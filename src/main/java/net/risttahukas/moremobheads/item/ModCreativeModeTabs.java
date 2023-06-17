@@ -1,4 +1,4 @@
-package net.risttahukas.moremobheadsmod.item;
+package net.risttahukas.moremobheads.item;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -8,7 +8,7 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-import net.risttahukas.moremobheadsmod.MoreMobHeadsMod;
+import net.risttahukas.moremobheads.MoreMobHeadsMod;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =

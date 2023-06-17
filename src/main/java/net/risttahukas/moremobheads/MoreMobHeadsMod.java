@@ -1,4 +1,4 @@
-package net.risttahukas.moremobheadsmod;
+package net.risttahukas.moremobheads;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.Items;
@@ -11,8 +11,10 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.risttahukas.moremobheadsmod.item.ModCreativeModeTabs;
-import net.risttahukas.moremobheadsmod.item.ModItems;
+import net.risttahukas.moremobheads.block.ModBlocks;
+import net.risttahukas.moremobheads.block.entity.ModBlockEntities;
+import net.risttahukas.moremobheads.item.ModCreativeModeTabs;
+import net.risttahukas.moremobheads.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -29,6 +31,9 @@ public class MoreMobHeadsMod
 
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -50,6 +55,7 @@ public class MoreMobHeadsMod
             event.accept(Items.CREEPER_HEAD);
             event.accept(Items.PIGLIN_HEAD);
             event.accept(Items.DRAGON_HEAD);
+            event.accept(ModItems.SPIDER_HEAD);
         }
     }
 
