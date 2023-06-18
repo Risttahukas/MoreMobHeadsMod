@@ -2,6 +2,7 @@ package net.risttahukas.moremobheads.block.entity.renderer;
 
 import com.google.common.collect.ImmutableMap;
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.PiglinHeadModel;
 import net.minecraft.client.model.SkullModel;
 import net.minecraft.client.model.SkullModelBase;
@@ -13,6 +14,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.blockentity.SkullBlockRenderer;
+import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.AbstractSkullBlock;
@@ -27,9 +29,11 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.fml.ModLoader;
 import net.risttahukas.moremobheads.block.EffectSkullBlock;
 import net.risttahukas.moremobheads.block.entity.ModBlockEntityModelLayers;
+import net.risttahukas.moremobheads.block.entity.model.CaveSpiderHeadModel;
 import net.risttahukas.moremobheads.block.entity.model.SpiderHeadModel;
 import org.jetbrains.annotations.NotNull;
 
+import javax.annotation.Nullable;
 import java.util.Map;
 
 @OnlyIn(Dist.CLIENT)
@@ -41,6 +45,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         super(context);
         this.modelByType = createSkullRenderers(context.getModelSet());
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SPIDER, new ResourceLocation("textures/entity/spider/spider.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAVE_SPIDER, new ResourceLocation("textures/entity/spider/cave_spider.png"));
     }
 
     @Override
@@ -58,6 +63,30 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         renderSkull(direction, f1, f, poseStack, multiBufferSource, p_112538_, skullmodelbase, rendertype);
     }
 
+    public static void renderSkull(@Nullable Direction direction, float p_173665_, float p_173666_,
+                                   PoseStack poseStack, MultiBufferSource multiBufferSource, int p_173669_,
+                                   SkullModelBase skullModelBase, @NotNull RenderType renderType) {
+        poseStack.pushPose();
+        if (direction == null) {
+            poseStack.translate(0.5F, 0.0F, 0.5F);
+        } else {
+            if (skullModelBase instanceof CaveSpiderHeadModel) {
+                poseStack.translate(0.5F - (float)direction.getStepX() * 0.325F, 0.25F,
+                        0.5F - (float)direction.getStepZ() * 0.325F);
+            } else {
+                poseStack.translate(0.5F - (float)direction.getStepX() * 0.25F, 0.25F,
+                        0.5F - (float)direction.getStepZ() * 0.25F);
+            }
+        }
+
+        poseStack.scale(-1.0F, -1.0F, 1.0F);
+        VertexConsumer vertexconsumer = multiBufferSource.getBuffer(renderType);
+        skullModelBase.setupAnim(p_173666_, p_173665_, 0.0F);
+        skullModelBase.renderToBuffer(poseStack, vertexconsumer, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+        poseStack.popPose();
+    }
+
+    @SuppressWarnings("UnstableApiUsage")
     public static @NotNull Map<SkullBlock.Type, SkullModelBase> createSkullRenderers(EntityModelSet entityModelSet) {
         ImmutableMap.Builder<SkullBlock.Type, SkullModelBase> builder = ImmutableMap.builder();
         builder.put(SkullBlock.Types.SKELETON, new SkullModel(entityModelSet.bakeLayer(ModelLayers.SKELETON_SKULL)));
@@ -69,6 +98,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(SkullBlock.Types.PIGLIN, new PiglinHeadModel(entityModelSet.bakeLayer(ModelLayers.PIGLIN_HEAD)));
 
         builder.put(EffectSkullBlock.Types.SPIDER, new SpiderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SPIDER_HEAD)));
+        builder.put(EffectSkullBlock.Types.CAVE_SPIDER, new CaveSpiderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAVE_SPIDER_HEAD)));
         ModLoader.get().postEvent(new EntityRenderersEvent.CreateSkullModels(builder, entityModelSet));
         return builder.build();
     }

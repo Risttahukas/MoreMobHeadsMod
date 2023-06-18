@@ -6,6 +6,7 @@ import net.risttahukas.moremobheads.MoreMobHeadsMod;
 
 public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation SPIDER_HEAD = register("spider_head");
+    public static final ModelLayerLocation CAVE_SPIDER_HEAD = register("cave_spider_head");
 
     private static ModelLayerLocation register(String layer) {
         return new ModelLayerLocation(new ResourceLocation(MoreMobHeadsMod.MOD_ID, layer), "main");

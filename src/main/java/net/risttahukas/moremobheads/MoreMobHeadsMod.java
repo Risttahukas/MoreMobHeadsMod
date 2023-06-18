@@ -24,6 +24,7 @@ public class MoreMobHeadsMod
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "moremobheads";
     // Directly reference a slf4j logger
+    @SuppressWarnings("unused")
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public MoreMobHeadsMod() {
@@ -56,10 +57,12 @@ public class MoreMobHeadsMod
             event.accept(Items.PIGLIN_HEAD);
             event.accept(Items.DRAGON_HEAD);
             event.accept(ModItems.SPIDER_HEAD);
+            event.accept(ModItems.CAVE_SPIDER_HEAD);
         }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    @SuppressWarnings("unused")
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent

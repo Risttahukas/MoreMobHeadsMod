@@ -16,7 +16,11 @@ public class ModItems {
 
     public static final RegistryObject<Item> SPIDER_HEAD = ITEMS.register("spider_head", () ->
             new EffectSkullItem(ModBlocks.SPIDER_HEAD.get(), ModBlocks.SPIDER_WALL_HEAD.get(),
-            (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> CAVE_SPIDER_HEAD = ITEMS.register("cave_spider_head", () ->
+            new EffectSkullItem(ModBlocks.CAVE_SPIDER_HEAD.get(), ModBlocks.CAVE_SPIDER_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

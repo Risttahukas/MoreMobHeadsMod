@@ -31,6 +31,7 @@ public class EffectSkullItemRenderer extends BlockEntityWithoutLevelRenderer {
     }
 
     @Override
+    @SuppressWarnings("null")
     public void renderByItem(ItemStack itemStack, @NotNull ItemDisplayContext itemDisplayContext,
                              @NotNull PoseStack poseStack, @NotNull MultiBufferSource multiBufferSource,
                              int p_108834_, int p_108835_) {

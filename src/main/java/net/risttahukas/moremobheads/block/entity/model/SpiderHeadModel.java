@@ -27,9 +27,4 @@ public class SpiderHeadModel extends SkullModel {
         MeshDefinition meshdefinition = createSpiderHeadModel();
         return LayerDefinition.create(meshdefinition, 64, 32);
     }
-
-    public static LayerDefinition createCaveSpiderHeadLayer() {
-        MeshDefinition meshdefinition = createHeadModel();
-        return LayerDefinition.create(meshdefinition, 64, 32);
-    }
 }
