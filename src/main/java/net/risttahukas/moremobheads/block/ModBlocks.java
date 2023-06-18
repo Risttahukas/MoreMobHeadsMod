@@ -35,6 +35,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CHICKEN, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(SPIDER_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> WITCH_HEAD = BLOCKS.register("witch_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.WITCH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> WITCH_WALL_HEAD = BLOCKS.register("witch_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.WITCH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SPIDER_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

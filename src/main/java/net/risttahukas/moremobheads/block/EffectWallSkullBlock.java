@@ -5,14 +5,18 @@ import com.google.common.collect.Maps;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SkullBlock;
 import net.minecraft.world.level.block.WallSkullBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.risttahukas.moremobheads.block.entity.EffectSkullBlockEntity;
+import net.risttahukas.moremobheads.block.entity.ModBlockEntities;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
@@ -53,5 +57,18 @@ public class EffectWallSkullBlock extends WallSkullBlock {
     @Override
     public BlockEntity newBlockEntity(@NotNull BlockPos blockPos, @NotNull BlockState blockState) {
         return new EffectSkullBlockEntity(blockPos, blockState);
+    }
+
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, @NotNull BlockState blockState,
+                                                                  @NotNull BlockEntityType<T> tBlockEntityType) {
+        if (level.isClientSide) {
+            boolean flag = blockState.is(ModBlocks.WITCH_WALL_HEAD.get());
+            if (flag) {
+                return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
+                        EffectSkullBlockEntity::animation);
+            }
+        }
+        return null;
     }
 }

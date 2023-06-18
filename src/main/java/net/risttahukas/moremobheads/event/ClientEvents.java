@@ -24,6 +24,7 @@ import net.risttahukas.moremobheads.block.entity.ModBlockEntities;
 import net.risttahukas.moremobheads.block.entity.ModBlockEntityModelLayers;
 import net.risttahukas.moremobheads.block.entity.model.ChickenHeadModel;
 import net.risttahukas.moremobheads.block.entity.model.SpiderHeadModel;
+import net.risttahukas.moremobheads.block.entity.model.WitchHeadModel;
 import net.risttahukas.moremobheads.block.entity.renderer.EffectSkullBlockRenderer;
 import net.risttahukas.moremobheads.item.EffectSkullItem;
 
@@ -68,6 +69,7 @@ public class ClientEvents {
             event.registerLayerDefinition(ModBlockEntityModelLayers.SPIDER_HEAD, SpiderHeadModel::createSpiderHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.CAVE_SPIDER_HEAD, SpiderHeadModel::createSpiderHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.CHICKEN_HEAD, ChickenHeadModel::createChickenHeadLayer);
+            event.registerLayerDefinition(ModBlockEntityModelLayers.WITCH_HEAD, WitchHeadModel::createWitchHeadLayer);
         }
 
 
