@@ -19,7 +19,9 @@ public class SpiderHeadModel extends SkullModel {
     public static MeshDefinition createSpiderHeadModel() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
-        partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(32, 4).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F), PartPose.ZERO);
+        partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(32, 4)
+                .addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F),
+                PartPose.ZERO);
         return meshdefinition;
     }
 

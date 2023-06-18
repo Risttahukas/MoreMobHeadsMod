@@ -14,6 +14,8 @@ import org.jetbrains.annotations.NotNull;
 public class EffectSkullBlock extends SkullBlock {
     protected static final VoxelShape CAVE_SPIDER_SHAPE =
             Block.box(5.2D, 0.0D, 5.2D, 10.8D, 5.6D, 10.8D);
+    protected static final VoxelShape CHICKEN_SHAPE =
+            Block.box(6.0D, 0.0D, 6.0D, 10.0D, 6.0D, 10.0D);
 
     public EffectSkullBlock(Type type, Properties properties) {
         super(type, properties);
@@ -24,6 +26,8 @@ public class EffectSkullBlock extends SkullBlock {
                                         @NotNull BlockPos blockPos, @NotNull CollisionContext collisionContext) {
         if (Types.CAVE_SPIDER.equals(this.getType())) {
             return CAVE_SPIDER_SHAPE;
+        } if (Types.CHICKEN.equals(this.getType())) {
+            return CHICKEN_SHAPE;
         }
         return SHAPE;
     }
