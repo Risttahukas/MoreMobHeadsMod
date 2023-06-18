@@ -47,7 +47,7 @@ public class EffectSkullBlock extends SkullBlock {
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, @NotNull BlockState blockState,
                                                                   @NotNull BlockEntityType<T> tBlockEntityType) {
         if (level.isClientSide) {
-            boolean flag = blockState.is(ModBlocks.WITCH_HEAD.get());
+            boolean flag = blockState.is(ModBlocks.WITCH_HEAD.get()) || blockState.is(ModBlocks.GHAST_HEAD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);

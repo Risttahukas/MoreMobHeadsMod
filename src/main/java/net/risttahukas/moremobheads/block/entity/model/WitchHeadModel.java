@@ -24,12 +24,12 @@ public class WitchHeadModel extends VillagerHeadModel{
     }
 
     @Override
-    public void setupAnim(float p_103811_, float p_103812_, float p_103813_) {
-        super.setupAnim(p_103811_, p_103812_, p_103813_);
+    public void setupAnim(float animationTickCount, float p_103812_, float p_103813_) {
+        super.setupAnim(animationTickCount, p_103812_, p_103813_);
         this.nose.setPos(0.0F, -2.0F, 0.0F);
         float f = 0.05F;
-        this.nose.xRot = Mth.sin(p_103811_ * f) * 4.5F * ((float)Math.PI / 180F);
+        this.nose.xRot = Mth.sin(animationTickCount * f) * 4.5F * ((float)Math.PI / 180F);
         this.nose.yRot = 0.0F;
-        this.nose.zRot = Mth.cos(p_103811_ * f) * 2.5F * ((float)Math.PI / 180F);
+        this.nose.zRot = Mth.cos(animationTickCount * f) * 2.5F * ((float)Math.PI / 180F);
     }
 }
