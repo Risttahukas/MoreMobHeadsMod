@@ -60,6 +60,7 @@ public class EffectSkullBlock extends SkullBlock {
     public enum Types implements SkullBlock.Type {
         CAVE_SPIDER,
         CHICKEN,
+        GHAST,
         SPIDER,
         WITCH
     }
