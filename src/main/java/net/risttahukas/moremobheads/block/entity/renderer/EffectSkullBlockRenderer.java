@@ -43,6 +43,11 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
     public EffectSkullBlockRenderer(BlockEntityRendererProvider.Context context) {
         super(context);
         this.modelByType = createSkullRenderers(context.getModelSet());
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.AXOLOTL_LUCY, new ResourceLocation("textures/entity/axolotl/axolotl_lucy.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.AXOLOTL_WILD, new ResourceLocation("textures/entity/axolotl/axolotl_wild.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.AXOLOTL_GOLD, new ResourceLocation("textures/entity/axolotl/axolotl_gold.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.AXOLOTL_CYAN, new ResourceLocation("textures/entity/axolotl/axolotl_cyan.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.AXOLOTL_BLUE, new ResourceLocation("textures/entity/axolotl/axolotl_blue.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAVE_SPIDER, new ResourceLocation("textures/entity/spider/cave_spider.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CHICKEN, new ResourceLocation("textures/entity/chicken.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.GHAST, new ResourceLocation("textures/entity/ghast/ghast.png"));
@@ -77,7 +82,10 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         if (direction == null) {
             poseStack.translate(0.5F, 0.0F, 0.5F);
         } else {
-            if (skullModelBase instanceof CaveSpiderHeadModel) {
+            if (skullModelBase instanceof AxolotlHeadModel) {
+                poseStack.translate(0.5F - (float)direction.getStepX() * 0.375F, 0.25F,
+                        0.5F - (float)direction.getStepZ() * 0.375F);
+            } else if (skullModelBase instanceof CaveSpiderHeadModel) {
                 poseStack.translate(0.5F - (float)direction.getStepX() * 0.325F, 0.25F,
                         0.5F - (float)direction.getStepZ() * 0.325F);
             } else if (skullModelBase instanceof ChickenHeadModel || skullModelBase instanceof ParrotHeadModel) {
@@ -107,6 +115,11 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(SkullBlock.Types.DRAGON, new DragonHeadModel(entityModelSet.bakeLayer(ModelLayers.DRAGON_SKULL)));
         builder.put(SkullBlock.Types.PIGLIN, new PiglinHeadModel(entityModelSet.bakeLayer(ModelLayers.PIGLIN_HEAD)));
 
+        builder.put(EffectSkullBlock.Types.AXOLOTL_LUCY, new AxolotlHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.AXOLOTL_HEAD)));
+        builder.put(EffectSkullBlock.Types.AXOLOTL_WILD, new AxolotlHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.AXOLOTL_HEAD)));
+        builder.put(EffectSkullBlock.Types.AXOLOTL_GOLD, new AxolotlHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.AXOLOTL_HEAD)));
+        builder.put(EffectSkullBlock.Types.AXOLOTL_CYAN, new AxolotlHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.AXOLOTL_HEAD)));
+        builder.put(EffectSkullBlock.Types.AXOLOTL_BLUE, new AxolotlHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.AXOLOTL_HEAD)));
         builder.put(EffectSkullBlock.Types.CAVE_SPIDER, new CaveSpiderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAVE_SPIDER_HEAD)));
         builder.put(EffectSkullBlock.Types.CHICKEN, new ChickenHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CHICKEN_HEAD)));
         builder.put(EffectSkullBlock.Types.GHAST, new GhastHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.GHAST_HEAD)));

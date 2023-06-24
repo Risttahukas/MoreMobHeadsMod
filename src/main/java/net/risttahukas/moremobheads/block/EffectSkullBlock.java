@@ -4,12 +4,10 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SkullBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.SkullBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -18,6 +16,8 @@ import net.risttahukas.moremobheads.block.entity.ModBlockEntities;
 import org.jetbrains.annotations.NotNull;
 
 public class EffectSkullBlock extends SkullBlock {
+    protected static final VoxelShape AXOLOTL_SHAPE =
+            Block.box(5.0D, 0.0D, 5.0D, 11.0D, 5.0D, 11.0D);
     protected static final VoxelShape CAVE_SPIDER_SHAPE =
             Block.box(5.2D, 0.0D, 5.2D, 10.8D, 5.6D, 10.8D);
     protected static final VoxelShape CHICKEN_SHAPE =
@@ -32,7 +32,11 @@ public class EffectSkullBlock extends SkullBlock {
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState blockState, @NotNull BlockGetter blockGetter,
                                         @NotNull BlockPos blockPos, @NotNull CollisionContext collisionContext) {
-        if (Types.CAVE_SPIDER.equals(this.getType())) {
+        if (Types.AXOLOTL_LUCY.equals(this.getType()) || Types.AXOLOTL_WILD.equals(this.getType()) ||
+                Types.AXOLOTL_GOLD.equals(this.getType()) || Types.AXOLOTL_CYAN.equals(this.getType()) ||
+                Types.AXOLOTL_BLUE.equals(this.getType())) {
+            return AXOLOTL_SHAPE;
+        } if (Types.CAVE_SPIDER.equals(this.getType())) {
             return CAVE_SPIDER_SHAPE;
         } if (Types.CHICKEN.equals(this.getType())) {
             return CHICKEN_SHAPE;
@@ -64,6 +68,11 @@ public class EffectSkullBlock extends SkullBlock {
 
     @SuppressWarnings("unused")
     public enum Types implements SkullBlock.Type {
+        AXOLOTL_LUCY,
+        AXOLOTL_WILD,
+        AXOLOTL_GOLD,
+        AXOLOTL_CYAN,
+        AXOLOTL_BLUE,
         CAVE_SPIDER,
         CHICKEN,
         GHAST,

@@ -29,7 +29,7 @@ public class GhastHeadModel extends SkullModel {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
         PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0)
-                .addBox(-8.0F, -16.0F, -8.0F, 16.0F, 16.0F, 16.0F),
+                        .addBox(-8.0F, -16.0F, -8.0F, 16.0F, 16.0F, 16.0F),
                 PartPose.ZERO);
         RandomSource randomsource = RandomSource.create(1660L);
 

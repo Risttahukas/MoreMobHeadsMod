@@ -49,24 +49,28 @@ public class MoreMobHeadsMod
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == ModCreativeModeTabs.MOB_HEADS_TAB.get()) {
-            event.accept(Items.SKELETON_SKULL);
-            event.accept(Items.WITHER_SKELETON_SKULL);
-            event.accept(Items.PLAYER_HEAD);
-            event.accept(Items.ZOMBIE_HEAD);
-            event.accept(Items.CREEPER_HEAD);
-            event.accept(Items.PIGLIN_HEAD);
-            event.accept(Items.DRAGON_HEAD);
+            event.accept(ModItems.AXOLOTL_HEAD_LUCY);
+            event.accept(ModItems.AXOLOTL_HEAD_WILD);
+            event.accept(ModItems.AXOLOTL_HEAD_GOLD);
+            event.accept(ModItems.AXOLOTL_HEAD_CYAN);
+            event.accept(ModItems.AXOLOTL_HEAD_BLUE);
             event.accept(ModItems.CAVE_SPIDER_HEAD);
             event.accept(ModItems.CHICKEN_HEAD);
-            event.accept(ModItems.GHAST_HEAD);
+            event.accept(Items.CREEPER_HEAD);
+            event.accept(Items.DRAGON_HEAD);
             event.accept(ModItems.GHAST_HEAD);
             event.accept(ModItems.PARROT_HEAD_RED_BLUE);
             event.accept(ModItems.PARROT_HEAD_BLUE);
             event.accept(ModItems.PARROT_HEAD_GREEN);
             event.accept(ModItems.PARROT_HEAD_YELLOW_BLUE);
             event.accept(ModItems.PARROT_HEAD_GREY);
+            event.accept(Items.PIGLIN_HEAD);
+            event.accept(Items.PLAYER_HEAD);
+            event.accept(Items.SKELETON_SKULL);
             event.accept(ModItems.SPIDER_HEAD);
             event.accept(ModItems.WITCH_HEAD);
+            event.accept(Items.WITHER_SKELETON_SKULL);
+            event.accept(Items.ZOMBIE_HEAD);
         }
     }
 

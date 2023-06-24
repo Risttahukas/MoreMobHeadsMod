@@ -27,6 +27,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 8.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 8.0D, 12.0D, 12.0D),
             Direction.WEST, Block.box(8.0D, 4.0D, 4.0D, 16.0D, 12.0D, 12.0D)));
+    private static final Map<Direction, VoxelShape> AXOLOTL_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(4.0D, 4.0D, 11.0D, 12.0D, 9.0D, 16.0D),
+            Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 9.0D, 5.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 5.0D, 9.0D, 12.0D),
+            Direction.WEST, Block.box(11.0D, 4.0D, 4.0D, 16.0D, 9.0D, 12.0D)));
     private static final Map<Direction, VoxelShape> CAVE_SPIDER_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(5.2D, 4.0D, 10.4D, 10.8D, 9.6D, 16.0D),
             Direction.SOUTH, Block.box(5.2D, 4.0D, 0.0D, 10.8D, 9.6D, 5.6D),
@@ -51,7 +56,13 @@ public class EffectWallSkullBlock extends WallSkullBlock {
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState blockState, @NotNull BlockGetter blockGetter,
                                         @NotNull BlockPos blockPos, @NotNull CollisionContext collisionContext) {
-        if (EffectSkullBlock.Types.CAVE_SPIDER.equals(this.getType())) {
+        if (EffectSkullBlock.Types.AXOLOTL_LUCY.equals(this.getType()) ||
+                EffectSkullBlock.Types.AXOLOTL_WILD.equals(this.getType()) ||
+                EffectSkullBlock.Types.AXOLOTL_GOLD.equals(this.getType()) ||
+                EffectSkullBlock.Types.AXOLOTL_CYAN.equals(this.getType()) ||
+                EffectSkullBlock.Types.AXOLOTL_BLUE.equals(this.getType())) {
+            return AXOLOTL_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.CAVE_SPIDER.equals(this.getType())) {
             return CAVE_SPIDER_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.CHICKEN.equals(this.getType())) {
             return CHICKEN_AABBS.get(blockState.getValue(FACING));
