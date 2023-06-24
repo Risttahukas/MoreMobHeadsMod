@@ -62,6 +62,11 @@ public class EffectSkullBlock extends SkullBlock {
         CHICKEN,
         GHAST,
         SPIDER,
-        WITCH
+        WITCH,
+        PARROT_RED_BLUE,
+        PARROT_BLUE,
+        PARROT_GREEN,
+        PARROT_YELLOW_BLUE,
+        PARROT_GREY
     }
 }

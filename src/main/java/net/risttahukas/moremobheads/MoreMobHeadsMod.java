@@ -59,6 +59,12 @@ public class MoreMobHeadsMod
             event.accept(ModItems.CAVE_SPIDER_HEAD);
             event.accept(ModItems.CHICKEN_HEAD);
             event.accept(ModItems.GHAST_HEAD);
+            event.accept(ModItems.GHAST_HEAD);
+            event.accept(ModItems.PARROT_HEAD_RED_BLUE);
+            event.accept(ModItems.PARROT_HEAD_BLUE);
+            event.accept(ModItems.PARROT_HEAD_GREEN);
+            event.accept(ModItems.PARROT_HEAD_YELLOW_BLUE);
+            event.accept(ModItems.PARROT_HEAD_GREY);
             event.accept(ModItems.SPIDER_HEAD);
             event.accept(ModItems.WITCH_HEAD);
         }

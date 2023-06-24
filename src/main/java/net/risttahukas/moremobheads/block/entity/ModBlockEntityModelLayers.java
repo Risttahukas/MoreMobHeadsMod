@@ -5,10 +5,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.risttahukas.moremobheads.MoreMobHeadsMod;
 
 public class ModBlockEntityModelLayers {
-    public static final ModelLayerLocation SPIDER_HEAD = register("spider_head");
     public static final ModelLayerLocation CAVE_SPIDER_HEAD = register("cave_spider_head");
     public static final ModelLayerLocation CHICKEN_HEAD = register("chicken_head");
     public static final ModelLayerLocation GHAST_HEAD = register("ghast_head");
+    public static final ModelLayerLocation PARROT_HEAD = register("parrot_head");
+    public static final ModelLayerLocation SPIDER_HEAD = register("spider_head");
     public static final ModelLayerLocation WITCH_HEAD = register("witch_head");
 
     private static ModelLayerLocation register(String layer) {
