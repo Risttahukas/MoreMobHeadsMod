@@ -37,6 +37,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(6.0D, 4.0D, 0.0D, 10.0D, 10.0D, 5.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 6.0D, 5.0D, 10.0D, 10.0D),
             Direction.WEST, Block.box(11.0D, 4.0D, 6.0D, 16.0D, 10.0D, 10.0D)));
+    private static final Map<Direction, VoxelShape> PARROT_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(7.0D, 4.0D, 12.0D, 9.0D, 8.0D, 16.0D),
+            Direction.SOUTH, Block.box(7.0D, 4.0D, 0.0D, 9.0D, 8.0D, 4.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 7.0D, 4.0D, 8.0D, 9.0D),
+            Direction.WEST, Block.box(12.0D, 4.0D, 7.0D, 16.0D, 8.0D, 9.0D)));
 
 
     public EffectWallSkullBlock(SkullBlock.Type type, Properties properties) {
@@ -50,6 +55,12 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return CAVE_SPIDER_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.CHICKEN.equals(this.getType())) {
             return CHICKEN_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.PARROT_RED_BLUE.equals(this.getType()) ||
+                EffectSkullBlock.Types.PARROT_BLUE.equals(this.getType()) ||
+                EffectSkullBlock.Types.PARROT_GREEN.equals(this.getType()) ||
+                EffectSkullBlock.Types.PARROT_YELLOW_BLUE.equals(this.getType()) ||
+                EffectSkullBlock.Types.PARROT_GREY.equals(this.getType())) {
+            return PARROT_AABBS.get(blockState.getValue(FACING));
         }
         return AABBS.get(blockState.getValue(FACING));
     }

@@ -80,7 +80,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
             if (skullModelBase instanceof CaveSpiderHeadModel) {
                 poseStack.translate(0.5F - (float)direction.getStepX() * 0.325F, 0.25F,
                         0.5F - (float)direction.getStepZ() * 0.325F);
-            } else if (skullModelBase instanceof ChickenHeadModel) {
+            } else if (skullModelBase instanceof ChickenHeadModel || skullModelBase instanceof ParrotHeadModel) {
                 poseStack.translate(0.5F - (float)direction.getStepX() * 0.4375F, 0.25F,
                         0.5F - (float)direction.getStepZ() * 0.4375F);
             } else {
