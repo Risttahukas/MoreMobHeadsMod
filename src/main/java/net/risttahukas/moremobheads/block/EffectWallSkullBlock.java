@@ -42,6 +42,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(6.0D, 4.0D, 0.0D, 10.0D, 10.0D, 5.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 6.0D, 5.0D, 10.0D, 10.0D),
             Direction.WEST, Block.box(11.0D, 4.0D, 6.0D, 16.0D, 10.0D, 10.0D)));
+    private static final Map<Direction, VoxelShape> SHEEP_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(5.0D, 4.0D, 8.0D, 11.0D, 10.0D, 16.0D),
+            Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 10.0D, 8.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 5.0D, 8.0D, 10.0D, 11.0D),
+            Direction.WEST, Block.box(8.0D, 4.0D, 5.0D, 16.0D, 10.0D, 11.0D)));
     private static final Map<Direction, VoxelShape> PARROT_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(7.0D, 4.0D, 12.0D, 9.0D, 8.0D, 16.0D),
             Direction.SOUTH, Block.box(7.0D, 4.0D, 0.0D, 9.0D, 8.0D, 4.0D),
@@ -66,6 +71,24 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return CAVE_SPIDER_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.CHICKEN.equals(this.getType())) {
             return CHICKEN_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.SHEEP_WHITE.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_ORANGE.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_MAGENTA.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_LIGHT_BLUE.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_YELLOW.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_LIME.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_PINK.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_GRAY.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_LIGHT_GRAY.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_CYAN.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_PURPLE.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_BLUE.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_BROWN.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_GREEN.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_RED.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_BLACK.equals(this.getType()) ||
+                EffectSkullBlock.Types.SHEEP_RAINBOW.equals(this.getType())) {
+            return SHEEP_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.PARROT_RED_BLUE.equals(this.getType()) ||
                 EffectSkullBlock.Types.PARROT_BLUE.equals(this.getType()) ||
                 EffectSkullBlock.Types.PARROT_GREEN.equals(this.getType()) ||
@@ -85,7 +108,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, @NotNull BlockState blockState,
                                                                   @NotNull BlockEntityType<T> tBlockEntityType) {
         if (level.isClientSide) {
-            boolean flag = blockState.is(ModBlocks.WITCH_WALL_HEAD.get()) || blockState.is(ModBlocks.GHAST_WALL_HEAD.get());
+            boolean flag = blockState.is(ModBlocks.WITCH_WALL_HEAD.get()) || blockState.is(ModBlocks.GHAST_WALL_HEAD.get()) ||
+                    blockState.is(ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);

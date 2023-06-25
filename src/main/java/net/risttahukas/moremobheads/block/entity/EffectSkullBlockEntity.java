@@ -5,6 +5,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.SkullBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.risttahukas.moremobheads.block.ModBlocks;
 import org.jetbrains.annotations.NotNull;
 
 public class EffectSkullBlockEntity extends SkullBlockEntity {
@@ -21,7 +22,8 @@ public class EffectSkullBlockEntity extends SkullBlockEntity {
     }
 
     public static void animation(Level level, BlockPos blockPos, BlockState blockState, EffectSkullBlockEntity effectSkullBlockEntity) {
-        if (level.hasNeighborSignal(blockPos)) {
+        if (level.hasNeighborSignal(blockPos) ||
+                blockState.is(ModBlocks.SHEEP_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get())) {
             effectSkullBlockEntity.isAnimating = true;
             ++effectSkullBlockEntity.animationTickCount;
         } else {

@@ -22,6 +22,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(5.2D, 0.0D, 5.2D, 10.8D, 5.6D, 10.8D);
     protected static final VoxelShape CHICKEN_SHAPE =
             Block.box(6.0D, 0.0D, 6.0D, 10.0D, 6.0D, 10.0D);
+    protected static final VoxelShape SHEEP_SHAPE =
+            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 6.0D, 12.0D);
     protected static final VoxelShape PARROT_SHAPE =
             Block.box(7.0D, 0.0D, 7.0D, 9.0D, 4.0D, 9.0D);
 
@@ -40,6 +42,16 @@ public class EffectSkullBlock extends SkullBlock {
             return CAVE_SPIDER_SHAPE;
         } if (Types.CHICKEN.equals(this.getType())) {
             return CHICKEN_SHAPE;
+        } if (Types.SHEEP_WHITE.equals(this.getType()) || Types.SHEEP_ORANGE.equals(this.getType()) ||
+                Types.SHEEP_MAGENTA.equals(this.getType()) || Types.SHEEP_LIGHT_BLUE.equals(this.getType()) ||
+                Types.SHEEP_YELLOW.equals(this.getType()) || Types.SHEEP_LIME.equals(this.getType()) ||
+                Types.SHEEP_PINK.equals(this.getType()) || Types.SHEEP_GRAY.equals(this.getType()) ||
+                Types.SHEEP_LIGHT_GRAY.equals(this.getType()) || Types.SHEEP_CYAN.equals(this.getType()) ||
+                Types.SHEEP_PURPLE.equals(this.getType()) || Types.SHEEP_BLUE.equals(this.getType()) ||
+                Types.SHEEP_BROWN.equals(this.getType()) || Types.SHEEP_GREEN.equals(this.getType()) ||
+                Types.SHEEP_RED.equals(this.getType()) || Types.SHEEP_BLACK.equals(this.getType()) ||
+                Types.SHEEP_RAINBOW.equals(this.getType())) {
+            return SHEEP_SHAPE;
         } if (Types.PARROT_RED_BLUE.equals(this.getType()) || Types.PARROT_BLUE.equals(this.getType()) ||
                 Types.PARROT_GREEN.equals(this.getType()) || Types.PARROT_YELLOW_BLUE.equals(this.getType()) ||
                 Types.PARROT_GREY.equals(this.getType())) {
@@ -57,7 +69,8 @@ public class EffectSkullBlock extends SkullBlock {
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, @NotNull BlockState blockState,
                                                                   @NotNull BlockEntityType<T> tBlockEntityType) {
         if (level.isClientSide) {
-            boolean flag = blockState.is(ModBlocks.WITCH_HEAD.get()) || blockState.is(ModBlocks.GHAST_HEAD.get());
+            boolean flag = blockState.is(ModBlocks.WITCH_HEAD.get()) || blockState.is(ModBlocks.GHAST_HEAD.get()) ||
+                    blockState.is(ModBlocks.SHEEP_HEAD_RAINBOW.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);
@@ -76,6 +89,23 @@ public class EffectSkullBlock extends SkullBlock {
         CAVE_SPIDER,
         CHICKEN,
         GHAST,
+        SHEEP_WHITE,
+        SHEEP_ORANGE,
+        SHEEP_MAGENTA,
+        SHEEP_LIGHT_BLUE,
+        SHEEP_YELLOW,
+        SHEEP_LIME,
+        SHEEP_PINK,
+        SHEEP_GRAY,
+        SHEEP_LIGHT_GRAY,
+        SHEEP_CYAN,
+        SHEEP_PURPLE,
+        SHEEP_BLUE,
+        SHEEP_BROWN,
+        SHEEP_GREEN,
+        SHEEP_RED,
+        SHEEP_BLACK,
+        SHEEP_RAINBOW,
         SPIDER,
         WITCH,
         PARROT_RED_BLUE,

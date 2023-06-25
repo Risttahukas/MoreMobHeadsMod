@@ -2,6 +2,7 @@ package net.risttahukas.moremobheads.item.renderer;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.SkullModelBase;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
@@ -18,6 +19,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SkullBlock;
 import net.risttahukas.moremobheads.block.EffectSkullBlock;
 import net.risttahukas.moremobheads.block.entity.renderer.EffectSkullBlockRenderer;
+import net.risttahukas.moremobheads.event.ClientEvents;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
@@ -33,16 +35,21 @@ public class EffectSkullItemRenderer extends BlockEntityWithoutLevelRenderer {
     @Override
     public void renderByItem(ItemStack itemStack, @NotNull ItemDisplayContext itemDisplayContext,
                              @NotNull PoseStack poseStack, @NotNull MultiBufferSource multiBufferSource,
-                             int p_108834_, int p_108835_) {
+                             int light, int overlay) {
         Item item = itemStack.getItem();
-        if (item instanceof BlockItem) {
-            Block block = ((BlockItem)item).getBlock();
+        if (item instanceof BlockItem blockItem) {
+            Block block = blockItem.getBlock();
             if (block instanceof EffectSkullBlock) {
                 GameProfile gameprofile = null;
                 SkullBlock.Type type = ((AbstractSkullBlock)block).getType();
                 SkullModelBase skullmodelbase = this.skullModels.get(type);
                 RenderType rendertype = SkullBlockRenderer.getRenderType(type, gameprofile);
-                SkullBlockRenderer.renderSkull(null, 180.0F, 0.0F, poseStack, multiBufferSource, p_108834_, skullmodelbase, rendertype);
+                if (type == EffectSkullBlock.Types.SHEEP_RAINBOW) {
+                    float tickCount = (float)ClientEvents.time + Minecraft.getInstance().getPartialTick();
+                    EffectSkullBlockRenderer.renderSkull(null, 180.0F, tickCount / 2.0F, poseStack, multiBufferSource, light, skullmodelbase, rendertype);
+                } else {
+                    EffectSkullBlockRenderer.renderSkull(null, 180.0F, 0.0F, poseStack, multiBufferSource, light, skullmodelbase, rendertype);
+                }
             }
         }
     }

@@ -56,14 +56,31 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_GREEN, new ResourceLocation("textures/entity/parrot/parrot_green.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_YELLOW_BLUE, new ResourceLocation("textures/entity/parrot/parrot_yellow_blue.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_GREY, new ResourceLocation("textures/entity/parrot/parrot_grey.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_WHITE, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_ORANGE, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_MAGENTA, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_LIGHT_BLUE, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_YELLOW, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_LIME, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_PINK, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_GRAY, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_LIGHT_GRAY, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_CYAN, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_PURPLE, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_BLUE, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_BROWN, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_GREEN, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_RED, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_BLACK, new ResourceLocation("textures/entity/sheep/sheep.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_RAINBOW, new ResourceLocation("textures/entity/sheep/sheep.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SPIDER, new ResourceLocation("textures/entity/spider/spider.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WITCH, new ResourceLocation("textures/entity/witch.png"));
     }
 
     @Override
-    public void render(SkullBlockEntity skullBlockEntity, float p_112535_, @NotNull PoseStack poseStack,
+    public void render(SkullBlockEntity skullBlockEntity, float partialTicks, @NotNull PoseStack poseStack,
                        @NotNull MultiBufferSource multiBufferSource, int p_112538_, int p_112539_) {
-        float f = skullBlockEntity.getAnimation(p_112535_);
+        float f = skullBlockEntity.getAnimation(partialTicks);
         BlockState blockstate = skullBlockEntity.getBlockState();
         boolean flag = blockstate.getBlock() instanceof WallSkullBlock;
         Direction direction = flag ? blockstate.getValue(WallSkullBlock.FACING) : null;
@@ -75,7 +92,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         renderSkull(direction, f1, f, poseStack, multiBufferSource, p_112538_, skullmodelbase, rendertype);
     }
 
-    public static void renderSkull(@Nullable Direction direction, float p_173665_, float p_173666_,
+    public static void renderSkull(@Nullable Direction direction, float p_173665_, float animationProgress,
                                    PoseStack poseStack, MultiBufferSource multiBufferSource, int p_173669_,
                                    SkullModelBase skullModelBase, @NotNull RenderType renderType) {
         poseStack.pushPose();
@@ -99,8 +116,12 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
 
         poseStack.scale(-1.0F, -1.0F, 1.0F);
         VertexConsumer vertexconsumer = multiBufferSource.getBuffer(renderType);
-        skullModelBase.setupAnim(p_173666_, p_173665_, 0.0F);
-        skullModelBase.renderToBuffer(poseStack, vertexconsumer, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+        skullModelBase.setupAnim(animationProgress, p_173665_, 0.0F);
+        if (skullModelBase instanceof SheepHeadModel sheepHeadModel) {
+            sheepHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+        } else {
+            skullModelBase.renderToBuffer(poseStack, vertexconsumer, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+        }
         poseStack.popPose();
     }
 
@@ -128,6 +149,23 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.PARROT_GREEN, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_YELLOW_BLUE, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_GREY, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
+        builder.put(EffectSkullBlock.Types.SHEEP_WHITE, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 0));
+        builder.put(EffectSkullBlock.Types.SHEEP_ORANGE, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 1));
+        builder.put(EffectSkullBlock.Types.SHEEP_MAGENTA, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 2));
+        builder.put(EffectSkullBlock.Types.SHEEP_LIGHT_BLUE, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 3));
+        builder.put(EffectSkullBlock.Types.SHEEP_YELLOW, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 4));
+        builder.put(EffectSkullBlock.Types.SHEEP_LIME, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 5));
+        builder.put(EffectSkullBlock.Types.SHEEP_PINK, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 6));
+        builder.put(EffectSkullBlock.Types.SHEEP_GRAY, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 7));
+        builder.put(EffectSkullBlock.Types.SHEEP_LIGHT_GRAY, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 8));
+        builder.put(EffectSkullBlock.Types.SHEEP_CYAN, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 9));
+        builder.put(EffectSkullBlock.Types.SHEEP_PURPLE, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 10));
+        builder.put(EffectSkullBlock.Types.SHEEP_BLUE, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 11));
+        builder.put(EffectSkullBlock.Types.SHEEP_BROWN, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 12));
+        builder.put(EffectSkullBlock.Types.SHEEP_GREEN, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 13));
+        builder.put(EffectSkullBlock.Types.SHEEP_RED, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 14));
+        builder.put(EffectSkullBlock.Types.SHEEP_BLACK, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 15));
+        builder.put(EffectSkullBlock.Types.SHEEP_RAINBOW, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 16));
         builder.put(EffectSkullBlock.Types.SPIDER, new SpiderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SPIDER_HEAD)));
         builder.put(EffectSkullBlock.Types.WITCH, new WitchHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WITCH_HEAD)));
         ModLoader.get().postEvent(new EntityRenderersEvent.CreateSkullModels(builder, entityModelSet));
