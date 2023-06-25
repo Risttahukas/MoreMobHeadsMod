@@ -29,7 +29,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         }
     }
 
-    public void skull(RegistryObject<Block>  block) {
+    public void skull(RegistryObject<Block> block) {
         simpleBlock(block.get(), models().getExistingFile(skullModelLocation));
     }
 }
