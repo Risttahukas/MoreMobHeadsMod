@@ -14,6 +14,13 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, MoreMobHeadsMod.MOD_ID);
 
+    public static final RegistryObject<Block> ALLAY_HEAD = BLOCKS.register("allay_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ALLAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ALLAY_WALL_HEAD = BLOCKS.register("allay_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ALLAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ALLAY_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> AXOLOTL_HEAD_LUCY = BLOCKS.register("axolotl_head_lucy",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.AXOLOTL_LUCY, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

@@ -49,6 +49,7 @@ public class MoreMobHeadsMod
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == ModCreativeModeTabs.MOB_HEADS_TAB.get()) {
+            event.accept(ModItems.ALLAY_HEAD);
             event.accept(ModItems.AXOLOTL_HEAD_LUCY);
             event.accept(ModItems.AXOLOTL_HEAD_WILD);
             event.accept(ModItems.AXOLOTL_HEAD_GOLD);

@@ -27,6 +27,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 8.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 8.0D, 12.0D, 12.0D),
             Direction.WEST, Block.box(8.0D, 4.0D, 4.0D, 16.0D, 12.0D, 12.0D)));
+    private static final Map<Direction, VoxelShape> ALLAY_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(5.5D, 4.0D, 11.0D, 10.5D, 9.0D, 16.0D),
+            Direction.SOUTH, Block.box(5.5D, 4.0D, 0.0D, 10.5D, 9.0D, 5.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 5.5D, 5.0D, 9.0D, 10.5D),
+            Direction.WEST, Block.box(11.0D, 4.0D, 5.5D, 16.0D, 9.0D, 10.5D)));
     private static final Map<Direction, VoxelShape> AXOLOTL_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.0D, 4.0D, 11.0D, 12.0D, 9.0D, 16.0D),
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 9.0D, 5.0D),
@@ -61,7 +66,9 @@ public class EffectWallSkullBlock extends WallSkullBlock {
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState blockState, @NotNull BlockGetter blockGetter,
                                         @NotNull BlockPos blockPos, @NotNull CollisionContext collisionContext) {
-        if (EffectSkullBlock.Types.AXOLOTL_LUCY.equals(this.getType()) ||
+        if (EffectSkullBlock.Types.ALLAY.equals(this.getType())) {
+            return ALLAY_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.AXOLOTL_LUCY.equals(this.getType()) ||
                 EffectSkullBlock.Types.AXOLOTL_WILD.equals(this.getType()) ||
                 EffectSkullBlock.Types.AXOLOTL_GOLD.equals(this.getType()) ||
                 EffectSkullBlock.Types.AXOLOTL_CYAN.equals(this.getType()) ||

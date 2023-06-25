@@ -14,6 +14,10 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MoreMobHeadsMod.MOD_ID);
 
+    public static final RegistryObject<Item> ALLAY_HEAD = ITEMS.register("allay_head", () ->
+            new EffectSkullItem(ModBlocks.ALLAY_HEAD.get(), ModBlocks.ALLAY_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> AXOLOTL_HEAD_LUCY = ITEMS.register("axolotl_head_lucy", () ->
             new EffectSkullItem(ModBlocks.AXOLOTL_HEAD_LUCY.get(), ModBlocks.AXOLOTL_WALL_HEAD_LUCY.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

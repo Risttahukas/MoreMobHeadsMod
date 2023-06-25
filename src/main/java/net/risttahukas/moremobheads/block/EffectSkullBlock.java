@@ -16,6 +16,8 @@ import net.risttahukas.moremobheads.block.entity.ModBlockEntities;
 import org.jetbrains.annotations.NotNull;
 
 public class EffectSkullBlock extends SkullBlock {
+    protected static final VoxelShape ALLAY_SHAPE =
+            Block.box(5.5D, 0.0D, 5.5D, 10.5D, 5.0D, 10.5D);
     protected static final VoxelShape AXOLOTL_SHAPE =
             Block.box(5.0D, 0.0D, 5.0D, 11.0D, 5.0D, 11.0D);
     protected static final VoxelShape CAVE_SPIDER_SHAPE =
@@ -34,7 +36,9 @@ public class EffectSkullBlock extends SkullBlock {
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState blockState, @NotNull BlockGetter blockGetter,
                                         @NotNull BlockPos blockPos, @NotNull CollisionContext collisionContext) {
-        if (Types.AXOLOTL_LUCY.equals(this.getType()) || Types.AXOLOTL_WILD.equals(this.getType()) ||
+        if (Types.ALLAY.equals(this.getType())) {
+            return ALLAY_SHAPE;
+        } if (Types.AXOLOTL_LUCY.equals(this.getType()) || Types.AXOLOTL_WILD.equals(this.getType()) ||
                 Types.AXOLOTL_GOLD.equals(this.getType()) || Types.AXOLOTL_CYAN.equals(this.getType()) ||
                 Types.AXOLOTL_BLUE.equals(this.getType())) {
             return AXOLOTL_SHAPE;
@@ -81,6 +85,7 @@ public class EffectSkullBlock extends SkullBlock {
 
     @SuppressWarnings("unused")
     public enum Types implements SkullBlock.Type {
+        ALLAY,
         AXOLOTL_LUCY,
         AXOLOTL_WILD,
         AXOLOTL_GOLD,
