@@ -36,7 +36,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> AXOLOTL_HEAD_BLUE = ITEMS.register("axolotl_head_blue", () ->
             new EffectSkullItem(ModBlocks.AXOLOTL_HEAD_BLUE.get(), ModBlocks.AXOLOTL_WALL_HEAD_BLUE.get(),
-                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+                    (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
 
     public static final RegistryObject<Item> CAVE_SPIDER_HEAD = ITEMS.register("cave_spider_head", () ->
             new EffectSkullItem(ModBlocks.CAVE_SPIDER_HEAD.get(), ModBlocks.CAVE_SPIDER_WALL_HEAD.get(),
@@ -136,10 +136,14 @@ public class ModItems {
 
     public static final RegistryObject<Item> SHEEP_HEAD_RAINBOW = ITEMS.register("sheep_head_rainbow", () ->
             new EffectSkullItem(ModBlocks.SHEEP_HEAD_RAINBOW.get(), ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get(),
-                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+                    (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
 
     public static final RegistryObject<Item> SPIDER_HEAD = ITEMS.register("spider_head", () ->
             new EffectSkullItem(ModBlocks.SPIDER_HEAD.get(), ModBlocks.SPIDER_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> VEX_HEAD = ITEMS.register("vex_head", () ->
+            new EffectSkullItem(ModBlocks.VEX_HEAD.get(), ModBlocks.VEX_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> WITCH_HEAD = ITEMS.register("witch_head", () ->

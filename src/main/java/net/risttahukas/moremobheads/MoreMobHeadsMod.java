@@ -86,6 +86,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.SHEEP_HEAD_RAINBOW);
             event.accept(Items.SKELETON_SKULL);
             event.accept(ModItems.SPIDER_HEAD);
+            event.accept(ModItems.VEX_HEAD);
             event.accept(ModItems.WITCH_HEAD);
             event.accept(Items.WITHER_SKELETON_SKULL);
             event.accept(Items.ZOMBIE_HEAD);

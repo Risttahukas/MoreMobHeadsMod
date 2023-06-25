@@ -66,7 +66,7 @@ public class EffectWallSkullBlock extends WallSkullBlock {
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState blockState, @NotNull BlockGetter blockGetter,
                                         @NotNull BlockPos blockPos, @NotNull CollisionContext collisionContext) {
-        if (EffectSkullBlock.Types.ALLAY.equals(this.getType())) {
+        if (EffectSkullBlock.Types.ALLAY.equals(this.getType()) || EffectSkullBlock.Types.VEX.equals(this.getType())) {
             return ALLAY_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.AXOLOTL_LUCY.equals(this.getType()) ||
                 EffectSkullBlock.Types.AXOLOTL_WILD.equals(this.getType()) ||

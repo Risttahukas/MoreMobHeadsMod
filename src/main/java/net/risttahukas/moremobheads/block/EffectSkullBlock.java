@@ -36,7 +36,7 @@ public class EffectSkullBlock extends SkullBlock {
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState blockState, @NotNull BlockGetter blockGetter,
                                         @NotNull BlockPos blockPos, @NotNull CollisionContext collisionContext) {
-        if (Types.ALLAY.equals(this.getType())) {
+        if (Types.ALLAY.equals(this.getType()) || Types.VEX.equals(this.getType())) {
             return ALLAY_SHAPE;
         } if (Types.AXOLOTL_LUCY.equals(this.getType()) || Types.AXOLOTL_WILD.equals(this.getType()) ||
                 Types.AXOLOTL_GOLD.equals(this.getType()) || Types.AXOLOTL_CYAN.equals(this.getType()) ||
@@ -94,6 +94,11 @@ public class EffectSkullBlock extends SkullBlock {
         CAVE_SPIDER,
         CHICKEN,
         GHAST,
+        PARROT_RED_BLUE,
+        PARROT_BLUE,
+        PARROT_GREEN,
+        PARROT_YELLOW_BLUE,
+        PARROT_GREY,
         SHEEP_WHITE,
         SHEEP_ORANGE,
         SHEEP_MAGENTA,
@@ -112,11 +117,7 @@ public class EffectSkullBlock extends SkullBlock {
         SHEEP_BLACK,
         SHEEP_RAINBOW,
         SPIDER,
-        WITCH,
-        PARROT_RED_BLUE,
-        PARROT_BLUE,
-        PARROT_GREEN,
-        PARROT_YELLOW_BLUE,
-        PARROT_GREY
+        VEX,
+        WITCH
     }
 }
