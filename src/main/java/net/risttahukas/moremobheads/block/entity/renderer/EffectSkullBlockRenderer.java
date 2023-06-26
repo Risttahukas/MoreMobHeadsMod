@@ -49,9 +49,21 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.AXOLOTL_GOLD, new ResourceLocation("textures/entity/axolotl/axolotl_gold.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.AXOLOTL_CYAN, new ResourceLocation("textures/entity/axolotl/axolotl_cyan.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.AXOLOTL_BLUE, new ResourceLocation("textures/entity/axolotl/axolotl_blue.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_TABBY, new ResourceLocation("textures/entity/cat/tabby.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_BLACK, new ResourceLocation("textures/entity/cat/black.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_RED, new ResourceLocation("textures/entity/cat/red.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_SIAMESE, new ResourceLocation("textures/entity/cat/siamese.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_BRITISH_SHORTHAIR, new ResourceLocation("textures/entity/cat/british_shorthair.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_CALICO, new ResourceLocation("textures/entity/cat/calico.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_PERSIAN, new ResourceLocation("textures/entity/cat/persian.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_RAGDOLL, new ResourceLocation("textures/entity/cat/ragdoll.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_WHITE, new ResourceLocation("textures/entity/cat/white.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_JELLIE, new ResourceLocation("textures/entity/cat/jellie.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_ALL_BLACK, new ResourceLocation("textures/entity/cat/all_black.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAVE_SPIDER, new ResourceLocation("textures/entity/spider/cave_spider.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CHICKEN, new ResourceLocation("textures/entity/chicken.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.GHAST, new ResourceLocation("textures/entity/ghast/ghast.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.OCELOT, new ResourceLocation("textures/entity/cat/ocelot.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_RED_BLUE, new ResourceLocation("textures/entity/parrot/parrot_red_blue.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_BLUE, new ResourceLocation("textures/entity/parrot/parrot_blue.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_GREEN, new ResourceLocation("textures/entity/parrot/parrot_green.png"));
@@ -101,12 +113,12 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         if (direction == null) {
             poseStack.translate(0.5F, 0.0F, 0.5F);
         } else {
-            if (skullModelBase instanceof AllayHeadModel) {
-                poseStack.translate(0.5F - (float)direction.getStepX() * 0.34375F, 0.25F,
-                        0.5F - (float)direction.getStepZ() * 0.34375F);
-            } else if (skullModelBase instanceof AxolotlHeadModel) {
+            if (skullModelBase instanceof AxolotlHeadModel || skullModelBase instanceof CatHeadModel) {
                 poseStack.translate(0.5F - (float)direction.getStepX() * 0.375F, 0.25F,
                         0.5F - (float)direction.getStepZ() * 0.375F);
+            } else if (skullModelBase instanceof AllayHeadModel || skullModelBase instanceof OcelotHeadModel) {
+                poseStack.translate(0.5F - (float)direction.getStepX() * 0.34375F, 0.25F,
+                        0.5F - (float)direction.getStepZ() * 0.34375F);
             } else if (skullModelBase instanceof CaveSpiderHeadModel) {
                 poseStack.translate(0.5F - (float)direction.getStepX() * 0.325F, 0.25F,
                         0.5F - (float)direction.getStepZ() * 0.325F);
@@ -149,9 +161,21 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.AXOLOTL_GOLD, new AxolotlHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.AXOLOTL_HEAD)));
         builder.put(EffectSkullBlock.Types.AXOLOTL_CYAN, new AxolotlHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.AXOLOTL_HEAD)));
         builder.put(EffectSkullBlock.Types.AXOLOTL_BLUE, new AxolotlHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.AXOLOTL_HEAD)));
+        builder.put(EffectSkullBlock.Types.CAT_TABBY, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
+        builder.put(EffectSkullBlock.Types.CAT_BLACK, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
+        builder.put(EffectSkullBlock.Types.CAT_RED, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
+        builder.put(EffectSkullBlock.Types.CAT_SIAMESE, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
+        builder.put(EffectSkullBlock.Types.CAT_BRITISH_SHORTHAIR, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
+        builder.put(EffectSkullBlock.Types.CAT_CALICO, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
+        builder.put(EffectSkullBlock.Types.CAT_PERSIAN, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
+        builder.put(EffectSkullBlock.Types.CAT_RAGDOLL, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
+        builder.put(EffectSkullBlock.Types.CAT_WHITE, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
+        builder.put(EffectSkullBlock.Types.CAT_JELLIE, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
+        builder.put(EffectSkullBlock.Types.CAT_ALL_BLACK, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
         builder.put(EffectSkullBlock.Types.CAVE_SPIDER, new CaveSpiderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAVE_SPIDER_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SPIDER_EYES)));
         builder.put(EffectSkullBlock.Types.CHICKEN, new ChickenHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CHICKEN_HEAD)));
         builder.put(EffectSkullBlock.Types.GHAST, new GhastHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.GHAST_HEAD)));
+        builder.put(EffectSkullBlock.Types.OCELOT, new OcelotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.OCELOT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_RED_BLUE, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_BLUE, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_GREEN, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));

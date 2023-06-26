@@ -13,7 +13,7 @@ public class AllayHeadModel extends SkullModel {
     public static MeshDefinition createAllayHeadModel() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
-        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0)
+        partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0)
                         .addBox(-2.5F, -5.0F, -2.5F, 5.0F, 5.0F, 5.0F),
                 PartPose.ZERO);
         return meshdefinition;

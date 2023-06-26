@@ -56,6 +56,83 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.AXOLOTL_BLUE, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(AXOLOTL_HEAD_BLUE).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> CAT_HEAD_TABBY = BLOCKS.register("cat_head_tabby",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.CAT_TABBY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> CAT_WALL_HEAD_TABBY = BLOCKS.register("cat_wall_head_tabby",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CAT_TABBY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(CAT_HEAD_TABBY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> CAT_HEAD_BLACK = BLOCKS.register("cat_head_black",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.CAT_BLACK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> CAT_WALL_HEAD_BLACK = BLOCKS.register("cat_wall_head_black",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CAT_BLACK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(CAT_HEAD_BLACK).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> CAT_HEAD_RED = BLOCKS.register("cat_head_red",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.CAT_RED, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> CAT_WALL_HEAD_RED = BLOCKS.register("cat_wall_head_red",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CAT_RED, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(CAT_HEAD_RED).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> CAT_HEAD_SIAMESE = BLOCKS.register("cat_head_siamese",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.CAT_SIAMESE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> CAT_WALL_HEAD_SIAMESE = BLOCKS.register("cat_wall_head_siamese",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CAT_SIAMESE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(CAT_HEAD_SIAMESE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> CAT_HEAD_BRITISH_SHORTHAIR = BLOCKS.register("cat_head_british_shorthair",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.CAT_BRITISH_SHORTHAIR, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> CAT_WALL_HEAD_BRITISH_SHORTHAIR = BLOCKS.register("cat_wall_head_british_shorthair",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CAT_BRITISH_SHORTHAIR, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(CAT_HEAD_BRITISH_SHORTHAIR).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> CAT_HEAD_CALICO = BLOCKS.register("cat_head_calico",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.CAT_CALICO, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> CAT_WALL_HEAD_CALICO = BLOCKS.register("cat_wall_head_calico",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CAT_CALICO, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(CAT_HEAD_CALICO).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> CAT_HEAD_PERSIAN = BLOCKS.register("cat_head_persian",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.CAT_PERSIAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> CAT_WALL_HEAD_PERSIAN = BLOCKS.register("cat_wall_head_persian",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CAT_PERSIAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(CAT_HEAD_PERSIAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> CAT_HEAD_RAGDOLL = BLOCKS.register("cat_head_ragdoll",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.CAT_RAGDOLL, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> CAT_WALL_HEAD_RAGDOLL = BLOCKS.register("cat_wall_head_ragdoll",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CAT_RAGDOLL, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(CAT_HEAD_RAGDOLL).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> CAT_HEAD_WHITE = BLOCKS.register("cat_head_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.CAT_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> CAT_WALL_HEAD_WHITE = BLOCKS.register("cat_wall_head_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CAT_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(CAT_HEAD_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> CAT_HEAD_JELLIE = BLOCKS.register("cat_head_jellie",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.CAT_JELLIE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> CAT_WALL_HEAD_JELLIE = BLOCKS.register("cat_wall_head_jellie",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CAT_JELLIE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(CAT_HEAD_JELLIE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> CAT_HEAD_ALL_BLACK = BLOCKS.register("cat_head_all_black",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.CAT_ALL_BLACK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> CAT_WALL_HEAD_ALL_BLACK = BLOCKS.register("cat_wall_head_all_black",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CAT_ALL_BLACK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(CAT_HEAD_ALL_BLACK).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> CAVE_SPIDER_HEAD = BLOCKS.register("cave_spider_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.CAVE_SPIDER, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
@@ -76,6 +153,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> GHAST_WALL_HEAD = BLOCKS.register("ghast_wall_head",
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GHAST, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(GHAST_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> OCELOT_HEAD = BLOCKS.register("ocelot_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.OCELOT, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> OCELOT_WALL_HEAD = BLOCKS.register("ocelot_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.OCELOT, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(OCELOT_HEAD).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> PARROT_HEAD_RED_BLUE = BLOCKS.register("parrot_head_red_blue",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.PARROT_RED_BLUE, BlockBehaviour.Properties.of()

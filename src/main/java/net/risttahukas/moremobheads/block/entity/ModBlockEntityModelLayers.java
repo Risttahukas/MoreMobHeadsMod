@@ -7,9 +7,11 @@ import net.risttahukas.moremobheads.MoreMobHeadsMod;
 public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation ALLAY_HEAD = register("allay_head");
     public static final ModelLayerLocation AXOLOTL_HEAD = register("axolotl_head");
+    public static final ModelLayerLocation CAT_HEAD = register("cat_head");
     public static final ModelLayerLocation CAVE_SPIDER_HEAD = register("cave_spider_head");
     public static final ModelLayerLocation CHICKEN_HEAD = register("chicken_head");
     public static final ModelLayerLocation GHAST_HEAD = register("ghast_head");
+    public static final ModelLayerLocation OCELOT_HEAD = register("ocelot_head");
     public static final ModelLayerLocation PARROT_HEAD = register("parrot_head");
     public static final ModelLayerLocation SHEEP_HEAD = register("sheep_head");
     public static final ModelLayerLocation SHEEP_HEAD_WOOL = register("sheep_head_wool");

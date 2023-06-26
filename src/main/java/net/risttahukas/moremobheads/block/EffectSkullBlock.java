@@ -20,14 +20,18 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(5.5D, 0.0D, 5.5D, 10.5D, 5.0D, 10.5D);
     protected static final VoxelShape AXOLOTL_SHAPE =
             Block.box(5.0D, 0.0D, 5.0D, 11.0D, 5.0D, 11.0D);
+    protected static final VoxelShape CAT_SHAPE =
+            Block.box(6.0D, 0.0D, 6.0D, 10.0D, 3.2D, 10.0D);
     protected static final VoxelShape CAVE_SPIDER_SHAPE =
             Block.box(5.2D, 0.0D, 5.2D, 10.8D, 5.6D, 10.8D);
     protected static final VoxelShape CHICKEN_SHAPE =
             Block.box(6.0D, 0.0D, 6.0D, 10.0D, 6.0D, 10.0D);
-    protected static final VoxelShape SHEEP_SHAPE =
-            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 6.0D, 12.0D);
+    protected static final VoxelShape OCELOT_SHAPE =
+            Block.box(5.5D, 0.0D, 5.5D, 10.5D, 4.0D, 10.5D);
     protected static final VoxelShape PARROT_SHAPE =
             Block.box(7.0D, 0.0D, 7.0D, 9.0D, 4.0D, 9.0D);
+    protected static final VoxelShape SHEEP_SHAPE =
+            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 6.0D, 12.0D);
 
     public EffectSkullBlock(Type type, Properties properties) {
         super(type, properties);
@@ -42,10 +46,23 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.AXOLOTL_GOLD.equals(this.getType()) || Types.AXOLOTL_CYAN.equals(this.getType()) ||
                 Types.AXOLOTL_BLUE.equals(this.getType())) {
             return AXOLOTL_SHAPE;
+        } if (Types.CAT_TABBY.equals(this.getType()) || Types.CAT_BLACK.equals(this.getType()) ||
+                Types.CAT_RED.equals(this.getType()) || Types.CAT_SIAMESE.equals(this.getType()) ||
+                Types.CAT_BRITISH_SHORTHAIR.equals(this.getType()) || Types.CAT_CALICO.equals(this.getType()) ||
+                Types.CAT_PERSIAN.equals(this.getType()) || Types.CAT_RAGDOLL.equals(this.getType()) ||
+                Types.CAT_WHITE.equals(this.getType()) || Types.CAT_JELLIE.equals(this.getType()) ||
+                Types.CAT_ALL_BLACK.equals(this.getType())) {
+            return CAT_SHAPE;
         } if (Types.CAVE_SPIDER.equals(this.getType())) {
             return CAVE_SPIDER_SHAPE;
         } if (Types.CHICKEN.equals(this.getType())) {
             return CHICKEN_SHAPE;
+        } if (Types.OCELOT.equals(this.getType())) {
+            return OCELOT_SHAPE;
+        } if (Types.PARROT_RED_BLUE.equals(this.getType()) || Types.PARROT_BLUE.equals(this.getType()) ||
+                Types.PARROT_GREEN.equals(this.getType()) || Types.PARROT_YELLOW_BLUE.equals(this.getType()) ||
+                Types.PARROT_GREY.equals(this.getType())) {
+            return PARROT_SHAPE;
         } if (Types.SHEEP_WHITE.equals(this.getType()) || Types.SHEEP_ORANGE.equals(this.getType()) ||
                 Types.SHEEP_MAGENTA.equals(this.getType()) || Types.SHEEP_LIGHT_BLUE.equals(this.getType()) ||
                 Types.SHEEP_YELLOW.equals(this.getType()) || Types.SHEEP_LIME.equals(this.getType()) ||
@@ -56,10 +73,6 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.SHEEP_RED.equals(this.getType()) || Types.SHEEP_BLACK.equals(this.getType()) ||
                 Types.SHEEP_RAINBOW.equals(this.getType())) {
             return SHEEP_SHAPE;
-        } if (Types.PARROT_RED_BLUE.equals(this.getType()) || Types.PARROT_BLUE.equals(this.getType()) ||
-                Types.PARROT_GREEN.equals(this.getType()) || Types.PARROT_YELLOW_BLUE.equals(this.getType()) ||
-                Types.PARROT_GREY.equals(this.getType())) {
-            return PARROT_SHAPE;
         }
         return SHAPE;
     }
@@ -91,9 +104,24 @@ public class EffectSkullBlock extends SkullBlock {
         AXOLOTL_GOLD,
         AXOLOTL_CYAN,
         AXOLOTL_BLUE,
+        BAT,
+        BEE,
+        CAMEL,
+        CAT_TABBY,
+        CAT_BLACK,
+        CAT_RED,
+        CAT_SIAMESE,
+        CAT_BRITISH_SHORTHAIR,
+        CAT_CALICO,
+        CAT_PERSIAN,
+        CAT_RAGDOLL,
+        CAT_WHITE,
+        CAT_JELLIE,
+        CAT_ALL_BLACK,
         CAVE_SPIDER,
         CHICKEN,
         GHAST,
+        OCELOT,
         PARROT_RED_BLUE,
         PARROT_BLUE,
         PARROT_GREEN,
