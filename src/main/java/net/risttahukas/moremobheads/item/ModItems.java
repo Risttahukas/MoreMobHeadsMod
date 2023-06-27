@@ -38,6 +38,14 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.AXOLOTL_HEAD_BLUE.get(), ModBlocks.AXOLOTL_WALL_HEAD_BLUE.get(),
                     (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
 
+    public static final RegistryObject<Item> BAT_HEAD = ITEMS.register("bat_head", () ->
+            new EffectSkullItem(ModBlocks.BAT_HEAD.get(), ModBlocks.BAT_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> CAMEL_HEAD = ITEMS.register("camel_head", () ->
+            new EffectSkullItem(ModBlocks.CAMEL_HEAD.get(), ModBlocks.CAMEL_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> CAT_HEAD_TABBY = ITEMS.register("cat_head_tabby", () ->
             new EffectSkullItem(ModBlocks.CAT_HEAD_TABBY.get(), ModBlocks.CAT_WALL_HEAD_TABBY.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

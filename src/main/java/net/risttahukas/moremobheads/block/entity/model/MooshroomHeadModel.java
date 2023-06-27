@@ -7,6 +7,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.block.BlockRenderDispatcher;
+import net.minecraft.util.Mth;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.data.ModelData;
 import org.jetbrains.annotations.NotNull;
@@ -32,8 +33,8 @@ public class MooshroomHeadModel extends CowHeadModel {
         BlockRenderDispatcher blockRenderDispatcher = Minecraft.getInstance().getBlockRenderer();
         poseStack.scale(1.0F, -1.0F, 1.0F);
         poseStack.translate(-0.5F, 0.45F, -0.5F);
-        float xTranslation = (float)(-0.01F * Math.sin((double)rotationAngle * ((float)Math.PI / 180F)));
-        float zTranslation = (float)(-0.01F * Math.cos((double)rotationAngle * ((float)Math.PI / 180F)));
+        float xTranslation = -0.01F * Mth.sin(rotationAngle * ((float)Math.PI / 180F));
+        float zTranslation = -0.01F * Mth.cos(rotationAngle * ((float)Math.PI / 180F));
         poseStack.translate(xTranslation, 0.0F, zTranslation);
         poseStack.rotateAround(Axis.YP.rotationDegrees(-78.0F + rotationAngle), 0.5F, 0.0F, 0.5F);
         blockRenderDispatcher.renderSingleBlock(blockstate, poseStack, multiBufferSource, p_103817_, 655360, ModelData.EMPTY, null);

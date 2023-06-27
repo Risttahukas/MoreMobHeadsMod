@@ -49,6 +49,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.AXOLOTL_GOLD, new ResourceLocation("textures/entity/axolotl/axolotl_gold.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.AXOLOTL_CYAN, new ResourceLocation("textures/entity/axolotl/axolotl_cyan.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.AXOLOTL_BLUE, new ResourceLocation("textures/entity/axolotl/axolotl_blue.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.BAT, new ResourceLocation("textures/entity/bat.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAMEL, new ResourceLocation("textures/entity/camel/camel.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_TABBY, new ResourceLocation("textures/entity/cat/tabby.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_BLACK, new ResourceLocation("textures/entity/cat/black.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_RED, new ResourceLocation("textures/entity/cat/red.png"));
@@ -116,20 +118,26 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         if (direction == null) {
             poseStack.translate(0.5F, 0.0F, 0.5F);
         } else {
-            float translation = 0.25F;
+            float horizontalTranslation = 0.25F;
+            float verticalTranslation = 0.25F;
             if (skullModelBase instanceof AxolotlHeadModel || skullModelBase instanceof CatHeadModel) {
-                translation = 0.375F;
+                horizontalTranslation = 0.375F;
             } else if (skullModelBase instanceof AllayHeadModel || skullModelBase instanceof OcelotHeadModel) {
-                translation = 0.34375F;
+                horizontalTranslation = 0.34375F;
+            } else if (skullModelBase instanceof BatHeadModel) {
+                horizontalTranslation = 0.434375F;
+            } else if (skullModelBase instanceof CamelHeadModel) {
+                horizontalTranslation = 0.28125F;
+                verticalTranslation = 0.125F;
             } else if (skullModelBase instanceof CaveSpiderHeadModel) {
-                translation = 0.325F;
+                horizontalTranslation = 0.325F;
             } else if (skullModelBase instanceof ChickenHeadModel || skullModelBase instanceof ParrotHeadModel) {
-                translation = 0.4375F;
+                horizontalTranslation = 0.4375F;
             } else if (skullModelBase instanceof CowHeadModel) {
-                translation = 0.3125F;
+                horizontalTranslation = 0.3125F;
             }
-            poseStack.translate(0.5F - (float)direction.getStepX() * translation, 0.25F,
-                    0.5F - (float)direction.getStepZ() * translation);
+            poseStack.translate(0.5F - (float)direction.getStepX() * horizontalTranslation, verticalTranslation,
+                    0.5F - (float)direction.getStepZ() * horizontalTranslation);
         }
 
         poseStack.scale(-1.0F, -1.0F, 1.0F);
@@ -164,6 +172,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.AXOLOTL_GOLD, new AxolotlHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.AXOLOTL_HEAD)));
         builder.put(EffectSkullBlock.Types.AXOLOTL_CYAN, new AxolotlHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.AXOLOTL_HEAD)));
         builder.put(EffectSkullBlock.Types.AXOLOTL_BLUE, new AxolotlHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.AXOLOTL_HEAD)));
+        builder.put(EffectSkullBlock.Types.BAT, new BatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.BAT_HEAD)));
+        builder.put(EffectSkullBlock.Types.CAMEL, new CamelHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAMEL_HEAD)));
         builder.put(EffectSkullBlock.Types.CAT_TABBY, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
         builder.put(EffectSkullBlock.Types.CAT_BLACK, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
         builder.put(EffectSkullBlock.Types.CAT_RED, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));

@@ -10,7 +10,7 @@ public class WitchHeadModel extends VillagerHeadModel{
         super(modelPart);
     }
 
-    public static LayerDefinition createWitchHeadLayer() {
+    public static MeshDefinition createWitchHeadModel() {
         MeshDefinition meshdefinition = createVillagerHeadModel();
         PartDefinition partdefinition = meshdefinition.getRoot();
         PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -10.0F, -4.0F, 8.0F, 10.0F, 8.0F), PartPose.ZERO);
@@ -20,6 +20,11 @@ public class WitchHeadModel extends VillagerHeadModel{
         hat3.addOrReplaceChild("hat4", CubeListBuilder.create().texOffs(0, 95).addBox(0.0F, 0.0F, 0.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.25F)), PartPose.offsetAndRotation(1.75F, -2.0F, 2.0F, -0.20943952F, 0.0F, 0.10471976F));
         PartDefinition nose = head.getChild("nose");
         nose.addOrReplaceChild("mole", CubeListBuilder.create().texOffs(0, 0).addBox(0.0F, 3.0F, -6.75F, 1.0F, 1.0F, 1.0F, new CubeDeformation(-0.25F)), PartPose.offset(0.0F, -2.0F, 0.0F));
+        return meshdefinition;
+    }
+
+    public static LayerDefinition createWitchHeadLayer() {
+        MeshDefinition meshdefinition = createWitchHeadModel();
         return LayerDefinition.create(meshdefinition, 64, 128);
     }
 

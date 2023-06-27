@@ -56,6 +56,20 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.AXOLOTL_BLUE, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(AXOLOTL_HEAD_BLUE).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> BAT_HEAD = BLOCKS.register("bat_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.BAT, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> BAT_WALL_HEAD = BLOCKS.register("bat_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.BAT, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(BAT_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> CAMEL_HEAD = BLOCKS.register("camel_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.CAMEL, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> CAMEL_WALL_HEAD = BLOCKS.register("camel_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CAMEL, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(CAMEL_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> CAT_HEAD_TABBY = BLOCKS.register("cat_head_tabby",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.CAT_TABBY, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

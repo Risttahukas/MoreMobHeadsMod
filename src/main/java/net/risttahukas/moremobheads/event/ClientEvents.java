@@ -78,6 +78,8 @@ public class ClientEvents {
         public static void registerLayerDefinitions(final EntityRenderersEvent.RegisterLayerDefinitions event) {
             event.registerLayerDefinition(ModBlockEntityModelLayers.AXOLOTL_HEAD, AxolotlHeadModel::createAxolotlHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.ALLAY_HEAD, AllayHeadModel::createAllayHeadLayer);
+            event.registerLayerDefinition(ModBlockEntityModelLayers.BAT_HEAD, BatHeadModel::createBatHeadLayer);
+            event.registerLayerDefinition(ModBlockEntityModelLayers.CAMEL_HEAD, CamelHeadModel::createCamelHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.CAT_HEAD, CatHeadModel::createCatHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.CAVE_SPIDER_HEAD, SpiderHeadModel::createSpiderHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.CHICKEN_HEAD, ChickenHeadModel::createChickenHeadLayer);

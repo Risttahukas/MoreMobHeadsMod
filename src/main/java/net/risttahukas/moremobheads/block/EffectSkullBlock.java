@@ -20,6 +20,10 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(5.5D, 0.0D, 5.5D, 10.5D, 5.0D, 10.5D);
     protected static final VoxelShape AXOLOTL_SHAPE =
             Block.box(5.0D, 0.0D, 5.0D, 11.0D, 5.0D, 11.0D);
+    protected static final VoxelShape BAT_SHAPE =
+            Block.box(6.95D, 0.0D, 6.95D, 9.05D, 2.1D, 9.05D);
+    protected static final VoxelShape CAMEL_SHAPE =
+            Block.box(4.5D, 0.0D, 4.5D, 11.5D, 14.0D, 11.5D);
     protected static final VoxelShape CAT_SHAPE =
             Block.box(6.0D, 0.0D, 6.0D, 10.0D, 3.2D, 10.0D);
     protected static final VoxelShape CAVE_SPIDER_SHAPE =
@@ -46,6 +50,10 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.AXOLOTL_GOLD.equals(this.getType()) || Types.AXOLOTL_CYAN.equals(this.getType()) ||
                 Types.AXOLOTL_BLUE.equals(this.getType())) {
             return AXOLOTL_SHAPE;
+        } if (Types.BAT.equals(this.getType())) {
+            return BAT_SHAPE;
+        } if (Types.CAMEL.equals(this.getType())) {
+            return CAMEL_SHAPE;
         } if (Types.CAT_TABBY.equals(this.getType()) || Types.CAT_BLACK.equals(this.getType()) ||
                 Types.CAT_RED.equals(this.getType()) || Types.CAT_SIAMESE.equals(this.getType()) ||
                 Types.CAT_BRITISH_SHORTHAIR.equals(this.getType()) || Types.CAT_CALICO.equals(this.getType()) ||
@@ -87,7 +95,7 @@ public class EffectSkullBlock extends SkullBlock {
                                                                   @NotNull BlockEntityType<T> tBlockEntityType) {
         if (level.isClientSide) {
             boolean flag = blockState.is(ModBlocks.WITCH_HEAD.get()) || blockState.is(ModBlocks.GHAST_HEAD.get()) ||
-                    blockState.is(ModBlocks.SHEEP_HEAD_RAINBOW.get());
+                    blockState.is(ModBlocks.SHEEP_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.CAMEL_HEAD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);
