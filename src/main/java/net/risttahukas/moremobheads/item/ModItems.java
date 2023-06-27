@@ -90,9 +90,21 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.CHICKEN_HEAD.get(), ModBlocks.CHICKEN_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> COW_HEAD = ITEMS.register("cow_head", () ->
+            new EffectSkullItem(ModBlocks.COW_HEAD.get(), ModBlocks.COW_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> GHAST_HEAD = ITEMS.register("ghast_head", () ->
             new EffectSkullItem(ModBlocks.GHAST_HEAD.get(), ModBlocks.GHAST_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> MOOSHROOM_HEAD_RED = ITEMS.register("mooshroom_head_red", () ->
+            new EffectSkullItem(ModBlocks.MOOSHROOM_HEAD_RED.get(), ModBlocks.MOOSHROOM_WALL_HEAD_RED.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> MOOSHROOM_HEAD_BROWN = ITEMS.register("mooshroom_head_brown", () ->
+            new EffectSkullItem(ModBlocks.MOOSHROOM_HEAD_BROWN.get(), ModBlocks.MOOSHROOM_WALL_HEAD_BROWN.get(),
+                    (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
 
     public static final RegistryObject<Item> OCELOT_HEAD = ITEMS.register("ocelot_head", () ->
             new EffectSkullItem(ModBlocks.OCELOT_HEAD.get(), ModBlocks.OCELOT_WALL_HEAD.get(),

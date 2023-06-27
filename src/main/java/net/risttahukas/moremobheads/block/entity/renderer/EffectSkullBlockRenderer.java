@@ -18,6 +18,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.AbstractSkullBlock;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SkullBlock;
 import net.minecraft.world.level.block.WallSkullBlock;
 import net.minecraft.world.level.block.entity.SkullBlockEntity;
@@ -37,7 +38,6 @@ import java.util.Map;
 
 @OnlyIn(Dist.CLIENT)
 public class EffectSkullBlockRenderer extends SkullBlockRenderer implements BlockEntityRenderer<SkullBlockEntity> {
-
     private final Map<SkullBlock.Type, SkullModelBase> modelByType;
 
     public EffectSkullBlockRenderer(BlockEntityRendererProvider.Context context) {
@@ -62,7 +62,10 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_ALL_BLACK, new ResourceLocation("textures/entity/cat/all_black.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAVE_SPIDER, new ResourceLocation("textures/entity/spider/cave_spider.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CHICKEN, new ResourceLocation("textures/entity/chicken.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.COW, new ResourceLocation("textures/entity/cow/cow.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.GHAST, new ResourceLocation("textures/entity/ghast/ghast.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.MOOSHROOM_RED, new ResourceLocation("textures/entity/cow/red_mooshroom.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.MOOSHROOM_BROWN, new ResourceLocation("textures/entity/cow/brown_mooshroom.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.OCELOT, new ResourceLocation("textures/entity/cat/ocelot.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_RED_BLUE, new ResourceLocation("textures/entity/parrot/parrot_red_blue.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_BLUE, new ResourceLocation("textures/entity/parrot/parrot_blue.png"));
@@ -113,22 +116,20 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         if (direction == null) {
             poseStack.translate(0.5F, 0.0F, 0.5F);
         } else {
+            float translation = 0.25F;
             if (skullModelBase instanceof AxolotlHeadModel || skullModelBase instanceof CatHeadModel) {
-                poseStack.translate(0.5F - (float)direction.getStepX() * 0.375F, 0.25F,
-                        0.5F - (float)direction.getStepZ() * 0.375F);
+                translation = 0.375F;
             } else if (skullModelBase instanceof AllayHeadModel || skullModelBase instanceof OcelotHeadModel) {
-                poseStack.translate(0.5F - (float)direction.getStepX() * 0.34375F, 0.25F,
-                        0.5F - (float)direction.getStepZ() * 0.34375F);
+                translation = 0.34375F;
             } else if (skullModelBase instanceof CaveSpiderHeadModel) {
-                poseStack.translate(0.5F - (float)direction.getStepX() * 0.325F, 0.25F,
-                        0.5F - (float)direction.getStepZ() * 0.325F);
+                translation = 0.325F;
             } else if (skullModelBase instanceof ChickenHeadModel || skullModelBase instanceof ParrotHeadModel) {
-                poseStack.translate(0.5F - (float)direction.getStepX() * 0.4375F, 0.25F,
-                        0.5F - (float)direction.getStepZ() * 0.4375F);
-            } else {
-                poseStack.translate(0.5F - (float)direction.getStepX() * 0.25F, 0.25F,
-                        0.5F - (float)direction.getStepZ() * 0.25F);
+                translation = 0.4375F;
+            } else if (skullModelBase instanceof CowHeadModel) {
+                translation = 0.3125F;
             }
+            poseStack.translate(0.5F - (float)direction.getStepX() * translation, 0.25F,
+                    0.5F - (float)direction.getStepZ() * translation);
         }
 
         poseStack.scale(-1.0F, -1.0F, 1.0F);
@@ -138,6 +139,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
             sheepHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else if (skullModelBase instanceof SpiderHeadModel spiderHeadModel) {
             spiderHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+        } else if (skullModelBase instanceof MooshroomHeadModel mooshroomHeadModel) {
+            mooshroomHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else {
             skullModelBase.renderToBuffer(poseStack, vertexconsumer, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         }
@@ -174,7 +177,10 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.CAT_ALL_BLACK, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
         builder.put(EffectSkullBlock.Types.CAVE_SPIDER, new CaveSpiderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAVE_SPIDER_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SPIDER_EYES)));
         builder.put(EffectSkullBlock.Types.CHICKEN, new ChickenHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CHICKEN_HEAD)));
+        builder.put(EffectSkullBlock.Types.COW, new CowHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.COW_HEAD)));
         builder.put(EffectSkullBlock.Types.GHAST, new GhastHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.GHAST_HEAD)));
+        builder.put(EffectSkullBlock.Types.MOOSHROOM_RED, new MooshroomHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.COW_HEAD), Blocks.RED_MUSHROOM.defaultBlockState()));
+        builder.put(EffectSkullBlock.Types.MOOSHROOM_BROWN, new MooshroomHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.COW_HEAD), Blocks.BROWN_MUSHROOM.defaultBlockState()));
         builder.put(EffectSkullBlock.Types.OCELOT, new OcelotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.OCELOT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_RED_BLUE, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_BLUE, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));

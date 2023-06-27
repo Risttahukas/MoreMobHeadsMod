@@ -147,12 +147,33 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CHICKEN, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(CHICKEN_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> COW_HEAD = BLOCKS.register("cow_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.COW, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> COW_WALL_HEAD = BLOCKS.register("cow_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.COW, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(COW_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> GHAST_HEAD = BLOCKS.register("ghast_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.GHAST, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
     public static final RegistryObject<Block> GHAST_WALL_HEAD = BLOCKS.register("ghast_wall_head",
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GHAST, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(GHAST_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> MOOSHROOM_HEAD_RED = BLOCKS.register("mooshroom_head_red",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.MOOSHROOM_RED, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> MOOSHROOM_WALL_HEAD_RED = BLOCKS.register("mooshroom_wall_head_red",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.MOOSHROOM_RED, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(MOOSHROOM_HEAD_RED).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> MOOSHROOM_HEAD_BROWN = BLOCKS.register("mooshroom_head_brown",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.MOOSHROOM_BROWN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> MOOSHROOM_WALL_HEAD_BROWN = BLOCKS.register("mooshroom_wall_head_brown",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.MOOSHROOM_BROWN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(MOOSHROOM_HEAD_BROWN).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> OCELOT_HEAD = BLOCKS.register("ocelot_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.OCELOT, BlockBehaviour.Properties.of()
