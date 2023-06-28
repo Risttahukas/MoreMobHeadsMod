@@ -175,6 +175,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.COW, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(COW_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> DROWNED_HEAD = BLOCKS.register("drowned_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.DROWNED, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> DROWNED_WALL_HEAD = BLOCKS.register("drowned_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.DROWNED, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(DROWNED_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> GHAST_HEAD = BLOCKS.register("ghast_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.GHAST, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

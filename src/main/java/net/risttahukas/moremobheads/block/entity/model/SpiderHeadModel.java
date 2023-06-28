@@ -22,7 +22,7 @@ public class SpiderHeadModel extends SkullModel {
     public SpiderHeadModel(ModelPart skinModelPart, ModelPart eyesModelPart) {
         super(skinModelPart);
         this.rootEyes = eyesModelPart;
-        this.headEyes =  eyesModelPart.getChild("head");
+        this.headEyes = eyesModelPart.getChild("head");
     }
 
     public static MeshDefinition createSpiderHeadModel() {

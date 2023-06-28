@@ -66,6 +66,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAVE_SPIDER, new ResourceLocation("textures/entity/spider/cave_spider.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CHICKEN, new ResourceLocation("textures/entity/chicken.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.COW, new ResourceLocation("textures/entity/cow/cow.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.DROWNED, new ResourceLocation("textures/entity/zombie/drowned.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.GHAST, new ResourceLocation("textures/entity/ghast/ghast.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.HUSK, new ResourceLocation("textures/entity/zombie/husk.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.MOOSHROOM_RED, new ResourceLocation("textures/entity/cow/red_mooshroom.png"));
@@ -151,6 +152,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
             sheepHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else if (skullModelBase instanceof SpiderHeadModel spiderHeadModel) {
             spiderHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+        } else if (skullModelBase instanceof DrownedHeadModel drownedHeadModel) {
+            drownedHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else if (skullModelBase instanceof MooshroomHeadModel mooshroomHeadModel) {
             mooshroomHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else {
@@ -193,6 +196,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.CAVE_SPIDER, new CaveSpiderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAVE_SPIDER_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SPIDER_EYES)));
         builder.put(EffectSkullBlock.Types.CHICKEN, new ChickenHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CHICKEN_HEAD)));
         builder.put(EffectSkullBlock.Types.COW, new CowHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.COW_HEAD)));
+        builder.put(EffectSkullBlock.Types.DROWNED, new DrownedHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HUMANOID_SKULL), entityModelSet.bakeLayer(ModBlockEntityModelLayers.DROWNED_CLOTHES)));
         builder.put(EffectSkullBlock.Types.GHAST, new GhastHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.GHAST_HEAD)));
         builder.put(EffectSkullBlock.Types.HUSK, new HuskHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HUMANOID_SKULL)));
         builder.put(EffectSkullBlock.Types.MOOSHROOM_RED, new MooshroomHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.COW_HEAD), Blocks.RED_MUSHROOM.defaultBlockState()));
