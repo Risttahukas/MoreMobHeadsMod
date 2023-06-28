@@ -113,6 +113,7 @@ public class EffectSkullBlock extends SkullBlock {
         AXOLOTL_CYAN,
         AXOLOTL_BLUE,
         BAT,
+        BLAZE,
         BEE,
         CAMEL,
         CAT_TABBY,

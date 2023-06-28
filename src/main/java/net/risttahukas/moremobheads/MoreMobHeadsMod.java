@@ -56,6 +56,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.AXOLOTL_HEAD_CYAN);
             event.accept(ModItems.AXOLOTL_HEAD_BLUE);
             event.accept(ModItems.BAT_HEAD);
+            event.accept(ModItems.BLAZE_HEAD);
             event.accept(ModItems.CAMEL_HEAD);
             event.accept(ModItems.CAT_HEAD_TABBY);
             event.accept(ModItems.CAT_HEAD_BLACK);

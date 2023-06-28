@@ -50,6 +50,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.AXOLOTL_CYAN, new ResourceLocation("textures/entity/axolotl/axolotl_cyan.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.AXOLOTL_BLUE, new ResourceLocation("textures/entity/axolotl/axolotl_blue.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.BAT, new ResourceLocation("textures/entity/bat.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.BLAZE, new ResourceLocation("textures/entity/blaze.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAMEL, new ResourceLocation("textures/entity/camel/camel.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_TABBY, new ResourceLocation("textures/entity/cat/tabby.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_BLACK, new ResourceLocation("textures/entity/cat/black.png"));
@@ -173,6 +174,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.AXOLOTL_CYAN, new AxolotlHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.AXOLOTL_HEAD)));
         builder.put(EffectSkullBlock.Types.AXOLOTL_BLUE, new AxolotlHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.AXOLOTL_HEAD)));
         builder.put(EffectSkullBlock.Types.BAT, new BatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.BAT_HEAD)));
+        builder.put(EffectSkullBlock.Types.BLAZE, new SkullModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.MOB_SKULL)));
         builder.put(EffectSkullBlock.Types.CAMEL, new CamelHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAMEL_HEAD)));
         builder.put(EffectSkullBlock.Types.CAT_TABBY, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
         builder.put(EffectSkullBlock.Types.CAT_BLACK, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));

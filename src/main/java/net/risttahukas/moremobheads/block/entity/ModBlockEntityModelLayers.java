@@ -5,6 +5,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.risttahukas.moremobheads.MoreMobHeadsMod;
 
 public class ModBlockEntityModelLayers {
+    public static final ModelLayerLocation MOB_SKULL = register("mob_skull");
+
     public static final ModelLayerLocation ALLAY_HEAD = register("allay_head");
     public static final ModelLayerLocation AXOLOTL_HEAD = register("axolotl_head");
     public static final ModelLayerLocation BAT_HEAD = register("bat_head");

@@ -63,6 +63,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.BAT, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(BAT_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> BLAZE_HEAD = BLOCKS.register("blaze_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.BLAZE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> BLAZE_WALL_HEAD = BLOCKS.register("blaze_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.BLAZE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(BLAZE_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> CAMEL_HEAD = BLOCKS.register("camel_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.CAMEL, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

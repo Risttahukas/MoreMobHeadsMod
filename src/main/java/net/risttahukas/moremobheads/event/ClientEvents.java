@@ -3,6 +3,7 @@ package net.risttahukas.moremobheads.event;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.model.SkullModel;
 import net.minecraft.client.model.SkullModelBase;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
@@ -76,6 +77,7 @@ public class ClientEvents {
 
         @SubscribeEvent
         public static void registerLayerDefinitions(final EntityRenderersEvent.RegisterLayerDefinitions event) {
+            event.registerLayerDefinition(ModBlockEntityModelLayers.MOB_SKULL, SkullModel::createMobHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.AXOLOTL_HEAD, AxolotlHeadModel::createAxolotlHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.ALLAY_HEAD, AllayHeadModel::createAllayHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.BAT_HEAD, BatHeadModel::createBatHeadLayer);
