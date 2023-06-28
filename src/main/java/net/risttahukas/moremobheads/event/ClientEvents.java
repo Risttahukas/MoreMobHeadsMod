@@ -77,7 +77,9 @@ public class ClientEvents {
 
         @SubscribeEvent
         public static void registerLayerDefinitions(final EntityRenderersEvent.RegisterLayerDefinitions event) {
+            event.registerLayerDefinition(ModBlockEntityModelLayers.HUMANOID_SKULL, SkullModel::createHumanoidHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.MOB_SKULL, SkullModel::createMobHeadLayer);
+
             event.registerLayerDefinition(ModBlockEntityModelLayers.AXOLOTL_HEAD, AxolotlHeadModel::createAxolotlHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.ALLAY_HEAD, AllayHeadModel::createAllayHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.BAT_HEAD, BatHeadModel::createBatHeadLayer);

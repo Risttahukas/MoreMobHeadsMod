@@ -182,6 +182,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GHAST, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(GHAST_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> HUSK_HEAD = BLOCKS.register("husk_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HUSK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HUSK_WALL_HEAD = BLOCKS.register("husk_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HUSK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HUSK_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> MOOSHROOM_HEAD_RED = BLOCKS.register("mooshroom_head_red",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.MOOSHROOM_RED, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
