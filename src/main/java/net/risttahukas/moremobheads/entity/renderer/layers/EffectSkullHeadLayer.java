@@ -99,7 +99,8 @@ public class EffectSkullHeadLayer<T extends LivingEntity, M extends EntityModel<
 
                 float animationProgress = walkanimationstate.position(p_116737_);
 
-                if (skullblock$type == EffectSkullBlock.Types.SHEEP_RAINBOW) {
+                if (skullblock$type == EffectSkullBlock.Types.SHEEP_RAINBOW ||
+                        skullblock$type == EffectSkullBlock.Types.CREEPER_CHARGED) {
                     float tickCount = (float) ClientEvents.time + Minecraft.getInstance().getPartialTick();
                     animationProgress = tickCount / 2.0F;
                 }

@@ -72,8 +72,9 @@ public class MoreMobHeadsMod
             event.accept(ModItems.CAVE_SPIDER_HEAD);
             event.accept(ModItems.CHICKEN_HEAD);
             event.accept(ModItems.COW_HEAD);
-            event.accept(ModItems.DROWNED_HEAD);
             event.accept(Items.CREEPER_HEAD);
+            event.accept(ModItems.CREEPER_HEAD_CHARGED);
+            event.accept(ModItems.DROWNED_HEAD);
             event.accept(Items.DRAGON_HEAD);
             event.accept(ModItems.GHAST_HEAD);
             event.accept(ModItems.HUSK_HEAD);

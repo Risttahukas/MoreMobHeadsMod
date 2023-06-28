@@ -170,7 +170,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                                                                   @NotNull BlockEntityType<T> tBlockEntityType) {
         if (level.isClientSide) {
             boolean flag = blockState.is(ModBlocks.WITCH_WALL_HEAD.get()) || blockState.is(ModBlocks.GHAST_WALL_HEAD.get()) ||
-                    blockState.is(ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.CAMEL_WALL_HEAD.get());
+                    blockState.is(ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.CAMEL_WALL_HEAD.get()) ||
+                    blockState.is(ModBlocks.CREEPER_WALL_HEAD_CHARGED.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);

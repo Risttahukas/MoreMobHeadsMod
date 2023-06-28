@@ -23,7 +23,8 @@ public class EffectSkullBlockEntity extends SkullBlockEntity {
 
     public static void animation(Level level, BlockPos blockPos, BlockState blockState, EffectSkullBlockEntity effectSkullBlockEntity) {
         if (level.hasNeighborSignal(blockPos) ||
-                blockState.is(ModBlocks.SHEEP_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get())) {
+                blockState.is(ModBlocks.SHEEP_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get()) ||
+                blockState.is(ModBlocks.CREEPER_HEAD_CHARGED.get()) || blockState.is(ModBlocks.CREEPER_WALL_HEAD_CHARGED.get())) {
             effectSkullBlockEntity.isAnimating = true;
             ++effectSkullBlockEntity.animationTickCount;
         } else {

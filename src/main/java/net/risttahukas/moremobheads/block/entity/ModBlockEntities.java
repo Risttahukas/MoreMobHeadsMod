@@ -38,6 +38,7 @@ public class ModBlockEntities {
                             ModBlocks.CAVE_SPIDER_HEAD.get(), ModBlocks.CAVE_SPIDER_WALL_HEAD.get(),
                             ModBlocks.CHICKEN_HEAD.get(), ModBlocks.CHICKEN_WALL_HEAD.get(),
                             ModBlocks.COW_HEAD.get(), ModBlocks.COW_WALL_HEAD.get(),
+                            ModBlocks.CREEPER_HEAD_CHARGED.get(), ModBlocks.CREEPER_WALL_HEAD_CHARGED.get(),
                             ModBlocks.DROWNED_HEAD.get(), ModBlocks.DROWNED_WALL_HEAD.get(),
                             ModBlocks.GHAST_HEAD.get(), ModBlocks.GHAST_WALL_HEAD.get(),
                             ModBlocks.HUSK_HEAD.get(), ModBlocks.HUSK_WALL_HEAD.get(),

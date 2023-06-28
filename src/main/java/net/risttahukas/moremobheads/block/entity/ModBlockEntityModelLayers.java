@@ -16,7 +16,8 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation CAVE_SPIDER_HEAD = register("cave_spider_head");
     public static final ModelLayerLocation CHICKEN_HEAD = register("chicken_head");
     public static final ModelLayerLocation COW_HEAD = register("cow_head");
-    public static final ModelLayerLocation DROWNED_CLOTHES = register("drowned_clothes");
+    public static final ModelLayerLocation CREEPER_HEAD_CHARGE = register("creeper_head_charge");
+    public static final ModelLayerLocation DROWNED_HEAD_CLOTHES = register("drowned_head_clothes");
     public static final ModelLayerLocation GHAST_HEAD = register("ghast_head");
     public static final ModelLayerLocation OCELOT_HEAD = register("ocelot_head");
     public static final ModelLayerLocation PARROT_HEAD = register("parrot_head");
@@ -24,7 +25,7 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation SHEEP_HEAD_WOOL = register("sheep_head_wool");
     public static final ModelLayerLocation SPIDER_HEAD = register("spider_head");
     public static final ModelLayerLocation SPIDER_EYES = register("spider_eyes");
-    public static final ModelLayerLocation STRAY_CLOTHES = register("stray_clothes");
+    public static final ModelLayerLocation STRAY_SKULL_CLOTHES = register("stray_skull_clothes");
     public static final ModelLayerLocation WITCH_HEAD = register("witch_head");
 
     private static ModelLayerLocation register(String layer) {

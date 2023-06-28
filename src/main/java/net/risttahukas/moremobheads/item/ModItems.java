@@ -106,6 +106,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.COW_HEAD.get(), ModBlocks.COW_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> CREEPER_HEAD_CHARGED = ITEMS.register("creeper_head_charged", () ->
+            new EffectSkullItem(ModBlocks.CREEPER_HEAD_CHARGED.get(), ModBlocks.CREEPER_WALL_HEAD_CHARGED.get(),
+                    (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
+
     public static final RegistryObject<Item> DROWNED_HEAD = ITEMS.register("drowned_head", () ->
             new EffectSkullItem(ModBlocks.DROWNED_HEAD.get(), ModBlocks.DROWNED_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
