@@ -30,6 +30,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(5.2D, 0.0D, 5.2D, 10.8D, 5.6D, 10.8D);
     protected static final VoxelShape CHICKEN_SHAPE =
             Block.box(6.0D, 0.0D, 6.0D, 10.0D, 6.0D, 10.0D);
+    protected static final VoxelShape DOLPHIN_SHAPE =
+            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 7.0D, 12.0D);
     protected static final VoxelShape HUSK_SHAPE =
             Block.box(3.75D, 0.0D, 3.75D, 12.25D, 8.5D, 12.25D);
     protected static final VoxelShape OCELOT_SHAPE =
@@ -67,6 +69,8 @@ public class EffectSkullBlock extends SkullBlock {
             return CAVE_SPIDER_SHAPE;
         } if (Types.CHICKEN.equals(this.getType())) {
             return CHICKEN_SHAPE;
+        } if (Types.DOLPHIN.equals(this.getType())) {
+            return DOLPHIN_SHAPE;
         } if (Types.HUSK.equals(this.getType())) {
             return HUSK_SHAPE;
         } if (Types.OCELOT.equals(this.getType())) {
@@ -136,11 +140,23 @@ public class EffectSkullBlock extends SkullBlock {
         CHICKEN,
         COW,
         CREEPER_CHARGED,
+        DOLPHIN,
+        DONKEY,
         DROWNED,
         GHAST,
+        HORSE_WHITE,
+        HORSE_CREAMY,
+        HORSE_CHESTNUT,
+        HORSE_BROWN,
+        HORSE_BLACK,
+        HORSE_GRAY,
+        HORSE_DARK_BROWN,
+        HORSE_ZOMBIE,
+        HORSE_SKELETON,
         HUSK,
         MOOSHROOM_RED,
         MOOSHROOM_BROWN,
+        MULE,
         OCELOT,
         PARROT_RED_BLUE,
         PARROT_BLUE,

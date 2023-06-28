@@ -67,6 +67,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 6.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 6.0D, 12.0D, 12.0D),
             Direction.WEST, Block.box(10.0D, 4.0D, 4.0D, 16.0D, 12.0D, 12.0D)));
+    private static final Map<Direction, VoxelShape> DOLPHIN_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(4.0D, 4.0D, 10.0D, 12.0D, 11.0D, 16.0D),
+            Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 11.0D, 6.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 6.0D, 11.0D, 12.0D),
+            Direction.WEST, Block.box(10.0D, 4.0D, 4.0D, 16.0D, 11.0D, 12.0D)));
     private static final Map<Direction, VoxelShape> HUSK_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(3.75D, 4.0D, 7.5D, 12.25D, 12.5D, 16.0D),
             Direction.SOUTH, Block.box(3.75D, 4.0D, 0.0D, 12.25D, 12.5D, 8.5D),
@@ -128,6 +133,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                 EffectSkullBlock.Types.MOOSHROOM_RED.equals(this.getType()) ||
                 EffectSkullBlock.Types.MOOSHROOM_BROWN.equals(this.getType())) {
             return COW_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.DOLPHIN.equals(this.getType())) {
+            return DOLPHIN_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.HUSK.equals(this.getType())) {
             return HUSK_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.OCELOT.equals(this.getType())) {

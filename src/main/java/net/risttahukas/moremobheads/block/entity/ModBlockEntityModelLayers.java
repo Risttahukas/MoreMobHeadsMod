@@ -17,8 +17,10 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation CHICKEN_HEAD = register("chicken_head");
     public static final ModelLayerLocation COW_HEAD = register("cow_head");
     public static final ModelLayerLocation CREEPER_HEAD_CHARGE = register("creeper_head_charge");
+    public static final ModelLayerLocation DOLPHIN_HEAD = register("dolphin_head");
     public static final ModelLayerLocation DROWNED_HEAD_CLOTHES = register("drowned_head_clothes");
     public static final ModelLayerLocation GHAST_HEAD = register("ghast_head");
+    public static final ModelLayerLocation HORSE_HEAD = register("horse_head");
     public static final ModelLayerLocation OCELOT_HEAD = register("ocelot_head");
     public static final ModelLayerLocation PARROT_HEAD = register("parrot_head");
     public static final ModelLayerLocation PUFFERFISH_HEAD = register("pufferfish_head");

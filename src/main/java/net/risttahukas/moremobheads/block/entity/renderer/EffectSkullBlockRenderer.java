@@ -67,8 +67,18 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CHICKEN, new ResourceLocation("textures/entity/chicken.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.COW, new ResourceLocation("textures/entity/cow/cow.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CREEPER_CHARGED, new ResourceLocation("textures/entity/creeper/creeper.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.DOLPHIN, new ResourceLocation("textures/entity/dolphin.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.DROWNED, new ResourceLocation("textures/entity/zombie/drowned.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.GHAST, new ResourceLocation("textures/entity/ghast/ghast.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_WHITE, new ResourceLocation("textures/entity/horse/horse_white.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_CREAMY, new ResourceLocation("textures/entity/horse/horse_creamy.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_CHESTNUT, new ResourceLocation("textures/entity/horse/horse_chestnut.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_BROWN, new ResourceLocation("textures/entity/horse/horse_brown.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_BLACK, new ResourceLocation("textures/entity/horse/horse_black.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_GRAY, new ResourceLocation("textures/entity/horse/horse_gray.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_DARK_BROWN, new ResourceLocation("textures/entity/horse/horse_darkbrown.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_ZOMBIE, new ResourceLocation("textures/entity/horse/horse_zombie.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_SKELETON, new ResourceLocation("textures/entity/horse/horse_skeleton.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.HUSK, new ResourceLocation("textures/entity/zombie/husk.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.MOOSHROOM_RED, new ResourceLocation("textures/entity/cow/red_mooshroom.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.MOOSHROOM_BROWN, new ResourceLocation("textures/entity/cow/brown_mooshroom.png"));
@@ -139,7 +149,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
                 horizontalTranslation = 0.325F;
             } else if (skullModelBase instanceof ChickenHeadModel || skullModelBase instanceof ParrotHeadModel) {
                 horizontalTranslation = 0.4375F;
-            } else if (skullModelBase instanceof CowHeadModel) {
+            } else if (skullModelBase instanceof CowHeadModel || skullModelBase instanceof DolphinHeadModel) {
                 horizontalTranslation = 0.3125F;
             } else if (skullModelBase instanceof HuskHeadModel) {
                 horizontalTranslation = 0.234375F;
@@ -204,8 +214,11 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.CHICKEN, new ChickenHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CHICKEN_HEAD)));
         builder.put(EffectSkullBlock.Types.COW, new CowHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.COW_HEAD)));
         builder.put(EffectSkullBlock.Types.CREEPER_CHARGED, new ChargedCreeperHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.MOB_SKULL), entityModelSet.bakeLayer(ModBlockEntityModelLayers.CREEPER_HEAD_CHARGE)));
+        builder.put(EffectSkullBlock.Types.DOLPHIN, new DolphinHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.DOLPHIN_HEAD)));
         builder.put(EffectSkullBlock.Types.DROWNED, new DrownedHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HUMANOID_SKULL), entityModelSet.bakeLayer(ModBlockEntityModelLayers.DROWNED_HEAD_CLOTHES)));
         builder.put(EffectSkullBlock.Types.GHAST, new GhastHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.GHAST_HEAD)));
+        builder.put(EffectSkullBlock.Types.HORSE_ZOMBIE, new AbstractHorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD)));
+        builder.put(EffectSkullBlock.Types.HORSE_SKELETON, new AbstractHorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD)));
         builder.put(EffectSkullBlock.Types.HUSK, new HuskHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HUMANOID_SKULL)));
         builder.put(EffectSkullBlock.Types.MOOSHROOM_RED, new MooshroomHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.COW_HEAD), Blocks.RED_MUSHROOM.defaultBlockState()));
         builder.put(EffectSkullBlock.Types.MOOSHROOM_BROWN, new MooshroomHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.COW_HEAD), Blocks.BROWN_MUSHROOM.defaultBlockState()));
