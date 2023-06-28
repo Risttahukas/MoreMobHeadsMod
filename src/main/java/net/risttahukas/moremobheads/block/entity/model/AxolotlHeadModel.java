@@ -4,7 +4,10 @@ import net.minecraft.client.model.SkullModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
+@OnlyIn(Dist.CLIENT)
 public class AxolotlHeadModel extends SkullModel {
     public AxolotlHeadModel(ModelPart modelPart) {
         super(modelPart);
