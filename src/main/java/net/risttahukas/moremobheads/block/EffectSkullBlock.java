@@ -163,6 +163,7 @@ public class EffectSkullBlock extends SkullBlock {
         SHEEP_BLACK,
         SHEEP_RAINBOW,
         SPIDER,
+        STRAY,
         VEX,
         WITCH
     }

@@ -24,6 +24,7 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation SHEEP_HEAD_WOOL = register("sheep_head_wool");
     public static final ModelLayerLocation SPIDER_HEAD = register("spider_head");
     public static final ModelLayerLocation SPIDER_EYES = register("spider_eyes");
+    public static final ModelLayerLocation STRAY_CLOTHES = register("stray_clothes");
     public static final ModelLayerLocation WITCH_HEAD = register("witch_head");
 
     private static ModelLayerLocation register(String layer) {

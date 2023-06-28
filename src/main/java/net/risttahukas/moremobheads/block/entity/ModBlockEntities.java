@@ -67,6 +67,7 @@ public class ModBlockEntities {
                             ModBlocks.SHEEP_HEAD_BLACK.get(), ModBlocks.SHEEP_WALL_HEAD_BLACK.get(),
                             ModBlocks.SHEEP_HEAD_RAINBOW.get(), ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get(),
                             ModBlocks.SPIDER_HEAD.get(), ModBlocks.SPIDER_WALL_HEAD.get(),
+                            ModBlocks.STRAY_SKULL.get(), ModBlocks.STRAY_WALL_SKULL.get(),
                             ModBlocks.VEX_HEAD.get(), ModBlocks.VEX_WALL_HEAD.get(),
                             ModBlocks.WITCH_HEAD.get(), ModBlocks.WITCH_WALL_HEAD.get())
                     .build(null));

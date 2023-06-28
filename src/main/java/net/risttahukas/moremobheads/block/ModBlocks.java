@@ -378,6 +378,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SPIDER, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(SPIDER_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> STRAY_SKULL = BLOCKS.register("stray_skull",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.STRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> STRAY_WALL_SKULL = BLOCKS.register("stray_wall_skull",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.STRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(STRAY_SKULL).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> VEX_HEAD = BLOCKS.register("vex_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.VEX, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
