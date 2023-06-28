@@ -100,7 +100,7 @@ public class EffectSkullBlock extends SkullBlock {
         if (level.isClientSide) {
             boolean flag = blockState.is(ModBlocks.WITCH_HEAD.get()) || blockState.is(ModBlocks.GHAST_HEAD.get()) ||
                     blockState.is(ModBlocks.SHEEP_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.CAMEL_HEAD.get()) ||
-                    blockState.is(ModBlocks.CREEPER_HEAD_CHARGED.get());
+                    blockState.is(ModBlocks.CREEPER_HEAD_CHARGED.get()) || blockState.is(ModBlocks.PUFFERFISH_HEAD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);
@@ -147,6 +147,7 @@ public class EffectSkullBlock extends SkullBlock {
         PARROT_GREEN,
         PARROT_YELLOW_BLUE,
         PARROT_GREY,
+        PUFFERFISH,
         SHEEP_WHITE,
         SHEEP_ORANGE,
         SHEEP_MAGENTA,

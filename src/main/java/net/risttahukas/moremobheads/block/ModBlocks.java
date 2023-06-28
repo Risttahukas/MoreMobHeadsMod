@@ -259,6 +259,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PARROT_GREY, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(PARROT_HEAD_GREY).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> PUFFERFISH_HEAD = BLOCKS.register("pufferfish_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.PUFFERFISH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> PUFFERFISH_WALL_HEAD = BLOCKS.register("pufferfish_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PUFFERFISH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(PUFFERFISH_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> SHEEP_HEAD_WHITE = BLOCKS.register("sheep_head_white",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.SHEEP_WHITE, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

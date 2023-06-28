@@ -154,6 +154,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.PARROT_HEAD_GREY.get(), ModBlocks.PARROT_WALL_HEAD_GREY.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> PUFFERFISH_HEAD = ITEMS.register("pufferfish_head", () ->
+            new EffectSkullItem(ModBlocks.PUFFERFISH_HEAD.get(), ModBlocks.PUFFERFISH_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> SHEEP_HEAD_WHITE = ITEMS.register("sheep_head_white", () ->
             new EffectSkullItem(ModBlocks.SHEEP_HEAD_WHITE.get(), ModBlocks.SHEEP_WALL_HEAD_WHITE.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

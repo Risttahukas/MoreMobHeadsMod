@@ -93,6 +93,7 @@ public class ClientEvents {
             event.registerLayerDefinition(ModBlockEntityModelLayers.GHAST_HEAD, GhastHeadModel::createGhastHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.OCELOT_HEAD, OcelotHeadModel::createOcelotHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.PARROT_HEAD, ParrotHeadModel::createParrotHeadLayer);
+            event.registerLayerDefinition(ModBlockEntityModelLayers.PUFFERFISH_HEAD, PufferfishHeadModel::createPufferfishHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.SHEEP_HEAD, SheepHeadModel::createSheepHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL, SheepHeadModel::createSheepHeadWoolLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.SPIDER_HEAD, SpiderHeadModel::createSpiderHeadLayer);
