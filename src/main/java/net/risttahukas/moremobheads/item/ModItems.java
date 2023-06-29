@@ -402,6 +402,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.VEX_HEAD.get(), ModBlocks.VEX_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> WARDEN_HEAD = ITEMS.register("warden_head", () ->
+            new EffectSkullItem(ModBlocks.WARDEN_HEAD.get(), ModBlocks.WARDEN_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.EPIC), Direction.DOWN));
+
     public static final RegistryObject<Item> WITCH_HEAD = ITEMS.register("witch_head", () ->
             new EffectSkullItem(ModBlocks.WITCH_HEAD.get(), ModBlocks.WITCH_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

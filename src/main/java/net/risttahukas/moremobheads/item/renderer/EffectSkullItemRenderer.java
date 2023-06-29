@@ -44,7 +44,8 @@ public class EffectSkullItemRenderer extends BlockEntityWithoutLevelRenderer {
                 SkullBlock.Type type = ((AbstractSkullBlock)block).getType();
                 SkullModelBase skullmodelbase = this.skullModels.get(type);
                 RenderType rendertype = SkullBlockRenderer.getRenderType(type, gameprofile);
-                if (type == EffectSkullBlock.Types.SHEEP_RAINBOW || type == EffectSkullBlock.Types.CREEPER_CHARGED) {
+                if (type == EffectSkullBlock.Types.SHEEP_RAINBOW || type == EffectSkullBlock.Types.CREEPER_CHARGED ||
+                        type == EffectSkullBlock.Types.WARDEN) {
                     float tickCount = (float)ClientEvents.time + Minecraft.getInstance().getPartialTick();
                     EffectSkullBlockRenderer.renderSkull(null, 180.0F, tickCount / 2.0F, poseStack, multiBufferSource, light, skullmodelbase, rendertype);
                 } else {

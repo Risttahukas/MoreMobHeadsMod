@@ -112,6 +112,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 15.0D, 7.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 5.0D, 7.0D, 15.0D, 11.0D),
             Direction.WEST, Block.box(9.0D, 4.0D, 5.0D, 16.0D, 15.0D, 11.0D)));
+    private static final Map<Direction, VoxelShape> WARDEN_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(4.0D, 4.0D, 11.0D, 12.0D, 12.0D, 16.0D),
+            Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 5.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 5.0D, 12.0D, 12.0D),
+            Direction.WEST, Block.box(11.0D, 4.0D, 4.0D, 16.0D, 12.0D, 12.0D)));
 
 
 
@@ -227,6 +232,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                 EffectSkullBlock.Types.SHEEP_BLACK.equals(this.getType()) ||
                 EffectSkullBlock.Types.SHEEP_RAINBOW.equals(this.getType())) {
             return SHEEP_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.WARDEN.equals(this.getType())) {
+            return WARDEN_AABBS.get(blockState.getValue(FACING));
         }
         return AABBS.get(blockState.getValue(FACING));
     }
@@ -243,7 +250,7 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             boolean flag = blockState.is(ModBlocks.WITCH_WALL_HEAD.get()) || blockState.is(ModBlocks.GHAST_WALL_HEAD.get()) ||
                     blockState.is(ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.CAMEL_WALL_HEAD.get()) ||
                     blockState.is(ModBlocks.CREEPER_WALL_HEAD_CHARGED.get()) || blockState.is(ModBlocks.PUFFERFISH_WALL_HEAD.get()) ||
-                    blockState.is(ModBlocks.ENDERMAN_WALL_HEAD.get());
+                    blockState.is(ModBlocks.ENDERMAN_WALL_HEAD.get()) || blockState.is(ModBlocks.WARDEN_WALL_HEAD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);

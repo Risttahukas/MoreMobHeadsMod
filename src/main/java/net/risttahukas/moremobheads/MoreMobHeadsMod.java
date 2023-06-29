@@ -151,6 +151,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.SPIDER_HEAD);
             event.accept(ModItems.STRAY_SKULL);
             event.accept(ModItems.VEX_HEAD);
+            event.accept(ModItems.WARDEN_HEAD);
             event.accept(ModItems.WITCH_HEAD);
             event.accept(Items.WITHER_SKELETON_SKULL);
             event.accept(Items.ZOMBIE_HEAD);

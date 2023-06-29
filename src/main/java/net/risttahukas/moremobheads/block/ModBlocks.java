@@ -693,6 +693,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.VEX, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(VEX_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> WARDEN_HEAD = BLOCKS.register("warden_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.WARDEN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> WARDEN_WALL_HEAD = BLOCKS.register("warden_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.WARDEN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(WARDEN_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> WITCH_HEAD = BLOCKS.register("witch_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.WITCH, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
