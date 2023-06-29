@@ -72,11 +72,21 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 11.0D, 6.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 6.0D, 11.0D, 12.0D),
             Direction.WEST, Block.box(10.0D, 4.0D, 4.0D, 16.0D, 11.0D, 12.0D)));
+    private static final Map<Direction, VoxelShape> DONKEY_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(5.39D, 4.0D, 9.91D, 10.61D, 13.57D, 16.0D),
+            Direction.SOUTH, Block.box(5.39D, 4.0D, 0.0D, 10.61D, 13.57D, 6.09D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 5.39D, 6.09D, 13.57D, 10.61D),
+            Direction.WEST, Block.box(9.91D, 4.0D, 5.39D, 16.0D, 13.57D, 10.61D)));
     private static final Map<Direction, VoxelShape> HUSK_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(3.75D, 4.0D, 7.5D, 12.25D, 12.5D, 16.0D),
             Direction.SOUTH, Block.box(3.75D, 4.0D, 0.0D, 12.25D, 12.5D, 8.5D),
             Direction.EAST, Block.box(0.0D, 4.0D, 3.75D, 8.5D, 12.5D, 12.25D),
             Direction.WEST, Block.box(7.5D, 4.0D, 3.75D, 16.0D, 12.5D, 12.25D)));
+    private static final Map<Direction, VoxelShape> MULE_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(5.24D, 4.0D, 9.56D, 10.76D, 14.12D, 16.0D),
+            Direction.SOUTH, Block.box(5.24D, 4.0D, 0.0D, 10.76D, 14.12D, 6.44D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 5.24D, 6.44D, 14.12D, 10.76D),
+            Direction.WEST, Block.box(9.56D, 4.0D, 5.24D, 16.0D, 14.12D, 10.76D)));
     private static final Map<Direction, VoxelShape> OCELOT_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(5.5D, 4.0D, 11.0D, 10.5D, 8.0D, 16.0D),
             Direction.SOUTH, Block.box(5.5D, 4.0D, 0.0D, 10.5D, 8.0D, 5.0D),
@@ -92,6 +102,12 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 10.0D, 8.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 5.0D, 8.0D, 10.0D, 11.0D),
             Direction.WEST, Block.box(8.0D, 4.0D, 5.0D, 16.0D, 10.0D, 11.0D)));
+    private static final Map<Direction, VoxelShape> UNDEAD_HORSE_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(5.0D, 4.0D, 9.0D, 11.0D, 15.0D, 16.0D),
+            Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 15.0D, 7.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 5.0D, 7.0D, 15.0D, 11.0D),
+            Direction.WEST, Block.box(9.0D, 4.0D, 5.0D, 16.0D, 15.0D, 11.0D)));
+
 
 
     public EffectWallSkullBlock(SkullBlock.Type type, Properties properties) {
@@ -135,8 +151,15 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return COW_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.DOLPHIN.equals(this.getType())) {
             return DOLPHIN_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.DONKEY.equals(this.getType())) {
+            return DONKEY_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.HORSE_ZOMBIE.equals(this.getType()) ||
+                EffectSkullBlock.Types.HORSE_SKELETON.equals(this.getType())) {
+            return UNDEAD_HORSE_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.HUSK.equals(this.getType())) {
             return HUSK_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.MULE.equals(this.getType())) {
+            return MULE_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.OCELOT.equals(this.getType())) {
             return OCELOT_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.PARROT_RED_BLUE.equals(this.getType()) ||

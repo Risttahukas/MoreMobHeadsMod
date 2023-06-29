@@ -75,12 +75,16 @@ public class MoreMobHeadsMod
             event.accept(Items.CREEPER_HEAD);
             event.accept(ModItems.CREEPER_HEAD_CHARGED);
             event.accept(ModItems.DOLPHIN_HEAD);
+            event.accept(ModItems.DONKEY_HEAD);
             event.accept(ModItems.DROWNED_HEAD);
             event.accept(Items.DRAGON_HEAD);
             event.accept(ModItems.GHAST_HEAD);
+            event.accept(ModItems.HORSE_HEAD_ZOMBIE);
+            event.accept(ModItems.HORSE_SKULL_SKELETON);
             event.accept(ModItems.HUSK_HEAD);
             event.accept(ModItems.MOOSHROOM_HEAD_RED);
             event.accept(ModItems.MOOSHROOM_HEAD_BROWN);
+            event.accept(ModItems.MULE_HEAD);
             event.accept(ModItems.OCELOT_HEAD);
             event.accept(ModItems.PARROT_HEAD_RED_BLUE);
             event.accept(ModItems.PARROT_HEAD_BLUE);

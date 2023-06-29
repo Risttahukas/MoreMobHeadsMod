@@ -32,14 +32,20 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(6.0D, 0.0D, 6.0D, 10.0D, 6.0D, 10.0D);
     protected static final VoxelShape DOLPHIN_SHAPE =
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 7.0D, 12.0D);
+    protected static final VoxelShape DONKEY_SHAPE =
+            Block.box(4.955D, 0.0D, 4.955D, 11.045D, 9.57D, 11.045D);
     protected static final VoxelShape HUSK_SHAPE =
             Block.box(3.75D, 0.0D, 3.75D, 12.25D, 8.5D, 12.25D);
+    protected static final VoxelShape MULE_SHAPE =
+            Block.box(4.78D, 0.0D, 4.78D, 11.22D, 10.12D, 11.22D);
     protected static final VoxelShape OCELOT_SHAPE =
             Block.box(5.5D, 0.0D, 5.5D, 10.5D, 4.0D, 10.5D);
     protected static final VoxelShape PARROT_SHAPE =
             Block.box(7.0D, 0.0D, 7.0D, 9.0D, 4.0D, 9.0D);
     protected static final VoxelShape SHEEP_SHAPE =
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 6.0D, 12.0D);
+    protected static final VoxelShape UNDEAD_HORSE_SHAPE =
+            Block.box(4.5D, 0.0D, 4.5D, 11.5D, 11.0D, 11.5D);
 
     public EffectSkullBlock(Type type, Properties properties) {
         super(type, properties);
@@ -71,8 +77,14 @@ public class EffectSkullBlock extends SkullBlock {
             return CHICKEN_SHAPE;
         } if (Types.DOLPHIN.equals(this.getType())) {
             return DOLPHIN_SHAPE;
+        } if (Types.DONKEY.equals(this.getType())) {
+            return DONKEY_SHAPE;
+        } if (Types.HORSE_ZOMBIE.equals(this.getType()) || Types.HORSE_SKELETON.equals(this.getType())) {
+            return UNDEAD_HORSE_SHAPE;
         } if (Types.HUSK.equals(this.getType())) {
             return HUSK_SHAPE;
+        } if (Types.MULE.equals(this.getType())) {
+            return MULE_SHAPE;
         } if (Types.OCELOT.equals(this.getType())) {
             return OCELOT_SHAPE;
         } if (Types.PARROT_RED_BLUE.equals(this.getType()) || Types.PARROT_BLUE.equals(this.getType()) ||

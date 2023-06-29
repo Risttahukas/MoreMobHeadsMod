@@ -189,6 +189,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.DOLPHIN, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(DOLPHIN_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> DONKEY_HEAD = BLOCKS.register("donkey_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.DONKEY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> DONKEY_WALL_HEAD = BLOCKS.register("donkey_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.DONKEY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(DONKEY_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> DROWNED_HEAD = BLOCKS.register("drowned_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.DROWNED, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
@@ -202,6 +209,20 @@ public class ModBlocks {
     public static final RegistryObject<Block> GHAST_WALL_HEAD = BLOCKS.register("ghast_wall_head",
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GHAST, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(GHAST_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_ZOMBIE = BLOCKS.register("horse_head_zombie",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_ZOMBIE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_ZOMBIE = BLOCKS.register("horse_wall_head_zombie",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_ZOMBIE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_ZOMBIE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_SKULL_SKELETON = BLOCKS.register("horse_skull_skeleton",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_SKELETON, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_SKULL_SKELETON = BLOCKS.register("horse_wall_skull_skeleton",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_SKELETON, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_SKULL_SKELETON).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> HUSK_HEAD = BLOCKS.register("husk_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.HUSK, BlockBehaviour.Properties.of()
@@ -223,6 +244,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> MOOSHROOM_WALL_HEAD_BROWN = BLOCKS.register("mooshroom_wall_head_brown",
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.MOOSHROOM_BROWN, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(MOOSHROOM_HEAD_BROWN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> MULE_HEAD = BLOCKS.register("mule_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.MULE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> MULE_WALL_HEAD = BLOCKS.register("mule_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.MULE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(MULE_HEAD).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> OCELOT_HEAD = BLOCKS.register("ocelot_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.OCELOT, BlockBehaviour.Properties.of()
