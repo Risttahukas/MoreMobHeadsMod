@@ -21,7 +21,11 @@ public abstract class ModRenderType extends RenderType {
 
     private static final BiFunction<ResourceLocation, Boolean, RenderType> ENTITY_TRANSLUCENT_NO_CULL_Z_OFFSET = Util.memoize((resourceLocation, aBoolean) -> {
         RenderType.CompositeState rendertype$compositestate = RenderType.CompositeState.builder().setShaderState(RENDERTYPE_ENTITY_TRANSLUCENT_SHADER).setTextureState(new RenderStateShard.TextureStateShard(resourceLocation, false, false)).setTransparencyState(TRANSLUCENT_TRANSPARENCY).setCullState(NO_CULL).setLightmapState(LIGHTMAP).setOverlayState(OVERLAY).setLayeringState(VIEW_OFFSET_Z_LAYERING).createCompositeState(aBoolean);
-        return create("entity_translucent", DefaultVertexFormat.NEW_ENTITY, VertexFormat.Mode.QUADS, 256, true, true, rendertype$compositestate);
+        return create("entity_translucent_no_cull_z_offset", DefaultVertexFormat.NEW_ENTITY, VertexFormat.Mode.QUADS, 256, true, true, rendertype$compositestate);
+    });
+    private static final Function<ResourceLocation, RenderType> EYES_Z_OFFSET = Util.memoize((resourceLocation) -> {
+        RenderType.CompositeState rendertype$compositestate = RenderType.CompositeState.builder().setShaderState(RENDERTYPE_EYES_SHADER).setTextureState(new RenderStateShard.TextureStateShard(resourceLocation, false, false)).setTransparencyState(ADDITIVE_TRANSPARENCY).setWriteMaskState(COLOR_WRITE).setLayeringState(VIEW_OFFSET_Z_LAYERING).createCompositeState(false);
+        return create("eyes_z_offset", DefaultVertexFormat.NEW_ENTITY, VertexFormat.Mode.QUADS, 256, false, true, rendertype$compositestate);
     });
 
     public static RenderType entityTranslucentNoCullZOffset(@NotNull ResourceLocation resourceLocation, boolean b) {
@@ -30,5 +34,9 @@ public abstract class ModRenderType extends RenderType {
 
     public static RenderType entityTranslucentNoCullZOffset(@NotNull ResourceLocation resourceLocation) {
         return entityTranslucentNoCullZOffset(resourceLocation, true);
+    }
+
+    public static @NotNull RenderType eyesZOffset(@NotNull ResourceLocation resourceLocation) {
+        return EYES_Z_OFFSET.apply(resourceLocation);
     }
 }

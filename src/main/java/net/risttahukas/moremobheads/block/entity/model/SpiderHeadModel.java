@@ -7,10 +7,10 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.risttahukas.moremobheads.entity.renderer.ModRenderType;
 import org.jetbrains.annotations.NotNull;
 
 @OnlyIn(Dist.CLIENT)
@@ -38,7 +38,7 @@ public class SpiderHeadModel extends SkullModel {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
         partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(32, 4)
-                        .addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.001F)),
+                        .addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F),
                 PartPose.ZERO);
         return meshdefinition;
     }
@@ -62,7 +62,7 @@ public class SpiderHeadModel extends SkullModel {
 
     public void renderToBuffer(@NotNull PoseStack poseStack, @NotNull VertexConsumer vertexConsumer, MultiBufferSource multiBufferSource, int p_103817_, int p_103818_, float p_103819_, float p_103820_, float p_103821_, float p_103822_) {
         super.renderToBuffer(poseStack, vertexConsumer, p_103817_, p_103818_, p_103819_, p_103820_, p_103821_, p_103822_);
-        VertexConsumer eyesVertexConsumer = multiBufferSource.getBuffer(RenderType.entityCutoutNoCullZOffset(SPIDER_EYES_LOCATION));
+        VertexConsumer eyesVertexConsumer = multiBufferSource.getBuffer(ModRenderType.eyesZOffset(SPIDER_EYES_LOCATION));
         this.rootEyes.render(poseStack, eyesVertexConsumer, p_103817_, p_103818_, p_103819_, p_103820_, p_103821_, p_103822_);
     }
 }
