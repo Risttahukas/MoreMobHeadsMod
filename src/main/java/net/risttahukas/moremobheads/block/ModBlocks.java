@@ -203,6 +203,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.DROWNED, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(DROWNED_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> ENDERMAN_HEAD = BLOCKS.register("enderman_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ENDERMAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ENDERMAN_WALL_HEAD = BLOCKS.register("enderman_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ENDERMAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ENDERMAN_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> GHAST_HEAD = BLOCKS.register("ghast_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.GHAST, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
