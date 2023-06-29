@@ -210,6 +210,251 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GHAST, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(GHAST_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> HORSE_HEAD_WHITE = BLOCKS.register("horse_head_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_WHITE = BLOCKS.register("horse_wall_head_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_CREAMY = BLOCKS.register("horse_head_creamy",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_CREAMY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_CREAMY = BLOCKS.register("horse_wall_head_creamy",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_CREAMY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_CREAMY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_CHESTNUT = BLOCKS.register("horse_head_chestnut",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_CHESTNUT, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_CHESTNUT = BLOCKS.register("horse_wall_head_chestnut",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_CHESTNUT, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_CHESTNUT).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_BROWN = BLOCKS.register("horse_head_brown",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_BROWN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_BROWN = BLOCKS.register("horse_wall_head_brown",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_BROWN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_BROWN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_BLACK = BLOCKS.register("horse_head_black",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_BLACK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_BLACK = BLOCKS.register("horse_wall_head_black",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_BLACK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_BLACK).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_GRAY = BLOCKS.register("horse_head_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_GRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_GRAY = BLOCKS.register("horse_wall_head_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_GRAY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_DARK_BROWN = BLOCKS.register("horse_head_dark_brown",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_DARK_BROWN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_DARK_BROWN = BLOCKS.register("horse_wall_head_dark_brown",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_DARK_BROWN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_DARK_BROWN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_WHITE_WHITE = BLOCKS.register("horse_head_white_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_WHITE_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_WHITE_WHITE = BLOCKS.register("horse_wall_head_white_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_WHITE_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_WHITE_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_CREAMY_WHITE = BLOCKS.register("horse_head_creamy_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_CREAMY_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_CREAMY_WHITE = BLOCKS.register("horse_wall_head_creamy_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_CREAMY_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_CREAMY_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_CHESTNUT_WHITE = BLOCKS.register("horse_head_chestnut_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_CHESTNUT_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_CHESTNUT_WHITE = BLOCKS.register("horse_wall_head_chestnut_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_CHESTNUT_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_CHESTNUT_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_BROWN_WHITE = BLOCKS.register("horse_head_brown_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_BROWN_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_BROWN_WHITE = BLOCKS.register("horse_wall_head_brown_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_BROWN_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_BROWN_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_BLACK_WHITE = BLOCKS.register("horse_head_black_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_BLACK_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_BLACK_WHITE = BLOCKS.register("horse_wall_head_black_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_BLACK_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_BLACK_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_GRAY_WHITE = BLOCKS.register("horse_head_gray_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_GRAY_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_GRAY_WHITE = BLOCKS.register("horse_wall_head_gray_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_GRAY_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_GRAY_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_DARK_BROWN_WHITE = BLOCKS.register("horse_head_dark_brown_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_DARK_BROWN_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_DARK_BROWN_WHITE = BLOCKS.register("horse_wall_head_dark_brown_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_DARK_BROWN_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_DARK_BROWN_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_WHITE_WHITE_FIELD = BLOCKS.register("horse_head_white_white_field",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_WHITE_WHITE_FIELD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_WHITE_WHITE_FIELD = BLOCKS.register("horse_wall_head_white_white_field",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_WHITE_WHITE_FIELD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_WHITE_WHITE_FIELD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_CREAMY_WHITE_FIELD = BLOCKS.register("horse_head_creamy_white_field",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_CREAMY_WHITE_FIELD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_CREAMY_WHITE_FIELD = BLOCKS.register("horse_wall_head_creamy_white_field",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_CREAMY_WHITE_FIELD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_CREAMY_WHITE_FIELD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_CHESTNUT_WHITE_FIELD = BLOCKS.register("horse_head_chestnut_white_field",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_CHESTNUT_WHITE_FIELD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_CHESTNUT_WHITE_FIELD = BLOCKS.register("horse_wall_head_chestnut_white_field",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_CHESTNUT_WHITE_FIELD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_CHESTNUT_WHITE_FIELD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_BROWN_WHITE_FIELD = BLOCKS.register("horse_head_brown_white_field",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_BROWN_WHITE_FIELD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_BROWN_WHITE_FIELD = BLOCKS.register("horse_wall_head_brown_white_field",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_BROWN_WHITE_FIELD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_BROWN_WHITE_FIELD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_BLACK_WHITE_FIELD = BLOCKS.register("horse_head_black_white_field",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_BLACK_WHITE_FIELD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_BLACK_WHITE_FIELD = BLOCKS.register("horse_wall_head_black_white_field",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_BLACK_WHITE_FIELD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_BLACK_WHITE_FIELD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_GRAY_WHITE_FIELD = BLOCKS.register("horse_head_gray_white_field",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_GRAY_WHITE_FIELD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_GRAY_WHITE_FIELD = BLOCKS.register("horse_wall_head_gray_white_field",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_GRAY_WHITE_FIELD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_GRAY_WHITE_FIELD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_DARK_BROWN_WHITE_FIELD = BLOCKS.register("horse_head_dark_brown_white_field",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_DARK_BROWN_WHITE_FIELD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_DARK_BROWN_WHITE_FIELD = BLOCKS.register("horse_wall_head_dark_brown_white_field",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_DARK_BROWN_WHITE_FIELD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_DARK_BROWN_WHITE_FIELD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_WHITE_WHITE_DOTS = BLOCKS.register("horse_head_white_white_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_WHITE_WHITE_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_WHITE_WHITE_DOTS = BLOCKS.register("horse_wall_head_white_white_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_WHITE_WHITE_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_WHITE_WHITE_DOTS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_CREAMY_WHITE_DOTS = BLOCKS.register("horse_head_creamy_white_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_CREAMY_WHITE_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_CREAMY_WHITE_DOTS = BLOCKS.register("horse_wall_head_creamy_white_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_CREAMY_WHITE_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_CREAMY_WHITE_DOTS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_CHESTNUT_WHITE_DOTS = BLOCKS.register("horse_head_chestnut_white_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_CHESTNUT_WHITE_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_CHESTNUT_WHITE_DOTS = BLOCKS.register("horse_wall_head_chestnut_white_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_CHESTNUT_WHITE_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_CHESTNUT_WHITE_DOTS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_BROWN_WHITE_DOTS = BLOCKS.register("horse_head_brown_white_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_BROWN_WHITE_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_BROWN_WHITE_DOTS = BLOCKS.register("horse_wall_head_brown_white_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_BROWN_WHITE_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_BROWN_WHITE_DOTS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_BLACK_WHITE_DOTS = BLOCKS.register("horse_head_black_white_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_BLACK_WHITE_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_BLACK_WHITE_DOTS = BLOCKS.register("horse_wall_head_black_white_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_BLACK_WHITE_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_BLACK_WHITE_DOTS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_GRAY_WHITE_DOTS = BLOCKS.register("horse_head_gray_white_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_GRAY_WHITE_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_GRAY_WHITE_DOTS = BLOCKS.register("horse_wall_head_gray_white_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_GRAY_WHITE_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_GRAY_WHITE_DOTS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_DARK_BROWN_WHITE_DOTS = BLOCKS.register("horse_head_dark_brown_white_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_DARK_BROWN_WHITE_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_DARK_BROWN_WHITE_DOTS = BLOCKS.register("horse_wall_head_dark_brown_white_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_DARK_BROWN_WHITE_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_DARK_BROWN_WHITE_DOTS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_WHITE_BLACK_DOTS = BLOCKS.register("horse_head_white_black_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_WHITE_BLACK_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_WHITE_BLACK_DOTS = BLOCKS.register("horse_wall_head_white_black_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_WHITE_BLACK_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_WHITE_BLACK_DOTS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_CREAMY_BLACK_DOTS = BLOCKS.register("horse_head_creamy_black_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_CREAMY_BLACK_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_CREAMY_BLACK_DOTS = BLOCKS.register("horse_wall_head_creamy_black_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_CREAMY_BLACK_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_CREAMY_BLACK_DOTS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_CHESTNUT_BLACK_DOTS = BLOCKS.register("horse_head_chestnut_black_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_CHESTNUT_BLACK_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_CHESTNUT_BLACK_DOTS = BLOCKS.register("horse_wall_head_chestnut_black_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_CHESTNUT_BLACK_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_CHESTNUT_BLACK_DOTS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_BROWN_BLACK_DOTS = BLOCKS.register("horse_head_brown_black_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_BROWN_BLACK_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_BROWN_BLACK_DOTS = BLOCKS.register("horse_wall_head_brown_black_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_BROWN_BLACK_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_BROWN_BLACK_DOTS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_BLACK_BLACK_DOTS = BLOCKS.register("horse_head_black_black_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_BLACK_BLACK_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_BLACK_BLACK_DOTS = BLOCKS.register("horse_wall_head_black_black_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_BLACK_BLACK_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_BLACK_BLACK_DOTS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_GRAY_BLACK_DOTS = BLOCKS.register("horse_head_gray_black_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_GRAY_BLACK_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_GRAY_BLACK_DOTS = BLOCKS.register("horse_wall_head_gray_black_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_GRAY_BLACK_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_GRAY_BLACK_DOTS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> HORSE_HEAD_DARK_BROWN_BLACK_DOTS = BLOCKS.register("horse_head_dark_brown_black_dots",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_DARK_BROWN_BLACK_DOTS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HORSE_WALL_HEAD_DARK_BROWN_BLACK_DOTS = BLOCKS.register("horse_wall_head_dark_brown_black_dots",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HORSE_DARK_BROWN_BLACK_DOTS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HORSE_HEAD_DARK_BROWN_BLACK_DOTS).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> HORSE_HEAD_ZOMBIE = BLOCKS.register("horse_head_zombie",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_ZOMBIE, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

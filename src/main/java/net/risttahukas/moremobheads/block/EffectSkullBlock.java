@@ -34,6 +34,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 7.0D, 12.0D);
     protected static final VoxelShape DONKEY_SHAPE =
             Block.box(4.955D, 0.0D, 4.955D, 11.045D, 9.57D, 11.045D);
+    protected static final VoxelShape HORSE_SHAPE =
+            Block.box(4.15D, 0.0D, 4.15D, 11.85D, 12.1D, 11.85D);
     protected static final VoxelShape HUSK_SHAPE =
             Block.box(3.75D, 0.0D, 3.75D, 12.25D, 8.5D, 12.25D);
     protected static final VoxelShape MULE_SHAPE =
@@ -79,6 +81,27 @@ public class EffectSkullBlock extends SkullBlock {
             return DOLPHIN_SHAPE;
         } if (Types.DONKEY.equals(this.getType())) {
             return DONKEY_SHAPE;
+        } if (Types.HORSE_WHITE.equals(this.getType()) || Types.HORSE_CREAMY.equals(this.getType()) ||
+                Types.HORSE_CHESTNUT.equals(this.getType()) || Types.HORSE_BROWN.equals(this.getType()) ||
+                Types.HORSE_BLACK.equals(this.getType()) || Types.HORSE_GRAY.equals(this.getType()) ||
+                Types.HORSE_DARK_BROWN.equals(this.getType()) ||
+                Types.HORSE_WHITE_WHITE.equals(this.getType()) || Types.HORSE_CREAMY_WHITE.equals(this.getType()) ||
+                Types.HORSE_CHESTNUT_WHITE.equals(this.getType()) || Types.HORSE_BROWN_WHITE.equals(this.getType()) ||
+                Types.HORSE_BLACK_WHITE.equals(this.getType()) || Types.HORSE_GRAY_WHITE.equals(this.getType()) ||
+                Types.HORSE_DARK_BROWN_WHITE.equals(this.getType()) ||
+                Types.HORSE_WHITE_WHITE_FIELD.equals(this.getType()) || Types.HORSE_CREAMY_WHITE_FIELD.equals(this.getType()) ||
+                Types.HORSE_CHESTNUT_WHITE_FIELD.equals(this.getType()) || Types.HORSE_BROWN_WHITE_FIELD.equals(this.getType()) ||
+                Types.HORSE_BLACK_WHITE_FIELD.equals(this.getType()) || Types.HORSE_GRAY_WHITE_FIELD.equals(this.getType()) ||
+                Types.HORSE_DARK_BROWN_WHITE_FIELD.equals(this.getType()) ||
+                Types.HORSE_WHITE_WHITE_DOTS.equals(this.getType()) || Types.HORSE_CREAMY_WHITE_DOTS.equals(this.getType()) ||
+                Types.HORSE_CHESTNUT_WHITE_DOTS.equals(this.getType()) || Types.HORSE_BROWN_WHITE_DOTS.equals(this.getType()) ||
+                Types.HORSE_BLACK_WHITE_DOTS.equals(this.getType()) || Types.HORSE_GRAY_WHITE_DOTS.equals(this.getType()) ||
+                Types.HORSE_DARK_BROWN_WHITE_DOTS.equals(this.getType()) ||
+                Types.HORSE_WHITE_BLACK_DOTS.equals(this.getType()) || Types.HORSE_CREAMY_BLACK_DOTS.equals(this.getType()) ||
+                Types.HORSE_CHESTNUT_BLACK_DOTS.equals(this.getType()) || Types.HORSE_BROWN_BLACK_DOTS.equals(this.getType()) ||
+                Types.HORSE_BLACK_BLACK_DOTS.equals(this.getType()) || Types.HORSE_GRAY_BLACK_DOTS.equals(this.getType()) ||
+                Types.HORSE_DARK_BROWN_BLACK_DOTS.equals(this.getType())) {
+            return HORSE_SHAPE;
         } if (Types.HORSE_ZOMBIE.equals(this.getType()) || Types.HORSE_SKELETON.equals(this.getType())) {
             return UNDEAD_HORSE_SHAPE;
         } if (Types.HUSK.equals(this.getType())) {
@@ -163,6 +186,34 @@ public class EffectSkullBlock extends SkullBlock {
         HORSE_BLACK,
         HORSE_GRAY,
         HORSE_DARK_BROWN,
+        HORSE_WHITE_WHITE,
+        HORSE_CREAMY_WHITE,
+        HORSE_CHESTNUT_WHITE,
+        HORSE_BROWN_WHITE,
+        HORSE_BLACK_WHITE,
+        HORSE_GRAY_WHITE,
+        HORSE_DARK_BROWN_WHITE,
+        HORSE_WHITE_WHITE_FIELD,
+        HORSE_CREAMY_WHITE_FIELD,
+        HORSE_CHESTNUT_WHITE_FIELD,
+        HORSE_BROWN_WHITE_FIELD,
+        HORSE_BLACK_WHITE_FIELD,
+        HORSE_GRAY_WHITE_FIELD,
+        HORSE_DARK_BROWN_WHITE_FIELD,
+        HORSE_WHITE_WHITE_DOTS,
+        HORSE_CREAMY_WHITE_DOTS,
+        HORSE_CHESTNUT_WHITE_DOTS,
+        HORSE_BROWN_WHITE_DOTS,
+        HORSE_BLACK_WHITE_DOTS,
+        HORSE_GRAY_WHITE_DOTS,
+        HORSE_DARK_BROWN_WHITE_DOTS,
+        HORSE_WHITE_BLACK_DOTS,
+        HORSE_CREAMY_BLACK_DOTS,
+        HORSE_CHESTNUT_BLACK_DOTS,
+        HORSE_BROWN_BLACK_DOTS,
+        HORSE_BLACK_BLACK_DOTS,
+        HORSE_GRAY_BLACK_DOTS,
+        HORSE_DARK_BROWN_BLACK_DOTS,
         HORSE_ZOMBIE,
         HORSE_SKELETON,
         HUSK,

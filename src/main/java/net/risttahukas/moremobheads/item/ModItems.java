@@ -126,6 +126,146 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.GHAST_HEAD.get(), ModBlocks.GHAST_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> HORSE_HEAD_WHITE = ITEMS.register("horse_head_white", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_WHITE.get(), ModBlocks.HORSE_WALL_HEAD_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_CREAMY = ITEMS.register("horse_head_creamy", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_CREAMY.get(), ModBlocks.HORSE_WALL_HEAD_CREAMY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_CHESTNUT = ITEMS.register("horse_head_chestnut", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_CHESTNUT.get(), ModBlocks.HORSE_WALL_HEAD_CHESTNUT.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_BROWN = ITEMS.register("horse_head_brown", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_BROWN.get(), ModBlocks.HORSE_WALL_HEAD_BROWN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_BLACK = ITEMS.register("horse_head_black", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_BLACK.get(), ModBlocks.HORSE_WALL_HEAD_BLACK.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_GRAY = ITEMS.register("horse_head_gray", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_GRAY.get(), ModBlocks.HORSE_WALL_HEAD_GRAY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_DARK_BROWN = ITEMS.register("horse_head_dark_brown", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_DARK_BROWN.get(), ModBlocks.HORSE_WALL_HEAD_DARK_BROWN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_WHITE_WHITE = ITEMS.register("horse_head_white_white", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_WHITE_WHITE.get(), ModBlocks.HORSE_WALL_HEAD_WHITE_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_CREAMY_WHITE = ITEMS.register("horse_head_creamy_white", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_CREAMY_WHITE.get(), ModBlocks.HORSE_WALL_HEAD_CREAMY_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_CHESTNUT_WHITE = ITEMS.register("horse_head_chestnut_white", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_CHESTNUT_WHITE.get(), ModBlocks.HORSE_WALL_HEAD_CHESTNUT_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_BROWN_WHITE = ITEMS.register("horse_head_brown_white", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_BROWN_WHITE.get(), ModBlocks.HORSE_WALL_HEAD_BROWN_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_BLACK_WHITE = ITEMS.register("horse_head_black_white", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_BLACK_WHITE.get(), ModBlocks.HORSE_WALL_HEAD_BLACK_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_GRAY_WHITE = ITEMS.register("horse_head_gray_white", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_GRAY_WHITE.get(), ModBlocks.HORSE_WALL_HEAD_GRAY_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_DARK_BROWN_WHITE = ITEMS.register("horse_head_dark_brown_white", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_DARK_BROWN_WHITE.get(), ModBlocks.HORSE_WALL_HEAD_DARK_BROWN_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_WHITE_WHITE_FIELD = ITEMS.register("horse_head_white_white_field", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_WHITE_WHITE_FIELD.get(), ModBlocks.HORSE_WALL_HEAD_WHITE_WHITE_FIELD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_CREAMY_WHITE_FIELD = ITEMS.register("horse_head_creamy_white_field", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_CREAMY_WHITE_FIELD.get(), ModBlocks.HORSE_WALL_HEAD_CREAMY_WHITE_FIELD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_CHESTNUT_WHITE_FIELD = ITEMS.register("horse_head_chestnut_white_field", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_CHESTNUT_WHITE_FIELD.get(), ModBlocks.HORSE_WALL_HEAD_CHESTNUT_WHITE_FIELD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_BROWN_WHITE_FIELD = ITEMS.register("horse_head_brown_white_field", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_BROWN_WHITE_FIELD.get(), ModBlocks.HORSE_WALL_HEAD_BROWN_WHITE_FIELD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_BLACK_WHITE_FIELD = ITEMS.register("horse_head_black_white_field", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_BLACK_WHITE_FIELD.get(), ModBlocks.HORSE_WALL_HEAD_BLACK_WHITE_FIELD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_GRAY_WHITE_FIELD = ITEMS.register("horse_head_gray_white_field", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_GRAY_WHITE_FIELD.get(), ModBlocks.HORSE_WALL_HEAD_GRAY_WHITE_FIELD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_DARK_BROWN_WHITE_FIELD = ITEMS.register("horse_head_dark_brown_white_field", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_DARK_BROWN_WHITE_FIELD.get(), ModBlocks.HORSE_WALL_HEAD_DARK_BROWN_WHITE_FIELD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_WHITE_WHITE_DOTS = ITEMS.register("horse_head_white_white_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_WHITE_WHITE_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_WHITE_WHITE_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_CREAMY_WHITE_DOTS = ITEMS.register("horse_head_creamy_white_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_CREAMY_WHITE_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_CREAMY_WHITE_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_CHESTNUT_WHITE_DOTS = ITEMS.register("horse_head_chestnut_white_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_CHESTNUT_WHITE_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_CHESTNUT_WHITE_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_BROWN_WHITE_DOTS = ITEMS.register("horse_head_brown_white_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_BROWN_WHITE_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_BROWN_WHITE_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_BLACK_WHITE_DOTS = ITEMS.register("horse_head_black_white_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_BLACK_WHITE_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_BLACK_WHITE_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_GRAY_WHITE_DOTS = ITEMS.register("horse_head_gray_white_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_GRAY_WHITE_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_GRAY_WHITE_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_DARK_BROWN_WHITE_DOTS = ITEMS.register("horse_head_dark_brown_white_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_DARK_BROWN_WHITE_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_DARK_BROWN_WHITE_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_WHITE_BLACK_DOTS = ITEMS.register("horse_head_white_black_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_WHITE_BLACK_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_WHITE_BLACK_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_CREAMY_BLACK_DOTS = ITEMS.register("horse_head_creamy_black_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_CREAMY_BLACK_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_CREAMY_BLACK_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_CHESTNUT_BLACK_DOTS = ITEMS.register("horse_head_chestnut_black_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_CHESTNUT_BLACK_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_CHESTNUT_BLACK_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_BROWN_BLACK_DOTS = ITEMS.register("horse_head_brown_black_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_BROWN_BLACK_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_BROWN_BLACK_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_BLACK_BLACK_DOTS = ITEMS.register("horse_head_black_black_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_BLACK_BLACK_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_BLACK_BLACK_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_GRAY_BLACK_DOTS = ITEMS.register("horse_head_gray_black_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_GRAY_BLACK_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_GRAY_BLACK_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> HORSE_HEAD_DARK_BROWN_BLACK_DOTS = ITEMS.register("horse_head_dark_brown_black_dots", () ->
+            new EffectSkullItem(ModBlocks.HORSE_HEAD_DARK_BROWN_BLACK_DOTS.get(), ModBlocks.HORSE_WALL_HEAD_DARK_BROWN_BLACK_DOTS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> HORSE_HEAD_ZOMBIE = ITEMS.register("horse_head_zombie", () ->
             new EffectSkullItem(ModBlocks.HORSE_HEAD_ZOMBIE.get(), ModBlocks.HORSE_WALL_HEAD_ZOMBIE.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

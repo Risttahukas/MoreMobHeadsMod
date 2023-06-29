@@ -17,6 +17,7 @@ import net.minecraft.client.renderer.blockentity.SkullBlockRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.animal.horse.Markings;
 import net.minecraft.world.level.block.AbstractSkullBlock;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SkullBlock;
@@ -78,6 +79,34 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_BLACK, new ResourceLocation("textures/entity/horse/horse_black.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_GRAY, new ResourceLocation("textures/entity/horse/horse_gray.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_DARK_BROWN, new ResourceLocation("textures/entity/horse/horse_darkbrown.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_WHITE_WHITE, new ResourceLocation("textures/entity/horse/horse_white.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_CREAMY_WHITE, new ResourceLocation("textures/entity/horse/horse_creamy.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_CHESTNUT_WHITE, new ResourceLocation("textures/entity/horse/horse_chestnut.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_BROWN_WHITE, new ResourceLocation("textures/entity/horse/horse_brown.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_BLACK_WHITE, new ResourceLocation("textures/entity/horse/horse_black.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_GRAY_WHITE, new ResourceLocation("textures/entity/horse/horse_gray.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_DARK_BROWN_WHITE, new ResourceLocation("textures/entity/horse/horse_darkbrown.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_WHITE_WHITE_FIELD, new ResourceLocation("textures/entity/horse/horse_white.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_CREAMY_WHITE_FIELD, new ResourceLocation("textures/entity/horse/horse_creamy.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_CHESTNUT_WHITE_FIELD, new ResourceLocation("textures/entity/horse/horse_chestnut.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_BROWN_WHITE_FIELD, new ResourceLocation("textures/entity/horse/horse_brown.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_BLACK_WHITE_FIELD, new ResourceLocation("textures/entity/horse/horse_black.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_GRAY_WHITE_FIELD, new ResourceLocation("textures/entity/horse/horse_gray.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_DARK_BROWN_WHITE_FIELD, new ResourceLocation("textures/entity/horse/horse_darkbrown.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_WHITE_WHITE_DOTS, new ResourceLocation("textures/entity/horse/horse_white.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_CREAMY_WHITE_DOTS, new ResourceLocation("textures/entity/horse/horse_creamy.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_CHESTNUT_WHITE_DOTS, new ResourceLocation("textures/entity/horse/horse_chestnut.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_BROWN_WHITE_DOTS, new ResourceLocation("textures/entity/horse/horse_brown.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_BLACK_WHITE_DOTS, new ResourceLocation("textures/entity/horse/horse_black.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_GRAY_WHITE_DOTS, new ResourceLocation("textures/entity/horse/horse_gray.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_DARK_BROWN_WHITE_DOTS, new ResourceLocation("textures/entity/horse/horse_darkbrown.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_WHITE_BLACK_DOTS, new ResourceLocation("textures/entity/horse/horse_white.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_CREAMY_BLACK_DOTS, new ResourceLocation("textures/entity/horse/horse_creamy.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_CHESTNUT_BLACK_DOTS, new ResourceLocation("textures/entity/horse/horse_chestnut.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_BROWN_BLACK_DOTS, new ResourceLocation("textures/entity/horse/horse_brown.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_BLACK_BLACK_DOTS, new ResourceLocation("textures/entity/horse/horse_black.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_GRAY_BLACK_DOTS, new ResourceLocation("textures/entity/horse/horse_gray.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_DARK_BROWN_BLACK_DOTS, new ResourceLocation("textures/entity/horse/horse_darkbrown.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_ZOMBIE, new ResourceLocation("textures/entity/horse/horse_zombie.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_SKELETON, new ResourceLocation("textures/entity/horse/horse_skeleton.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.HUSK, new ResourceLocation("textures/entity/zombie/husk.png"));
@@ -157,6 +186,9 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
                 horizontalTranslation = 0.3096875F;
             } else if (skullModelBase instanceof MuleHeadModel) {
                 horizontalTranslation = 0.29875F;
+            } else if (skullModelBase instanceof HorseHeadModel) {
+                horizontalTranslation = 0.259375F;
+                verticalTranslation = 0.1875F;
             } else if (skullModelBase instanceof AbstractHorseHeadModel) {
                 horizontalTranslation = 0.28125F;
             } else if (skullModelBase instanceof HuskHeadModel) {
@@ -173,6 +205,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
             chargedCreeperHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else if (skullModelBase instanceof DrownedHeadModel drownedHeadModel) {
             drownedHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+        } else if (skullModelBase instanceof HorseHeadModel horseHeadModel) {
+            horseHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else if (skullModelBase instanceof MooshroomHeadModel mooshroomHeadModel) {
             mooshroomHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else if (skullModelBase instanceof SheepHeadModel sheepHeadModel) {
@@ -226,6 +260,41 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.DONKEY, new DonkeyHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CHESTED_HORSE_HEAD)));
         builder.put(EffectSkullBlock.Types.DROWNED, new DrownedHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HUMANOID_SKULL), entityModelSet.bakeLayer(ModBlockEntityModelLayers.DROWNED_HEAD_CLOTHES)));
         builder.put(EffectSkullBlock.Types.GHAST, new GhastHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.GHAST_HEAD)));
+        builder.put(EffectSkullBlock.Types.HORSE_WHITE, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.NONE));
+        builder.put(EffectSkullBlock.Types.HORSE_CREAMY, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.NONE));
+        builder.put(EffectSkullBlock.Types.HORSE_CHESTNUT, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.NONE));
+        builder.put(EffectSkullBlock.Types.HORSE_BROWN, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.NONE));
+        builder.put(EffectSkullBlock.Types.HORSE_BLACK, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.NONE));
+        builder.put(EffectSkullBlock.Types.HORSE_GRAY, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.NONE));
+        builder.put(EffectSkullBlock.Types.HORSE_DARK_BROWN, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.NONE));
+        builder.put(EffectSkullBlock.Types.HORSE_WHITE_WHITE, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE));
+        builder.put(EffectSkullBlock.Types.HORSE_CREAMY_WHITE, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE));
+        builder.put(EffectSkullBlock.Types.HORSE_CHESTNUT_WHITE, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE));
+        builder.put(EffectSkullBlock.Types.HORSE_BROWN_WHITE, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE));
+        builder.put(EffectSkullBlock.Types.HORSE_BLACK_WHITE, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE));
+        builder.put(EffectSkullBlock.Types.HORSE_GRAY_WHITE, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE));
+        builder.put(EffectSkullBlock.Types.HORSE_DARK_BROWN_WHITE, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE));
+        builder.put(EffectSkullBlock.Types.HORSE_WHITE_WHITE_FIELD, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_FIELD));
+        builder.put(EffectSkullBlock.Types.HORSE_CREAMY_WHITE_FIELD, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_FIELD));
+        builder.put(EffectSkullBlock.Types.HORSE_CHESTNUT_WHITE_FIELD, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_FIELD));
+        builder.put(EffectSkullBlock.Types.HORSE_BROWN_WHITE_FIELD, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_FIELD));
+        builder.put(EffectSkullBlock.Types.HORSE_BLACK_WHITE_FIELD, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_FIELD));
+        builder.put(EffectSkullBlock.Types.HORSE_GRAY_WHITE_FIELD, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_FIELD));
+        builder.put(EffectSkullBlock.Types.HORSE_DARK_BROWN_WHITE_FIELD, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_FIELD));
+        builder.put(EffectSkullBlock.Types.HORSE_WHITE_WHITE_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_DOTS));
+        builder.put(EffectSkullBlock.Types.HORSE_CREAMY_WHITE_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_DOTS));
+        builder.put(EffectSkullBlock.Types.HORSE_CHESTNUT_WHITE_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_DOTS));
+        builder.put(EffectSkullBlock.Types.HORSE_BROWN_WHITE_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_DOTS));
+        builder.put(EffectSkullBlock.Types.HORSE_BLACK_WHITE_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_DOTS));
+        builder.put(EffectSkullBlock.Types.HORSE_GRAY_WHITE_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_DOTS));
+        builder.put(EffectSkullBlock.Types.HORSE_DARK_BROWN_WHITE_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.WHITE_DOTS));
+        builder.put(EffectSkullBlock.Types.HORSE_WHITE_BLACK_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.BLACK_DOTS));
+        builder.put(EffectSkullBlock.Types.HORSE_CREAMY_BLACK_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.BLACK_DOTS));
+        builder.put(EffectSkullBlock.Types.HORSE_CHESTNUT_BLACK_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.BLACK_DOTS));
+        builder.put(EffectSkullBlock.Types.HORSE_BROWN_BLACK_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.BLACK_DOTS));
+        builder.put(EffectSkullBlock.Types.HORSE_BLACK_BLACK_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.BLACK_DOTS));
+        builder.put(EffectSkullBlock.Types.HORSE_GRAY_BLACK_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.BLACK_DOTS));
+        builder.put(EffectSkullBlock.Types.HORSE_DARK_BROWN_BLACK_DOTS, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.BLACK_DOTS));
         builder.put(EffectSkullBlock.Types.HORSE_ZOMBIE, new AbstractHorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD)));
         builder.put(EffectSkullBlock.Types.HORSE_SKELETON, new AbstractHorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD)));
         builder.put(EffectSkullBlock.Types.HUSK, new HuskHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HUMANOID_SKULL)));
