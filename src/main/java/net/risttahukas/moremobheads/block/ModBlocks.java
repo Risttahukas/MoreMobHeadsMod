@@ -623,6 +623,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PARROT_GREY, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(PARROT_HEAD_GREY).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> PHANTOM_HEAD = BLOCKS.register("phantom_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.PHANTOM, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> PHANTOM_WALL_HEAD = BLOCKS.register("phantom_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PHANTOM, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(PHANTOM_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> PILLAGER_HEAD = BLOCKS.register("pillager_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.PILLAGER, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

@@ -46,6 +46,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(2.5D, 0.0D, 2.5D, 13.5D, 10.0D, 13.5D);
     protected static final VoxelShape PARROT_SHAPE =
             Block.box(7.0D, 0.0D, 7.0D, 9.0D, 4.0D, 9.0D);
+    protected static final VoxelShape PHANTOM_SHAPE =
+            Block.box(4.5D, 0.0D, 4.5D, 11.5D, 3.0D, 11.5D);
     protected static final VoxelShape POLAR_BEAR_SHAPE =
             Block.box(4.5D, 0.0D, 4.5D, 11.5D, 7.0D, 11.5D);
     protected static final VoxelShape RAVAGER_SHAPE =
@@ -128,6 +130,8 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.PARROT_GREEN.equals(this.getType()) || Types.PARROT_YELLOW_BLUE.equals(this.getType()) ||
                 Types.PARROT_GREY.equals(this.getType())) {
             return PARROT_SHAPE;
+        } if (Types.PHANTOM.equals(this.getType())) {
+            return PHANTOM_SHAPE;
         } if (Types.POLAR_BEAR.equals(this.getType())) {
             return POLAR_BEAR_SHAPE;
         } if (Types.SHEEP_WHITE.equals(this.getType()) || Types.SHEEP_ORANGE.equals(this.getType()) ||
@@ -261,6 +265,7 @@ public class EffectSkullBlock extends SkullBlock {
         PARROT_GREEN,
         PARROT_YELLOW_BLUE,
         PARROT_GREY,
+        PHANTOM,
         PILLAGER,
         POLAR_BEAR,
         PUFFERFISH,

@@ -131,6 +131,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_GREEN, new ResourceLocation("textures/entity/parrot/parrot_green.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_YELLOW_BLUE, new ResourceLocation("textures/entity/parrot/parrot_yellow_blue.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_GREY, new ResourceLocation("textures/entity/parrot/parrot_grey.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.PHANTOM, new ResourceLocation("textures/entity/phantom.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PILLAGER, new ResourceLocation("textures/entity/illager/pillager.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.POLAR_BEAR, new ResourceLocation("textures/entity/bear/polarbear.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PUFFERFISH, new ResourceLocation("textures/entity/fish/pufferfish.png"));
@@ -170,9 +171,9 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         Direction direction = flag ? blockstate.getValue(WallSkullBlock.FACING) : null;
         int i = flag ? RotationSegment.convertToSegment(direction.getOpposite()) : blockstate.getValue(SkullBlock.ROTATION);
         float f1 = RotationSegment.convertToDegrees(i);
-        SkullBlock.Type skullblock$type = ((AbstractSkullBlock)blockstate.getBlock()).getType();
-        SkullModelBase skullmodelbase = this.modelByType.get(skullblock$type);
-        RenderType rendertype = getRenderType(skullblock$type, skullBlockEntity.getOwnerProfile());
+        SkullBlock.Type skullBlock$type = ((AbstractSkullBlock)blockstate.getBlock()).getType();
+        SkullModelBase skullmodelbase = this.modelByType.get(skullBlock$type);
+        RenderType rendertype = getRenderType(skullBlock$type, skullBlockEntity.getOwnerProfile());
         renderSkull(direction, f1, f, poseStack, multiBufferSource, p_112538_, skullmodelbase, rendertype);
     }
 
@@ -188,7 +189,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
             if (skullModelBase instanceof AxolotlHeadModel || skullModelBase instanceof CatHeadModel) {
                 horizontalTranslation = 0.375F;
             } else if (skullModelBase instanceof AllayHeadModel || skullModelBase instanceof OcelotHeadModel ||
-                    skullModelBase instanceof WardenHeadModel) {
+                    skullModelBase instanceof WardenHeadModel || skullModelBase instanceof PhantomHeadModel) {
                 horizontalTranslation = 0.34375F;
             } else if (skullModelBase instanceof BatHeadModel) {
                 horizontalTranslation = 0.434375F;
@@ -234,6 +235,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
             horseHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else if (skullModelBase instanceof MooshroomHeadModel mooshroomHeadModel) {
             mooshroomHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+        } else if (skullModelBase instanceof PhantomHeadModel phantomHeadModel) {
+            phantomHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else if (skullModelBase instanceof SheepHeadModel sheepHeadModel) {
             sheepHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else if (skullModelBase instanceof SlimeHeadModel slimeHeadModel) {
@@ -348,6 +351,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.PARROT_GREEN, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_YELLOW_BLUE, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_GREY, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
+        builder.put(EffectSkullBlock.Types.PHANTOM, new PhantomHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PHANTOM_HEAD)));
         builder.put(EffectSkullBlock.Types.PILLAGER, new IllagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ILLAGER_HEAD)));
         builder.put(EffectSkullBlock.Types.POLAR_BEAR, new PolarBearHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.POLAR_BEAR_HEAD)));
         builder.put(EffectSkullBlock.Types.PUFFERFISH, new PufferfishHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PUFFERFISH_HEAD)));
