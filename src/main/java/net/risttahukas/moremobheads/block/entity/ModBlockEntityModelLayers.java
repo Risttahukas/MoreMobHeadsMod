@@ -33,6 +33,7 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation PHANTOM_HEAD = register("phantom_head");
     public static final ModelLayerLocation POLAR_BEAR_HEAD = register("polar_bear_head");
     public static final ModelLayerLocation PUFFERFISH_HEAD = register("pufferfish_head");
+    public static final ModelLayerLocation RABBIT_HEAD = register("rabbit_head");
     public static final ModelLayerLocation RAVAGER_HEAD = register("ravager_head");
     public static final ModelLayerLocation SHEEP_HEAD = register("sheep_head");
     public static final ModelLayerLocation SHEEP_HEAD_WOOL = register("sheep_head_wool");

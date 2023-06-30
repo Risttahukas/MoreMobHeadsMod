@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "moremobheads:rabbit_head_caerbannog"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "moremobheads:blocks/rabbit_head_caerbannog"
+}

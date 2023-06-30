@@ -135,6 +135,14 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PILLAGER, new ResourceLocation("textures/entity/illager/pillager.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.POLAR_BEAR, new ResourceLocation("textures/entity/bear/polarbear.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PUFFERFISH, new ResourceLocation("textures/entity/fish/pufferfish.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.RABBIT_BROWN, new ResourceLocation("textures/entity/rabbit/brown.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.RABBIT_WHITE, new ResourceLocation("textures/entity/rabbit/white.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.RABBIT_BLACK, new ResourceLocation("textures/entity/rabbit/black.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.RABBIT_WHITE_SPLOTCHED, new ResourceLocation("textures/entity/rabbit/white_splotched.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.RABBIT_GOLD, new ResourceLocation("textures/entity/rabbit/gold.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.RABBIT_SALT, new ResourceLocation("textures/entity/rabbit/salt.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.RABBIT_CAERBANNOG, new ResourceLocation("textures/entity/rabbit/caerbannog.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.RABBIT_TOAST, new ResourceLocation("textures/entity/rabbit/toast.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.RAVAGER, new ResourceLocation("textures/entity/illager/ravager.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_WHITE, new ResourceLocation("textures/entity/sheep/sheep.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_ORANGE, new ResourceLocation("textures/entity/sheep/sheep.png"));
@@ -213,6 +221,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
                 horizontalTranslation = 0.28125F;
             } else if (skullModelBase instanceof PandaHeadModel) {
                 horizontalTranslation = 0.21875F;
+            } else if (skullModelBase instanceof RabbitHeadModel) {
+                horizontalTranslation = 0.411458334F;
             } else if (skullModelBase instanceof HuskHeadModel) {
                 horizontalTranslation = 0.234375F;
             } else if (skullModelBase instanceof RavagerHeadModel) {
@@ -355,6 +365,14 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.PILLAGER, new IllagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ILLAGER_HEAD)));
         builder.put(EffectSkullBlock.Types.POLAR_BEAR, new PolarBearHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.POLAR_BEAR_HEAD)));
         builder.put(EffectSkullBlock.Types.PUFFERFISH, new PufferfishHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PUFFERFISH_HEAD)));
+        builder.put(EffectSkullBlock.Types.RABBIT_BROWN, new RabbitHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.RABBIT_HEAD)));
+        builder.put(EffectSkullBlock.Types.RABBIT_WHITE, new RabbitHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.RABBIT_HEAD)));
+        builder.put(EffectSkullBlock.Types.RABBIT_BLACK, new RabbitHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.RABBIT_HEAD)));
+        builder.put(EffectSkullBlock.Types.RABBIT_WHITE_SPLOTCHED, new RabbitHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.RABBIT_HEAD)));
+        builder.put(EffectSkullBlock.Types.RABBIT_GOLD, new RabbitHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.RABBIT_HEAD)));
+        builder.put(EffectSkullBlock.Types.RABBIT_SALT, new RabbitHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.RABBIT_HEAD)));
+        builder.put(EffectSkullBlock.Types.RABBIT_CAERBANNOG, new RabbitHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.RABBIT_HEAD)));
+        builder.put(EffectSkullBlock.Types.RABBIT_TOAST, new RabbitHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.RABBIT_HEAD)));
         builder.put(EffectSkullBlock.Types.RAVAGER, new RavagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.RAVAGER_HEAD)));
         builder.put(EffectSkullBlock.Types.SHEEP_WHITE, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 0));
         builder.put(EffectSkullBlock.Types.SHEEP_ORANGE, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 1));

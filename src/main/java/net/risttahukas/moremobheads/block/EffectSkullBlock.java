@@ -50,6 +50,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(4.5D, 0.0D, 4.5D, 11.5D, 3.0D, 11.5D);
     protected static final VoxelShape POLAR_BEAR_SHAPE =
             Block.box(4.5D, 0.0D, 4.5D, 11.5D, 7.0D, 11.5D);
+    protected static final VoxelShape RABBIT_SHAPE =
+            Block.box(6.58333333D, 0.0D, 6.58333333D, 9.41666667D, 2.26666667D, 9.41666667D);
     protected static final VoxelShape RAVAGER_SHAPE =
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 10.75D, 12.0D);
     protected static final VoxelShape SHEEP_SHAPE =
@@ -134,6 +136,13 @@ public class EffectSkullBlock extends SkullBlock {
             return PHANTOM_SHAPE;
         } if (Types.POLAR_BEAR.equals(this.getType())) {
             return POLAR_BEAR_SHAPE;
+        } if (Types.RABBIT_BROWN.equals(this.getType()) || Types.RABBIT_WHITE.equals(this.getType()) ||
+                Types.RABBIT_BLACK.equals(this.getType()) || Types.RABBIT_WHITE_SPLOTCHED.equals(this.getType()) ||
+                Types.RABBIT_GOLD.equals(this.getType()) || Types.RABBIT_SALT.equals(this.getType()) ||
+                Types.RABBIT_CAERBANNOG.equals(this.getType()) || Types.RABBIT_TOAST.equals(this.getType())) {
+            return RABBIT_SHAPE;
+        } if (Types.RAVAGER.equals(this.getType())) {
+            return RAVAGER_SHAPE;
         } if (Types.SHEEP_WHITE.equals(this.getType()) || Types.SHEEP_ORANGE.equals(this.getType()) ||
                 Types.SHEEP_MAGENTA.equals(this.getType()) || Types.SHEEP_LIGHT_BLUE.equals(this.getType()) ||
                 Types.SHEEP_YELLOW.equals(this.getType()) || Types.SHEEP_LIME.equals(this.getType()) ||
@@ -148,8 +157,6 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.EVOKER.equals(this.getType()) || Types.ILLUSIONER.equals(this.getType()) ||
                 Types.PILLAGER.equals(this.getType()) || Types.VINDICATOR.equals(this.getType())) {
             return VILLAGER_SHAPE;
-        } if (Types.RAVAGER.equals(this.getType())) {
-            return RAVAGER_SHAPE;
         }
         return SHAPE;
     }
@@ -269,6 +276,14 @@ public class EffectSkullBlock extends SkullBlock {
         PILLAGER,
         POLAR_BEAR,
         PUFFERFISH,
+        RABBIT_BROWN,
+        RABBIT_WHITE,
+        RABBIT_BLACK,
+        RABBIT_WHITE_SPLOTCHED,
+        RABBIT_GOLD,
+        RABBIT_SALT,
+        RABBIT_CAERBANNOG,
+        RABBIT_TOAST,
         RAVAGER,
         SHEEP_WHITE,
         SHEEP_ORANGE,

@@ -117,6 +117,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.5D, 4.0D, 0.0D, 11.5D, 11.0D, 7.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.5D, 7.0D, 11.0D, 11.5D),
             Direction.WEST, Block.box(9.0D, 4.0D, 4.5D, 16.0D, 11.0D, 11.5D)));
+    private static final Map<Direction, VoxelShape> RABBIT_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(6.58333333D, 4.0D, 13.16666667D, 9.41666667D, 6.26666667D, 16.0D),
+            Direction.SOUTH, Block.box(6.58333333D, 4.0D, 0.0D, 9.41666667D, 6.26666667D, 2.83333333D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 6.58333333D, 2.83333333D, 6.26666667D, 9.41666667D),
+            Direction.WEST, Block.box(13.16666667D, 4.0D, 6.58333333D, 16.0D, 6.26666667D, 9.41666667D)));
     private static final Map<Direction, VoxelShape> RAVAGER_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.0D, 3.25D, 8.0D, 12.0D, 14.0D, 16.0D),
             Direction.SOUTH, Block.box(4.0D, 3.25D, 0.0D, 12.0D, 14.0D, 8.0D),
@@ -251,6 +256,17 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return PHANTOM_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.POLAR_BEAR.equals(this.getType())) {
             return POLAR_BEAR_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.RABBIT_BROWN.equals(this.getType()) ||
+                EffectSkullBlock.Types.RABBIT_WHITE.equals(this.getType()) ||
+                EffectSkullBlock.Types.RABBIT_BLACK.equals(this.getType()) ||
+                EffectSkullBlock.Types.RABBIT_WHITE_SPLOTCHED.equals(this.getType()) ||
+                EffectSkullBlock.Types.RABBIT_GOLD.equals(this.getType()) ||
+                EffectSkullBlock.Types.RABBIT_SALT.equals(this.getType()) ||
+                EffectSkullBlock.Types.RABBIT_CAERBANNOG.equals(this.getType()) ||
+                EffectSkullBlock.Types.RABBIT_TOAST.equals(this.getType())) {
+            return RABBIT_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.RAVAGER.equals(this.getType())) {
+            return RAVAGER_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.SHEEP_WHITE.equals(this.getType()) ||
                 EffectSkullBlock.Types.SHEEP_ORANGE.equals(this.getType()) ||
                 EffectSkullBlock.Types.SHEEP_MAGENTA.equals(this.getType()) ||
@@ -276,8 +292,6 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                 EffectSkullBlock.Types.PILLAGER.equals(this.getType()) ||
                 EffectSkullBlock.Types.VINDICATOR.equals(this.getType())) {
             return VILLAGER_AABBS.get(blockState.getValue(FACING));
-        } if (EffectSkullBlock.Types.RAVAGER.equals(this.getType())) {
-            return RAVAGER_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.WARDEN.equals(this.getType())) {
             return WARDEN_AABBS.get(blockState.getValue(FACING));
         }

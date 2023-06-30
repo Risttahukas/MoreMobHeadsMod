@@ -144,6 +144,14 @@ public class MoreMobHeadsMod
             event.accept(Items.PLAYER_HEAD);
             event.accept(ModItems.POLAR_BEAR_HEAD);
             event.accept(ModItems.PUFFERFISH_HEAD);
+            event.accept(ModItems.RABBIT_HEAD_BROWN);
+            event.accept(ModItems.RABBIT_HEAD_WHITE);
+            event.accept(ModItems.RABBIT_HEAD_BLACK);
+            event.accept(ModItems.RABBIT_HEAD_WHITE_SPLOTCHED);
+            event.accept(ModItems.RABBIT_HEAD_GOLD);
+            event.accept(ModItems.RABBIT_HEAD_SALT);
+            event.accept(ModItems.RABBIT_HEAD_CAERBANNOG);
+            event.accept(ModItems.RABBIT_HEAD_TOAST);
             event.accept(ModItems.RAVAGER_HEAD);
             event.accept(ModItems.SHEEP_HEAD_WHITE);
             event.accept(ModItems.SHEEP_HEAD_ORANGE);

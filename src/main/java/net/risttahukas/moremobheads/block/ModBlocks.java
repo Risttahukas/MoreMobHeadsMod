@@ -651,6 +651,62 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PUFFERFISH, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(PUFFERFISH_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> RABBIT_HEAD_BROWN = BLOCKS.register("rabbit_head_brown",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.RABBIT_BROWN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> RABBIT_WALL_HEAD_BROWN = BLOCKS.register("rabbit_wall_head_brown",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.RABBIT_BROWN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(RABBIT_HEAD_BROWN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> RABBIT_HEAD_WHITE = BLOCKS.register("rabbit_head_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.RABBIT_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> RABBIT_WALL_HEAD_WHITE = BLOCKS.register("rabbit_wall_head_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.RABBIT_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(RABBIT_HEAD_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> RABBIT_HEAD_BLACK = BLOCKS.register("rabbit_head_black",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.RABBIT_BLACK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> RABBIT_WALL_HEAD_BLACK = BLOCKS.register("rabbit_wall_head_black",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.RABBIT_BLACK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(RABBIT_HEAD_BLACK).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> RABBIT_HEAD_WHITE_SPLOTCHED = BLOCKS.register("rabbit_head_white_splotched",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.RABBIT_WHITE_SPLOTCHED, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> RABBIT_WALL_HEAD_WHITE_SPLOTCHED = BLOCKS.register("rabbit_wall_head_white_splotched",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.RABBIT_WHITE_SPLOTCHED, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(RABBIT_HEAD_WHITE_SPLOTCHED).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> RABBIT_HEAD_GOLD = BLOCKS.register("rabbit_head_gold",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.RABBIT_GOLD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> RABBIT_WALL_HEAD_GOLD = BLOCKS.register("rabbit_wall_head_gold",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.RABBIT_GOLD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(RABBIT_HEAD_GOLD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> RABBIT_HEAD_SALT = BLOCKS.register("rabbit_head_salt",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.RABBIT_SALT, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> RABBIT_WALL_HEAD_SALT = BLOCKS.register("rabbit_wall_head_salt",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.RABBIT_SALT, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(RABBIT_HEAD_SALT).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> RABBIT_HEAD_CAERBANNOG = BLOCKS.register("rabbit_head_caerbannog",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.RABBIT_CAERBANNOG, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> RABBIT_WALL_HEAD_CAERBANNOG = BLOCKS.register("rabbit_wall_head_caerbannog",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.RABBIT_CAERBANNOG, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(RABBIT_HEAD_CAERBANNOG).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> RABBIT_HEAD_TOAST = BLOCKS.register("rabbit_head_toast",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.RABBIT_TOAST, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> RABBIT_WALL_HEAD_TOAST = BLOCKS.register("rabbit_wall_head_toast",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.RABBIT_TOAST, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(RABBIT_HEAD_TOAST).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> RAVAGER_HEAD = BLOCKS.register("ravager_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.RAVAGER, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

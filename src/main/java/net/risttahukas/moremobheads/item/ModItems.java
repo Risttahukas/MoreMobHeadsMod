@@ -378,6 +378,38 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.PUFFERFISH_HEAD.get(), ModBlocks.PUFFERFISH_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> RABBIT_HEAD_BROWN = ITEMS.register("rabbit_head_brown", () ->
+            new EffectSkullItem(ModBlocks.RABBIT_HEAD_BROWN.get(), ModBlocks.RABBIT_WALL_HEAD_BROWN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> RABBIT_HEAD_WHITE = ITEMS.register("rabbit_head_white", () ->
+            new EffectSkullItem(ModBlocks.RABBIT_HEAD_WHITE.get(), ModBlocks.RABBIT_WALL_HEAD_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> RABBIT_HEAD_BLACK = ITEMS.register("rabbit_head_black", () ->
+            new EffectSkullItem(ModBlocks.RABBIT_HEAD_BLACK.get(), ModBlocks.RABBIT_WALL_HEAD_BLACK.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> RABBIT_HEAD_WHITE_SPLOTCHED = ITEMS.register("rabbit_head_white_splotched", () ->
+            new EffectSkullItem(ModBlocks.RABBIT_HEAD_WHITE_SPLOTCHED.get(), ModBlocks.RABBIT_WALL_HEAD_WHITE_SPLOTCHED.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> RABBIT_HEAD_GOLD = ITEMS.register("rabbit_head_gold", () ->
+            new EffectSkullItem(ModBlocks.RABBIT_HEAD_GOLD.get(), ModBlocks.RABBIT_WALL_HEAD_GOLD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> RABBIT_HEAD_SALT = ITEMS.register("rabbit_head_salt", () ->
+            new EffectSkullItem(ModBlocks.RABBIT_HEAD_SALT.get(), ModBlocks.RABBIT_WALL_HEAD_SALT.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> RABBIT_HEAD_CAERBANNOG = ITEMS.register("rabbit_head_caerbannog", () ->
+            new EffectSkullItem(ModBlocks.RABBIT_HEAD_CAERBANNOG.get(), ModBlocks.RABBIT_WALL_HEAD_CAERBANNOG.get(),
+                    (new Item.Properties()).rarity(Rarity.EPIC), Direction.DOWN));
+
+    public static final RegistryObject<Item> RABBIT_HEAD_TOAST = ITEMS.register("rabbit_head_toast", () ->
+            new EffectSkullItem(ModBlocks.RABBIT_HEAD_TOAST.get(), ModBlocks.RABBIT_WALL_HEAD_TOAST.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> RAVAGER_HEAD = ITEMS.register("ravager_head", () ->
             new EffectSkullItem(ModBlocks.RAVAGER_HEAD.get(), ModBlocks.RAVAGER_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
