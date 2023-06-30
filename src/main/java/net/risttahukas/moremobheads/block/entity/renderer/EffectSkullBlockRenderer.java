@@ -119,6 +119,13 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.MOOSHROOM_BROWN, new ResourceLocation("textures/entity/cow/brown_mooshroom.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.MULE, new ResourceLocation("textures/entity/horse/mule.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.OCELOT, new ResourceLocation("textures/entity/cat/ocelot.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.PANDA, new ResourceLocation("textures/entity/panda/panda.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.PANDA_AGGRESSIVE, new ResourceLocation("textures/entity/panda/aggressive_panda.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.PANDA_LAZY, new ResourceLocation("textures/entity/panda/lazy_panda.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.PANDA_WORRIED, new ResourceLocation("textures/entity/panda/worried_panda.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.PANDA_PLAYFUL, new ResourceLocation("textures/entity/panda/playful_panda.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.PANDA_WEAK, new ResourceLocation("textures/entity/panda/weak_panda.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.PANDA_BROWN, new ResourceLocation("textures/entity/panda/brown_panda.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_RED_BLUE, new ResourceLocation("textures/entity/parrot/parrot_red_blue.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_BLUE, new ResourceLocation("textures/entity/parrot/parrot_blue.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_GREEN, new ResourceLocation("textures/entity/parrot/parrot_green.png"));
@@ -203,6 +210,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
                 verticalTranslation = 0.1875F;
             } else if (skullModelBase instanceof AbstractHorseHeadModel || skullModelBase instanceof PolarBearHeadModel) {
                 horizontalTranslation = 0.28125F;
+            } else if (skullModelBase instanceof PandaHeadModel) {
+                horizontalTranslation = 0.21875F;
             } else if (skullModelBase instanceof HuskHeadModel) {
                 horizontalTranslation = 0.234375F;
             } else if (skullModelBase instanceof RavagerHeadModel) {
@@ -327,6 +336,13 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.MOOSHROOM_BROWN, new MooshroomHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.COW_HEAD), Blocks.BROWN_MUSHROOM.defaultBlockState()));
         builder.put(EffectSkullBlock.Types.MULE, new MuleHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CHESTED_HORSE_HEAD)));
         builder.put(EffectSkullBlock.Types.OCELOT, new OcelotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.OCELOT_HEAD)));
+        builder.put(EffectSkullBlock.Types.PANDA, new PandaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PANDA_HEAD)));
+        builder.put(EffectSkullBlock.Types.PANDA_AGGRESSIVE, new PandaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PANDA_HEAD)));
+        builder.put(EffectSkullBlock.Types.PANDA_LAZY, new PandaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PANDA_HEAD)));
+        builder.put(EffectSkullBlock.Types.PANDA_WORRIED, new PandaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PANDA_HEAD)));
+        builder.put(EffectSkullBlock.Types.PANDA_PLAYFUL, new PandaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PANDA_HEAD)));
+        builder.put(EffectSkullBlock.Types.PANDA_WEAK, new PandaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PANDA_HEAD)));
+        builder.put(EffectSkullBlock.Types.PANDA_BROWN, new PandaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PANDA_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_RED_BLUE, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_BLUE, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_GREEN, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));

@@ -42,6 +42,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(4.78D, 0.0D, 4.78D, 11.22D, 10.12D, 11.22D);
     protected static final VoxelShape OCELOT_SHAPE =
             Block.box(5.5D, 0.0D, 5.5D, 10.5D, 4.0D, 10.5D);
+    protected static final VoxelShape PANDA_SHAPE =
+            Block.box(2.5D, 0.0D, 2.5D, 13.5D, 10.0D, 13.5D);
     protected static final VoxelShape PARROT_SHAPE =
             Block.box(7.0D, 0.0D, 7.0D, 9.0D, 4.0D, 9.0D);
     protected static final VoxelShape POLAR_BEAR_SHAPE =
@@ -117,6 +119,11 @@ public class EffectSkullBlock extends SkullBlock {
             return MULE_SHAPE;
         } if (Types.OCELOT.equals(this.getType())) {
             return OCELOT_SHAPE;
+        } if (Types.PANDA.equals(this.getType()) || Types.PANDA_AGGRESSIVE.equals(this.getType()) ||
+                Types.PANDA_LAZY.equals(this.getType()) || Types.PANDA_WORRIED.equals(this.getType()) ||
+                Types.PANDA_PLAYFUL.equals(this.getType()) || Types.PANDA_WEAK.equals(this.getType()) ||
+                Types.PANDA_BROWN.equals(this.getType())) {
+            return PANDA_SHAPE;
         } if (Types.PARROT_RED_BLUE.equals(this.getType()) || Types.PARROT_BLUE.equals(this.getType()) ||
                 Types.PARROT_GREEN.equals(this.getType()) || Types.PARROT_YELLOW_BLUE.equals(this.getType()) ||
                 Types.PARROT_GREY.equals(this.getType())) {
@@ -242,6 +249,13 @@ public class EffectSkullBlock extends SkullBlock {
         MOOSHROOM_BROWN,
         MULE,
         OCELOT,
+        PANDA,
+        PANDA_AGGRESSIVE,
+        PANDA_LAZY,
+        PANDA_WORRIED,
+        PANDA_PLAYFUL,
+        PANDA_WEAK,
+        PANDA_BROWN,
         PARROT_RED_BLUE,
         PARROT_BLUE,
         PARROT_GREEN,

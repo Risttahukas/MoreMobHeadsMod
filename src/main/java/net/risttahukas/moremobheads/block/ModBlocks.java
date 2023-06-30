@@ -539,6 +539,55 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.OCELOT, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(OCELOT_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> PANDA_HEAD = BLOCKS.register("panda_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.PANDA, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> PANDA_WALL_HEAD = BLOCKS.register("panda_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PANDA, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(PANDA_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> PANDA_HEAD_AGGRESSIVE = BLOCKS.register("panda_head_aggressive",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.PANDA_AGGRESSIVE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> PANDA_WALL_HEAD_AGGRESSIVE = BLOCKS.register("panda_wall_head_aggressive",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PANDA_AGGRESSIVE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(PANDA_HEAD_AGGRESSIVE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> PANDA_HEAD_LAZY = BLOCKS.register("panda_head_lazy",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.PANDA_LAZY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> PANDA_WALL_HEAD_LAZY = BLOCKS.register("panda_wall_head_lazy",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PANDA_LAZY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(PANDA_HEAD_LAZY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> PANDA_HEAD_WORRIED = BLOCKS.register("panda_head_worried",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.PANDA_WORRIED, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> PANDA_WALL_HEAD_WORRIED = BLOCKS.register("panda_wall_head_worried",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PANDA_WORRIED, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(PANDA_HEAD_WORRIED).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> PANDA_HEAD_PLAYFUL = BLOCKS.register("panda_head_playful",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.PANDA_PLAYFUL, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> PANDA_WALL_HEAD_PLAYFUL = BLOCKS.register("panda_wall_head_playful",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PANDA_PLAYFUL, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(PANDA_HEAD_PLAYFUL).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> PANDA_HEAD_WEAK = BLOCKS.register("panda_head_weak",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.PANDA_WEAK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> PANDA_WALL_HEAD_WEAK = BLOCKS.register("panda_wall_head_weak",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PANDA_WEAK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(PANDA_HEAD_WEAK).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> PANDA_HEAD_BROWN = BLOCKS.register("panda_head_brown",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.PANDA_BROWN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> PANDA_WALL_HEAD_BROWN = BLOCKS.register("panda_wall_head_brown",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PANDA_BROWN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(PANDA_HEAD_BROWN).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> PARROT_HEAD_RED_BLUE = BLOCKS.register("parrot_head_red_blue",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.PARROT_RED_BLUE, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

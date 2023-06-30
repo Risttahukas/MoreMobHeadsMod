@@ -314,6 +314,34 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.OCELOT_HEAD.get(), ModBlocks.OCELOT_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> PANDA_HEAD = ITEMS.register("panda_head", () ->
+            new EffectSkullItem(ModBlocks.PANDA_HEAD.get(), ModBlocks.PANDA_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> PANDA_HEAD_AGGRESSIVE = ITEMS.register("panda_head_aggressive", () ->
+            new EffectSkullItem(ModBlocks.PANDA_HEAD_AGGRESSIVE.get(), ModBlocks.PANDA_WALL_HEAD_AGGRESSIVE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> PANDA_HEAD_LAZY = ITEMS.register("panda_head_lazy", () ->
+            new EffectSkullItem(ModBlocks.PANDA_HEAD_LAZY.get(), ModBlocks.PANDA_WALL_HEAD_LAZY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> PANDA_HEAD_WORRIED = ITEMS.register("panda_head_worried", () ->
+            new EffectSkullItem(ModBlocks.PANDA_HEAD_WORRIED.get(), ModBlocks.PANDA_WALL_HEAD_WORRIED.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> PANDA_HEAD_PLAYFUL = ITEMS.register("panda_head_playful", () ->
+            new EffectSkullItem(ModBlocks.PANDA_HEAD_PLAYFUL.get(), ModBlocks.PANDA_WALL_HEAD_PLAYFUL.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> PANDA_HEAD_WEAK = ITEMS.register("panda_head_weak", () ->
+            new EffectSkullItem(ModBlocks.PANDA_HEAD_WEAK.get(), ModBlocks.PANDA_WALL_HEAD_WEAK.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> PANDA_HEAD_BROWN = ITEMS.register("panda_head_brown", () ->
+            new EffectSkullItem(ModBlocks.PANDA_HEAD_BROWN.get(), ModBlocks.PANDA_WALL_HEAD_BROWN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> PARROT_HEAD_RED_BLUE = ITEMS.register("parrot_head_red_blue", () ->
             new EffectSkullItem(ModBlocks.PARROT_HEAD_RED_BLUE.get(), ModBlocks.PARROT_WALL_HEAD_RED_BLUE.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

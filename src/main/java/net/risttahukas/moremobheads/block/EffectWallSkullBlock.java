@@ -97,6 +97,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(5.5D, 4.0D, 0.0D, 10.5D, 8.0D, 5.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 5.5D, 5.0D, 8.0D, 10.5D),
             Direction.WEST, Block.box(11.0D, 4.0D, 5.5D, 16.0D, 8.0D, 10.5D)));
+    private static final Map<Direction, VoxelShape> PANDA_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(1.5D, 4.0D, 7.0D, 14.5D, 14.0D, 16.0D),
+            Direction.SOUTH, Block.box(1.5D, 4.0D, 0.0D, 14.5D, 14.0D, 9.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 1.5D, 9.0D, 14.0D, 14.5D),
+            Direction.WEST, Block.box(7.0D, 4.0D, 1.5D, 16.0D, 14.0D, 14.5D)));
     private static final Map<Direction, VoxelShape> PARROT_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(7.0D, 4.0D, 12.0D, 9.0D, 8.0D, 16.0D),
             Direction.SOUTH, Block.box(7.0D, 4.0D, 0.0D, 9.0D, 8.0D, 4.0D),
@@ -223,6 +228,14 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return MULE_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.OCELOT.equals(this.getType())) {
             return OCELOT_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.PANDA.equals(this.getType()) ||
+                EffectSkullBlock.Types.PANDA_AGGRESSIVE.equals(this.getType()) ||
+                EffectSkullBlock.Types.PANDA_LAZY.equals(this.getType()) ||
+                EffectSkullBlock.Types.PANDA_WORRIED.equals(this.getType()) ||
+                EffectSkullBlock.Types.PANDA_PLAYFUL.equals(this.getType()) ||
+                EffectSkullBlock.Types.PANDA_WEAK.equals(this.getType()) ||
+                EffectSkullBlock.Types.PANDA_BROWN.equals(this.getType())) {
+            return PANDA_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.PARROT_RED_BLUE.equals(this.getType()) ||
                 EffectSkullBlock.Types.PARROT_BLUE.equals(this.getType()) ||
                 EffectSkullBlock.Types.PARROT_GREEN.equals(this.getType()) ||

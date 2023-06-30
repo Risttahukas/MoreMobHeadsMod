@@ -126,6 +126,13 @@ public class MoreMobHeadsMod
             event.accept(ModItems.MOOSHROOM_HEAD_BROWN);
             event.accept(ModItems.MULE_HEAD);
             event.accept(ModItems.OCELOT_HEAD);
+            event.accept(ModItems.PANDA_HEAD);
+            event.accept(ModItems.PANDA_HEAD_AGGRESSIVE);
+            event.accept(ModItems.PANDA_HEAD_LAZY);
+            event.accept(ModItems.PANDA_HEAD_WORRIED);
+            event.accept(ModItems.PANDA_HEAD_PLAYFUL);
+            event.accept(ModItems.PANDA_HEAD_WEAK);
+            event.accept(ModItems.PANDA_HEAD_BROWN);
             event.accept(ModItems.PARROT_HEAD_RED_BLUE);
             event.accept(ModItems.PARROT_HEAD_BLUE);
             event.accept(ModItems.PARROT_HEAD_GREEN);
