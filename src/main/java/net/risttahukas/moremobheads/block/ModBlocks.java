@@ -483,6 +483,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HUSK, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(HUSK_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> MAGMA_CUBE_HEAD = BLOCKS.register("magma_cube_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.MAGMA_CUBE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> MAGMA_CUBE_WALL_HEAD = BLOCKS.register("magma_cube_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.MAGMA_CUBE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(MAGMA_CUBE_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> MOOSHROOM_HEAD_RED = BLOCKS.register("mooshroom_head_red",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.MOOSHROOM_RED, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
@@ -671,6 +678,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> SHEEP_WALL_HEAD_RAINBOW = BLOCKS.register("sheep_wall_head_rainbow",
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHEEP_RAINBOW, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(SHEEP_HEAD_RAINBOW).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SLIME_HEAD = BLOCKS.register("slime_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SLIME, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SLIME_WALL_HEAD = BLOCKS.register("slime_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SLIME, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SLIME_HEAD).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> SPIDER_HEAD = BLOCKS.register("spider_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.SPIDER, BlockBehaviour.Properties.of()

@@ -24,11 +24,14 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation GHAST_HEAD = register("ghast_head");
     public static final ModelLayerLocation HORSE_HEAD = register("horse_head");
     public static final ModelLayerLocation HORSE_HEAD_MARKINGS = register("horse_head_markings");
+    public static final ModelLayerLocation MAGMA_CUBE_HEAD = register("magma_cube_head");
     public static final ModelLayerLocation OCELOT_HEAD = register("ocelot_head");
     public static final ModelLayerLocation PARROT_HEAD = register("parrot_head");
     public static final ModelLayerLocation PUFFERFISH_HEAD = register("pufferfish_head");
     public static final ModelLayerLocation SHEEP_HEAD = register("sheep_head");
     public static final ModelLayerLocation SHEEP_HEAD_WOOL = register("sheep_head_wool");
+    public static final ModelLayerLocation SLIME_HEAD = register("slime_head");
+    public static final ModelLayerLocation SLIME_HEAD_OUTER_LAYER = register("slime_head_outer_layer");
     public static final ModelLayerLocation SPIDER_HEAD = register("spider_head");
     public static final ModelLayerLocation SPIDER_EYES = register("spider_eyes");
     public static final ModelLayerLocation STRAY_SKULL_CLOTHES = register("stray_skull_clothes");

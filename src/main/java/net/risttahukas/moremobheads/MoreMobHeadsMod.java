@@ -118,6 +118,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.HORSE_HEAD_ZOMBIE);
             event.accept(ModItems.HORSE_SKULL_SKELETON);
             event.accept(ModItems.HUSK_HEAD);
+            event.accept(ModItems.MAGMA_CUBE_HEAD);
             event.accept(ModItems.MOOSHROOM_HEAD_RED);
             event.accept(ModItems.MOOSHROOM_HEAD_BROWN);
             event.accept(ModItems.MULE_HEAD);
@@ -148,6 +149,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.SHEEP_HEAD_BLACK);
             event.accept(ModItems.SHEEP_HEAD_RAINBOW);
             event.accept(Items.SKELETON_SKULL);
+            event.accept(ModItems.SLIME_HEAD);
             event.accept(ModItems.SPIDER_HEAD);
             event.accept(ModItems.STRAY_SKULL);
             event.accept(ModItems.VEX_HEAD);
