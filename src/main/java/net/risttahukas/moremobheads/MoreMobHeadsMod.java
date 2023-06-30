@@ -172,6 +172,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.SHEEP_HEAD_RAINBOW);
             event.accept(Items.SKELETON_SKULL);
             event.accept(ModItems.SLIME_HEAD);
+            event.accept(ModItems.SNOW_GOLEM_HEAD);
             event.accept(ModItems.SPIDER_HEAD);
             event.accept(ModItems.STRAY_SKULL);
             event.accept(ModItems.VEX_HEAD);

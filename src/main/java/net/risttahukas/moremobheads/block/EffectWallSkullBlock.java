@@ -254,7 +254,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return PARROT_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.PHANTOM.equals(this.getType())) {
             return PHANTOM_AABBS.get(blockState.getValue(FACING));
-        } if (EffectSkullBlock.Types.POLAR_BEAR.equals(this.getType())) {
+        } if (EffectSkullBlock.Types.POLAR_BEAR.equals(this.getType()) ||
+                EffectSkullBlock.Types.SNOW_GOLEM.equals(this.getType())) {
             return POLAR_BEAR_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.RABBIT_BROWN.equals(this.getType()) ||
                 EffectSkullBlock.Types.RABBIT_WHITE.equals(this.getType()) ||

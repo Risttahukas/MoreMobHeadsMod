@@ -840,6 +840,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SLIME, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(SLIME_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> SNOW_GOLEM_HEAD = BLOCKS.register("snow_golem_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SNOW_GOLEM, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SNOW_GOLEM_WALL_HEAD = BLOCKS.register("snow_golem_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SNOW_GOLEM, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SNOW_GOLEM_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> SPIDER_HEAD = BLOCKS.register("spider_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.SPIDER, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

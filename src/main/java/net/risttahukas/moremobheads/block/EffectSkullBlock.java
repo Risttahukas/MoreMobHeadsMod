@@ -134,7 +134,7 @@ public class EffectSkullBlock extends SkullBlock {
             return PARROT_SHAPE;
         } if (Types.PHANTOM.equals(this.getType())) {
             return PHANTOM_SHAPE;
-        } if (Types.POLAR_BEAR.equals(this.getType())) {
+        } if (Types.POLAR_BEAR.equals(this.getType()) || Types.SNOW_GOLEM.equals(this.getType()) ) {
             return POLAR_BEAR_SHAPE;
         } if (Types.RABBIT_BROWN.equals(this.getType()) || Types.RABBIT_WHITE.equals(this.getType()) ||
                 Types.RABBIT_BLACK.equals(this.getType()) || Types.RABBIT_WHITE_SPLOTCHED.equals(this.getType()) ||
@@ -303,6 +303,7 @@ public class EffectSkullBlock extends SkullBlock {
         SHEEP_BLACK,
         SHEEP_RAINBOW,
         SLIME,
+        SNOW_GOLEM,
         SPIDER,
         STRAY,
         VEX,
