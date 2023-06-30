@@ -96,10 +96,13 @@ public class ClientEvents {
             event.registerLayerDefinition(ModBlockEntityModelLayers.GHAST_HEAD, GhastHeadModel::createGhastHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.HORSE_HEAD, AbstractHorseHeadModel::createHorseHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS, HorseHeadModel::createHorseHeadMarkingsLayer);
+            event.registerLayerDefinition(ModBlockEntityModelLayers.ILLAGER_HEAD, IllagerHeadModel::createIllagerHeadLayer);
+            event.registerLayerDefinition(ModBlockEntityModelLayers.IRON_GOLEM_HEAD, IronGolemHeadModel::createIronGolemHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.MAGMA_CUBE_HEAD, MagmaCubeHeadModel::createMagmaCubeHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.OCELOT_HEAD, OcelotHeadModel::createOcelotHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.PARROT_HEAD, ParrotHeadModel::createParrotHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.PUFFERFISH_HEAD, PufferfishHeadModel::createPufferfishHeadLayer);
+            event.registerLayerDefinition(ModBlockEntityModelLayers.RAVAGER_HEAD, RavagerHeadModel::createRavagerHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.SHEEP_HEAD, SheepHeadModel::createSheepHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL, SheepHeadModel::createSheepHeadWoolLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.SLIME_HEAD, SlimeHeadModel::createSlimeHeadLayer);

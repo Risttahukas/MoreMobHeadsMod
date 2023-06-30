@@ -102,6 +102,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(7.0D, 4.0D, 0.0D, 9.0D, 8.0D, 4.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 7.0D, 4.0D, 8.0D, 9.0D),
             Direction.WEST, Block.box(12.0D, 4.0D, 7.0D, 16.0D, 8.0D, 9.0D)));
+    private static final Map<Direction, VoxelShape> RAVAGER_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(4.0D, 3.25D, 8.0D, 12.0D, 14.0D, 16.0D),
+            Direction.SOUTH, Block.box(4.0D, 3.25D, 0.0D, 12.0D, 14.0D, 8.0D),
+            Direction.EAST, Block.box(0.0D, 3.25D, 4.0D, 8.0D, 14.0D, 12.0D),
+            Direction.WEST, Block.box(8.0D, 3.25D, 4.0D, 16.0D, 14.0D, 12.0D)));
     private static final Map<Direction, VoxelShape> SHEEP_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(5.0D, 4.0D, 8.0D, 11.0D, 10.0D, 16.0D),
             Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 10.0D, 8.0D),
@@ -112,6 +117,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 15.0D, 7.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 5.0D, 7.0D, 15.0D, 11.0D),
             Direction.WEST, Block.box(9.0D, 4.0D, 5.0D, 16.0D, 15.0D, 11.0D)));
+    private static final Map<Direction, VoxelShape> VILLAGER_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(4.0D, 4.0D, 8.0D, 12.0D, 14.0D, 16.0D),
+            Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 14.0D, 8.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 8.0D, 14.0D, 12.0D),
+            Direction.WEST, Block.box(8.0D, 4.0D, 4.0D, 16.0D, 14.0D, 12.0D)));
     private static final Map<Direction, VoxelShape> WARDEN_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.0D, 4.0D, 11.0D, 12.0D, 12.0D, 16.0D),
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 5.0D),
@@ -232,6 +242,15 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                 EffectSkullBlock.Types.SHEEP_BLACK.equals(this.getType()) ||
                 EffectSkullBlock.Types.SHEEP_RAINBOW.equals(this.getType())) {
             return SHEEP_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.IRON_GOLEM.equals(this.getType()) ||
+                EffectSkullBlock.Types.WITCH.equals(this.getType()) ||
+                EffectSkullBlock.Types.EVOKER.equals(this.getType()) ||
+                EffectSkullBlock.Types.ILLUSIONER.equals(this.getType()) ||
+                EffectSkullBlock.Types.PILLAGER.equals(this.getType()) ||
+                EffectSkullBlock.Types.VINDICATOR.equals(this.getType())) {
+            return VILLAGER_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.RAVAGER.equals(this.getType())) {
+            return RAVAGER_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.WARDEN.equals(this.getType())) {
             return WARDEN_AABBS.get(blockState.getValue(FACING));
         }

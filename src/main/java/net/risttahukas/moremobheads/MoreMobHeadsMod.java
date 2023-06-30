@@ -79,6 +79,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.DROWNED_HEAD);
             event.accept(Items.DRAGON_HEAD);
             event.accept(ModItems.ENDERMAN_HEAD);
+            event.accept(ModItems.EVOKER_HEAD);
             event.accept(ModItems.GHAST_HEAD);
             event.accept(ModItems.HORSE_HEAD_WHITE);
             event.accept(ModItems.HORSE_HEAD_CREAMY);
@@ -118,6 +119,8 @@ public class MoreMobHeadsMod
             event.accept(ModItems.HORSE_HEAD_ZOMBIE);
             event.accept(ModItems.HORSE_SKULL_SKELETON);
             event.accept(ModItems.HUSK_HEAD);
+            event.accept(ModItems.ILLUSIONER_HEAD);
+            event.accept(ModItems.IRON_GOLEM_HEAD);
             event.accept(ModItems.MAGMA_CUBE_HEAD);
             event.accept(ModItems.MOOSHROOM_HEAD_RED);
             event.accept(ModItems.MOOSHROOM_HEAD_BROWN);
@@ -129,8 +132,10 @@ public class MoreMobHeadsMod
             event.accept(ModItems.PARROT_HEAD_YELLOW_BLUE);
             event.accept(ModItems.PARROT_HEAD_GREY);
             event.accept(Items.PIGLIN_HEAD);
+            event.accept(ModItems.PILLAGER_HEAD);
             event.accept(Items.PLAYER_HEAD);
             event.accept(ModItems.PUFFERFISH_HEAD);
+            event.accept(ModItems.RAVAGER_HEAD);
             event.accept(ModItems.SHEEP_HEAD_WHITE);
             event.accept(ModItems.SHEEP_HEAD_ORANGE);
             event.accept(ModItems.SHEEP_HEAD_MAGENTA);
@@ -153,6 +158,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.SPIDER_HEAD);
             event.accept(ModItems.STRAY_SKULL);
             event.accept(ModItems.VEX_HEAD);
+            event.accept(ModItems.VINDICATOR_HEAD);
             event.accept(ModItems.WARDEN_HEAD);
             event.accept(ModItems.WITCH_HEAD);
             event.accept(Items.WITHER_SKELETON_SKULL);

@@ -126,6 +126,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.ENDERMAN_HEAD.get(), ModBlocks.ENDERMAN_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> EVOKER_HEAD = ITEMS.register("evoker_head", () ->
+            new EffectSkullItem(ModBlocks.EVOKER_HEAD.get(), ModBlocks.EVOKER_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> GHAST_HEAD = ITEMS.register("ghast_head", () ->
             new EffectSkullItem(ModBlocks.GHAST_HEAD.get(), ModBlocks.GHAST_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
@@ -282,6 +286,14 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.HUSK_HEAD.get(), ModBlocks.HUSK_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> ILLUSIONER_HEAD = ITEMS.register("illusioner_head", () ->
+            new EffectSkullItem(ModBlocks.ILLUSIONER_HEAD.get(), ModBlocks.ILLUSIONER_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> IRON_GOLEM_HEAD = ITEMS.register("iron_golem_head", () ->
+            new EffectSkullItem(ModBlocks.IRON_GOLEM_HEAD.get(), ModBlocks.IRON_GOLEM_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> MAGMA_CUBE_HEAD = ITEMS.register("magma_cube_head", () ->
             new EffectSkullItem(ModBlocks.MAGMA_CUBE_HEAD.get(), ModBlocks.MAGMA_CUBE_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
@@ -322,9 +334,17 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.PARROT_HEAD_GREY.get(), ModBlocks.PARROT_WALL_HEAD_GREY.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> PILLAGER_HEAD = ITEMS.register("pillager_head", () ->
+            new EffectSkullItem(ModBlocks.PILLAGER_HEAD.get(), ModBlocks.PILLAGER_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> PUFFERFISH_HEAD = ITEMS.register("pufferfish_head", () ->
             new EffectSkullItem(ModBlocks.PUFFERFISH_HEAD.get(), ModBlocks.PUFFERFISH_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> RAVAGER_HEAD = ITEMS.register("ravager_head", () ->
+            new EffectSkullItem(ModBlocks.RAVAGER_HEAD.get(), ModBlocks.RAVAGER_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
 
     public static final RegistryObject<Item> SHEEP_HEAD_WHITE = ITEMS.register("sheep_head_white", () ->
             new EffectSkullItem(ModBlocks.SHEEP_HEAD_WHITE.get(), ModBlocks.SHEEP_WALL_HEAD_WHITE.get(),
@@ -408,6 +428,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> VEX_HEAD = ITEMS.register("vex_head", () ->
             new EffectSkullItem(ModBlocks.VEX_HEAD.get(), ModBlocks.VEX_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> VINDICATOR_HEAD = ITEMS.register("vindicator_head", () ->
+            new EffectSkullItem(ModBlocks.VINDICATOR_HEAD.get(), ModBlocks.VINDICATOR_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> WARDEN_HEAD = ITEMS.register("warden_head", () ->

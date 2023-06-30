@@ -8,7 +8,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class WitchHeadModel extends VillagerHeadModel{
+public class WitchHeadModel extends VillagerHeadModel {
     public WitchHeadModel(ModelPart modelPart) {
         super(modelPart);
     }

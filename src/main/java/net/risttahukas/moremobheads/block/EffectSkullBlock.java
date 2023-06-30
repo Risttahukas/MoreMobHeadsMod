@@ -44,10 +44,15 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(5.5D, 0.0D, 5.5D, 10.5D, 4.0D, 10.5D);
     protected static final VoxelShape PARROT_SHAPE =
             Block.box(7.0D, 0.0D, 7.0D, 9.0D, 4.0D, 9.0D);
+    protected static final VoxelShape RAVAGER_SHAPE =
+            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 10.75D, 12.0D);
     protected static final VoxelShape SHEEP_SHAPE =
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 6.0D, 12.0D);
     protected static final VoxelShape UNDEAD_HORSE_SHAPE =
             Block.box(4.5D, 0.0D, 4.5D, 11.5D, 11.0D, 11.5D);
+    protected static final VoxelShape VILLAGER_SHAPE =
+            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 10.0D, 12.0D);
+
 
     public EffectSkullBlock(Type type, Properties properties) {
         super(type, properties);
@@ -124,6 +129,12 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.SHEEP_RED.equals(this.getType()) || Types.SHEEP_BLACK.equals(this.getType()) ||
                 Types.SHEEP_RAINBOW.equals(this.getType())) {
             return SHEEP_SHAPE;
+        } if (Types.IRON_GOLEM.equals(this.getType()) || Types.WITCH.equals(this.getType()) ||
+                Types.EVOKER.equals(this.getType()) || Types.ILLUSIONER.equals(this.getType()) ||
+                Types.PILLAGER.equals(this.getType()) || Types.VINDICATOR.equals(this.getType())) {
+            return VILLAGER_SHAPE;
+        } if (Types.RAVAGER.equals(this.getType())) {
+            return RAVAGER_SHAPE;
         }
         return SHAPE;
     }
@@ -180,6 +191,7 @@ public class EffectSkullBlock extends SkullBlock {
         DONKEY,
         DROWNED,
         ENDERMAN,
+        EVOKER,
         GHAST,
         HORSE_WHITE,
         HORSE_CREAMY,
@@ -219,6 +231,8 @@ public class EffectSkullBlock extends SkullBlock {
         HORSE_ZOMBIE,
         HORSE_SKELETON,
         HUSK,
+        ILLUSIONER,
+        IRON_GOLEM,
         MAGMA_CUBE,
         MOOSHROOM_RED,
         MOOSHROOM_BROWN,
@@ -229,7 +243,9 @@ public class EffectSkullBlock extends SkullBlock {
         PARROT_GREEN,
         PARROT_YELLOW_BLUE,
         PARROT_GREY,
+        PILLAGER,
         PUFFERFISH,
+        RAVAGER,
         SHEEP_WHITE,
         SHEEP_ORANGE,
         SHEEP_MAGENTA,
@@ -251,6 +267,7 @@ public class EffectSkullBlock extends SkullBlock {
         SPIDER,
         STRAY,
         VEX,
+        VINDICATOR,
         WARDEN,
         WITCH
     }

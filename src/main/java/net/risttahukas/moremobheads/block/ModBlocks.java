@@ -210,6 +210,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ENDERMAN, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(ENDERMAN_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> EVOKER_HEAD = BLOCKS.register("evoker_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.EVOKER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> EVOKER_WALL_HEAD = BLOCKS.register("evoker_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.EVOKER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(EVOKER_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> GHAST_HEAD = BLOCKS.register("ghast_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.GHAST, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
@@ -483,6 +490,20 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HUSK, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(HUSK_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> ILLUSIONER_HEAD = BLOCKS.register("illusioner_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ILLUSIONER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ILLUSIONER_WALL_HEAD = BLOCKS.register("illusioner_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ILLUSIONER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ILLUSIONER_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> IRON_GOLEM_HEAD = BLOCKS.register("iron_golem_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.IRON_GOLEM, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> IRON_GOLEM_WALL_HEAD = BLOCKS.register("iron_golem_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.IRON_GOLEM, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(IRON_GOLEM_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> MAGMA_CUBE_HEAD = BLOCKS.register("magma_cube_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.MAGMA_CUBE, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
@@ -553,12 +574,26 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PARROT_GREY, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(PARROT_HEAD_GREY).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> PILLAGER_HEAD = BLOCKS.register("pillager_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.PILLAGER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> PILLAGER_WALL_HEAD = BLOCKS.register("pillager_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PILLAGER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(PILLAGER_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> PUFFERFISH_HEAD = BLOCKS.register("pufferfish_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.PUFFERFISH, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
     public static final RegistryObject<Block> PUFFERFISH_WALL_HEAD = BLOCKS.register("pufferfish_wall_head",
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PUFFERFISH, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(PUFFERFISH_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> RAVAGER_HEAD = BLOCKS.register("ravager_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.RAVAGER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> RAVAGER_WALL_HEAD = BLOCKS.register("ravager_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.RAVAGER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(RAVAGER_HEAD).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> SHEEP_HEAD_WHITE = BLOCKS.register("sheep_head_white",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.SHEEP_WHITE, BlockBehaviour.Properties.of()
@@ -706,6 +741,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> VEX_WALL_HEAD = BLOCKS.register("vex_wall_head",
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.VEX, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(VEX_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> VINDICATOR_HEAD = BLOCKS.register("vindicator_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.VINDICATOR, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> VINDICATOR_WALL_HEAD = BLOCKS.register("vindicator_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.VINDICATOR, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(VINDICATOR_HEAD).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> WARDEN_HEAD = BLOCKS.register("warden_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.WARDEN, BlockBehaviour.Properties.of()
