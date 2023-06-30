@@ -29,5 +29,9 @@ public class DataGenerators {
         ModBlockTagsProvider blockTagsProvider = new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper);
         generator.addProvider(true, blockTagsProvider);
         generator.addProvider(true, new ModItemTagsProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
+
+        ModForgeBlockTagsProvider forgeBlockTagsProvider = new ModForgeBlockTagsProvider(packOutput, lookupProvider, existingFileHelper);
+        generator.addProvider(true, forgeBlockTagsProvider);
+        generator.addProvider(true, new ModForgeItemTagsProvider(packOutput, lookupProvider, forgeBlockTagsProvider.contentsGetter(), existingFileHelper));
     }
 }
