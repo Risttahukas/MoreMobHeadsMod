@@ -134,6 +134,7 @@ public class MoreMobHeadsMod
             event.accept(Items.PIGLIN_HEAD);
             event.accept(ModItems.PILLAGER_HEAD);
             event.accept(Items.PLAYER_HEAD);
+            event.accept(ModItems.POLAR_BEAR_HEAD);
             event.accept(ModItems.PUFFERFISH_HEAD);
             event.accept(ModItems.RAVAGER_HEAD);
             event.accept(ModItems.SHEEP_HEAD_WHITE);

@@ -581,6 +581,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PILLAGER, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(PILLAGER_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> POLAR_BEAR_HEAD = BLOCKS.register("polar_bear_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.POLAR_BEAR, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> POLAR_BEAR_WALL_HEAD = BLOCKS.register("polar_bear_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.POLAR_BEAR, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(POLAR_BEAR_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> PUFFERFISH_HEAD = BLOCKS.register("pufferfish_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.PUFFERFISH, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

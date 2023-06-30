@@ -102,6 +102,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(7.0D, 4.0D, 0.0D, 9.0D, 8.0D, 4.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 7.0D, 4.0D, 8.0D, 9.0D),
             Direction.WEST, Block.box(12.0D, 4.0D, 7.0D, 16.0D, 8.0D, 9.0D)));
+    private static final Map<Direction, VoxelShape> POLAR_BEAR_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(4.5D, 4.0D, 9.0D, 11.5D, 11.0D, 16.0D),
+            Direction.SOUTH, Block.box(4.5D, 4.0D, 0.0D, 11.5D, 11.0D, 7.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 4.5D, 7.0D, 11.0D, 11.5D),
+            Direction.WEST, Block.box(9.0D, 4.0D, 4.5D, 16.0D, 11.0D, 11.5D)));
     private static final Map<Direction, VoxelShape> RAVAGER_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.0D, 3.25D, 8.0D, 12.0D, 14.0D, 16.0D),
             Direction.SOUTH, Block.box(4.0D, 3.25D, 0.0D, 12.0D, 14.0D, 8.0D),
@@ -224,6 +229,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                 EffectSkullBlock.Types.PARROT_YELLOW_BLUE.equals(this.getType()) ||
                 EffectSkullBlock.Types.PARROT_GREY.equals(this.getType())) {
             return PARROT_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.POLAR_BEAR.equals(this.getType())) {
+            return POLAR_BEAR_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.SHEEP_WHITE.equals(this.getType()) ||
                 EffectSkullBlock.Types.SHEEP_ORANGE.equals(this.getType()) ||
                 EffectSkullBlock.Types.SHEEP_MAGENTA.equals(this.getType()) ||
