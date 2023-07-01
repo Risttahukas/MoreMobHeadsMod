@@ -345,7 +345,16 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                     blockState.is(ModBlocks.CREEPER_WALL_HEAD_CHARGED.get()) || blockState.is(ModBlocks.PUFFERFISH_WALL_HEAD.get()) ||
                     blockState.is(ModBlocks.ENDERMAN_WALL_HEAD.get()) || blockState.is(ModBlocks.WARDEN_WALL_HEAD.get()) ||
                     blockState.is(ModBlocks.STRIDER_WALL_HEAD.get()) || blockState.is(ModBlocks.STRIDER_WALL_HEAD_COLD.get()) ||
-                    blockState.is(ModBlocks.PIGLIN_BRUTE_WALL_HEAD.get()) || blockState.is(ModBlocks.ZOMBIFIED_PIGLIN_WALL_HEAD.get());
+                    blockState.is(ModBlocks.PIGLIN_BRUTE_WALL_HEAD.get()) || blockState.is(ModBlocks.ZOMBIFIED_PIGLIN_WALL_HEAD.get()) ||
+                    blockState.is(ModBlocks.SHULKER_WALL_HEAD.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_WHITE.get()) ||
+                    blockState.is(ModBlocks.SHULKER_WALL_HEAD_ORANGE.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_MAGENTA.get()) ||
+                    blockState.is(ModBlocks.SHULKER_WALL_HEAD_LIGHT_BLUE.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_YELLOW.get()) ||
+                    blockState.is(ModBlocks.SHULKER_WALL_HEAD_LIME.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_PINK.get()) ||
+                    blockState.is(ModBlocks.SHULKER_WALL_HEAD_GRAY.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_LIGHT_GRAY.get()) ||
+                    blockState.is(ModBlocks.SHULKER_WALL_HEAD_CYAN.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_PURPLE.get()) ||
+                    blockState.is(ModBlocks.SHULKER_WALL_HEAD_BLUE.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_BROWN.get()) ||
+                    blockState.is(ModBlocks.SHULKER_WALL_HEAD_GREEN.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_RED.get()) ||
+                    blockState.is(ModBlocks.SHULKER_WALL_HEAD_BLACK.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);

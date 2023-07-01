@@ -186,7 +186,16 @@ public class EffectSkullBlock extends SkullBlock {
                     blockState.is(ModBlocks.CREEPER_HEAD_CHARGED.get()) || blockState.is(ModBlocks.PUFFERFISH_HEAD.get()) ||
                     blockState.is(ModBlocks.ENDERMAN_HEAD.get()) || blockState.is(ModBlocks.WARDEN_HEAD.get()) ||
                     blockState.is(ModBlocks.STRIDER_HEAD.get()) || blockState.is(ModBlocks.STRIDER_HEAD_COLD.get()) ||
-                    blockState.is(ModBlocks.PIGLIN_BRUTE_HEAD.get()) || blockState.is(ModBlocks.ZOMBIFIED_PIGLIN_HEAD.get());
+                    blockState.is(ModBlocks.PIGLIN_BRUTE_HEAD.get()) || blockState.is(ModBlocks.ZOMBIFIED_PIGLIN_HEAD.get()) ||
+                    blockState.is(ModBlocks.SHULKER_HEAD.get()) || blockState.is(ModBlocks.SHULKER_HEAD_WHITE.get()) ||
+                    blockState.is(ModBlocks.SHULKER_HEAD_ORANGE.get()) || blockState.is(ModBlocks.SHULKER_HEAD_MAGENTA.get()) ||
+                    blockState.is(ModBlocks.SHULKER_HEAD_LIGHT_BLUE.get()) || blockState.is(ModBlocks.SHULKER_HEAD_YELLOW.get()) ||
+                    blockState.is(ModBlocks.SHULKER_HEAD_LIME.get()) || blockState.is(ModBlocks.SHULKER_HEAD_PINK.get()) ||
+                    blockState.is(ModBlocks.SHULKER_HEAD_GRAY.get()) || blockState.is(ModBlocks.SHULKER_HEAD_LIGHT_GRAY.get()) ||
+                    blockState.is(ModBlocks.SHULKER_HEAD_CYAN.get()) || blockState.is(ModBlocks.SHULKER_HEAD_PURPLE.get()) ||
+                    blockState.is(ModBlocks.SHULKER_HEAD_BLUE.get()) || blockState.is(ModBlocks.SHULKER_HEAD_BROWN.get()) ||
+                    blockState.is(ModBlocks.SHULKER_HEAD_GREEN.get()) || blockState.is(ModBlocks.SHULKER_HEAD_RED.get()) ||
+                    blockState.is(ModBlocks.SHULKER_HEAD_BLACK.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);
@@ -319,6 +328,23 @@ public class EffectSkullBlock extends SkullBlock {
         SHEEP_RED,
         SHEEP_BLACK,
         SHEEP_RAINBOW,
+        SHULKER,
+        SHULKER_WHITE,
+        SHULKER_ORANGE,
+        SHULKER_MAGENTA,
+        SHULKER_LIGHT_BLUE,
+        SHULKER_YELLOW,
+        SHULKER_LIME,
+        SHULKER_PINK,
+        SHULKER_GRAY,
+        SHULKER_LIGHT_GRAY,
+        SHULKER_CYAN,
+        SHULKER_PURPLE,
+        SHULKER_BLUE,
+        SHULKER_BROWN,
+        SHULKER_GREEN,
+        SHULKER_RED,
+        SHULKER_BLACK,
         SLIME,
         SNOW_GOLEM,
         SPIDER,

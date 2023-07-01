@@ -861,6 +861,125 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHEEP_RAINBOW, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(SHEEP_HEAD_RAINBOW).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> SHULKER_HEAD = BLOCKS.register("shulker_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD = BLOCKS.register("shulker_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_WHITE = BLOCKS.register("shulker_head_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_WHITE = BLOCKS.register("shulker_wall_head_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_ORANGE = BLOCKS.register("shulker_head_orange",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_ORANGE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_ORANGE = BLOCKS.register("shulker_wall_head_orange",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_ORANGE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_ORANGE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_MAGENTA = BLOCKS.register("shulker_head_magenta",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_MAGENTA, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_MAGENTA = BLOCKS.register("shulker_wall_head_magenta",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_MAGENTA, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_MAGENTA).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_LIGHT_BLUE = BLOCKS.register("shulker_head_light_blue",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_LIGHT_BLUE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_LIGHT_BLUE = BLOCKS.register("shulker_wall_head_light_blue",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_LIGHT_BLUE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_LIGHT_BLUE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_YELLOW = BLOCKS.register("shulker_head_yellow",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_YELLOW, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_YELLOW = BLOCKS.register("shulker_wall_head_yellow",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_YELLOW, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_YELLOW).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_LIME = BLOCKS.register("shulker_head_lime",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_LIME, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_LIME = BLOCKS.register("shulker_wall_head_lime",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_LIME, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_LIME).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_PINK = BLOCKS.register("shulker_head_pink",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_PINK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_PINK = BLOCKS.register("shulker_wall_head_pink",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_PINK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_PINK).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_GRAY = BLOCKS.register("shulker_head_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_GRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_GRAY = BLOCKS.register("shulker_wall_head_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_GRAY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_LIGHT_GRAY = BLOCKS.register("shulker_head_light_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_LIGHT_GRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_LIGHT_GRAY = BLOCKS.register("shulker_wall_head_light_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_LIGHT_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_LIGHT_GRAY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_CYAN = BLOCKS.register("shulker_head_cyan",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_CYAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_CYAN = BLOCKS.register("shulker_wall_head_cyan",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_CYAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_CYAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_PURPLE = BLOCKS.register("shulker_head_purple",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_PURPLE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_PURPLE = BLOCKS.register("shulker_wall_head_purple",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_PURPLE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_PURPLE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_BLUE = BLOCKS.register("shulker_head_blue",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_BLUE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_BLUE = BLOCKS.register("shulker_wall_head_blue",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_BLUE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_BLUE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_BROWN = BLOCKS.register("shulker_head_brown",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_BROWN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_BROWN = BLOCKS.register("shulker_wall_head_brown",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_BROWN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_BROWN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_GREEN = BLOCKS.register("shulker_head_green",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_GREEN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_GREEN = BLOCKS.register("shulker_wall_head_green",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_GREEN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_GREEN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_RED = BLOCKS.register("shulker_head_red",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_RED, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_RED = BLOCKS.register("shulker_wall_head_red",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_RED, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_RED).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SHULKER_HEAD_BLACK = BLOCKS.register("shulker_head_black",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SHULKER_BLACK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SHULKER_WALL_HEAD_BLACK = BLOCKS.register("shulker_wall_head_black",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_BLACK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SHULKER_HEAD_BLACK).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> SLIME_HEAD = BLOCKS.register("slime_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.SLIME, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

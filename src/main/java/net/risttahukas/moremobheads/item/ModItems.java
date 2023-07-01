@@ -498,6 +498,74 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.SHEEP_HEAD_RAINBOW.get(), ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get(),
                     (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
 
+    public static final RegistryObject<Item> SHULKER_HEAD = ITEMS.register("shulker_head", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD.get(), ModBlocks.SHULKER_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_WHITE = ITEMS.register("shulker_head_white", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_WHITE.get(), ModBlocks.SHULKER_WALL_HEAD_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_ORANGE = ITEMS.register("shulker_head_orange", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_ORANGE.get(), ModBlocks.SHULKER_WALL_HEAD_ORANGE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_MAGENTA = ITEMS.register("shulker_head_magenta", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_MAGENTA.get(), ModBlocks.SHULKER_WALL_HEAD_MAGENTA.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_LIGHT_BLUE = ITEMS.register("shulker_head_light_blue", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_LIGHT_BLUE.get(), ModBlocks.SHULKER_WALL_HEAD_LIGHT_BLUE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_YELLOW = ITEMS.register("shulker_head_yellow", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_YELLOW.get(), ModBlocks.SHULKER_WALL_HEAD_YELLOW.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_LIME = ITEMS.register("shulker_head_lime", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_LIME.get(), ModBlocks.SHULKER_WALL_HEAD_LIME.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_PINK = ITEMS.register("shulker_head_pink", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_PINK.get(), ModBlocks.SHULKER_WALL_HEAD_PINK.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_GRAY = ITEMS.register("shulker_head_gray", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_GRAY.get(), ModBlocks.SHULKER_WALL_HEAD_GRAY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_LIGHT_GRAY = ITEMS.register("shulker_head_light_gray", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_LIGHT_GRAY.get(), ModBlocks.SHULKER_WALL_HEAD_LIGHT_GRAY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_CYAN = ITEMS.register("shulker_head_cyan", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_CYAN.get(), ModBlocks.SHULKER_WALL_HEAD_CYAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_PURPLE = ITEMS.register("shulker_head_purple", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_PURPLE.get(), ModBlocks.SHULKER_WALL_HEAD_PURPLE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_BLUE = ITEMS.register("shulker_head_blue", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_BLUE.get(), ModBlocks.SHULKER_WALL_HEAD_BLUE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_BROWN = ITEMS.register("shulker_head_brown", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_BROWN.get(), ModBlocks.SHULKER_WALL_HEAD_BROWN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_GREEN = ITEMS.register("shulker_head_green", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_GREEN.get(), ModBlocks.SHULKER_WALL_HEAD_GREEN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_RED = ITEMS.register("shulker_head_red", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_RED.get(), ModBlocks.SHULKER_WALL_HEAD_RED.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SHULKER_HEAD_BLACK = ITEMS.register("shulker_head_black", () ->
+            new EffectSkullItem(ModBlocks.SHULKER_HEAD_BLACK.get(), ModBlocks.SHULKER_WALL_HEAD_BLACK.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> SLIME_HEAD = ITEMS.register("slime_head", () ->
             new EffectSkullItem(ModBlocks.SLIME_HEAD.get(), ModBlocks.SLIME_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
