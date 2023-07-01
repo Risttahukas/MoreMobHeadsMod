@@ -38,6 +38,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(4.15D, 0.0D, 4.15D, 11.85D, 12.1D, 11.85D);
     protected static final VoxelShape HUSK_SHAPE =
             Block.box(3.75D, 0.0D, 3.75D, 12.25D, 8.5D, 12.25D);
+    protected static final VoxelShape IRON_GOLEM_SHAPE =
+            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 10.0D, 12.0D);
     protected static final VoxelShape MULE_SHAPE =
             Block.box(4.78D, 0.0D, 4.78D, 11.22D, 10.12D, 11.22D);
     protected static final VoxelShape OCELOT_SHAPE =
@@ -63,7 +65,7 @@ public class EffectSkullBlock extends SkullBlock {
     protected static final VoxelShape UNDEAD_HORSE_SHAPE =
             Block.box(4.5D, 0.0D, 4.5D, 11.5D, 11.0D, 11.5D);
     protected static final VoxelShape VILLAGER_SHAPE =
-            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 10.0D, 12.0D);
+            Block.box(4.25D, 0.0D, 4.25D, 11.75D, 9.375D, 11.75D);
 
 
     public EffectSkullBlock(Type type, Properties properties) {
@@ -123,6 +125,8 @@ public class EffectSkullBlock extends SkullBlock {
             return UNDEAD_HORSE_SHAPE;
         } if (Types.HUSK.equals(this.getType())) {
             return HUSK_SHAPE;
+        } if (Types.IRON_GOLEM.equals(this.getType())) {
+            return IRON_GOLEM_SHAPE;
         } if (Types.MULE.equals(this.getType())) {
             return MULE_SHAPE;
         } if (Types.OCELOT.equals(this.getType())) {
@@ -164,7 +168,7 @@ public class EffectSkullBlock extends SkullBlock {
             return SQUID_SHAPE;
         } if (Types.STRIDER.equals(this.getType()) || Types.STRIDER_COLD.equals(this.getType())) {
             return STRIDER_SHAPE;
-        } if (Types.IRON_GOLEM.equals(this.getType()) || Types.WITCH.equals(this.getType()) ||
+        } if (Types.WANDERING_TRADER.equals(this.getType()) || Types.WITCH.equals(this.getType()) ||
                 Types.EVOKER.equals(this.getType()) || Types.ILLUSIONER.equals(this.getType()) ||
                 Types.PILLAGER.equals(this.getType()) || Types.VINDICATOR.equals(this.getType())) {
             return VILLAGER_SHAPE;
@@ -354,6 +358,7 @@ public class EffectSkullBlock extends SkullBlock {
         STRIDER_COLD,
         VEX,
         VINDICATOR,
+        WANDERING_TRADER,
         WARDEN,
         WITCH,
         ZOMBIFIED_PIGLIN

@@ -253,6 +253,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
                 horizontalTranslation = 0.411458334F;
             } else if (skullModelBase instanceof HuskHeadModel) {
                 horizontalTranslation = 0.234375F;
+            } else if (skullModelBase instanceof VillagerHeadModel || skullModelBase instanceof IllagerHeadModel) {
+                horizontalTranslation = 0.265625F;
             } else if (skullModelBase instanceof RavagerHeadModel) {
                 verticalTranslation = 0.203125F;
             }

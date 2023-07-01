@@ -1,11 +1,14 @@
 package net.risttahukas.moremobheads.block.entity.model;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.SkullModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.NotNull;
 
 @OnlyIn(Dist.CLIENT)
 public class VillagerHeadModel extends SkullModel {
@@ -29,5 +32,11 @@ public class VillagerHeadModel extends SkullModel {
     public static LayerDefinition createVillagerHeadLayer() {
         MeshDefinition meshdefinition = createVillagerHeadModel();
         return LayerDefinition.create(meshdefinition, 64, 64);
+    }
+
+    @Override
+    public void renderToBuffer(@NotNull PoseStack poseStack, @NotNull VertexConsumer vertexConsumer, int p_103817_, int p_103818_, float p_103819_, float p_103820_, float p_103821_, float p_103822_) {
+        poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+        super.renderToBuffer(poseStack, vertexConsumer, p_103817_, p_103818_, p_103819_, p_103820_, p_103821_, p_103822_);
     }
 }
