@@ -56,6 +56,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 10.75D, 12.0D);
     protected static final VoxelShape SHEEP_SHAPE =
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 6.0D, 12.0D);
+    protected static final VoxelShape SQUID_SHAPE =
+            Block.box(5.0D, 0.0D, 5.0D, 11.0D, 8.0D, 11.0D);
     protected static final VoxelShape STRIDER_SHAPE =
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 7.0D, 12.0D);
     protected static final VoxelShape UNDEAD_HORSE_SHAPE =
@@ -155,6 +157,8 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.SHEEP_RED.equals(this.getType()) || Types.SHEEP_BLACK.equals(this.getType()) ||
                 Types.SHEEP_RAINBOW.equals(this.getType())) {
             return SHEEP_SHAPE;
+        } if (Types.SQUID.equals(this.getType()) || Types.GLOW_SQUID.equals(this.getType())) {
+            return SQUID_SHAPE;
         } if (Types.STRIDER.equals(this.getType()) || Types.STRIDER_COLD.equals(this.getType())) {
             return STRIDER_SHAPE;
         } if (Types.IRON_GOLEM.equals(this.getType()) || Types.WITCH.equals(this.getType()) ||
@@ -220,6 +224,7 @@ public class EffectSkullBlock extends SkullBlock {
         ENDERMAN,
         EVOKER,
         GHAST,
+        GLOW_SQUID,
         HORSE_WHITE,
         HORSE_CREAMY,
         HORSE_CHESTNUT,
@@ -310,6 +315,7 @@ public class EffectSkullBlock extends SkullBlock {
         SLIME,
         SNOW_GOLEM,
         SPIDER,
+        SQUID,
         STRAY,
         STRIDER,
         STRIDER_COLD,

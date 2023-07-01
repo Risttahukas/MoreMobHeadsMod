@@ -81,6 +81,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.ENDERMAN_HEAD);
             event.accept(ModItems.EVOKER_HEAD);
             event.accept(ModItems.GHAST_HEAD);
+            event.accept(ModItems.GLOW_SQUID_HEAD);
             event.accept(ModItems.HORSE_HEAD_WHITE);
             event.accept(ModItems.HORSE_HEAD_CREAMY);
             event.accept(ModItems.HORSE_HEAD_CHESTNUT);
@@ -174,6 +175,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.SLIME_HEAD);
             event.accept(ModItems.SNOW_GOLEM_HEAD);
             event.accept(ModItems.SPIDER_HEAD);
+            event.accept(ModItems.SQUID_HEAD);
             event.accept(ModItems.STRAY_SKULL);
             event.accept(ModItems.STRIDER_HEAD);
             event.accept(ModItems.STRIDER_HEAD_COLD);

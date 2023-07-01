@@ -224,6 +224,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GHAST, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(GHAST_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> GLOW_SQUID_HEAD = BLOCKS.register("glow_squid_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.GLOW_SQUID, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> GLOW_SQUID_WALL_HEAD = BLOCKS.register("glow_squid_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GLOW_SQUID, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(GLOW_SQUID_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> HORSE_HEAD_WHITE = BLOCKS.register("horse_head_white",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_WHITE, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
@@ -853,6 +860,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> SPIDER_WALL_HEAD = BLOCKS.register("spider_wall_head",
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SPIDER, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(SPIDER_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> SQUID_HEAD = BLOCKS.register("squid_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SQUID, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SQUID_WALL_HEAD = BLOCKS.register("squid_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SQUID, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SQUID_HEAD).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> STRAY_SKULL = BLOCKS.register("stray_skull",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.STRAY, BlockBehaviour.Properties.of()

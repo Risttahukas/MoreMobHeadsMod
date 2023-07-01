@@ -57,7 +57,6 @@ public class StriderHeadModel extends SkullModel {
         head.addOrReplaceChild("left_bottom_bristle", CubeListBuilder.create().texOffs(16, 65)
                         .addBox(0.0F, 0.0F, 0.0F, 12.0F, 0.0F, 16.0F),
                 PartPose.offsetAndRotation(8.0F, -5.0F, -8.0F, 0.0F, 0.0F, 1.2217305F));
-
         return meshdefinition;
     }
 

@@ -134,6 +134,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.GHAST_HEAD.get(), ModBlocks.GHAST_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> GLOW_SQUID_HEAD = ITEMS.register("glow_squid_head", () ->
+            new EffectSkullItem(ModBlocks.GLOW_SQUID_HEAD.get(), ModBlocks.GLOW_SQUID_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> HORSE_HEAD_WHITE = ITEMS.register("horse_head_white", () ->
             new EffectSkullItem(ModBlocks.HORSE_HEAD_WHITE.get(), ModBlocks.HORSE_WALL_HEAD_WHITE.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
@@ -492,6 +496,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> SPIDER_HEAD = ITEMS.register("spider_head", () ->
             new EffectSkullItem(ModBlocks.SPIDER_HEAD.get(), ModBlocks.SPIDER_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> SQUID_HEAD = ITEMS.register("squid_head", () ->
+            new EffectSkullItem(ModBlocks.SQUID_HEAD.get(), ModBlocks.SQUID_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> STRAY_SKULL = ITEMS.register("stray_skull", () ->
