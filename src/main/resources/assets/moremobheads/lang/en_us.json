@@ -88,6 +88,7 @@
   "block.moremobheads.parrot_head_yellow_blue": "Parrot Head",
   "block.moremobheads.parrot_head_grey": "Parrot Head",
   "block.moremobheads.phantom_head": "Phantom Head",
+  "block.moremobheads.piglin_brute_head": "Piglin Brute Head",
   "block.moremobheads.pillager_head": "Pillager Head",
   "block.moremobheads.polar_bear_head": "Polar Bear Head",
   "block.moremobheads.pufferfish_head": "Pufferfish Head",
@@ -128,6 +129,7 @@
   "block.moremobheads.vindicator_head": "Vindicator Head",
   "block.moremobheads.warden_head": "Warden Head",
   "block.moremobheads.witch_head": "Witch Head",
+  "block.moremobheads.zombified_piglin_head": "Zombified Piglin Head",
 
   "creativemodetab.mob_heads_tab": "Mob Heads"
 }

@@ -112,6 +112,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.5D, 4.0D, 0.0D, 11.5D, 7.0D, 5.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.5D, 5.0D, 7.0D, 11.5D),
             Direction.WEST, Block.box(11.0D, 4.0D, 4.5D, 16.0D, 7.0D, 11.5D)));
+    private static final Map<Direction, VoxelShape> PIGLIN_AABBS = Maps.immutableEnumMap(Map.of(
+            Direction.NORTH, Block.box(3.0D, 4.0D, 8.0D, 13.0D, 12.0D, 16.0D),
+            Direction.SOUTH, Block.box(3.0D, 4.0D, 0.0D, 13.0D, 12.0D, 8.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 3.0D, 8.0D, 12.0D, 13.0D),
+            Direction.WEST, Block.box(8.0D, 4.0D, 3.0D, 16.0D, 12.0D, 13.0D)));
     private static final Map<Direction, VoxelShape> POLAR_BEAR_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.5D, 4.0D, 9.0D, 11.5D, 11.0D, 16.0D),
             Direction.SOUTH, Block.box(4.5D, 4.0D, 0.0D, 11.5D, 11.0D, 7.0D),
@@ -264,6 +269,9 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return PARROT_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.PHANTOM.equals(this.getType())) {
             return PHANTOM_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.PIGLIN_BRUTE.equals(this.getType()) ||
+                EffectSkullBlock.Types.ZOMBIFIED_PIGLIN.equals(this.getType())) {
+            return PIGLIN_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.POLAR_BEAR.equals(this.getType()) ||
                 EffectSkullBlock.Types.SNOW_GOLEM.equals(this.getType())) {
             return POLAR_BEAR_AABBS.get(blockState.getValue(FACING));
@@ -328,7 +336,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                     blockState.is(ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.CAMEL_WALL_HEAD.get()) ||
                     blockState.is(ModBlocks.CREEPER_WALL_HEAD_CHARGED.get()) || blockState.is(ModBlocks.PUFFERFISH_WALL_HEAD.get()) ||
                     blockState.is(ModBlocks.ENDERMAN_WALL_HEAD.get()) || blockState.is(ModBlocks.WARDEN_WALL_HEAD.get()) ||
-                    blockState.is(ModBlocks.STRIDER_WALL_HEAD.get()) || blockState.is(ModBlocks.STRIDER_WALL_HEAD_COLD.get());
+                    blockState.is(ModBlocks.STRIDER_WALL_HEAD.get()) || blockState.is(ModBlocks.STRIDER_WALL_HEAD_COLD.get()) ||
+                    blockState.is(ModBlocks.PIGLIN_BRUTE_WALL_HEAD.get()) || blockState.is(ModBlocks.ZOMBIFIED_PIGLIN_WALL_HEAD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);

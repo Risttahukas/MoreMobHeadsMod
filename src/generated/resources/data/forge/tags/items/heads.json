@@ -89,6 +89,7 @@
     "moremobheads:parrot_head_yellow_blue",
     "moremobheads:parrot_head_grey",
     "moremobheads:phantom_head",
+    "moremobheads:piglin_brute_head",
     "moremobheads:pillager_head",
     "moremobheads:polar_bear_head",
     "moremobheads:pufferfish_head",
@@ -128,6 +129,7 @@
     "moremobheads:vex_head",
     "moremobheads:vindicator_head",
     "moremobheads:warden_head",
-    "moremobheads:witch_head"
+    "moremobheads:witch_head",
+    "moremobheads:zombified_piglin_head"
   ]
 }

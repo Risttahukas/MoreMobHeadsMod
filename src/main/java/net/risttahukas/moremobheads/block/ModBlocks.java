@@ -637,6 +637,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PHANTOM, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(PHANTOM_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> PIGLIN_BRUTE_HEAD = BLOCKS.register("piglin_brute_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.PIGLIN_BRUTE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> PIGLIN_BRUTE_WALL_HEAD = BLOCKS.register("piglin_brute_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PIGLIN_BRUTE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(PIGLIN_BRUTE_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> PILLAGER_HEAD = BLOCKS.register("pillager_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.PILLAGER, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
@@ -916,6 +923,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> WITCH_WALL_HEAD = BLOCKS.register("witch_wall_head",
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.WITCH, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(WITCH_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIFIED_PIGLIN_HEAD = BLOCKS.register("zombified_piglin_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIFIED_PIGLIN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIFIED_PIGLIN_WALL_HEAD = BLOCKS.register("zombified_piglin_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIFIED_PIGLIN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIFIED_PIGLIN_HEAD).pushReaction(PushReaction.DESTROY)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

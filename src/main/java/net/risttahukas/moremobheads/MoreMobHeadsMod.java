@@ -141,6 +141,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.PARROT_HEAD_GREY);
             event.accept(ModItems.PHANTOM_HEAD);
             event.accept(Items.PIGLIN_HEAD);
+            event.accept(ModItems.PIGLIN_BRUTE_HEAD);
             event.accept(ModItems.PILLAGER_HEAD);
             event.accept(Items.PLAYER_HEAD);
             event.accept(ModItems.POLAR_BEAR_HEAD);
@@ -185,6 +186,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.WITCH_HEAD);
             event.accept(Items.WITHER_SKELETON_SKULL);
             event.accept(Items.ZOMBIE_HEAD);
+            event.accept(ModItems.ZOMBIFIED_PIGLIN_HEAD);
         }
     }
 

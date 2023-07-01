@@ -138,6 +138,8 @@ public class EffectSkullBlock extends SkullBlock {
             return PARROT_SHAPE;
         } if (Types.PHANTOM.equals(this.getType())) {
             return PHANTOM_SHAPE;
+        } if (Types.PIGLIN_BRUTE.equals(this.getType()) || Types.ZOMBIFIED_PIGLIN.equals(this.getType()) ) {
+            return PIGLIN_SHAPE;
         } if (Types.POLAR_BEAR.equals(this.getType()) || Types.SNOW_GOLEM.equals(this.getType()) ) {
             return POLAR_BEAR_SHAPE;
         } if (Types.RABBIT_BROWN.equals(this.getType()) || Types.RABBIT_WHITE.equals(this.getType()) ||
@@ -182,7 +184,8 @@ public class EffectSkullBlock extends SkullBlock {
                     blockState.is(ModBlocks.SHEEP_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.CAMEL_HEAD.get()) ||
                     blockState.is(ModBlocks.CREEPER_HEAD_CHARGED.get()) || blockState.is(ModBlocks.PUFFERFISH_HEAD.get()) ||
                     blockState.is(ModBlocks.ENDERMAN_HEAD.get()) || blockState.is(ModBlocks.WARDEN_HEAD.get()) ||
-                    blockState.is(ModBlocks.STRIDER_HEAD.get()) || blockState.is(ModBlocks.STRIDER_HEAD_COLD.get());
+                    blockState.is(ModBlocks.STRIDER_HEAD.get()) || blockState.is(ModBlocks.STRIDER_HEAD_COLD.get()) ||
+                    blockState.is(ModBlocks.PIGLIN_BRUTE_HEAD.get()) || blockState.is(ModBlocks.ZOMBIFIED_PIGLIN_HEAD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);
@@ -283,6 +286,7 @@ public class EffectSkullBlock extends SkullBlock {
         PARROT_YELLOW_BLUE,
         PARROT_GREY,
         PHANTOM,
+        PIGLIN_BRUTE,
         PILLAGER,
         POLAR_BEAR,
         PUFFERFISH,
@@ -322,6 +326,7 @@ public class EffectSkullBlock extends SkullBlock {
         VEX,
         VINDICATOR,
         WARDEN,
-        WITCH
+        WITCH,
+        ZOMBIFIED_PIGLIN
     }
 }
