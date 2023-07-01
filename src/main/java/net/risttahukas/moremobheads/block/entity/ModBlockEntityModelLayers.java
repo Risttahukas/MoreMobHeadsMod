@@ -43,6 +43,7 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation SPIDER_HEAD = register("spider_head");
     public static final ModelLayerLocation SPIDER_EYES = register("spider_eyes");
     public static final ModelLayerLocation STRAY_SKULL_CLOTHES = register("stray_skull_clothes");
+    public static final ModelLayerLocation STRIDER_HEAD = register("strider_head");
     public static final ModelLayerLocation WARDEN_HEAD = register("warden_head");
     public static final ModelLayerLocation WARDEN_HEAD_EMISSIVE = register("warden_head_emissive");
     public static final ModelLayerLocation WITCH_HEAD = register("witch_head");

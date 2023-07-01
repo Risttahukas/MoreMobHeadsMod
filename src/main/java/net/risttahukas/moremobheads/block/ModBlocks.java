@@ -861,6 +861,20 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.STRAY, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(STRAY_SKULL).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> STRIDER_HEAD = BLOCKS.register("strider_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.STRIDER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> STRIDER_WALL_HEAD = BLOCKS.register("strider_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.STRIDER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(STRIDER_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> STRIDER_HEAD_COLD = BLOCKS.register("strider_head_cold",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.STRIDER_COLD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> STRIDER_WALL_HEAD_COLD = BLOCKS.register("strider_wall_head_cold",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.STRIDER_COLD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(STRIDER_HEAD_COLD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> VEX_HEAD = BLOCKS.register("vex_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.VEX, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

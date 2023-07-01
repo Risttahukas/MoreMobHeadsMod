@@ -56,6 +56,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 10.75D, 12.0D);
     protected static final VoxelShape SHEEP_SHAPE =
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 6.0D, 12.0D);
+    protected static final VoxelShape STRIDER_SHAPE =
+            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 7.0D, 12.0D);
     protected static final VoxelShape UNDEAD_HORSE_SHAPE =
             Block.box(4.5D, 0.0D, 4.5D, 11.5D, 11.0D, 11.5D);
     protected static final VoxelShape VILLAGER_SHAPE =
@@ -153,6 +155,8 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.SHEEP_RED.equals(this.getType()) || Types.SHEEP_BLACK.equals(this.getType()) ||
                 Types.SHEEP_RAINBOW.equals(this.getType())) {
             return SHEEP_SHAPE;
+        } if (Types.STRIDER.equals(this.getType()) || Types.STRIDER_COLD.equals(this.getType())) {
+            return STRIDER_SHAPE;
         } if (Types.IRON_GOLEM.equals(this.getType()) || Types.WITCH.equals(this.getType()) ||
                 Types.EVOKER.equals(this.getType()) || Types.ILLUSIONER.equals(this.getType()) ||
                 Types.PILLAGER.equals(this.getType()) || Types.VINDICATOR.equals(this.getType())) {
@@ -173,7 +177,8 @@ public class EffectSkullBlock extends SkullBlock {
             boolean flag = blockState.is(ModBlocks.WITCH_HEAD.get()) || blockState.is(ModBlocks.GHAST_HEAD.get()) ||
                     blockState.is(ModBlocks.SHEEP_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.CAMEL_HEAD.get()) ||
                     blockState.is(ModBlocks.CREEPER_HEAD_CHARGED.get()) || blockState.is(ModBlocks.PUFFERFISH_HEAD.get()) ||
-                    blockState.is(ModBlocks.ENDERMAN_HEAD.get()) || blockState.is(ModBlocks.WARDEN_HEAD.get());
+                    blockState.is(ModBlocks.ENDERMAN_HEAD.get()) || blockState.is(ModBlocks.WARDEN_HEAD.get()) ||
+                    blockState.is(ModBlocks.STRIDER_HEAD.get()) || blockState.is(ModBlocks.STRIDER_HEAD_COLD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);
@@ -306,6 +311,8 @@ public class EffectSkullBlock extends SkullBlock {
         SNOW_GOLEM,
         SPIDER,
         STRAY,
+        STRIDER,
+        STRIDER_COLD,
         VEX,
         VINDICATOR,
         WARDEN,

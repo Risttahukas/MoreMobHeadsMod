@@ -165,6 +165,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SNOW_GOLEM, new ResourceLocation("textures/entity/snow_golem.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SPIDER, new ResourceLocation("textures/entity/spider/spider.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.STRAY, new ResourceLocation("textures/entity/skeleton/stray.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.STRIDER, new ResourceLocation("textures/entity/strider/strider.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.STRIDER_COLD, new ResourceLocation("textures/entity/strider/strider_cold.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VEX, new ResourceLocation("textures/entity/illager/vex.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VINDICATOR, new ResourceLocation("textures/entity/illager/vindicator.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WARDEN, new ResourceLocation("textures/entity/warden/warden.png"));
@@ -397,6 +399,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.SNOW_GOLEM, new SnowGolemHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SNOW_GOLEM_HEAD)));
         builder.put(EffectSkullBlock.Types.SPIDER, new SpiderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SPIDER_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SPIDER_EYES)));
         builder.put(EffectSkullBlock.Types.STRAY, new StraySkullModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.MOB_SKULL), entityModelSet.bakeLayer(ModBlockEntityModelLayers.STRAY_SKULL_CLOTHES)));
+        builder.put(EffectSkullBlock.Types.STRIDER, new StriderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.STRIDER_HEAD)));
+        builder.put(EffectSkullBlock.Types.STRIDER_COLD, new StriderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.STRIDER_HEAD)));
         builder.put(EffectSkullBlock.Types.VEX, new AllayHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ALLAY_HEAD)));
         builder.put(EffectSkullBlock.Types.VINDICATOR, new IllagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ILLAGER_HEAD)));
         builder.put(EffectSkullBlock.Types.WARDEN, new WardenHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WARDEN_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.WARDEN_HEAD_EMISSIVE)));

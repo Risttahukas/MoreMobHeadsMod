@@ -136,6 +136,8 @@ public class ModBlockEntities {
                             ModBlocks.SNOW_GOLEM_HEAD.get(), ModBlocks.SNOW_GOLEM_WALL_HEAD.get(),
                             ModBlocks.SPIDER_HEAD.get(), ModBlocks.SPIDER_WALL_HEAD.get(),
                             ModBlocks.STRAY_SKULL.get(), ModBlocks.STRAY_WALL_SKULL.get(),
+                            ModBlocks.STRIDER_HEAD.get(), ModBlocks.STRIDER_WALL_HEAD.get(),
+                            ModBlocks.STRIDER_HEAD_COLD.get(), ModBlocks.STRIDER_WALL_HEAD_COLD.get(),
                             ModBlocks.VEX_HEAD.get(), ModBlocks.VEX_WALL_HEAD.get(),
                             ModBlocks.VINDICATOR_HEAD.get(), ModBlocks.VINDICATOR_WALL_HEAD.get(),
                             ModBlocks.WARDEN_HEAD.get(), ModBlocks.WARDEN_WALL_HEAD.get(),

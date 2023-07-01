@@ -498,6 +498,14 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.STRAY_SKULL.get(), ModBlocks.STRAY_WALL_SKULL.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> STRIDER_HEAD = ITEMS.register("strider_head", () ->
+            new EffectSkullItem(ModBlocks.STRIDER_HEAD.get(), ModBlocks.STRIDER_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> STRIDER_HEAD_COLD = ITEMS.register("strider_head_cold", () ->
+            new EffectSkullItem(ModBlocks.STRIDER_HEAD_COLD.get(), ModBlocks.STRIDER_WALL_HEAD_COLD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> VEX_HEAD = ITEMS.register("vex_head", () ->
             new EffectSkullItem(ModBlocks.VEX_HEAD.get(), ModBlocks.VEX_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

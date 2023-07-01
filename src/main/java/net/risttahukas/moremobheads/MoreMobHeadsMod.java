@@ -175,6 +175,8 @@ public class MoreMobHeadsMod
             event.accept(ModItems.SNOW_GOLEM_HEAD);
             event.accept(ModItems.SPIDER_HEAD);
             event.accept(ModItems.STRAY_SKULL);
+            event.accept(ModItems.STRIDER_HEAD);
+            event.accept(ModItems.STRIDER_HEAD_COLD);
             event.accept(ModItems.VEX_HEAD);
             event.accept(ModItems.VINDICATOR_HEAD);
             event.accept(ModItems.WARDEN_HEAD);

@@ -132,6 +132,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 10.0D, 8.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 5.0D, 8.0D, 10.0D, 11.0D),
             Direction.WEST, Block.box(8.0D, 4.0D, 5.0D, 16.0D, 10.0D, 11.0D)));
+    private static final Map<Direction, VoxelShape> STRIDER_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(4.0D, 4.0D, 8.0D, 12.0D, 11.0D, 16.0D),
+            Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 11.0D, 8.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 8.0D, 11.0D, 12.0D),
+            Direction.WEST, Block.box(8.0D, 4.0D, 4.0D, 16.0D, 11.0D, 12.0D)));
     private static final Map<Direction, VoxelShape> UNDEAD_HORSE_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(5.0D, 4.0D, 9.0D, 11.0D, 15.0D, 16.0D),
             Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 15.0D, 7.0D),
@@ -286,6 +291,9 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                 EffectSkullBlock.Types.SHEEP_BLACK.equals(this.getType()) ||
                 EffectSkullBlock.Types.SHEEP_RAINBOW.equals(this.getType())) {
             return SHEEP_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.STRIDER.equals(this.getType()) ||
+                EffectSkullBlock.Types.STRIDER_COLD.equals(this.getType())) {
+            return STRIDER_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.IRON_GOLEM.equals(this.getType()) ||
                 EffectSkullBlock.Types.WITCH.equals(this.getType()) ||
                 EffectSkullBlock.Types.EVOKER.equals(this.getType()) ||
@@ -311,7 +319,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             boolean flag = blockState.is(ModBlocks.WITCH_WALL_HEAD.get()) || blockState.is(ModBlocks.GHAST_WALL_HEAD.get()) ||
                     blockState.is(ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.CAMEL_WALL_HEAD.get()) ||
                     blockState.is(ModBlocks.CREEPER_WALL_HEAD_CHARGED.get()) || blockState.is(ModBlocks.PUFFERFISH_WALL_HEAD.get()) ||
-                    blockState.is(ModBlocks.ENDERMAN_WALL_HEAD.get()) || blockState.is(ModBlocks.WARDEN_WALL_HEAD.get());
+                    blockState.is(ModBlocks.ENDERMAN_WALL_HEAD.get()) || blockState.is(ModBlocks.WARDEN_WALL_HEAD.get()) ||
+                    blockState.is(ModBlocks.STRIDER_WALL_HEAD.get()) || blockState.is(ModBlocks.STRIDER_WALL_HEAD_COLD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);
