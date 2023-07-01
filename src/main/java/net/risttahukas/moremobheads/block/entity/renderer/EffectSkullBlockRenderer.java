@@ -73,6 +73,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.DROWNED, new ResourceLocation("textures/entity/zombie/drowned.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.ENDERMAN, new ResourceLocation("textures/entity/enderman/enderman.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.EVOKER, new ResourceLocation("textures/entity/illager/evoker.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.FOX_RED, new ResourceLocation("textures/entity/fox/fox.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.FOX_SNOW, new ResourceLocation("textures/entity/fox/snow_fox.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.GHAST, new ResourceLocation("textures/entity/ghast/ghast.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.GLOW_SQUID, new ResourceLocation("textures/entity/squid/glow_squid.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_WHITE, new ResourceLocation("textures/entity/horse/horse_white.png"));
@@ -216,7 +218,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
             } else if (skullModelBase instanceof ChickenHeadModel || skullModelBase instanceof ParrotHeadModel) {
                 horizontalTranslation = 0.4375F;
             } else if (skullModelBase instanceof CowHeadModel || skullModelBase instanceof DolphinHeadModel ||
-                    skullModelBase instanceof SquidHeadModel) {
+                    skullModelBase instanceof SquidHeadModel || skullModelBase instanceof FoxHeadModel) {
                 horizontalTranslation = 0.3125F;
             } else if (skullModelBase instanceof DonkeyHeadModel) {
                 horizontalTranslation = 0.3096875F;
@@ -314,6 +316,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.DROWNED, new DrownedHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HUMANOID_SKULL), entityModelSet.bakeLayer(ModBlockEntityModelLayers.DROWNED_HEAD_CLOTHES)));
         builder.put(EffectSkullBlock.Types.ENDERMAN, new EndermanHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ENDERMAN_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.ENDERMAN_HEAD)));
         builder.put(EffectSkullBlock.Types.EVOKER, new IllagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ILLAGER_HEAD)));
+        builder.put(EffectSkullBlock.Types.FOX_RED, new FoxHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.FOX_HEAD)));
+        builder.put(EffectSkullBlock.Types.FOX_SNOW, new FoxHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.FOX_HEAD)));
         builder.put(EffectSkullBlock.Types.GHAST, new GhastHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.GHAST_HEAD)));
         builder.put(EffectSkullBlock.Types.GLOW_SQUID, new GlowSquidHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SQUID_HEAD)));
         builder.put(EffectSkullBlock.Types.HORSE_WHITE, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.NONE));

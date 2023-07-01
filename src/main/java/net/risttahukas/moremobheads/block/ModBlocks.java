@@ -217,6 +217,20 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.EVOKER, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(EVOKER_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> FOX_HEAD_RED = BLOCKS.register("fox_head_red",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.FOX_RED, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> FOX_WALL_HEAD_RED = BLOCKS.register("fox_wall_head_red",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.FOX_RED, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(FOX_HEAD_RED).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> FOX_HEAD_SNOW = BLOCKS.register("fox_head_snow",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.FOX_SNOW, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> FOX_WALL_HEAD_SNOW = BLOCKS.register("fox_wall_head_snow",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.FOX_SNOW, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(FOX_HEAD_SNOW).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> GHAST_HEAD = BLOCKS.register("ghast_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.GHAST, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

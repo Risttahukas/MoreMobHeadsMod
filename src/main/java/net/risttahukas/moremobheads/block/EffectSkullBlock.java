@@ -157,7 +157,8 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.SHEEP_PURPLE.equals(this.getType()) || Types.SHEEP_BLUE.equals(this.getType()) ||
                 Types.SHEEP_BROWN.equals(this.getType()) || Types.SHEEP_GREEN.equals(this.getType()) ||
                 Types.SHEEP_RED.equals(this.getType()) || Types.SHEEP_BLACK.equals(this.getType()) ||
-                Types.SHEEP_RAINBOW.equals(this.getType())) {
+                Types.SHEEP_RAINBOW.equals(this.getType()) || Types.FOX_RED.equals(this.getType()) ||
+                Types.FOX_SNOW.equals(this.getType())) {
             return SHEEP_SHAPE;
         } if (Types.SQUID.equals(this.getType()) || Types.GLOW_SQUID.equals(this.getType())) {
             return SQUID_SHAPE;
@@ -226,6 +227,8 @@ public class EffectSkullBlock extends SkullBlock {
         DROWNED,
         ENDERMAN,
         EVOKER,
+        FOX_RED,
+        FOX_SNOW,
         GHAST,
         GLOW_SQUID,
         HORSE_WHITE,
