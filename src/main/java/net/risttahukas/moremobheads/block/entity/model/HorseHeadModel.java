@@ -18,12 +18,12 @@ import java.util.Map;
 
 @OnlyIn(Dist.CLIENT)
 public class HorseHeadModel extends AbstractHorseHeadModel {
-    private static final Map<Markings, ResourceLocation> LOCATION_BY_MARKINGS = Util.make(Maps.newEnumMap(Markings.class), (p_117069_) -> {
-        p_117069_.put(Markings.NONE, null);
-        p_117069_.put(Markings.WHITE, new ResourceLocation("textures/entity/horse/horse_markings_white.png"));
-        p_117069_.put(Markings.WHITE_FIELD, new ResourceLocation("textures/entity/horse/horse_markings_whitefield.png"));
-        p_117069_.put(Markings.WHITE_DOTS, new ResourceLocation("textures/entity/horse/horse_markings_whitedots.png"));
-        p_117069_.put(Markings.BLACK_DOTS, new ResourceLocation("textures/entity/horse/horse_markings_blackdots.png"));
+    private static final Map<Markings, ResourceLocation> LOCATION_BY_MARKINGS = Util.make(Maps.newEnumMap(Markings.class), (enumMap) -> {
+        enumMap.put(Markings.NONE, null);
+        enumMap.put(Markings.WHITE, new ResourceLocation("textures/entity/horse/horse_markings_white.png"));
+        enumMap.put(Markings.WHITE_FIELD, new ResourceLocation("textures/entity/horse/horse_markings_whitefield.png"));
+        enumMap.put(Markings.WHITE_DOTS, new ResourceLocation("textures/entity/horse/horse_markings_whitedots.png"));
+        enumMap.put(Markings.BLACK_DOTS, new ResourceLocation("textures/entity/horse/horse_markings_blackdots.png"));
     });
     private final ModelPart rootMarkings;
     protected final ModelPart headMarkings;

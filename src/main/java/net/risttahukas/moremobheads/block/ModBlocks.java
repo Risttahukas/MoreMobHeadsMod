@@ -525,6 +525,482 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.IRON_GOLEM, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(IRON_GOLEM_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY = BLOCKS.register("llama_head_creamy",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY = BLOCKS.register("llama_wall_head_creamy",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE = BLOCKS.register("llama_head_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE = BLOCKS.register("llama_wall_head_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN = BLOCKS.register("llama_head_brown",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN = BLOCKS.register("llama_wall_head_brown",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY = BLOCKS.register("llama_head_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY = BLOCKS.register("llama_wall_head_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_WHITE = BLOCKS.register("llama_head_creamy_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_WHITE = BLOCKS.register("llama_wall_head_creamy_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_WHITE = BLOCKS.register("llama_head_white_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_WHITE = BLOCKS.register("llama_wall_head_white_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_WHITE = BLOCKS.register("llama_head_brown_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_WHITE = BLOCKS.register("llama_wall_head_brown_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_WHITE = BLOCKS.register("llama_head_gray_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_WHITE = BLOCKS.register("llama_wall_head_gray_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_ORANGE = BLOCKS.register("llama_head_creamy_orange",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_ORANGE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_ORANGE = BLOCKS.register("llama_wall_head_creamy_orange",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_ORANGE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_ORANGE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_ORANGE = BLOCKS.register("llama_head_white_orange",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_ORANGE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_ORANGE = BLOCKS.register("llama_wall_head_white_orange",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_ORANGE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_ORANGE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_ORANGE = BLOCKS.register("llama_head_brown_orange",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_ORANGE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_ORANGE = BLOCKS.register("llama_wall_head_brown_orange",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_ORANGE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_ORANGE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_ORANGE = BLOCKS.register("llama_head_gray_orange",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_ORANGE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_ORANGE = BLOCKS.register("llama_wall_head_gray_orange",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_ORANGE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_ORANGE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_MAGENTA = BLOCKS.register("llama_head_creamy_magenta",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_MAGENTA, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_MAGENTA = BLOCKS.register("llama_wall_head_creamy_magenta",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_MAGENTA, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_MAGENTA).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_MAGENTA = BLOCKS.register("llama_head_white_magenta",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_MAGENTA, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_MAGENTA = BLOCKS.register("llama_wall_head_white_magenta",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_MAGENTA, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_MAGENTA).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_MAGENTA = BLOCKS.register("llama_head_brown_magenta",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_MAGENTA, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_MAGENTA = BLOCKS.register("llama_wall_head_brown_magenta",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_MAGENTA, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_MAGENTA).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_MAGENTA = BLOCKS.register("llama_head_gray_magenta",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_MAGENTA, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_MAGENTA = BLOCKS.register("llama_wall_head_gray_magenta",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_MAGENTA, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_MAGENTA).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_LIGHT_BLUE = BLOCKS.register("llama_head_creamy_light_blue",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_LIGHT_BLUE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_LIGHT_BLUE = BLOCKS.register("llama_wall_head_creamy_light_blue",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_LIGHT_BLUE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_LIGHT_BLUE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_LIGHT_BLUE = BLOCKS.register("llama_head_white_light_blue",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_LIGHT_BLUE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_LIGHT_BLUE = BLOCKS.register("llama_wall_head_white_light_blue",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_LIGHT_BLUE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_LIGHT_BLUE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_LIGHT_BLUE = BLOCKS.register("llama_head_brown_light_blue",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_LIGHT_BLUE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_LIGHT_BLUE = BLOCKS.register("llama_wall_head_brown_light_blue",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_LIGHT_BLUE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_LIGHT_BLUE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_LIGHT_BLUE = BLOCKS.register("llama_head_gray_light_blue",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_LIGHT_BLUE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_LIGHT_BLUE = BLOCKS.register("llama_wall_head_gray_light_blue",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_LIGHT_BLUE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_LIGHT_BLUE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_YELLOW = BLOCKS.register("llama_head_creamy_yellow",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_YELLOW, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_YELLOW = BLOCKS.register("llama_wall_head_creamy_yellow",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_YELLOW, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_YELLOW).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_YELLOW = BLOCKS.register("llama_head_white_yellow",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_YELLOW, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_YELLOW = BLOCKS.register("llama_wall_head_white_yellow",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_YELLOW, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_YELLOW).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_YELLOW = BLOCKS.register("llama_head_brown_yellow",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_YELLOW, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_YELLOW = BLOCKS.register("llama_wall_head_brown_yellow",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_YELLOW, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_YELLOW).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_YELLOW = BLOCKS.register("llama_head_gray_yellow",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_YELLOW, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_YELLOW = BLOCKS.register("llama_wall_head_gray_yellow",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_YELLOW, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_YELLOW).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_LIME = BLOCKS.register("llama_head_creamy_lime",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_LIME, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_LIME = BLOCKS.register("llama_wall_head_creamy_lime",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_LIME, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_LIME).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_LIME = BLOCKS.register("llama_head_white_lime",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_LIME, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_LIME = BLOCKS.register("llama_wall_head_white_lime",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_LIME, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_LIME).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_LIME = BLOCKS.register("llama_head_brown_lime",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_LIME, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_LIME = BLOCKS.register("llama_wall_head_brown_lime",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_LIME, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_LIME).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_LIME = BLOCKS.register("llama_head_gray_lime",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_LIME, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_LIME = BLOCKS.register("llama_wall_head_gray_lime",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_LIME, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_LIME).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_PINK = BLOCKS.register("llama_head_creamy_pink",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_PINK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_PINK = BLOCKS.register("llama_wall_head_creamy_pink",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_PINK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_PINK).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_PINK = BLOCKS.register("llama_head_white_pink",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_PINK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_PINK = BLOCKS.register("llama_wall_head_white_pink",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_PINK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_PINK).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_PINK = BLOCKS.register("llama_head_brown_pink",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_PINK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_PINK = BLOCKS.register("llama_wall_head_brown_pink",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_PINK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_PINK).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_PINK = BLOCKS.register("llama_head_gray_pink",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_PINK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_PINK = BLOCKS.register("llama_wall_head_gray_pink",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_PINK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_PINK).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_GRAY = BLOCKS.register("llama_head_creamy_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_GRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_GRAY = BLOCKS.register("llama_wall_head_creamy_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_GRAY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_GRAY = BLOCKS.register("llama_head_white_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_GRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_GRAY = BLOCKS.register("llama_wall_head_white_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_GRAY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_GRAY = BLOCKS.register("llama_head_brown_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_GRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_GRAY = BLOCKS.register("llama_wall_head_brown_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_GRAY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_GRAY = BLOCKS.register("llama_head_gray_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_GRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_GRAY = BLOCKS.register("llama_wall_head_gray_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_GRAY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_LIGHT_GRAY = BLOCKS.register("llama_head_creamy_light_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_LIGHT_GRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_LIGHT_GRAY = BLOCKS.register("llama_wall_head_creamy_light_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_LIGHT_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_LIGHT_GRAY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_LIGHT_GRAY = BLOCKS.register("llama_head_white_light_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_LIGHT_GRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_LIGHT_GRAY = BLOCKS.register("llama_wall_head_white_light_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_LIGHT_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_LIGHT_GRAY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_LIGHT_GRAY = BLOCKS.register("llama_head_brown_light_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_LIGHT_GRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_LIGHT_GRAY = BLOCKS.register("llama_wall_head_brown_light_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_LIGHT_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_LIGHT_GRAY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_LIGHT_GRAY = BLOCKS.register("llama_head_gray_light_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_LIGHT_GRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_LIGHT_GRAY = BLOCKS.register("llama_wall_head_gray_light_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_LIGHT_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_LIGHT_GRAY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_CYAN = BLOCKS.register("llama_head_creamy_cyan",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_CYAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_CYAN = BLOCKS.register("llama_wall_head_creamy_cyan",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_CYAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_CYAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_CYAN = BLOCKS.register("llama_head_white_cyan",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_CYAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_CYAN = BLOCKS.register("llama_wall_head_white_cyan",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_CYAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_CYAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_CYAN = BLOCKS.register("llama_head_brown_cyan",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_CYAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_CYAN = BLOCKS.register("llama_wall_head_brown_cyan",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_CYAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_CYAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_CYAN = BLOCKS.register("llama_head_gray_cyan",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_CYAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_CYAN = BLOCKS.register("llama_wall_head_gray_cyan",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_CYAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_CYAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_PURPLE = BLOCKS.register("llama_head_creamy_purple",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_PURPLE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_PURPLE = BLOCKS.register("llama_wall_head_creamy_purple",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_PURPLE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_PURPLE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_PURPLE = BLOCKS.register("llama_head_white_purple",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_PURPLE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_PURPLE = BLOCKS.register("llama_wall_head_white_purple",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_PURPLE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_PURPLE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_PURPLE = BLOCKS.register("llama_head_brown_purple",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_PURPLE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_PURPLE = BLOCKS.register("llama_wall_head_brown_purple",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_PURPLE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_PURPLE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_PURPLE = BLOCKS.register("llama_head_gray_purple",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_PURPLE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_PURPLE = BLOCKS.register("llama_wall_head_gray_purple",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_PURPLE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_PURPLE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_BLUE = BLOCKS.register("llama_head_creamy_blue",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_BLUE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_BLUE = BLOCKS.register("llama_wall_head_creamy_blue",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_BLUE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_BLUE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_BLUE = BLOCKS.register("llama_head_white_blue",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_BLUE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_BLUE = BLOCKS.register("llama_wall_head_white_blue",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_BLUE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_BLUE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_BLUE = BLOCKS.register("llama_head_brown_blue",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_BLUE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_BLUE = BLOCKS.register("llama_wall_head_brown_blue",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_BLUE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_BLUE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_BLUE = BLOCKS.register("llama_head_gray_blue",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_BLUE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_BLUE = BLOCKS.register("llama_wall_head_gray_blue",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_BLUE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_BLUE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_BROWN = BLOCKS.register("llama_head_creamy_brown",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_BROWN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_BROWN = BLOCKS.register("llama_wall_head_creamy_brown",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_BROWN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_BROWN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_BROWN = BLOCKS.register("llama_head_white_brown",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_BROWN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_BROWN = BLOCKS.register("llama_wall_head_white_brown",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_BROWN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_BROWN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_BROWN = BLOCKS.register("llama_head_brown_brown",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_BROWN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_BROWN = BLOCKS.register("llama_wall_head_brown_brown",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_BROWN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_BROWN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_BROWN = BLOCKS.register("llama_head_gray_brown",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_BROWN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_BROWN = BLOCKS.register("llama_wall_head_gray_brown",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_BROWN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_BROWN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_GREEN = BLOCKS.register("llama_head_creamy_green",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_GREEN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_GREEN = BLOCKS.register("llama_wall_head_creamy_green",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_GREEN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_GREEN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_GREEN = BLOCKS.register("llama_head_white_green",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_GREEN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_GREEN = BLOCKS.register("llama_wall_head_white_green",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_GREEN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_GREEN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_GREEN = BLOCKS.register("llama_head_brown_green",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_GREEN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_GREEN = BLOCKS.register("llama_wall_head_brown_green",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_GREEN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_GREEN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_GREEN = BLOCKS.register("llama_head_gray_green",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_GREEN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_GREEN = BLOCKS.register("llama_wall_head_gray_green",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_GREEN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_GREEN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_RED = BLOCKS.register("llama_head_creamy_red",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_RED, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_RED = BLOCKS.register("llama_wall_head_creamy_red",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_RED, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_RED).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_RED = BLOCKS.register("llama_head_white_red",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_RED, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_RED = BLOCKS.register("llama_wall_head_white_red",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_RED, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_RED).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_RED = BLOCKS.register("llama_head_brown_red",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_RED, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_RED = BLOCKS.register("llama_wall_head_brown_red",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_RED, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_RED).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_RED = BLOCKS.register("llama_head_gray_red",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_RED, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_RED = BLOCKS.register("llama_wall_head_gray_red",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_RED, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_RED).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_CREAMY_BLACK = BLOCKS.register("llama_head_creamy_black",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_BLACK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_CREAMY_BLACK = BLOCKS.register("llama_wall_head_creamy_black",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_CREAMY_BLACK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_CREAMY_BLACK).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_WHITE_BLACK = BLOCKS.register("llama_head_white_black",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_BLACK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_WHITE_BLACK = BLOCKS.register("llama_wall_head_white_black",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_WHITE_BLACK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_WHITE_BLACK).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_BROWN_BLACK = BLOCKS.register("llama_head_brown_black",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_BLACK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_BROWN_BLACK = BLOCKS.register("llama_wall_head_brown_black",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_BROWN_BLACK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_BROWN_BLACK).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> LLAMA_HEAD_GRAY_BLACK = BLOCKS.register("llama_head_gray_black",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_BLACK, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LLAMA_WALL_HEAD_GRAY_BLACK = BLOCKS.register("llama_wall_head_gray_black",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.LLAMA_GRAY_BLACK, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(LLAMA_HEAD_GRAY_BLACK).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> MAGMA_CUBE_HEAD = BLOCKS.register("magma_cube_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.MAGMA_CUBE, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
@@ -1028,6 +1504,34 @@ public class ModBlocks {
     public static final RegistryObject<Block> STRIDER_WALL_HEAD_COLD = BLOCKS.register("strider_wall_head_cold",
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.STRIDER_COLD, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(STRIDER_HEAD_COLD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> TRADER_LLAMA_HEAD_CREAMY = BLOCKS.register("trader_llama_head_creamy",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.TRADER_LLAMA_CREAMY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> TRADER_LLAMA_WALL_HEAD_CREAMY = BLOCKS.register("trader_llama_wall_head_creamy",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.TRADER_LLAMA_CREAMY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(TRADER_LLAMA_HEAD_CREAMY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> TRADER_LLAMA_HEAD_WHITE = BLOCKS.register("trader_llama_head_white",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.TRADER_LLAMA_WHITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> TRADER_LLAMA_WALL_HEAD_WHITE = BLOCKS.register("trader_llama_wall_head_white",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.TRADER_LLAMA_WHITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(TRADER_LLAMA_HEAD_WHITE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> TRADER_LLAMA_HEAD_BROWN = BLOCKS.register("trader_llama_head_brown",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.TRADER_LLAMA_BROWN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> TRADER_LLAMA_WALL_HEAD_BROWN = BLOCKS.register("trader_llama_wall_head_brown",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.TRADER_LLAMA_BROWN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(TRADER_LLAMA_HEAD_BROWN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> TRADER_LLAMA_HEAD_GRAY = BLOCKS.register("trader_llama_head_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.TRADER_LLAMA_GRAY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> TRADER_LLAMA_WALL_HEAD_GRAY = BLOCKS.register("trader_llama_wall_head_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.TRADER_LLAMA_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(TRADER_LLAMA_HEAD_GRAY).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> VEX_HEAD = BLOCKS.register("vex_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.VEX, BlockBehaviour.Properties.of()

@@ -96,6 +96,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 14.0D, 8.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 8.0D, 14.0D, 12.0D),
             Direction.WEST, Block.box(8.0D, 4.0D, 4.0D, 16.0D, 14.0D, 12.0D)));
+    private static final Map<Direction, VoxelShape> LLAMA_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(4.0D, 4.0D, 10.0D, 12.0D, 14.0D, 16.0D),
+            Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 14.0D, 6.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 6.0D, 14.0D, 12.0D),
+            Direction.WEST, Block.box(10.0D, 4.0D, 4.0D, 16.0D, 14.0D, 12.0D)));
     private static final Map<Direction, VoxelShape> MULE_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(5.24D, 4.0D, 9.56D, 10.76D, 14.12D, 16.0D),
             Direction.SOUTH, Block.box(5.24D, 4.0D, 0.0D, 10.76D, 14.12D, 6.44D),
@@ -263,6 +268,79 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return HUSK_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.IRON_GOLEM.equals(this.getType())) {
             return IRON_GOLEM_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.LLAMA_CREAMY.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_WHITE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_WHITE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_WHITE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_WHITE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_ORANGE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_ORANGE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_ORANGE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_ORANGE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_MAGENTA.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_MAGENTA.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_MAGENTA.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_MAGENTA.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_LIGHT_BLUE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_LIGHT_BLUE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_LIGHT_BLUE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_LIGHT_BLUE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_YELLOW.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_YELLOW.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_YELLOW.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_YELLOW.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_LIME.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_LIME.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_LIME.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_LIME.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_PINK.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_PINK.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_PINK.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_PINK.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_GRAY.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_GRAY.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_GRAY.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_GRAY.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_LIGHT_GRAY.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_LIGHT_GRAY.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_LIGHT_GRAY.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_LIGHT_GRAY.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_CYAN.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_CYAN.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_CYAN.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_CYAN.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_PURPLE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_PURPLE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_PURPLE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_PURPLE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_BLUE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_BLUE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_BLUE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_BLUE.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_BROWN.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_BROWN.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_BROWN.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_BROWN.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_GREEN.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_GREEN.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_GREEN.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_GREEN.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_RED.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_RED.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_RED.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_RED.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_CREAMY_BLACK.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_WHITE_BLACK.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_BROWN_BLACK.equals(this.getType()) ||
+                EffectSkullBlock.Types.LLAMA_GRAY_BLACK.equals(this.getType()) ||
+                EffectSkullBlock.Types.TRADER_LLAMA_CREAMY.equals(this.getType()) ||
+                EffectSkullBlock.Types.TRADER_LLAMA_WHITE.equals(this.getType()) ||
+                EffectSkullBlock.Types.TRADER_LLAMA_BROWN.equals(this.getType()) ||
+                EffectSkullBlock.Types.TRADER_LLAMA_GRAY.equals(this.getType())) {
+            return LLAMA_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.MULE.equals(this.getType())) {
             return MULE_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.OCELOT.equals(this.getType())) {

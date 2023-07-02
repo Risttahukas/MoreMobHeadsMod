@@ -306,6 +306,278 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.IRON_GOLEM_HEAD.get(), ModBlocks.IRON_GOLEM_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY = ITEMS.register("llama_head_creamy", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE = ITEMS.register("llama_head_white", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN = ITEMS.register("llama_head_brown", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY = ITEMS.register("llama_head_gray", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_WHITE = ITEMS.register("llama_head_creamy_white", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_WHITE.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_WHITE = ITEMS.register("llama_head_white_white", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_WHITE.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_WHITE = ITEMS.register("llama_head_brown_white", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_WHITE.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_WHITE = ITEMS.register("llama_head_gray_white", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_WHITE.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_ORANGE = ITEMS.register("llama_head_creamy_orange", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_ORANGE.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_ORANGE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_ORANGE = ITEMS.register("llama_head_white_orange", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_ORANGE.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_ORANGE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_ORANGE = ITEMS.register("llama_head_brown_orange", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_ORANGE.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_ORANGE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_ORANGE = ITEMS.register("llama_head_gray_orange", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_ORANGE.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_ORANGE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_MAGENTA = ITEMS.register("llama_head_creamy_magenta", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_MAGENTA.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_MAGENTA.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_MAGENTA = ITEMS.register("llama_head_white_magenta", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_MAGENTA.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_MAGENTA.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_MAGENTA = ITEMS.register("llama_head_brown_magenta", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_MAGENTA.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_MAGENTA.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_MAGENTA = ITEMS.register("llama_head_gray_magenta", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_MAGENTA.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_MAGENTA.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_LIGHT_BLUE = ITEMS.register("llama_head_creamy_light_blue", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_LIGHT_BLUE.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_LIGHT_BLUE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_LIGHT_BLUE = ITEMS.register("llama_head_white_light_blue", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_LIGHT_BLUE.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_LIGHT_BLUE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_LIGHT_BLUE = ITEMS.register("llama_head_brown_light_blue", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_LIGHT_BLUE.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_LIGHT_BLUE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_LIGHT_BLUE = ITEMS.register("llama_head_gray_light_blue", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_LIGHT_BLUE.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_LIGHT_BLUE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_YELLOW = ITEMS.register("llama_head_creamy_yellow", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_YELLOW.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_YELLOW.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_YELLOW = ITEMS.register("llama_head_white_yellow", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_YELLOW.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_YELLOW.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_YELLOW = ITEMS.register("llama_head_brown_yellow", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_YELLOW.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_YELLOW.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_YELLOW = ITEMS.register("llama_head_gray_yellow", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_YELLOW.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_YELLOW.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_LIME = ITEMS.register("llama_head_creamy_lime", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_LIME.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_LIME.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_LIME = ITEMS.register("llama_head_white_lime", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_LIME.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_LIME.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_LIME = ITEMS.register("llama_head_brown_lime", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_LIME.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_LIME.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_LIME = ITEMS.register("llama_head_gray_lime", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_LIME.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_LIME.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_PINK = ITEMS.register("llama_head_creamy_pink", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_PINK.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_PINK.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_PINK = ITEMS.register("llama_head_white_pink", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_PINK.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_PINK.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_PINK = ITEMS.register("llama_head_brown_pink", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_PINK.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_PINK.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_PINK = ITEMS.register("llama_head_gray_pink", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_PINK.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_PINK.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_GRAY = ITEMS.register("llama_head_creamy_gray", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_GRAY.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_GRAY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_GRAY = ITEMS.register("llama_head_white_gray", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_GRAY.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_GRAY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_GRAY = ITEMS.register("llama_head_brown_gray", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_GRAY.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_GRAY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_GRAY = ITEMS.register("llama_head_gray_gray", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_GRAY.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_GRAY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_LIGHT_GRAY = ITEMS.register("llama_head_creamy_light_gray", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_LIGHT_GRAY.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_LIGHT_GRAY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_LIGHT_GRAY = ITEMS.register("llama_head_white_light_gray", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_LIGHT_GRAY.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_LIGHT_GRAY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_LIGHT_GRAY = ITEMS.register("llama_head_brown_light_gray", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_LIGHT_GRAY.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_LIGHT_GRAY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_LIGHT_GRAY = ITEMS.register("llama_head_gray_light_gray", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_LIGHT_GRAY.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_LIGHT_GRAY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_CYAN = ITEMS.register("llama_head_creamy_cyan", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_CYAN.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_CYAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_CYAN = ITEMS.register("llama_head_white_cyan", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_CYAN.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_CYAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_CYAN = ITEMS.register("llama_head_brown_cyan", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_CYAN.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_CYAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_CYAN = ITEMS.register("llama_head_gray_cyan", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_CYAN.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_CYAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_PURPLE = ITEMS.register("llama_head_creamy_purple", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_PURPLE.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_PURPLE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_PURPLE = ITEMS.register("llama_head_white_purple", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_PURPLE.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_PURPLE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_PURPLE = ITEMS.register("llama_head_brown_purple", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_PURPLE.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_PURPLE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_PURPLE = ITEMS.register("llama_head_gray_purple", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_PURPLE.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_PURPLE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_BLUE = ITEMS.register("llama_head_creamy_blue", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_BLUE.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_BLUE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_BLUE = ITEMS.register("llama_head_white_blue", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_BLUE.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_BLUE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_BLUE = ITEMS.register("llama_head_brown_blue", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_BLUE.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_BLUE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_BLUE = ITEMS.register("llama_head_gray_blue", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_BLUE.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_BLUE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_BROWN = ITEMS.register("llama_head_creamy_brown", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_BROWN.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_BROWN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_BROWN = ITEMS.register("llama_head_white_brown", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_BROWN.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_BROWN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_BROWN = ITEMS.register("llama_head_brown_brown", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_BROWN.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_BROWN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_BROWN = ITEMS.register("llama_head_gray_brown", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_BROWN.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_BROWN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_GREEN = ITEMS.register("llama_head_creamy_green", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_GREEN.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_GREEN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_GREEN = ITEMS.register("llama_head_white_green", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_GREEN.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_GREEN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_GREEN = ITEMS.register("llama_head_brown_green", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_GREEN.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_GREEN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_GREEN = ITEMS.register("llama_head_gray_green", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_GREEN.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_GREEN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_RED = ITEMS.register("llama_head_creamy_red", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_RED.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_RED.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_RED = ITEMS.register("llama_head_white_red", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_RED.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_RED.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_RED = ITEMS.register("llama_head_brown_red", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_RED.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_RED.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_RED = ITEMS.register("llama_head_gray_red", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_RED.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_RED.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_CREAMY_BLACK = ITEMS.register("llama_head_creamy_black", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_CREAMY_BLACK.get(), ModBlocks.LLAMA_WALL_HEAD_CREAMY_BLACK.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_WHITE_BLACK = ITEMS.register("llama_head_white_black", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_WHITE_BLACK.get(), ModBlocks.LLAMA_WALL_HEAD_WHITE_BLACK.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_BROWN_BLACK = ITEMS.register("llama_head_brown_black", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_BROWN_BLACK.get(), ModBlocks.LLAMA_WALL_HEAD_BROWN_BLACK.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> LLAMA_HEAD_GRAY_BLACK = ITEMS.register("llama_head_gray_black", () ->
+            new EffectSkullItem(ModBlocks.LLAMA_HEAD_GRAY_BLACK.get(), ModBlocks.LLAMA_WALL_HEAD_GRAY_BLACK.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> MAGMA_CUBE_HEAD = ITEMS.register("magma_cube_head", () ->
             new EffectSkullItem(ModBlocks.MAGMA_CUBE_HEAD.get(), ModBlocks.MAGMA_CUBE_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
@@ -592,6 +864,22 @@ public class ModItems {
 
     public static final RegistryObject<Item> STRIDER_HEAD_COLD = ITEMS.register("strider_head_cold", () ->
             new EffectSkullItem(ModBlocks.STRIDER_HEAD_COLD.get(), ModBlocks.STRIDER_WALL_HEAD_COLD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> TRADER_LLAMA_HEAD_CREAMY = ITEMS.register("trader_llama_head_creamy", () ->
+            new EffectSkullItem(ModBlocks.TRADER_LLAMA_HEAD_CREAMY.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_CREAMY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> TRADER_LLAMA_HEAD_WHITE = ITEMS.register("trader_llama_head_white", () ->
+            new EffectSkullItem(ModBlocks.TRADER_LLAMA_HEAD_WHITE.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_WHITE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> TRADER_LLAMA_HEAD_BROWN = ITEMS.register("trader_llama_head_brown", () ->
+            new EffectSkullItem(ModBlocks.TRADER_LLAMA_HEAD_BROWN.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_BROWN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> TRADER_LLAMA_HEAD_GRAY = ITEMS.register("trader_llama_head_gray", () ->
+            new EffectSkullItem(ModBlocks.TRADER_LLAMA_HEAD_GRAY.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_GRAY.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> VEX_HEAD = ITEMS.register("vex_head", () ->

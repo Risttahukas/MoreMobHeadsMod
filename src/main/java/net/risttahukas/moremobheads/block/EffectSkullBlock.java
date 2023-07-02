@@ -124,7 +124,43 @@ public class EffectSkullBlock extends SkullBlock {
             return UNDEAD_HORSE_SHAPE;
         } if (Types.HUSK.equals(this.getType())) {
             return HUSK_SHAPE;
-        } if (Types.IRON_GOLEM.equals(this.getType())) {
+        } if (Types.IRON_GOLEM.equals(this.getType()) ||
+                Types.LLAMA_CREAMY.equals(this.getType()) || Types.LLAMA_WHITE.equals(this.getType()) ||
+                Types.LLAMA_BROWN.equals(this.getType()) || Types.LLAMA_GRAY.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_WHITE.equals(this.getType()) || Types.LLAMA_WHITE_WHITE.equals(this.getType()) ||
+                Types.LLAMA_BROWN_WHITE.equals(this.getType()) || Types.LLAMA_GRAY_WHITE.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_ORANGE.equals(this.getType()) || Types.LLAMA_WHITE_ORANGE.equals(this.getType()) ||
+                Types.LLAMA_BROWN_ORANGE.equals(this.getType()) || Types.LLAMA_GRAY_ORANGE.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_MAGENTA.equals(this.getType()) || Types.LLAMA_WHITE_MAGENTA.equals(this.getType()) ||
+                Types.LLAMA_BROWN_MAGENTA.equals(this.getType()) || Types.LLAMA_GRAY_MAGENTA.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_LIGHT_BLUE.equals(this.getType()) || Types.LLAMA_WHITE_LIGHT_BLUE.equals(this.getType()) ||
+                Types.LLAMA_BROWN_LIGHT_BLUE.equals(this.getType()) || Types.LLAMA_GRAY_LIGHT_BLUE.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_YELLOW.equals(this.getType()) || Types.LLAMA_WHITE_YELLOW.equals(this.getType()) ||
+                Types.LLAMA_BROWN_YELLOW.equals(this.getType()) || Types.LLAMA_GRAY_YELLOW.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_LIME.equals(this.getType()) || Types.LLAMA_WHITE_LIME.equals(this.getType()) ||
+                Types.LLAMA_BROWN_LIME.equals(this.getType()) || Types.LLAMA_GRAY_LIME.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_PINK.equals(this.getType()) || Types.LLAMA_WHITE_PINK.equals(this.getType()) ||
+                Types.LLAMA_BROWN_PINK.equals(this.getType()) || Types.LLAMA_GRAY_PINK.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_GRAY.equals(this.getType()) || Types.LLAMA_WHITE_GRAY.equals(this.getType()) ||
+                Types.LLAMA_BROWN_GRAY.equals(this.getType()) || Types.LLAMA_GRAY_GRAY.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_LIGHT_GRAY.equals(this.getType()) || Types.LLAMA_WHITE_LIGHT_GRAY.equals(this.getType()) ||
+                Types.LLAMA_BROWN_LIGHT_GRAY.equals(this.getType()) || Types.LLAMA_GRAY_LIGHT_GRAY.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_CYAN.equals(this.getType()) || Types.LLAMA_WHITE_CYAN.equals(this.getType()) ||
+                Types.LLAMA_BROWN_CYAN.equals(this.getType()) || Types.LLAMA_GRAY_CYAN.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_PURPLE.equals(this.getType()) || Types.LLAMA_WHITE_PURPLE.equals(this.getType()) ||
+                Types.LLAMA_BROWN_PURPLE.equals(this.getType()) || Types.LLAMA_GRAY_PURPLE.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_BLUE.equals(this.getType()) || Types.LLAMA_WHITE_BLUE.equals(this.getType()) ||
+                Types.LLAMA_BROWN_BLUE.equals(this.getType()) || Types.LLAMA_GRAY_BLUE.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_BROWN.equals(this.getType()) || Types.LLAMA_WHITE_BROWN.equals(this.getType()) ||
+                Types.LLAMA_BROWN_BROWN.equals(this.getType()) || Types.LLAMA_GRAY_BROWN.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_GREEN.equals(this.getType()) || Types.LLAMA_WHITE_GREEN.equals(this.getType()) ||
+                Types.LLAMA_BROWN_GREEN.equals(this.getType()) || Types.LLAMA_GRAY_GREEN.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_RED.equals(this.getType()) || Types.LLAMA_WHITE_RED.equals(this.getType()) ||
+                Types.LLAMA_BROWN_RED.equals(this.getType()) || Types.LLAMA_GRAY_RED.equals(this.getType()) ||
+                Types.LLAMA_CREAMY_BLACK.equals(this.getType()) || Types.LLAMA_WHITE_BLACK.equals(this.getType()) ||
+                Types.LLAMA_BROWN_BLACK.equals(this.getType()) || Types.LLAMA_GRAY_BLACK.equals(this.getType()) ||
+                Types.TRADER_LLAMA_CREAMY.equals(this.getType()) || Types.TRADER_LLAMA_WHITE.equals(this.getType()) ||
+                Types.TRADER_LLAMA_BROWN.equals(this.getType()) || Types.TRADER_LLAMA_GRAY.equals(this.getType())) {
             return IRON_GOLEM_SHAPE;
         } if (Types.MULE.equals(this.getType())) {
             return MULE_SHAPE;
@@ -283,6 +319,74 @@ public class EffectSkullBlock extends SkullBlock {
         HUSK,
         ILLUSIONER,
         IRON_GOLEM,
+        LLAMA_CREAMY,
+        LLAMA_WHITE,
+        LLAMA_BROWN,
+        LLAMA_GRAY,
+        LLAMA_CREAMY_WHITE,
+        LLAMA_WHITE_WHITE,
+        LLAMA_BROWN_WHITE,
+        LLAMA_GRAY_WHITE,
+        LLAMA_CREAMY_ORANGE,
+        LLAMA_WHITE_ORANGE,
+        LLAMA_BROWN_ORANGE,
+        LLAMA_GRAY_ORANGE,
+        LLAMA_CREAMY_MAGENTA,
+        LLAMA_WHITE_MAGENTA,
+        LLAMA_BROWN_MAGENTA,
+        LLAMA_GRAY_MAGENTA,
+        LLAMA_CREAMY_LIGHT_BLUE,
+        LLAMA_WHITE_LIGHT_BLUE,
+        LLAMA_BROWN_LIGHT_BLUE,
+        LLAMA_GRAY_LIGHT_BLUE,
+        LLAMA_CREAMY_YELLOW,
+        LLAMA_WHITE_YELLOW,
+        LLAMA_BROWN_YELLOW,
+        LLAMA_GRAY_YELLOW,
+        LLAMA_CREAMY_LIME,
+        LLAMA_WHITE_LIME,
+        LLAMA_BROWN_LIME,
+        LLAMA_GRAY_LIME,
+        LLAMA_CREAMY_PINK,
+        LLAMA_WHITE_PINK,
+        LLAMA_BROWN_PINK,
+        LLAMA_GRAY_PINK,
+        LLAMA_CREAMY_GRAY,
+        LLAMA_WHITE_GRAY,
+        LLAMA_BROWN_GRAY,
+        LLAMA_GRAY_GRAY,
+        LLAMA_CREAMY_LIGHT_GRAY,
+        LLAMA_WHITE_LIGHT_GRAY,
+        LLAMA_BROWN_LIGHT_GRAY,
+        LLAMA_GRAY_LIGHT_GRAY,
+        LLAMA_CREAMY_CYAN,
+        LLAMA_WHITE_CYAN,
+        LLAMA_BROWN_CYAN,
+        LLAMA_GRAY_CYAN,
+        LLAMA_CREAMY_PURPLE,
+        LLAMA_WHITE_PURPLE,
+        LLAMA_BROWN_PURPLE,
+        LLAMA_GRAY_PURPLE,
+        LLAMA_CREAMY_BLUE,
+        LLAMA_WHITE_BLUE,
+        LLAMA_BROWN_BLUE,
+        LLAMA_GRAY_BLUE,
+        LLAMA_CREAMY_BROWN,
+        LLAMA_WHITE_BROWN,
+        LLAMA_BROWN_BROWN,
+        LLAMA_GRAY_BROWN,
+        LLAMA_CREAMY_GREEN,
+        LLAMA_WHITE_GREEN,
+        LLAMA_BROWN_GREEN,
+        LLAMA_GRAY_GREEN,
+        LLAMA_CREAMY_RED,
+        LLAMA_WHITE_RED,
+        LLAMA_BROWN_RED,
+        LLAMA_GRAY_RED,
+        LLAMA_CREAMY_BLACK,
+        LLAMA_WHITE_BLACK,
+        LLAMA_BROWN_BLACK,
+        LLAMA_GRAY_BLACK,
         MAGMA_CUBE,
         MOOSHROOM_RED,
         MOOSHROOM_BROWN,
@@ -355,6 +459,10 @@ public class EffectSkullBlock extends SkullBlock {
         STRAY,
         STRIDER,
         STRIDER_COLD,
+        TRADER_LLAMA_CREAMY,
+        TRADER_LLAMA_WHITE,
+        TRADER_LLAMA_BROWN,
+        TRADER_LLAMA_GRAY,
         VEX,
         VINDICATOR,
         WANDERING_TRADER,
