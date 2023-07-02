@@ -271,6 +271,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.TRADER_LLAMA_HEAD_WHITE);
             event.accept(ModItems.TRADER_LLAMA_HEAD_BROWN);
             event.accept(ModItems.TRADER_LLAMA_HEAD_GRAY);
+            event.accept(ModItems.TURTLE_HEAD);
             event.accept(ModItems.VEX_HEAD);
             event.accept(ModItems.VINDICATOR_HEAD);
             event.accept(ModItems.WANDERING_TRADER_HEAD);

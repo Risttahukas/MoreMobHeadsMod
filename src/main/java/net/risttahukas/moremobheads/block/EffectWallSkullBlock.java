@@ -161,6 +161,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 11.0D, 8.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 8.0D, 11.0D, 12.0D),
             Direction.WEST, Block.box(8.0D, 4.0D, 4.0D, 16.0D, 11.0D, 12.0D)));
+    private static final Map<Direction, VoxelShape> TURTLE_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(5.0D, 4.0D, 10.0D, 11.0D, 9.0D, 16.0D),
+            Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 9.0D, 6.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 5.0D, 6.0D, 9.0D, 11.0D),
+            Direction.WEST, Block.box(10.0D, 4.0D, 5.0D, 16.0D, 9.0D, 11.0D)));
     private static final Map<Direction, VoxelShape> UNDEAD_HORSE_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(5.0D, 4.0D, 9.0D, 11.0D, 15.0D, 16.0D),
             Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 15.0D, 7.0D),
@@ -402,6 +407,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
         } if (EffectSkullBlock.Types.STRIDER.equals(this.getType()) ||
                 EffectSkullBlock.Types.STRIDER_COLD.equals(this.getType())) {
             return STRIDER_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.TURTLE.equals(this.getType())) {
+            return TURTLE_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.WANDERING_TRADER.equals(this.getType()) ||
                 EffectSkullBlock.Types.WITCH.equals(this.getType()) ||
                 EffectSkullBlock.Types.EVOKER.equals(this.getType()) ||

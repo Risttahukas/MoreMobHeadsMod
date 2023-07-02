@@ -1533,6 +1533,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.TRADER_LLAMA_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(TRADER_LLAMA_HEAD_GRAY).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> TURTLE_HEAD = BLOCKS.register("turtle_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.TURTLE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> TURTLE_WALL_HEAD = BLOCKS.register("turtle_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.TURTLE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(TURTLE_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> VEX_HEAD = BLOCKS.register("vex_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.VEX, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

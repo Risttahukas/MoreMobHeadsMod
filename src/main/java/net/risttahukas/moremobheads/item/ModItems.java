@@ -882,6 +882,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.TRADER_LLAMA_HEAD_GRAY.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_GRAY.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> TURTLE_HEAD = ITEMS.register("turtle_head", () ->
+            new EffectSkullItem(ModBlocks.TURTLE_HEAD.get(), ModBlocks.TURTLE_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> VEX_HEAD = ITEMS.register("vex_head", () ->
             new EffectSkullItem(ModBlocks.VEX_HEAD.get(), ModBlocks.VEX_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

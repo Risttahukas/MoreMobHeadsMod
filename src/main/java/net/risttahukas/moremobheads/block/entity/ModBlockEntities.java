@@ -232,6 +232,7 @@ public class ModBlockEntities {
                             ModBlocks.TRADER_LLAMA_HEAD_WHITE.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_WHITE.get(),
                             ModBlocks.TRADER_LLAMA_HEAD_BROWN.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_BROWN.get(),
                             ModBlocks.TRADER_LLAMA_HEAD_GRAY.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_GRAY.get(),
+                            ModBlocks.TURTLE_HEAD.get(), ModBlocks.TURTLE_WALL_HEAD.get(),
                             ModBlocks.VEX_HEAD.get(), ModBlocks.VEX_WALL_HEAD.get(),
                             ModBlocks.VINDICATOR_HEAD.get(), ModBlocks.VINDICATOR_WALL_HEAD.get(),
                             ModBlocks.WANDERING_TRADER_HEAD.get(), ModBlocks.WANDERING_TRADER_WALL_HEAD.get(),

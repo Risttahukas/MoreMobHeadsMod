@@ -260,6 +260,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TRADER_LLAMA_WHITE, new ResourceLocation("textures/entity/llama/white.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TRADER_LLAMA_BROWN, new ResourceLocation("textures/entity/llama/brown.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TRADER_LLAMA_GRAY, new ResourceLocation("textures/entity/llama/gray.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.TURTLE, new ResourceLocation("textures/entity/turtle/big_sea_turtle.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VEX, new ResourceLocation("textures/entity/illager/vex.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VINDICATOR, new ResourceLocation("textures/entity/illager/vindicator.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WANDERING_TRADER, new ResourceLocation("textures/entity/wandering_trader.png"));
@@ -308,7 +309,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
                 horizontalTranslation = 0.4375F;
             } else if (skullModelBase instanceof CowHeadModel || skullModelBase instanceof DolphinHeadModel ||
                     skullModelBase instanceof SquidHeadModel || skullModelBase instanceof FoxHeadModel ||
-                    skullModelBase instanceof LlamaHeadModel) {
+                    skullModelBase instanceof LlamaHeadModel || skullModelBase instanceof TurtleHeadModel) {
                 horizontalTranslation = 0.3125F;
             } else if (skullModelBase instanceof DonkeyHeadModel) {
                 horizontalTranslation = 0.3096875F;
@@ -598,6 +599,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.TRADER_LLAMA_WHITE, new LlamaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD_DECOR), "trader"));
         builder.put(EffectSkullBlock.Types.TRADER_LLAMA_BROWN, new LlamaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD_DECOR), "trader"));
         builder.put(EffectSkullBlock.Types.TRADER_LLAMA_GRAY, new LlamaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD_DECOR), "trader"));
+        builder.put(EffectSkullBlock.Types.TURTLE, new TurtleHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.TURTLE_HEAD)));
         builder.put(EffectSkullBlock.Types.VEX, new AllayHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ALLAY_HEAD)));
         builder.put(EffectSkullBlock.Types.VINDICATOR, new IllagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ILLAGER_HEAD)));
         builder.put(EffectSkullBlock.Types.WANDERING_TRADER, new VillagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.VILLAGER_HEAD)));

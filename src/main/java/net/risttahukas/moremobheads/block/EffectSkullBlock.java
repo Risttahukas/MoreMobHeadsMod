@@ -78,7 +78,7 @@ public class EffectSkullBlock extends SkullBlock {
             return ALLAY_SHAPE;
         } if (Types.AXOLOTL_LUCY.equals(this.getType()) || Types.AXOLOTL_WILD.equals(this.getType()) ||
                 Types.AXOLOTL_GOLD.equals(this.getType()) || Types.AXOLOTL_CYAN.equals(this.getType()) ||
-                Types.AXOLOTL_BLUE.equals(this.getType())) {
+                Types.AXOLOTL_BLUE.equals(this.getType()) || Types.TURTLE.equals(this.getType())) {
             return AXOLOTL_SHAPE;
         } if (Types.BAT.equals(this.getType())) {
             return BAT_SHAPE;
@@ -463,6 +463,7 @@ public class EffectSkullBlock extends SkullBlock {
         TRADER_LLAMA_WHITE,
         TRADER_LLAMA_BROWN,
         TRADER_LLAMA_GRAY,
+        TURTLE,
         VEX,
         VINDICATOR,
         WANDERING_TRADER,
