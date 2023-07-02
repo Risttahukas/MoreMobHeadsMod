@@ -201,6 +201,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.STRIDER_HEAD_COLD);
             event.accept(ModItems.VEX_HEAD);
             event.accept(ModItems.VINDICATOR_HEAD);
+            event.accept(ModItems.WANDERING_TRADER_HEAD);
             event.accept(ModItems.WARDEN_HEAD);
             event.accept(ModItems.WITCH_HEAD);
             event.accept(Items.WITHER_SKELETON_SKULL);

@@ -119,6 +119,7 @@ public class ClientEvents {
             event.registerLayerDefinition(ModBlockEntityModelLayers.SQUID_HEAD, SquidHeadModel::createSquidHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.STRAY_SKULL_CLOTHES, StraySkullModel::createStraySkullClothesLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.STRIDER_HEAD, StriderHeadModel::createStriderHeadLayer);
+            event.registerLayerDefinition(ModBlockEntityModelLayers.VILLAGER_HEAD, VillagerHeadModel::createVillagerHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.WARDEN_HEAD, WardenHeadModel::createWardenHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.WARDEN_HEAD_EMISSIVE, WardenHeadModel::createWardenHeadEmissiveLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.WITCH_HEAD, WitchHeadModel::createWitchHeadLayer);

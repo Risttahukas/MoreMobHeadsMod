@@ -162,6 +162,7 @@ public class ModBlockEntities {
                             ModBlocks.STRIDER_HEAD_COLD.get(), ModBlocks.STRIDER_WALL_HEAD_COLD.get(),
                             ModBlocks.VEX_HEAD.get(), ModBlocks.VEX_WALL_HEAD.get(),
                             ModBlocks.VINDICATOR_HEAD.get(), ModBlocks.VINDICATOR_WALL_HEAD.get(),
+                            ModBlocks.WANDERING_TRADER_HEAD.get(), ModBlocks.WANDERING_TRADER_WALL_HEAD.get(),
                             ModBlocks.WARDEN_HEAD.get(), ModBlocks.WARDEN_WALL_HEAD.get(),
                             ModBlocks.WITCH_HEAD.get(), ModBlocks.WITCH_WALL_HEAD.get(),
                             ModBlocks.ZOMBIFIED_PIGLIN_HEAD.get(), ModBlocks.ZOMBIFIED_PIGLIN_WALL_HEAD.get())

@@ -190,6 +190,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.STRIDER_COLD, new ResourceLocation("textures/entity/strider/strider_cold.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VEX, new ResourceLocation("textures/entity/illager/vex.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VINDICATOR, new ResourceLocation("textures/entity/illager/vindicator.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.WANDERING_TRADER, new ResourceLocation("textures/entity/wandering_trader.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WARDEN, new ResourceLocation("textures/entity/warden/warden.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WITCH, new ResourceLocation("textures/entity/witch.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.ZOMBIFIED_PIGLIN, new ResourceLocation("textures/entity/piglin/zombified_piglin.png"));
@@ -452,6 +453,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.STRIDER_COLD, new StriderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.STRIDER_HEAD)));
         builder.put(EffectSkullBlock.Types.VEX, new AllayHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ALLAY_HEAD)));
         builder.put(EffectSkullBlock.Types.VINDICATOR, new IllagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ILLAGER_HEAD)));
+        builder.put(EffectSkullBlock.Types.WANDERING_TRADER, new VillagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.VILLAGER_HEAD)));
         builder.put(EffectSkullBlock.Types.WARDEN, new WardenHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WARDEN_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.WARDEN_HEAD_EMISSIVE)));
         builder.put(EffectSkullBlock.Types.WITCH, new WitchHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WITCH_HEAD)));
         builder.put(EffectSkullBlock.Types.ZOMBIFIED_PIGLIN, new PiglinHeadModel(entityModelSet.bakeLayer(ModelLayers.PIGLIN_HEAD)));

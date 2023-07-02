@@ -602,6 +602,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.VINDICATOR_HEAD.get(), ModBlocks.VINDICATOR_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> WANDERING_TRADER_HEAD = ITEMS.register("wandering_trader_head", () ->
+            new EffectSkullItem(ModBlocks.WANDERING_TRADER_HEAD.get(), ModBlocks.WANDERING_TRADER_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> WARDEN_HEAD = ITEMS.register("warden_head", () ->
             new EffectSkullItem(ModBlocks.WARDEN_HEAD.get(), ModBlocks.WARDEN_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.EPIC), Direction.DOWN));

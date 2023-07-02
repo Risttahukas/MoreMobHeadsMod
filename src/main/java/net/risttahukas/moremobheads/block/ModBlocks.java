@@ -1043,6 +1043,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.VINDICATOR, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(VINDICATOR_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> WANDERING_TRADER_HEAD = BLOCKS.register("wandering_trader_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.WANDERING_TRADER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> WANDERING_TRADER_WALL_HEAD = BLOCKS.register("wandering_trader_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.WANDERING_TRADER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(WANDERING_TRADER_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> WARDEN_HEAD = BLOCKS.register("warden_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.WARDEN, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
