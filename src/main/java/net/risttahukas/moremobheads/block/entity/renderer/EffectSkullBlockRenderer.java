@@ -202,6 +202,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_YELLOW_BLUE, new ResourceLocation("textures/entity/parrot/parrot_yellow_blue.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_GREY, new ResourceLocation("textures/entity/parrot/parrot_grey.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PHANTOM, new ResourceLocation("textures/entity/phantom.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.PIG, new ResourceLocation("textures/entity/pig/pig.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PIGLIN_BRUTE, new ResourceLocation("textures/entity/piglin/piglin_brute.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PILLAGER, new ResourceLocation("textures/entity/illager/pillager.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.POLAR_BEAR, new ResourceLocation("textures/entity/bear/polarbear.png"));
@@ -541,6 +542,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.PARROT_YELLOW_BLUE, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_GREY, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PHANTOM, new PhantomHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PHANTOM_HEAD)));
+        builder.put(EffectSkullBlock.Types.PIG, new PigHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PIG_HEAD)));
         builder.put(EffectSkullBlock.Types.PIGLIN_BRUTE, new PiglinHeadModel(entityModelSet.bakeLayer(ModelLayers.PIGLIN_HEAD)));
         builder.put(EffectSkullBlock.Types.PILLAGER, new IllagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ILLAGER_HEAD)));
         builder.put(EffectSkullBlock.Types.POLAR_BEAR, new PolarBearHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.POLAR_BEAR_HEAD)));

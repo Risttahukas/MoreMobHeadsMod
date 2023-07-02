@@ -1127,6 +1127,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PHANTOM, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(PHANTOM_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> PIG_HEAD = BLOCKS.register("pig_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.PIG, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> PIG_WALL_HEAD = BLOCKS.register("pig_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PIG, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(PIG_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> PIGLIN_BRUTE_HEAD = BLOCKS.register("piglin_brute_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.PIGLIN_BRUTE, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

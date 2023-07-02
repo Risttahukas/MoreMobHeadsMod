@@ -650,6 +650,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.PHANTOM_HEAD.get(), ModBlocks.PHANTOM_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> PIG_HEAD = ITEMS.register("pig_head", () ->
+            new EffectSkullItem(ModBlocks.PIG_HEAD.get(), ModBlocks.PIG_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> PIGLIN_BRUTE_HEAD = ITEMS.register("piglin_brute_head", () ->
             new EffectSkullItem(ModBlocks.PIGLIN_BRUTE_HEAD.get(), ModBlocks.PIGLIN_BRUTE_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

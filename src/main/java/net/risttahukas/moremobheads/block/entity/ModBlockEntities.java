@@ -174,6 +174,7 @@ public class ModBlockEntities {
                             ModBlocks.PARROT_HEAD_YELLOW_BLUE.get(), ModBlocks.PARROT_WALL_HEAD_YELLOW_BLUE.get(),
                             ModBlocks.PARROT_HEAD_GREY.get(), ModBlocks.PARROT_WALL_HEAD_GREY.get(),
                             ModBlocks.PHANTOM_HEAD.get(), ModBlocks.PHANTOM_WALL_HEAD.get(),
+                            ModBlocks.PIG_HEAD.get(), ModBlocks.PIG_WALL_HEAD.get(),
                             ModBlocks.PIGLIN_BRUTE_HEAD.get(), ModBlocks.PIGLIN_BRUTE_WALL_HEAD.get(),
                             ModBlocks.PILLAGER_HEAD.get(), ModBlocks.PILLAGER_WALL_HEAD.get(),
                             ModBlocks.POLAR_BEAR_HEAD.get(), ModBlocks.POLAR_BEAR_WALL_HEAD.get(),

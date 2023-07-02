@@ -405,6 +405,7 @@ public class EffectSkullBlock extends SkullBlock {
         PARROT_YELLOW_BLUE,
         PARROT_GREY,
         PHANTOM,
+        PIG,
         PIGLIN_BRUTE,
         PILLAGER,
         POLAR_BEAR,

@@ -210,6 +210,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.PARROT_HEAD_YELLOW_BLUE);
             event.accept(ModItems.PARROT_HEAD_GREY);
             event.accept(ModItems.PHANTOM_HEAD);
+            event.accept(ModItems.PIG_HEAD);
             event.accept(Items.PIGLIN_HEAD);
             event.accept(ModItems.PIGLIN_BRUTE_HEAD);
             event.accept(ModItems.PILLAGER_HEAD);
