@@ -32,7 +32,6 @@ import net.minecraftforge.fml.ModLoader;
 import net.risttahukas.moremobheads.block.EffectSkullBlock;
 import net.risttahukas.moremobheads.block.entity.ModBlockEntityModelLayers;
 import net.risttahukas.moremobheads.block.entity.model.*;
-import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.Map;
@@ -197,8 +196,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
     }
 
     @Override
-    public void render(SkullBlockEntity skullBlockEntity, float partialTicks, @NotNull PoseStack poseStack,
-                       @NotNull MultiBufferSource multiBufferSource, int p_112538_, int p_112539_) {
+    public void render(SkullBlockEntity skullBlockEntity, float partialTicks, PoseStack poseStack,
+                       MultiBufferSource multiBufferSource, int p_112538_, int p_112539_) {
         float f = skullBlockEntity.getAnimation(partialTicks);
         BlockState blockstate = skullBlockEntity.getBlockState();
         boolean flag = blockstate.getBlock() instanceof WallSkullBlock;
@@ -213,7 +212,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
 
     public static void renderSkull(@Nullable Direction direction, float p_173665_, float animationProgress,
                                    PoseStack poseStack, MultiBufferSource multiBufferSource, int p_173669_,
-                                   SkullModelBase skullModelBase, @NotNull RenderType renderType) {
+                                   SkullModelBase skullModelBase, RenderType renderType) {
         poseStack.pushPose();
         if (direction == null) {
             poseStack.translate(0.5F, 0.0F, 0.5F);
@@ -296,7 +295,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
     }
 
     @SuppressWarnings("UnstableApiUsage")
-    public static @NotNull Map<SkullBlock.Type, SkullModelBase> createSkullRenderers(EntityModelSet entityModelSet) {
+    public static Map<SkullBlock.Type, SkullModelBase> createSkullRenderers(EntityModelSet entityModelSet) {
         ImmutableMap.Builder<SkullBlock.Type, SkullModelBase> builder = ImmutableMap.builder();
         builder.put(SkullBlock.Types.SKELETON, new SkullModel(entityModelSet.bakeLayer(ModelLayers.SKELETON_SKULL)));
         builder.put(SkullBlock.Types.WITHER_SKELETON, new SkullModel(entityModelSet.bakeLayer(ModelLayers.WITHER_SKELETON_SKULL)));

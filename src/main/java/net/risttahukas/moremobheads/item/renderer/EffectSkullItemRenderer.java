@@ -20,7 +20,6 @@ import net.minecraft.world.level.block.SkullBlock;
 import net.risttahukas.moremobheads.block.EffectSkullBlock;
 import net.risttahukas.moremobheads.block.entity.renderer.EffectSkullBlockRenderer;
 import net.risttahukas.moremobheads.event.ClientEvents;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 
@@ -33,8 +32,8 @@ public class EffectSkullItemRenderer extends BlockEntityWithoutLevelRenderer {
     }
 
     @Override
-    public void renderByItem(ItemStack itemStack, @NotNull ItemDisplayContext itemDisplayContext,
-                             @NotNull PoseStack poseStack, @NotNull MultiBufferSource multiBufferSource,
+    public void renderByItem(ItemStack itemStack, ItemDisplayContext itemDisplayContext,
+                             PoseStack poseStack, MultiBufferSource multiBufferSource,
                              int light, int overlay) {
         Item item = itemStack.getItem();
         if (item instanceof BlockItem blockItem) {

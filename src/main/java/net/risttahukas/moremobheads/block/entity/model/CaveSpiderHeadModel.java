@@ -6,7 +6,6 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import org.jetbrains.annotations.NotNull;
 
 @OnlyIn(Dist.CLIENT)
 public class CaveSpiderHeadModel extends SpiderHeadModel {
@@ -15,7 +14,7 @@ public class CaveSpiderHeadModel extends SpiderHeadModel {
     }
 
     @Override
-    public void renderToBuffer(@NotNull PoseStack poseStack, @NotNull VertexConsumer vertexConsumer, MultiBufferSource multiBufferSource,
+    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, MultiBufferSource multiBufferSource,
                                int p_103817_, int p_103818_,
                                float p_103819_, float p_103820_, float p_103821_, float p_103822_) {
         poseStack.scale(0.7F, 0.7F, 0.7F);
@@ -23,7 +22,7 @@ public class CaveSpiderHeadModel extends SpiderHeadModel {
     }
 
     @Override
-    public void renderToBuffer(@NotNull PoseStack poseStack, @NotNull VertexConsumer vertexConsumer,
+    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer,
                                int p_103817_, int p_103818_,
                                float p_103819_, float p_103820_, float p_103821_, float p_103822_) {
         poseStack.scale(0.7F, 0.7F, 0.7F);

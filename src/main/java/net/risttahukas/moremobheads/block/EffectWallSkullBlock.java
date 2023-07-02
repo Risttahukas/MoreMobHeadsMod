@@ -17,7 +17,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.risttahukas.moremobheads.block.entity.EffectSkullBlockEntity;
 import net.risttahukas.moremobheads.block.entity.ModBlockEntities;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 
@@ -180,8 +179,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
     }
 
     @Override
-    public @NotNull VoxelShape getShape(@NotNull BlockState blockState, @NotNull BlockGetter blockGetter,
-                                        @NotNull BlockPos blockPos, @NotNull CollisionContext collisionContext) {
+    public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter,
+                                        BlockPos blockPos, CollisionContext collisionContext) {
         if (EffectSkullBlock.Types.ALLAY.equals(this.getType()) || EffectSkullBlock.Types.VEX.equals(this.getType())) {
             return ALLAY_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.AXOLOTL_LUCY.equals(this.getType()) ||
@@ -339,13 +338,13 @@ public class EffectWallSkullBlock extends WallSkullBlock {
     }
 
     @Override
-    public BlockEntity newBlockEntity(@NotNull BlockPos blockPos, @NotNull BlockState blockState) {
+    public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
         return new EffectSkullBlockEntity(blockPos, blockState);
     }
 
     @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, @NotNull BlockState blockState,
-                                                                  @NotNull BlockEntityType<T> tBlockEntityType) {
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState blockState,
+                                                                  BlockEntityType<T> tBlockEntityType) {
         if (level.isClientSide) {
             boolean flag = blockState.is(ModBlocks.WITCH_WALL_HEAD.get()) || blockState.is(ModBlocks.GHAST_WALL_HEAD.get()) ||
                     blockState.is(ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.CAMEL_WALL_HEAD.get()) ||

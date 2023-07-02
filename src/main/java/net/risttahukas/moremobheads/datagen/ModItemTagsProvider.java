@@ -11,7 +11,6 @@ import net.minecraftforge.registries.RegistryObject;
 import net.risttahukas.moremobheads.MoreMobHeadsMod;
 import net.risttahukas.moremobheads.item.EffectSkullItem;
 import net.risttahukas.moremobheads.item.ModItems;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Iterator;
 import java.util.concurrent.CompletableFuture;
@@ -24,7 +23,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.@NotNull Provider provider) {
+    protected void addTags(HolderLookup.Provider provider) {
         Iterator<RegistryObject<Item>> iterator = ModItems.ITEMS.getEntries().stream().iterator();
         while (iterator.hasNext()) {
             RegistryObject<Item> item = iterator.next();

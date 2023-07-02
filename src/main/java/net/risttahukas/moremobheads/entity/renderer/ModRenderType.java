@@ -8,7 +8,6 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -32,23 +31,23 @@ public abstract class ModRenderType extends RenderType {
         return create("eyes_z_offset", DefaultVertexFormat.NEW_ENTITY, VertexFormat.Mode.QUADS, 256, false, true, rendertype$compositestate);
     });
 
-    public static RenderType entityTranslucentNoCullZOffset(@NotNull ResourceLocation resourceLocation, boolean b) {
+    public static RenderType entityTranslucentNoCullZOffset(ResourceLocation resourceLocation, boolean b) {
         return ENTITY_TRANSLUCENT_NO_CULL_Z_OFFSET.apply(resourceLocation, b);
     }
 
-    public static RenderType entityTranslucentNoCullZOffset(@NotNull ResourceLocation resourceLocation) {
+    public static RenderType entityTranslucentNoCullZOffset(ResourceLocation resourceLocation) {
         return entityTranslucentNoCullZOffset(resourceLocation, true);
     }
 
-    public static RenderType entityTranslucentEmissiveZOffset(@NotNull ResourceLocation resourceLocation, boolean b) {
+    public static RenderType entityTranslucentEmissiveZOffset(ResourceLocation resourceLocation, boolean b) {
         return ENTITY_TRANSLUCENT_EMISSIVE_Z_OFFSET.apply(resourceLocation, b);
     }
 
-    public static RenderType entityTranslucentEmissiveZOffset(@NotNull ResourceLocation resourceLocation) {
+    public static RenderType entityTranslucentEmissiveZOffset(ResourceLocation resourceLocation) {
         return entityTranslucentEmissiveZOffset(resourceLocation, true);
     }
 
-    public static @NotNull RenderType eyesZOffset(@NotNull ResourceLocation resourceLocation) {
+    public static RenderType eyesZOffset(ResourceLocation resourceLocation) {
         return EYES_Z_OFFSET.apply(resourceLocation);
     }
 }

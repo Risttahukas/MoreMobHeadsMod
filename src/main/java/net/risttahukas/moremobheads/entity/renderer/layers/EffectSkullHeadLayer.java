@@ -29,7 +29,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.risttahukas.moremobheads.block.EffectSkullBlock;
 import net.risttahukas.moremobheads.block.entity.renderer.EffectSkullBlockRenderer;
 import net.risttahukas.moremobheads.event.ClientEvents;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 
@@ -56,7 +55,7 @@ public class EffectSkullHeadLayer<T extends LivingEntity, M extends EntityModel<
     }
 
     @Override
-    public void render(@NotNull PoseStack poseStack, @NotNull MultiBufferSource multiBufferSource, int p_116733_, T p_116734_, float p_116735_, float p_116736_, float p_116737_, float p_116738_, float p_116739_, float p_116740_) {
+    public void render(PoseStack poseStack, MultiBufferSource multiBufferSource, int p_116733_, T p_116734_, float p_116735_, float p_116736_, float p_116737_, float p_116738_, float p_116739_, float p_116740_) {
         ItemStack itemstack = p_116734_.getItemBySlot(EquipmentSlot.HEAD);
         if (!itemstack.isEmpty()) {
             Item item = itemstack.getItem();

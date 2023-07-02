@@ -13,7 +13,6 @@ import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import org.jetbrains.annotations.NotNull;
 
 @OnlyIn(Dist.CLIENT)
 public class GhastHeadModel extends SkullModel {
@@ -56,7 +55,7 @@ public class GhastHeadModel extends SkullModel {
     }
 
     @Override
-    public void renderToBuffer(@NotNull PoseStack poseStack, @NotNull VertexConsumer vertexConsumer,
+    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer,
                                int p_103817_, int p_103818_,
                                float p_103819_, float p_103820_, float p_103821_, float p_103822_) {
         poseStack.scale(0.5F, 0.5F, 0.5F);

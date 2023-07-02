@@ -13,7 +13,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.risttahukas.moremobheads.block.entity.EffectSkullBlockEntity;
 import net.risttahukas.moremobheads.block.entity.ModBlockEntities;
-import org.jetbrains.annotations.NotNull;
 
 public class EffectSkullBlock extends SkullBlock {
     protected static final VoxelShape ALLAY_SHAPE =
@@ -73,8 +72,8 @@ public class EffectSkullBlock extends SkullBlock {
     }
 
     @Override
-    public @NotNull VoxelShape getShape(@NotNull BlockState blockState, @NotNull BlockGetter blockGetter,
-                                        @NotNull BlockPos blockPos, @NotNull CollisionContext collisionContext) {
+    public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter,
+                                        BlockPos blockPos, CollisionContext collisionContext) {
         if (Types.ALLAY.equals(this.getType()) || Types.VEX.equals(this.getType())) {
             return ALLAY_SHAPE;
         } if (Types.AXOLOTL_LUCY.equals(this.getType()) || Types.AXOLOTL_WILD.equals(this.getType()) ||
@@ -177,13 +176,13 @@ public class EffectSkullBlock extends SkullBlock {
     }
 
     @Override
-    public BlockEntity newBlockEntity(@NotNull BlockPos blockPos, @NotNull BlockState blockState) {
+    public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
         return new EffectSkullBlockEntity(blockPos, blockState);
     }
 
     @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, @NotNull BlockState blockState,
-                                                                  @NotNull BlockEntityType<T> tBlockEntityType) {
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState blockState,
+                                                                  BlockEntityType<T> tBlockEntityType) {
         if (level.isClientSide) {
             boolean flag = blockState.is(ModBlocks.WITCH_HEAD.get()) || blockState.is(ModBlocks.GHAST_HEAD.get()) ||
                     blockState.is(ModBlocks.SHEEP_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.CAMEL_HEAD.get()) ||

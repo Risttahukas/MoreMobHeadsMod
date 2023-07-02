@@ -6,7 +6,6 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.SkullBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.risttahukas.moremobheads.block.ModBlocks;
-import org.jetbrains.annotations.NotNull;
 
 public class EffectSkullBlockEntity extends SkullBlockEntity {
     private int animationTickCount;
@@ -17,7 +16,7 @@ public class EffectSkullBlockEntity extends SkullBlockEntity {
     }
 
     @Override
-    public @NotNull BlockEntityType<?> getType() {
+    public BlockEntityType<?> getType() {
         return ModBlockEntities.EFFECT_SKULL.get();
     }
 
