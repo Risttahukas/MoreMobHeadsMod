@@ -910,6 +910,14 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.WITCH_HEAD.get(), ModBlocks.WITCH_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> WOLF_HEAD = ITEMS.register("wolf_head", () ->
+            new EffectSkullItem(ModBlocks.WOLF_HEAD.get(), ModBlocks.WOLF_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> WOLF_HEAD_TAME = ITEMS.register("wolf_head_tame", () ->
+            new EffectSkullItem(ModBlocks.WOLF_HEAD_TAME.get(), ModBlocks.WOLF_WALL_HEAD_TAME.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> ZOMBIFIED_PIGLIN_HEAD = ITEMS.register("zombified_piglin_head", () ->
             new EffectSkullItem(ModBlocks.ZOMBIFIED_PIGLIN_HEAD.get(), ModBlocks.ZOMBIFIED_PIGLIN_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

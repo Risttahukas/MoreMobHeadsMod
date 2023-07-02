@@ -224,6 +224,8 @@
     "moremobheads:wandering_trader_head",
     "moremobheads:warden_head",
     "moremobheads:witch_head",
+    "moremobheads:wolf_head",
+    "moremobheads:wolf_head_tame",
     "moremobheads:zombified_piglin_head"
   ]
 }

@@ -44,6 +44,7 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation SHULKER_HEAD = register("shulker_head");
     public static final ModelLayerLocation SLIME_HEAD = register("slime_head");
     public static final ModelLayerLocation SLIME_HEAD_OUTER_LAYER = register("slime_head_outer_layer");
+    public static final ModelLayerLocation SNIFFER_HEAD = register("sniffer_head");
     public static final ModelLayerLocation SNOW_GOLEM_HEAD = register("snow_golem_head");
     public static final ModelLayerLocation SPIDER_HEAD = register("spider_head");
     public static final ModelLayerLocation SPIDER_EYES = register("spider_eyes");
@@ -55,6 +56,7 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation WARDEN_HEAD = register("warden_head");
     public static final ModelLayerLocation WARDEN_HEAD_EMISSIVE = register("warden_head_emissive");
     public static final ModelLayerLocation WITCH_HEAD = register("witch_head");
+    public static final ModelLayerLocation WOLF_HEAD = register("wolf_head");
 
     private static ModelLayerLocation register(String layer) {
         return new ModelLayerLocation(new ResourceLocation(MoreMobHeadsMod.MOD_ID, layer), "main");

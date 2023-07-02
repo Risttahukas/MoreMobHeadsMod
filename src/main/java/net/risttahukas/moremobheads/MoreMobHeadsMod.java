@@ -278,6 +278,8 @@ public class MoreMobHeadsMod
             event.accept(ModItems.WANDERING_TRADER_HEAD);
             event.accept(ModItems.WARDEN_HEAD);
             event.accept(ModItems.WITCH_HEAD);
+            event.accept(ModItems.WOLF_HEAD);
+            event.accept(ModItems.WOLF_HEAD_TAME);
             event.accept(Items.WITHER_SKELETON_SKULL);
             event.accept(Items.ZOMBIE_HEAD);
             event.accept(ModItems.ZOMBIFIED_PIGLIN_HEAD);

@@ -239,6 +239,8 @@ public class ModBlockEntities {
                             ModBlocks.WANDERING_TRADER_HEAD.get(), ModBlocks.WANDERING_TRADER_WALL_HEAD.get(),
                             ModBlocks.WARDEN_HEAD.get(), ModBlocks.WARDEN_WALL_HEAD.get(),
                             ModBlocks.WITCH_HEAD.get(), ModBlocks.WITCH_WALL_HEAD.get(),
+                            ModBlocks.WOLF_HEAD.get(), ModBlocks.WOLF_WALL_HEAD.get(),
+                            ModBlocks.WOLF_HEAD_TAME.get(), ModBlocks.WOLF_WALL_HEAD_TAME.get(),
                             ModBlocks.ZOMBIFIED_PIGLIN_HEAD.get(), ModBlocks.ZOMBIFIED_PIGLIN_WALL_HEAD.get())
                     .build(null));
 

@@ -181,6 +181,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 5.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 5.0D, 12.0D, 12.0D),
             Direction.WEST, Block.box(11.0D, 4.0D, 4.0D, 16.0D, 12.0D, 12.0D)));
+    private static final Map<Direction, VoxelShape> WOLF_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(5.0D, 4.0D, 12.0D, 11.0D, 10.0D, 16.0D),
+            Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 10.0D, 4.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 5.0D, 4.0D, 10.0D, 11.0D),
+            Direction.WEST, Block.box(12.0D, 4.0D, 5.0D, 16.0D, 10.0D, 11.0D)));
 
 
 
@@ -418,6 +423,9 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return VILLAGER_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.WARDEN.equals(this.getType())) {
             return WARDEN_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.WOLF.equals(this.getType()) ||
+                EffectSkullBlock.Types.WOLF_TAME.equals(this.getType())) {
+            return WOLF_AABBS.get(blockState.getValue(FACING));
         }
         return AABBS.get(blockState.getValue(FACING));
     }

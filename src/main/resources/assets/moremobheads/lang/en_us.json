@@ -223,6 +223,8 @@
   "block.moremobheads.wandering_trader_head": "Wandering Trader Head",
   "block.moremobheads.warden_head": "Warden Head",
   "block.moremobheads.witch_head": "Witch Head",
+  "block.moremobheads.wolf_head": "Wolf Head",
+  "block.moremobheads.wolf_head_tame": "Tamed Wolf Head",
   "block.moremobheads.zombified_piglin_head": "Zombified Piglin Head",
 
   "creativemodetab.mob_heads_tab": "Mob Heads"

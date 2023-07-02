@@ -65,6 +65,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(4.5D, 0.0D, 4.5D, 11.5D, 11.0D, 11.5D);
     protected static final VoxelShape VILLAGER_SHAPE =
             Block.box(4.25D, 0.0D, 4.25D, 11.75D, 9.375D, 11.75D);
+    protected static final VoxelShape WOLF_SHAPE =
+            Block.box(5.0D, 0.0D, 5.0D, 11.0D, 6.0D, 11.0D);
 
 
     public EffectSkullBlock(Type type, Properties properties) {
@@ -207,6 +209,8 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.EVOKER.equals(this.getType()) || Types.ILLUSIONER.equals(this.getType()) ||
                 Types.PILLAGER.equals(this.getType()) || Types.VINDICATOR.equals(this.getType())) {
             return VILLAGER_SHAPE;
+        } if (Types.WOLF.equals(this.getType()) || Types.WOLF_TAME.equals(this.getType())) {
+            return WOLF_SHAPE;
         }
         return SHAPE;
     }
@@ -454,6 +458,7 @@ public class EffectSkullBlock extends SkullBlock {
         SHULKER_RED,
         SHULKER_BLACK,
         SLIME,
+        SNIFFER,
         SNOW_GOLEM,
         SPIDER,
         SQUID,
@@ -470,6 +475,8 @@ public class EffectSkullBlock extends SkullBlock {
         WANDERING_TRADER,
         WARDEN,
         WITCH,
+        WOLF,
+        WOLF_TAME,
         ZOMBIFIED_PIGLIN
     }
 }
