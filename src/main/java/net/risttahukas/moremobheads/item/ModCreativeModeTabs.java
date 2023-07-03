@@ -15,7 +15,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MoreMobHeadsMod.MOD_ID);
 
     public static RegistryObject<CreativeModeTab> MOB_HEADS_TAB = CREATIVE_MODE_TABS.register("mob_heads_tab", () ->
-            CreativeModeTab.builder().icon(() -> new ItemStack(Items.CREEPER_HEAD))
+            CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CREEPER_HEAD_CHARGED.get()))
                     .title(Component.translatable("creativemodetab.mob_heads_tab")).build());
 
     public static void register(IEventBus eventBus) {
