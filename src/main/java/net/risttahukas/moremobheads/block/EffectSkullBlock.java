@@ -29,6 +29,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(5.2D, 0.0D, 5.2D, 10.8D, 5.6D, 10.8D);
     protected static final VoxelShape CHICKEN_SHAPE =
             Block.box(6.0D, 0.0D, 6.0D, 10.0D, 6.0D, 10.0D);
+    protected static final VoxelShape COD_SHAPE =
+            Block.box(5.0D, 0.0D, 5.0D, 11.0D, 4.0D, 11.0D);
     protected static final VoxelShape DOLPHIN_SHAPE =
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 7.0D, 12.0D);
     protected static final VoxelShape DONKEY_SHAPE =
@@ -63,6 +65,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(5.0D, 0.0D, 5.0D, 11.0D, 8.0D, 11.0D);
     protected static final VoxelShape STRIDER_SHAPE =
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 7.0D, 12.0D);
+    protected static final VoxelShape TROPICAL_FISH_SHAPE =
+            Block.box(6.0D, 0.0D, 6.0D, 10.0D, 3.0D, 10.0D);
     protected static final VoxelShape UNDEAD_HORSE_SHAPE =
             Block.box(4.5D, 0.0D, 4.5D, 11.5D, 11.0D, 11.5D);
     protected static final VoxelShape VILLAGER_SHAPE =
@@ -82,7 +86,8 @@ public class EffectSkullBlock extends SkullBlock {
             return ALLAY_SHAPE;
         } if (Types.AXOLOTL_LUCY.equals(this.getType()) || Types.AXOLOTL_WILD.equals(this.getType()) ||
                 Types.AXOLOTL_GOLD.equals(this.getType()) || Types.AXOLOTL_CYAN.equals(this.getType()) ||
-                Types.AXOLOTL_BLUE.equals(this.getType()) || Types.TURTLE.equals(this.getType())) {
+                Types.AXOLOTL_BLUE.equals(this.getType()) || Types.TURTLE.equals(this.getType()) ||
+                Types.SALMON.equals(this.getType())) {
             return AXOLOTL_SHAPE;
         } if (Types.BAT.equals(this.getType())) {
             return BAT_SHAPE;
@@ -99,6 +104,8 @@ public class EffectSkullBlock extends SkullBlock {
             return CAVE_SPIDER_SHAPE;
         } if (Types.CHICKEN.equals(this.getType())) {
             return CHICKEN_SHAPE;
+        } if (Types.COD.equals(this.getType())) {
+            return COD_SHAPE;
         } if (Types.DOLPHIN.equals(this.getType())) {
             return DOLPHIN_SHAPE;
         } if (Types.DONKEY.equals(this.getType())) {
@@ -209,6 +216,8 @@ public class EffectSkullBlock extends SkullBlock {
             return SQUID_SHAPE;
         } if (Types.STRIDER.equals(this.getType()) || Types.STRIDER_COLD.equals(this.getType())) {
             return STRIDER_SHAPE;
+        } if (Types.TROPICAL_FISH.equals(this.getType())) {
+            return TROPICAL_FISH_SHAPE;
         } if (Types.WANDERING_TRADER.equals(this.getType()) || Types.WITCH.equals(this.getType()) ||
                 Types.EVOKER.equals(this.getType()) || Types.ILLUSIONER.equals(this.getType()) ||
                 Types.PILLAGER.equals(this.getType()) || Types.VINDICATOR.equals(this.getType())) {
@@ -276,6 +285,7 @@ public class EffectSkullBlock extends SkullBlock {
         CAT_ALL_BLACK,
         CAVE_SPIDER,
         CHICKEN,
+        COD,
         COW,
         CREEPER_CHARGED,
         DOLPHIN,
@@ -427,6 +437,7 @@ public class EffectSkullBlock extends SkullBlock {
         RABBIT_CAERBANNOG,
         RABBIT_TOAST,
         RAVAGER,
+        SALMON,
         SHEEP_WHITE,
         SHEEP_ORANGE,
         SHEEP_MAGENTA,
@@ -473,6 +484,7 @@ public class EffectSkullBlock extends SkullBlock {
         TRADER_LLAMA_WHITE,
         TRADER_LLAMA_BROWN,
         TRADER_LLAMA_GRAY,
+        TROPICAL_FISH,
         TURTLE,
         VEX,
         VINDICATOR,

@@ -16,6 +16,7 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation CAVE_SPIDER_HEAD = register("cave_spider_head");
     public static final ModelLayerLocation CHESTED_HORSE_HEAD = register("chested_horse_head");
     public static final ModelLayerLocation CHICKEN_HEAD = register("chicken_head");
+    public static final ModelLayerLocation COD_HEAD = register("cod_head");
     public static final ModelLayerLocation COW_HEAD = register("cow_head");
     public static final ModelLayerLocation CREEPER_HEAD_CHARGE = register("creeper_head_charge");
     public static final ModelLayerLocation DOLPHIN_HEAD = register("dolphin_head");
@@ -39,6 +40,7 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation PUFFERFISH_HEAD = register("pufferfish_head");
     public static final ModelLayerLocation RABBIT_HEAD = register("rabbit_head");
     public static final ModelLayerLocation RAVAGER_HEAD = register("ravager_head");
+    public static final ModelLayerLocation SALMON_HEAD = register("salmon_head");
     public static final ModelLayerLocation SHEEP_HEAD = register("sheep_head");
     public static final ModelLayerLocation SHEEP_HEAD_WOOL = register("sheep_head_wool");
     public static final ModelLayerLocation SHULKER_HEAD = register("shulker_head");
@@ -51,6 +53,8 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation SQUID_HEAD = register("squid_head");
     public static final ModelLayerLocation STRAY_SKULL_CLOTHES = register("stray_skull_clothes");
     public static final ModelLayerLocation STRIDER_HEAD = register("strider_head");
+    public static final ModelLayerLocation TROPICAL_FISH_HEAD = register("tropical_fish_head");
+    public static final ModelLayerLocation TROPICAL_FISH_HEAD_PATTERN = register("tropical_fish_head_pattern");
     public static final ModelLayerLocation TURTLE_HEAD = register("turtle_head");
     public static final ModelLayerLocation VILLAGER_HEAD = register("villager_head");
     public static final ModelLayerLocation WARDEN_HEAD = register("warden_head");

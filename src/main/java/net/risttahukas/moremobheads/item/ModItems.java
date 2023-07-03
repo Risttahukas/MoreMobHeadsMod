@@ -102,6 +102,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.CHICKEN_HEAD.get(), ModBlocks.CHICKEN_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> COD_HEAD = ITEMS.register("cod_head", () ->
+            new EffectSkullItem(ModBlocks.COD_HEAD.get(), ModBlocks.COD_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> COW_HEAD = ITEMS.register("cow_head", () ->
             new EffectSkullItem(ModBlocks.COW_HEAD.get(), ModBlocks.COW_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
@@ -706,6 +710,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.RAVAGER_HEAD.get(), ModBlocks.RAVAGER_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
 
+    public static final RegistryObject<Item> SALMON_HEAD = ITEMS.register("salmon_head", () ->
+            new EffectSkullItem(ModBlocks.SALMON_HEAD.get(), ModBlocks.SALMON_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> SHEEP_HEAD_WHITE = ITEMS.register("sheep_head_white", () ->
             new EffectSkullItem(ModBlocks.SHEEP_HEAD_WHITE.get(), ModBlocks.SHEEP_WALL_HEAD_WHITE.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
@@ -888,6 +896,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> TRADER_LLAMA_HEAD_GRAY = ITEMS.register("trader_llama_head_gray", () ->
             new EffectSkullItem(ModBlocks.TRADER_LLAMA_HEAD_GRAY.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_GRAY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> TROPICAL_FISH_HEAD = ITEMS.register("tropical_fish_head", () ->
+            new EffectSkullItem(ModBlocks.TROPICAL_FISH_HEAD.get(), ModBlocks.TROPICAL_FISH_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> TURTLE_HEAD = ITEMS.register("turtle_head", () ->

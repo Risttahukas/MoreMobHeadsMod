@@ -61,6 +61,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(6.0D, 4.0D, 0.0D, 10.0D, 10.0D, 5.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 6.0D, 5.0D, 10.0D, 10.0D),
             Direction.WEST, Block.box(11.0D, 4.0D, 6.0D, 16.0D, 10.0D, 10.0D)));
+    private static final Map<Direction, VoxelShape> COD_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(7.0D, 4.0D, 5.0D, 9.0D, 8.0D, 16.0D),
+            Direction.SOUTH, Block.box(7.0D, 4.0D, 0.0D, 9.0D, 8.0D, 11.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 7.0D, 11.0D, 8.0D, 9.0D),
+            Direction.WEST, Block.box(5.0D, 4.0D, 7.0D, 16.0D, 8.0D, 9.0D)));
     private static final Map<Direction, VoxelShape> COW_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.0D, 4.0D, 10.0D, 12.0D, 12.0D, 16.0D),
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 6.0D),
@@ -146,6 +151,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.0D, 3.25D, 0.0D, 12.0D, 14.0D, 8.0D),
             Direction.EAST, Block.box(0.0D, 3.25D, 4.0D, 8.0D, 14.0D, 12.0D),
             Direction.WEST, Block.box(8.0D, 3.25D, 4.0D, 16.0D, 14.0D, 12.0D)));
+    private static final Map<Direction, VoxelShape> SALMON_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(6.5D, 4.0D, 5.0D, 9.5D, 9.0D, 16.0D),
+            Direction.SOUTH, Block.box(6.5D, 4.0D, 0.0D, 9.5D, 9.0D, 11.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 6.5D, 11.0D, 9.0D, 9.5D),
+            Direction.WEST, Block.box(5.0D, 4.0D, 6.5D, 16.0D, 9.0D, 9.5D)));
     private static final Map<Direction, VoxelShape> SHEEP_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(5.0D, 4.0D, 8.0D, 11.0D, 10.0D, 16.0D),
             Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 10.0D, 8.0D),
@@ -166,6 +176,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 11.0D, 8.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 8.0D, 11.0D, 12.0D),
             Direction.WEST, Block.box(8.0D, 4.0D, 4.0D, 16.0D, 11.0D, 12.0D)));
+    private static final Map<Direction, VoxelShape> TROPICAL_FISH_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(7.0D, 4.0D, 10.0D, 9.0D, 7.0D, 16.0D),
+            Direction.SOUTH, Block.box(7.0D, 4.0D, 0.0D, 9.0D, 7.0D, 6.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 7.0D, 6.0D, 7.0D, 9.0D),
+            Direction.WEST, Block.box(10.0D, 4.0D, 7.0D, 16.0D, 7.0D, 9.0D)));
     private static final Map<Direction, VoxelShape> TURTLE_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(5.0D, 4.0D, 10.0D, 11.0D, 9.0D, 16.0D),
             Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 9.0D, 6.0D),
@@ -229,6 +244,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return CAVE_SPIDER_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.CHICKEN.equals(this.getType())) {
             return CHICKEN_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.COD.equals(this.getType())) {
+            return COD_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.COW.equals(this.getType()) ||
                 EffectSkullBlock.Types.MOOSHROOM_RED.equals(this.getType()) ||
                 EffectSkullBlock.Types.MOOSHROOM_BROWN.equals(this.getType())) {
@@ -393,6 +410,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return RABBIT_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.RAVAGER.equals(this.getType())) {
             return RAVAGER_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.SALMON.equals(this.getType())) {
+            return SALMON_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.SHEEP_WHITE.equals(this.getType()) ||
                 EffectSkullBlock.Types.SHEEP_ORANGE.equals(this.getType()) ||
                 EffectSkullBlock.Types.SHEEP_MAGENTA.equals(this.getType()) ||
@@ -419,6 +438,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
         } if (EffectSkullBlock.Types.STRIDER.equals(this.getType()) ||
                 EffectSkullBlock.Types.STRIDER_COLD.equals(this.getType())) {
             return STRIDER_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.TROPICAL_FISH.equals(this.getType())) {
+            return TROPICAL_FISH_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.TURTLE.equals(this.getType())) {
             return TURTLE_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.WANDERING_TRADER.equals(this.getType()) ||

@@ -65,6 +65,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAT_ALL_BLACK, new ResourceLocation("textures/entity/cat/all_black.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CAVE_SPIDER, new ResourceLocation("textures/entity/spider/cave_spider.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CHICKEN, new ResourceLocation("textures/entity/chicken.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.COD, new ResourceLocation("textures/entity/fish/cod.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.COW, new ResourceLocation("textures/entity/cow/cow.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.CREEPER_CHARGED, new ResourceLocation("textures/entity/creeper/creeper.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.DOLPHIN, new ResourceLocation("textures/entity/dolphin.png"));
@@ -216,6 +217,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.RABBIT_CAERBANNOG, new ResourceLocation("textures/entity/rabbit/caerbannog.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.RABBIT_TOAST, new ResourceLocation("textures/entity/rabbit/toast.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.RAVAGER, new ResourceLocation("textures/entity/illager/ravager.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SALMON, new ResourceLocation("textures/entity/fish/salmon.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_WHITE, new ResourceLocation("textures/entity/sheep/sheep.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_ORANGE, new ResourceLocation("textures/entity/sheep/sheep.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHEEP_MAGENTA, new ResourceLocation("textures/entity/sheep/sheep.png"));
@@ -262,6 +264,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TRADER_LLAMA_WHITE, new ResourceLocation("textures/entity/llama/white.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TRADER_LLAMA_BROWN, new ResourceLocation("textures/entity/llama/brown.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TRADER_LLAMA_GRAY, new ResourceLocation("textures/entity/llama/gray.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.TROPICAL_FISH, new ResourceLocation("textures/entity/fish/tropical_a.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TURTLE, new ResourceLocation("textures/entity/turtle/big_sea_turtle.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VEX, new ResourceLocation("textures/entity/illager/vex.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VINDICATOR, new ResourceLocation("textures/entity/illager/vindicator.png"));
@@ -314,7 +317,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
                 horizontalTranslation = 0.4375F;
             } else if (skullModelBase instanceof CowHeadModel || skullModelBase instanceof DolphinHeadModel ||
                     skullModelBase instanceof SquidHeadModel || skullModelBase instanceof FoxHeadModel ||
-                    skullModelBase instanceof LlamaHeadModel || skullModelBase instanceof TurtleHeadModel) {
+                    skullModelBase instanceof LlamaHeadModel || skullModelBase instanceof TurtleHeadModel ||
+                    skullModelBase instanceof TropicalFishHeadModelA) {
                 horizontalTranslation = 0.3125F;
             } else if (skullModelBase instanceof DonkeyHeadModel) {
                 horizontalTranslation = 0.3096875F;
@@ -368,6 +372,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
             spiderHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else if (skullModelBase instanceof StraySkullModel straySkullModel) {
             straySkullModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+        } else if (skullModelBase instanceof TropicalFishHeadModelA tropicalFishHeadModelA) {
+            tropicalFishHeadModelA.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else if (skullModelBase instanceof WardenHeadModel wardenHeadModel) {
             wardenHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else {
@@ -409,6 +415,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.CAT_ALL_BLACK, new CatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAT_HEAD)));
         builder.put(EffectSkullBlock.Types.CAVE_SPIDER, new CaveSpiderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CAVE_SPIDER_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SPIDER_EYES)));
         builder.put(EffectSkullBlock.Types.CHICKEN, new ChickenHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.CHICKEN_HEAD)));
+        builder.put(EffectSkullBlock.Types.COD, new CodHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.COD_HEAD)));
         builder.put(EffectSkullBlock.Types.COW, new CowHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.COW_HEAD)));
         builder.put(EffectSkullBlock.Types.CREEPER_CHARGED, new ChargedCreeperHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.MOB_SKULL), entityModelSet.bakeLayer(ModBlockEntityModelLayers.CREEPER_HEAD_CHARGE)));
         builder.put(EffectSkullBlock.Types.DOLPHIN, new DolphinHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.DOLPHIN_HEAD)));
@@ -560,6 +567,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.RABBIT_CAERBANNOG, new RabbitHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.RABBIT_HEAD)));
         builder.put(EffectSkullBlock.Types.RABBIT_TOAST, new RabbitHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.RABBIT_HEAD)));
         builder.put(EffectSkullBlock.Types.RAVAGER, new RavagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.RAVAGER_HEAD)));
+        builder.put(EffectSkullBlock.Types.SALMON, new SalmonHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SALMON_HEAD)));
         builder.put(EffectSkullBlock.Types.SHEEP_WHITE, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 0));
         builder.put(EffectSkullBlock.Types.SHEEP_ORANGE, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 1));
         builder.put(EffectSkullBlock.Types.SHEEP_MAGENTA, new SheepHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHEEP_HEAD_WOOL), 2));
@@ -606,6 +614,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.TRADER_LLAMA_WHITE, new LlamaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD_DECOR), "trader"));
         builder.put(EffectSkullBlock.Types.TRADER_LLAMA_BROWN, new LlamaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD_DECOR), "trader"));
         builder.put(EffectSkullBlock.Types.TRADER_LLAMA_GRAY, new LlamaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD_DECOR), "trader"));
+        builder.put(EffectSkullBlock.Types.TROPICAL_FISH, new TropicalFishHeadModelA(entityModelSet.bakeLayer(ModBlockEntityModelLayers.TROPICAL_FISH_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.TROPICAL_FISH_HEAD_PATTERN), "kob", 1, 0));
         builder.put(EffectSkullBlock.Types.TURTLE, new TurtleHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.TURTLE_HEAD)));
         builder.put(EffectSkullBlock.Types.VEX, new AllayHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ALLAY_HEAD)));
         builder.put(EffectSkullBlock.Types.VINDICATOR, new IllagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ILLAGER_HEAD)));

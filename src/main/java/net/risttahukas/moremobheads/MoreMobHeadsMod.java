@@ -71,6 +71,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.CAT_HEAD_ALL_BLACK);
             event.accept(ModItems.CAVE_SPIDER_HEAD);
             event.accept(ModItems.CHICKEN_HEAD);
+            event.accept(ModItems.COD_HEAD);
             event.accept(ModItems.COW_HEAD);
             event.accept(Items.CREEPER_HEAD);
             event.accept(ModItems.CREEPER_HEAD_CHARGED);
@@ -226,6 +227,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.RABBIT_HEAD_CAERBANNOG);
             event.accept(ModItems.RABBIT_HEAD_TOAST);
             event.accept(ModItems.RAVAGER_HEAD);
+            event.accept(ModItems.SALMON_HEAD);
             event.accept(ModItems.SHEEP_HEAD_WHITE);
             event.accept(ModItems.SHEEP_HEAD_ORANGE);
             event.accept(ModItems.SHEEP_HEAD_MAGENTA);
@@ -273,6 +275,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.TRADER_LLAMA_HEAD_WHITE);
             event.accept(ModItems.TRADER_LLAMA_HEAD_BROWN);
             event.accept(ModItems.TRADER_LLAMA_HEAD_GRAY);
+            event.accept(ModItems.TROPICAL_FISH_HEAD);
             event.accept(ModItems.TURTLE_HEAD);
             event.accept(ModItems.VEX_HEAD);
             event.accept(ModItems.VINDICATOR_HEAD);

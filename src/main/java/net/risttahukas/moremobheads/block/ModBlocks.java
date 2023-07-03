@@ -168,6 +168,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.CHICKEN, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(CHICKEN_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> COD_HEAD = BLOCKS.register("cod_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.COD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> COD_WALL_HEAD = BLOCKS.register("cod_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.COD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(COD_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> COW_HEAD = BLOCKS.register("cow_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.COW, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
@@ -1225,6 +1232,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.RAVAGER, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(RAVAGER_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> SALMON_HEAD = BLOCKS.register("salmon_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SALMON, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SALMON_WALL_HEAD = BLOCKS.register("salmon_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SALMON, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SALMON_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> SHEEP_HEAD_WHITE = BLOCKS.register("sheep_head_white",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.SHEEP_WHITE, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
@@ -1546,6 +1560,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> TRADER_LLAMA_WALL_HEAD_GRAY = BLOCKS.register("trader_llama_wall_head_gray",
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.TRADER_LLAMA_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(TRADER_LLAMA_HEAD_GRAY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> TROPICAL_FISH_HEAD = BLOCKS.register("tropical_fish_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.TROPICAL_FISH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> TROPICAL_FISH_WALL_HEAD = BLOCKS.register("tropical_fish_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.TROPICAL_FISH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(TROPICAL_FISH_HEAD).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> TURTLE_HEAD = BLOCKS.register("turtle_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.TURTLE, BlockBehaviour.Properties.of()
