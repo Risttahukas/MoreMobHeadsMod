@@ -151,6 +151,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 10.0D, 8.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 5.0D, 8.0D, 10.0D, 11.0D),
             Direction.WEST, Block.box(8.0D, 4.0D, 5.0D, 16.0D, 10.0D, 11.0D)));
+    private static final Map<Direction, VoxelShape> SNIFFER_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(4.75D, 4.0D, 6.0D, 11.25D, 11.5D, 16.0D),
+            Direction.SOUTH, Block.box(4.75D, 4.0D, 0.0D, 11.25D, 11.5D, 10.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 4.75D, 10.0D, 11.5D, 11.25D),
+            Direction.WEST, Block.box(6.0D, 4.0D, 4.75D, 16.0D, 11.5D, 11.25D)));
     private static final Map<Direction, VoxelShape> SQUID_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(5.0D, 4.0D, 10.0D, 11.0D, 12.0D, 16.0D),
             Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 12.0D, 6.0D),
@@ -406,6 +411,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                 EffectSkullBlock.Types.SHEEP_BLACK.equals(this.getType()) ||
                 EffectSkullBlock.Types.SHEEP_RAINBOW.equals(this.getType())) {
             return SHEEP_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.SNIFFER.equals(this.getType())) {
+            return SNIFFER_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.SQUID.equals(this.getType()) ||
                 EffectSkullBlock.Types.GLOW_SQUID.equals(this.getType())) {
             return SQUID_AABBS.get(blockState.getValue(FACING));
@@ -453,7 +460,7 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                     blockState.is(ModBlocks.SHULKER_WALL_HEAD_CYAN.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_PURPLE.get()) ||
                     blockState.is(ModBlocks.SHULKER_WALL_HEAD_BLUE.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_BROWN.get()) ||
                     blockState.is(ModBlocks.SHULKER_WALL_HEAD_GREEN.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_RED.get()) ||
-                    blockState.is(ModBlocks.SHULKER_WALL_HEAD_BLACK.get());
+                    blockState.is(ModBlocks.SHULKER_WALL_HEAD_BLACK.get()) || blockState.is(ModBlocks.SNIFFER_WALL_HEAD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);

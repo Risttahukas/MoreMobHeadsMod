@@ -223,6 +223,7 @@ public class ModBlockEntities {
                             ModBlocks.SHULKER_HEAD_RED.get(), ModBlocks.SHULKER_WALL_HEAD_RED.get(),
                             ModBlocks.SHULKER_HEAD_BLACK.get(), ModBlocks.SHULKER_WALL_HEAD_BLACK.get(),
                             ModBlocks.SLIME_HEAD.get(), ModBlocks.SLIME_WALL_HEAD.get(),
+                            ModBlocks.SNIFFER_HEAD.get(), ModBlocks.SNIFFER_WALL_HEAD.get(),
                             ModBlocks.SNOW_GOLEM_HEAD.get(), ModBlocks.SNOW_GOLEM_WALL_HEAD.get(),
                             ModBlocks.SPIDER_HEAD.get(), ModBlocks.SPIDER_WALL_HEAD.get(),
                             ModBlocks.SQUID_HEAD.get(), ModBlocks.SQUID_WALL_HEAD.get(),

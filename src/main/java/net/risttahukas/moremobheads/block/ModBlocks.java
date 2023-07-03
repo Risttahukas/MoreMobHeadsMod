@@ -1470,6 +1470,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SLIME, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(SLIME_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> SNIFFER_HEAD = BLOCKS.register("sniffer_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SNIFFER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SNIFFER_WALL_HEAD = BLOCKS.register("sniffer_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SNIFFER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SNIFFER_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> SNOW_GOLEM_HEAD = BLOCKS.register("snow_golem_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.SNOW_GOLEM, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

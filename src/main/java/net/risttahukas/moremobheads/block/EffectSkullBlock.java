@@ -57,6 +57,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 10.75D, 12.0D);
     protected static final VoxelShape SHEEP_SHAPE =
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 6.0D, 12.0D);
+    protected static final VoxelShape SNIFFER_SHAPE =
+            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 7.5D, 12.0D);
     protected static final VoxelShape SQUID_SHAPE =
             Block.box(5.0D, 0.0D, 5.0D, 11.0D, 8.0D, 11.0D);
     protected static final VoxelShape STRIDER_SHAPE =
@@ -201,6 +203,8 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.SHEEP_RAINBOW.equals(this.getType()) || Types.FOX_RED.equals(this.getType()) ||
                 Types.FOX_SNOW.equals(this.getType())) {
             return SHEEP_SHAPE;
+        } if (Types.SNIFFER.equals(this.getType())) {
+            return SNIFFER_SHAPE;
         } if (Types.SQUID.equals(this.getType()) || Types.GLOW_SQUID.equals(this.getType())) {
             return SQUID_SHAPE;
         } if (Types.STRIDER.equals(this.getType()) || Types.STRIDER_COLD.equals(this.getType())) {
@@ -238,7 +242,7 @@ public class EffectSkullBlock extends SkullBlock {
                     blockState.is(ModBlocks.SHULKER_HEAD_CYAN.get()) || blockState.is(ModBlocks.SHULKER_HEAD_PURPLE.get()) ||
                     blockState.is(ModBlocks.SHULKER_HEAD_BLUE.get()) || blockState.is(ModBlocks.SHULKER_HEAD_BROWN.get()) ||
                     blockState.is(ModBlocks.SHULKER_HEAD_GREEN.get()) || blockState.is(ModBlocks.SHULKER_HEAD_RED.get()) ||
-                    blockState.is(ModBlocks.SHULKER_HEAD_BLACK.get());
+                    blockState.is(ModBlocks.SHULKER_HEAD_BLACK.get()) || blockState.is(ModBlocks.SNIFFER_HEAD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);

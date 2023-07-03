@@ -846,6 +846,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.SLIME_HEAD.get(), ModBlocks.SLIME_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> SNIFFER_HEAD = ITEMS.register("sniffer_head", () ->
+            new EffectSkullItem(ModBlocks.SNIFFER_HEAD.get(), ModBlocks.SNIFFER_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> SNOW_GOLEM_HEAD = ITEMS.register("snow_golem_head", () ->
             new EffectSkullItem(ModBlocks.SNOW_GOLEM_HEAD.get(), ModBlocks.SNOW_GOLEM_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

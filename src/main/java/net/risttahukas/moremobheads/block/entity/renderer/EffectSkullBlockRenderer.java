@@ -251,6 +251,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHULKER_RED, new ResourceLocation("textures/entity/shulker/shulker_red.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHULKER_BLACK, new ResourceLocation("textures/entity/shulker/shulker_black.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SLIME, new ResourceLocation("textures/entity/slime/slime.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SNIFFER, new ResourceLocation("textures/entity/sniffer/sniffer.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SNOW_GOLEM, new ResourceLocation("textures/entity/snow_golem.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SPIDER, new ResourceLocation("textures/entity/spider/spider.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SQUID, new ResourceLocation("textures/entity/squid/squid.png"));
@@ -594,6 +595,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.SHULKER_RED, new ShulkerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHULKER_HEAD)));
         builder.put(EffectSkullBlock.Types.SHULKER_BLACK, new ShulkerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHULKER_HEAD)));
         builder.put(EffectSkullBlock.Types.SLIME, new SlimeHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SLIME_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SLIME_HEAD_OUTER_LAYER)));
+        builder.put(EffectSkullBlock.Types.SNIFFER, new SnifferHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SNIFFER_HEAD)));
         builder.put(EffectSkullBlock.Types.SNOW_GOLEM, new SnowGolemHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SNOW_GOLEM_HEAD)));
         builder.put(EffectSkullBlock.Types.SPIDER, new SpiderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SPIDER_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SPIDER_EYES)));
         builder.put(EffectSkullBlock.Types.SQUID, new SquidHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SQUID_HEAD)));

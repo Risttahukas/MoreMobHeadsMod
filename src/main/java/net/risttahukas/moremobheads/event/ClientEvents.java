@@ -116,6 +116,7 @@ public class ClientEvents {
             event.registerLayerDefinition(ModBlockEntityModelLayers.SHULKER_HEAD, ShulkerHeadModel::createShulkerHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.SLIME_HEAD, SlimeHeadModel::createSlimeHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.SLIME_HEAD_OUTER_LAYER, SlimeHeadModel::createSlimeHeadOuterLayer);
+            event.registerLayerDefinition(ModBlockEntityModelLayers.SNIFFER_HEAD, SnifferHeadModel::createSnifferHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.SNOW_GOLEM_HEAD, SnowGolemHeadModel::createSnowGolemHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.SPIDER_HEAD, SpiderHeadModel::createSpiderHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.SPIDER_EYES, SpiderHeadModel::createSpiderHeadEyesLayer);
