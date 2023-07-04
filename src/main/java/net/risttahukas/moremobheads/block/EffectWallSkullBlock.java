@@ -462,7 +462,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
         } if (EffectSkullBlock.Types.WARDEN.equals(this.getType())) {
             return WARDEN_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.WOLF.equals(this.getType()) ||
-                EffectSkullBlock.Types.WOLF_TAME.equals(this.getType())) {
+                EffectSkullBlock.Types.WOLF_TAME.equals(this.getType()) ||
+                EffectSkullBlock.Types.WOLF_ANGRY.equals(this.getType())) {
             return WOLF_AABBS.get(blockState.getValue(FACING));
         }
         return AABBS.get(blockState.getValue(FACING));

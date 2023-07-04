@@ -1652,6 +1652,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.WOLF_TAME, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(WOLF_HEAD_TAME).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> WOLF_HEAD_ANGRY = BLOCKS.register("wolf_head_angry",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.WOLF_ANGRY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> WOLF_WALL_HEAD_ANGRY = BLOCKS.register("wolf_wall_head_angry",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.WOLF_ANGRY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(WOLF_HEAD_ANGRY).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> ZOMBIFIED_PIGLIN_HEAD = BLOCKS.register("zombified_piglin_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIFIED_PIGLIN, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

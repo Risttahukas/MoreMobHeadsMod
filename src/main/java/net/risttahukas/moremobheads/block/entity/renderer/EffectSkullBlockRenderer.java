@@ -277,6 +277,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WITCH, new ResourceLocation("textures/entity/witch.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WOLF, new ResourceLocation("textures/entity/wolf/wolf.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WOLF_TAME, new ResourceLocation("textures/entity/wolf/wolf_tame.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.WOLF_ANGRY, new ResourceLocation("textures/entity/wolf/wolf_angry.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.ZOMBIFIED_PIGLIN, new ResourceLocation("textures/entity/piglin/zombified_piglin.png"));
     }
 
@@ -633,6 +634,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.WITCH, new WitchHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WITCH_HEAD)));
         builder.put(EffectSkullBlock.Types.WOLF, new WolfHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WOLF_HEAD)));
         builder.put(EffectSkullBlock.Types.WOLF_TAME, new WolfHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WOLF_HEAD)));
+        builder.put(EffectSkullBlock.Types.WOLF_ANGRY, new WolfHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WOLF_HEAD)));
         builder.put(EffectSkullBlock.Types.ZOMBIFIED_PIGLIN, new PiglinHeadModel(entityModelSet.bakeLayer(ModelLayers.PIGLIN_HEAD)));
         ModLoader.get().postEvent(new EntityRenderersEvent.CreateSkullModels(builder, entityModelSet));
         return builder.build();

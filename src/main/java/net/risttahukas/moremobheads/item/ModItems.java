@@ -950,6 +950,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.WOLF_HEAD_TAME.get(), ModBlocks.WOLF_WALL_HEAD_TAME.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> WOLF_HEAD_ANGRY = ITEMS.register("wolf_head_angry", () ->
+            new EffectSkullItem(ModBlocks.WOLF_HEAD_ANGRY.get(), ModBlocks.WOLF_WALL_HEAD_ANGRY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> ZOMBIFIED_PIGLIN_HEAD = ITEMS.register("zombified_piglin_head", () ->
             new EffectSkullItem(ModBlocks.ZOMBIFIED_PIGLIN_HEAD.get(), ModBlocks.ZOMBIFIED_PIGLIN_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

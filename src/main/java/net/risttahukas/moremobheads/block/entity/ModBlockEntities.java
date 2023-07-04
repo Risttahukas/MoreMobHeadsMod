@@ -249,6 +249,7 @@ public class ModBlockEntities {
                             ModBlocks.WITCH_HEAD.get(), ModBlocks.WITCH_WALL_HEAD.get(),
                             ModBlocks.WOLF_HEAD.get(), ModBlocks.WOLF_WALL_HEAD.get(),
                             ModBlocks.WOLF_HEAD_TAME.get(), ModBlocks.WOLF_WALL_HEAD_TAME.get(),
+                            ModBlocks.WOLF_HEAD_ANGRY.get(), ModBlocks.WOLF_WALL_HEAD_ANGRY.get(),
                             ModBlocks.ZOMBIFIED_PIGLIN_HEAD.get(), ModBlocks.ZOMBIFIED_PIGLIN_WALL_HEAD.get())
                     .build(null));
 

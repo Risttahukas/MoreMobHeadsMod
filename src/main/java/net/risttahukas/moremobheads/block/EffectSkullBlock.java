@@ -224,7 +224,8 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.EVOKER.equals(this.getType()) || Types.ILLUSIONER.equals(this.getType()) ||
                 Types.PILLAGER.equals(this.getType()) || Types.VINDICATOR.equals(this.getType())) {
             return VILLAGER_SHAPE;
-        } if (Types.WOLF.equals(this.getType()) || Types.WOLF_TAME.equals(this.getType())) {
+        } if (Types.WOLF.equals(this.getType()) || Types.WOLF_TAME.equals(this.getType()) ||
+                Types.WOLF_ANGRY.equals(this.getType())) {
             return WOLF_SHAPE;
         }
         return SHAPE;
