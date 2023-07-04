@@ -63,6 +63,34 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.BAT, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(BAT_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> BEE_HEAD = BLOCKS.register("bee_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.BEE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> BEE_WALL_HEAD = BLOCKS.register("bee_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.BEE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(BEE_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> BEE_HEAD_ANGRY = BLOCKS.register("bee_head_angry",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.BEE_ANGRY, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> BEE_WALL_HEAD_ANGRY = BLOCKS.register("bee_wall_head_angry",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.BEE_ANGRY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(BEE_HEAD_ANGRY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> BEE_HEAD_POLLEN = BLOCKS.register("bee_head_pollen",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.BEE_POLLEN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> BEE_WALL_HEAD_POLLEN = BLOCKS.register("bee_wall_head_pollen",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.BEE_POLLEN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(BEE_HEAD_POLLEN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> BEE_HEAD_ANGRY_POLLEN = BLOCKS.register("bee_head_angry_pollen",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.BEE_ANGRY_POLLEN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> BEE_WALL_HEAD_ANGRY_POLLEN = BLOCKS.register("bee_wall_head_angry_pollen",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.BEE_ANGRY_POLLEN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(BEE_HEAD_ANGRY_POLLEN).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> BLAZE_HEAD = BLOCKS.register("blaze_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.BLAZE, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

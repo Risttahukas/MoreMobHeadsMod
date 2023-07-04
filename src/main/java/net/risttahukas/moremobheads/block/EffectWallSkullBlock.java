@@ -41,6 +41,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(6.95D, 4.0D, 0.0D, 9.05D, 6.1D, 2.1D),
             Direction.EAST, Block.box(0.0D, 4.0D, 6.95D, 2.1D, 6.1D, 9.05D),
             Direction.WEST, Block.box(13.9D, 4.0D, 6.95D, 16.0D, 6.1D, 9.05D)));
+    private static final Map<Direction, VoxelShape> BEE_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(4.5D, 4.0D, 6.0D, 11.5D, 11.0D, 16.0D),
+            Direction.SOUTH, Block.box(4.5D, 4.0D, 0.0D, 11.5D, 11.0D, 10.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 4.5D, 10.0D, 11.0D, 11.5D),
+            Direction.WEST, Block.box(6.0D, 4.0D, 4.5D, 16.0D, 11.0D, 11.5D)));
     private static final Map<Direction, VoxelShape> CAMEL_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.5D, 2.0D, 9.0D, 11.5D, 16.0D, 16.0D),
             Direction.SOUTH, Block.box(4.5D, 2.0D, 0.0D, 11.5D, 16.0D, 7.0D),
@@ -226,6 +231,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return AXOLOTL_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.BAT.equals(this.getType())) {
             return BAT_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.BEE.equals(this.getType()) ||
+                EffectSkullBlock.Types.BEE_ANGRY.equals(this.getType()) ||
+                EffectSkullBlock.Types.BEE_POLLEN.equals(this.getType()) ||
+                EffectSkullBlock.Types.BEE_ANGRY_POLLEN.equals(this.getType())) {
+            return BEE_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.CAMEL.equals(this.getType())) {
             return CAMEL_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.CAT_TABBY.equals(this.getType()) ||
@@ -481,7 +491,9 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                     blockState.is(ModBlocks.SHULKER_WALL_HEAD_CYAN.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_PURPLE.get()) ||
                     blockState.is(ModBlocks.SHULKER_WALL_HEAD_BLUE.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_BROWN.get()) ||
                     blockState.is(ModBlocks.SHULKER_WALL_HEAD_GREEN.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_RED.get()) ||
-                    blockState.is(ModBlocks.SHULKER_WALL_HEAD_BLACK.get()) || blockState.is(ModBlocks.SNIFFER_WALL_HEAD.get());
+                    blockState.is(ModBlocks.SHULKER_WALL_HEAD_BLACK.get()) || blockState.is(ModBlocks.SNIFFER_WALL_HEAD.get()) ||
+                    blockState.is(ModBlocks.BEE_WALL_HEAD.get()) || blockState.is(ModBlocks.BEE_WALL_HEAD_ANGRY.get()) ||
+                    blockState.is(ModBlocks.BEE_WALL_HEAD_POLLEN.get()) || blockState.is(ModBlocks.BEE_WALL_HEAD_ANGRY_POLLEN.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);

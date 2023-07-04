@@ -106,7 +106,9 @@ public class EffectSkullBlock extends SkullBlock {
             return CHICKEN_SHAPE;
         } if (Types.COD.equals(this.getType())) {
             return COD_SHAPE;
-        } if (Types.DOLPHIN.equals(this.getType())) {
+        } if (Types.DOLPHIN.equals(this.getType()) || Types.BEE.equals(this.getType()) ||
+                Types.BEE_ANGRY.equals(this.getType()) || Types.BEE_POLLEN.equals(this.getType()) ||
+                Types.BEE_ANGRY_POLLEN.equals(this.getType())) {
             return DOLPHIN_SHAPE;
         } if (Types.DONKEY.equals(this.getType())) {
             return DONKEY_SHAPE;
@@ -251,7 +253,9 @@ public class EffectSkullBlock extends SkullBlock {
                     blockState.is(ModBlocks.SHULKER_HEAD_CYAN.get()) || blockState.is(ModBlocks.SHULKER_HEAD_PURPLE.get()) ||
                     blockState.is(ModBlocks.SHULKER_HEAD_BLUE.get()) || blockState.is(ModBlocks.SHULKER_HEAD_BROWN.get()) ||
                     blockState.is(ModBlocks.SHULKER_HEAD_GREEN.get()) || blockState.is(ModBlocks.SHULKER_HEAD_RED.get()) ||
-                    blockState.is(ModBlocks.SHULKER_HEAD_BLACK.get()) || blockState.is(ModBlocks.SNIFFER_HEAD.get());
+                    blockState.is(ModBlocks.SHULKER_HEAD_BLACK.get()) || blockState.is(ModBlocks.SNIFFER_HEAD.get()) ||
+                    blockState.is(ModBlocks.BEE_HEAD.get()) || blockState.is(ModBlocks.BEE_HEAD_ANGRY.get()) ||
+                    blockState.is(ModBlocks.BEE_HEAD_POLLEN.get()) || blockState.is(ModBlocks.BEE_HEAD_ANGRY_POLLEN.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);
@@ -271,6 +275,9 @@ public class EffectSkullBlock extends SkullBlock {
         BAT,
         BLAZE,
         BEE,
+        BEE_ANGRY,
+        BEE_POLLEN,
+        BEE_ANGRY_POLLEN,
         CAMEL,
         CAT_TABBY,
         CAT_BLACK,
@@ -493,6 +500,7 @@ public class EffectSkullBlock extends SkullBlock {
         WITCH,
         WOLF,
         WOLF_TAME,
+        WOLF_ANGRY,
         ZOMBIFIED_PIGLIN
     }
 }

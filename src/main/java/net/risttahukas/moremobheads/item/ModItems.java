@@ -42,6 +42,22 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.BAT_HEAD.get(), ModBlocks.BAT_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> BEE_HEAD = ITEMS.register("bee_head", () ->
+            new EffectSkullItem(ModBlocks.BEE_HEAD.get(), ModBlocks.BEE_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> BEE_HEAD_ANGRY = ITEMS.register("bee_head_angry", () ->
+            new EffectSkullItem(ModBlocks.BEE_HEAD_ANGRY.get(), ModBlocks.BEE_WALL_HEAD_ANGRY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> BEE_HEAD_POLLEN = ITEMS.register("bee_head_pollen", () ->
+            new EffectSkullItem(ModBlocks.BEE_HEAD_POLLEN.get(), ModBlocks.BEE_WALL_HEAD_POLLEN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> BEE_HEAD_ANGRY_POLLEN = ITEMS.register("bee_head_angry_pollen", () ->
+            new EffectSkullItem(ModBlocks.BEE_HEAD_ANGRY_POLLEN.get(), ModBlocks.BEE_WALL_HEAD_ANGRY_POLLEN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> BLAZE_HEAD = ITEMS.register("blaze_head", () ->
             new EffectSkullItem(ModBlocks.BLAZE_HEAD.get(), ModBlocks.BLAZE_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
