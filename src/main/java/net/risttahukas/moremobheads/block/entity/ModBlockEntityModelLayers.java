@@ -24,6 +24,7 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation DROWNED_HEAD_CLOTHES = register("drowned_head_clothes");
     public static final ModelLayerLocation ENDERMAN_HEAD = register("enderman_head");
     public static final ModelLayerLocation FOX_HEAD = register("fox_head");
+    public static final ModelLayerLocation FROG_HEAD = register("frog_head");
     public static final ModelLayerLocation GHAST_HEAD = register("ghast_head");
     public static final ModelLayerLocation HORSE_HEAD = register("horse_head");
     public static final ModelLayerLocation HORSE_HEAD_MARKINGS = register("horse_head_markings");
@@ -54,6 +55,7 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation SQUID_HEAD = register("squid_head");
     public static final ModelLayerLocation STRAY_SKULL_CLOTHES = register("stray_skull_clothes");
     public static final ModelLayerLocation STRIDER_HEAD = register("strider_head");
+    public static final ModelLayerLocation TADPOLE_HEAD = register("tadpole_head");
     public static final ModelLayerLocation TROPICAL_FISH_HEAD = register("tropical_fish_head");
     public static final ModelLayerLocation TROPICAL_FISH_HEAD_PATTERN = register("tropical_fish_head_pattern");
     public static final ModelLayerLocation TURTLE_HEAD = register("turtle_head");

@@ -96,6 +96,7 @@ public class ClientEvents {
             event.registerLayerDefinition(ModBlockEntityModelLayers.DROWNED_HEAD_CLOTHES, DrownedHeadModel::createDrownedHeadClothesLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.ENDERMAN_HEAD, EndermanHeadModel::createEndermanHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.FOX_HEAD, FoxHeadModel::createFoxHeadLayer);
+            event.registerLayerDefinition(ModBlockEntityModelLayers.FROG_HEAD, FrogHeadModel::createFrogHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.GHAST_HEAD, GhastHeadModel::createGhastHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.HORSE_HEAD, AbstractHorseHeadModel::createHorseHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS, HorseHeadModel::createHorseHeadMarkingsLayer);
@@ -126,6 +127,7 @@ public class ClientEvents {
             event.registerLayerDefinition(ModBlockEntityModelLayers.SQUID_HEAD, SquidHeadModel::createSquidHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.STRAY_SKULL_CLOTHES, StraySkullModel::createStraySkullClothesLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.STRIDER_HEAD, StriderHeadModel::createStriderHeadLayer);
+            event.registerLayerDefinition(ModBlockEntityModelLayers.TADPOLE_HEAD, TadpoleHeadModel::createTadpoleHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.TROPICAL_FISH_HEAD, TropicalFishHeadModelA::createTropicalFishHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.TROPICAL_FISH_HEAD_PATTERN, TropicalFishHeadModelA::createTropicalFishHeadPatternLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.TURTLE_HEAD, TurtleHeadModel::createTurtleHeadLayer);

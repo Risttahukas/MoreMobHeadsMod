@@ -266,6 +266,27 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.FOX_SNOW, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(FOX_HEAD_SNOW).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> FROG_HEAD_TEMPERATE = BLOCKS.register("frog_head_temperate",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.FROG_TEMPERATE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> FROG_WALL_HEAD_TEMPERATE = BLOCKS.register("frog_wall_head_temperate",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.FROG_TEMPERATE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(FROG_HEAD_TEMPERATE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> FROG_HEAD_WARM = BLOCKS.register("frog_head_warm",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.FROG_WARM, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> FROG_WALL_HEAD_WARM = BLOCKS.register("frog_wall_head_warm",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.FROG_WARM, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(FROG_HEAD_WARM).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> FROG_HEAD_COLD = BLOCKS.register("frog_head_cold",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.FROG_COLD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> FROG_WALL_HEAD_COLD = BLOCKS.register("frog_wall_head_cold",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.FROG_COLD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(FROG_HEAD_COLD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> GHAST_HEAD = BLOCKS.register("ghast_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.GHAST, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
@@ -1560,6 +1581,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> STRIDER_WALL_HEAD_COLD = BLOCKS.register("strider_wall_head_cold",
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.STRIDER_COLD, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(STRIDER_HEAD_COLD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> TADPOLE_HEAD = BLOCKS.register("tadpole_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.TADPOLE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> TADPOLE_WALL_HEAD = BLOCKS.register("tadpole_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.TADPOLE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(TADPOLE_HEAD).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> TRADER_LLAMA_HEAD_CREAMY = BLOCKS.register("trader_llama_head_creamy",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.TRADER_LLAMA_CREAMY, BlockBehaviour.Properties.of()

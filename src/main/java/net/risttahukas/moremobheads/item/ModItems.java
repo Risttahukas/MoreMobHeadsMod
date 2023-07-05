@@ -158,6 +158,18 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.FOX_HEAD_SNOW.get(), ModBlocks.FOX_WALL_HEAD_SNOW.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> FROG_HEAD_TEMPERATE = ITEMS.register("frog_head_temperate", () ->
+            new EffectSkullItem(ModBlocks.FROG_HEAD_TEMPERATE.get(), ModBlocks.FROG_WALL_HEAD_TEMPERATE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> FROG_HEAD_WARM = ITEMS.register("frog_head_warm", () ->
+            new EffectSkullItem(ModBlocks.FROG_HEAD_WARM.get(), ModBlocks.FROG_WALL_HEAD_WARM.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> FROG_HEAD_COLD = ITEMS.register("frog_head_cold", () ->
+            new EffectSkullItem(ModBlocks.FROG_HEAD_COLD.get(), ModBlocks.FROG_WALL_HEAD_COLD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> GHAST_HEAD = ITEMS.register("ghast_head", () ->
             new EffectSkullItem(ModBlocks.GHAST_HEAD.get(), ModBlocks.GHAST_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
@@ -896,6 +908,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> STRIDER_HEAD_COLD = ITEMS.register("strider_head_cold", () ->
             new EffectSkullItem(ModBlocks.STRIDER_HEAD_COLD.get(), ModBlocks.STRIDER_WALL_HEAD_COLD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> TADPOLE_HEAD = ITEMS.register("tadpole_head", () ->
+            new EffectSkullItem(ModBlocks.TADPOLE_HEAD.get(), ModBlocks.TADPOLE_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> TRADER_LLAMA_HEAD_CREAMY = ITEMS.register("trader_llama_head_creamy", () ->

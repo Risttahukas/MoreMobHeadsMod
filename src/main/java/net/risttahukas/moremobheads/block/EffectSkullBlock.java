@@ -35,6 +35,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 7.0D, 12.0D);
     protected static final VoxelShape DONKEY_SHAPE =
             Block.box(4.955D, 0.0D, 4.955D, 11.045D, 9.57D, 11.045D);
+    protected static final VoxelShape FROG_SHAPE =
+            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 5.0D, 12.0D);
     protected static final VoxelShape HORSE_SHAPE =
             Block.box(4.15D, 0.0D, 4.15D, 11.85D, 12.1D, 11.85D);
     protected static final VoxelShape HUSK_SHAPE =
@@ -65,6 +67,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(5.0D, 0.0D, 5.0D, 11.0D, 8.0D, 11.0D);
     protected static final VoxelShape STRIDER_SHAPE =
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 7.0D, 12.0D);
+    protected static final VoxelShape TADPOLE_SHAPE =
+            Block.box(6.5D, 0.0D, 6.5D, 9.5D, 2.0D, 9.5D);
     protected static final VoxelShape TROPICAL_FISH_SHAPE =
             Block.box(6.0D, 0.0D, 6.0D, 10.0D, 3.0D, 10.0D);
     protected static final VoxelShape UNDEAD_HORSE_SHAPE =
@@ -112,6 +116,9 @@ public class EffectSkullBlock extends SkullBlock {
             return DOLPHIN_SHAPE;
         } if (Types.DONKEY.equals(this.getType())) {
             return DONKEY_SHAPE;
+        } if (Types.FROG_TEMPERATE.equals(this.getType()) || Types.FROG_WARM.equals(this.getType()) ||
+                Types.FROG_COLD.equals(this.getType())) {
+            return FROG_SHAPE;
         } if (Types.HORSE_WHITE.equals(this.getType()) || Types.HORSE_CREAMY.equals(this.getType()) ||
                 Types.HORSE_CHESTNUT.equals(this.getType()) || Types.HORSE_BROWN.equals(this.getType()) ||
                 Types.HORSE_BLACK.equals(this.getType()) || Types.HORSE_GRAY.equals(this.getType()) ||
@@ -218,6 +225,8 @@ public class EffectSkullBlock extends SkullBlock {
             return SQUID_SHAPE;
         } if (Types.STRIDER.equals(this.getType()) || Types.STRIDER_COLD.equals(this.getType())) {
             return STRIDER_SHAPE;
+        } if (Types.TADPOLE.equals(this.getType())) {
+            return TADPOLE_SHAPE;
         } if (Types.TROPICAL_FISH.equals(this.getType())) {
             return TROPICAL_FISH_SHAPE;
         } if (Types.WANDERING_TRADER.equals(this.getType()) || Types.WITCH.equals(this.getType()) ||
@@ -256,7 +265,9 @@ public class EffectSkullBlock extends SkullBlock {
                     blockState.is(ModBlocks.SHULKER_HEAD_GREEN.get()) || blockState.is(ModBlocks.SHULKER_HEAD_RED.get()) ||
                     blockState.is(ModBlocks.SHULKER_HEAD_BLACK.get()) || blockState.is(ModBlocks.SNIFFER_HEAD.get()) ||
                     blockState.is(ModBlocks.BEE_HEAD.get()) || blockState.is(ModBlocks.BEE_HEAD_ANGRY.get()) ||
-                    blockState.is(ModBlocks.BEE_HEAD_POLLEN.get()) || blockState.is(ModBlocks.BEE_HEAD_ANGRY_POLLEN.get());
+                    blockState.is(ModBlocks.BEE_HEAD_POLLEN.get()) || blockState.is(ModBlocks.BEE_HEAD_ANGRY_POLLEN.get()) ||
+                    blockState.is(ModBlocks.TADPOLE_HEAD.get()) || blockState.is(ModBlocks.FROG_HEAD_TEMPERATE.get()) ||
+                    blockState.is(ModBlocks.FROG_HEAD_WARM.get()) || blockState.is(ModBlocks.FROG_HEAD_COLD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);
@@ -303,6 +314,9 @@ public class EffectSkullBlock extends SkullBlock {
         EVOKER,
         FOX_RED,
         FOX_SNOW,
+        FROG_TEMPERATE,
+        FROG_WARM,
+        FROG_COLD,
         GHAST,
         GLOW_SQUID,
         HORSE_WHITE,
@@ -488,6 +502,7 @@ public class EffectSkullBlock extends SkullBlock {
         STRAY,
         STRIDER,
         STRIDER_COLD,
+        TADPOLE,
         TRADER_LLAMA_CREAMY,
         TRADER_LLAMA_WHITE,
         TRADER_LLAMA_BROWN,

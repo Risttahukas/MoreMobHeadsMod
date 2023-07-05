@@ -91,6 +91,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 10.0D, 6.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 6.0D, 10.0D, 12.0D),
             Direction.WEST, Block.box(10.0D, 4.0D, 4.0D, 16.0D, 10.0D, 12.0D)));
+    private static final Map<Direction, VoxelShape> FROG_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(4.5D, 4.0D, 7.0D, 11.5D, 9.0D, 16.0D),
+            Direction.SOUTH, Block.box(4.5D, 4.0D, 0.0D, 11.5D, 9.0D, 9.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 4.5D, 9.0D, 9.0D, 11.5D),
+            Direction.WEST, Block.box(7.0D, 4.0D, 4.5D, 16.0D, 9.0D, 11.5D)));
     private static final Map<Direction, VoxelShape> HORSE_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.7D, 3.0D, 8.3D, 11.3D, 15.1D, 16.0D),
             Direction.SOUTH, Block.box(4.7D, 3.0D, 0.0D, 11.3D, 15.1D, 7.7D),
@@ -181,6 +186,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 11.0D, 8.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 8.0D, 11.0D, 12.0D),
             Direction.WEST, Block.box(8.0D, 4.0D, 4.0D, 16.0D, 11.0D, 12.0D)));
+    private static final Map<Direction, VoxelShape> TADPOLE_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(6.5D, 4.0D, 13.0D, 9.5D, 6.0D, 16.0D),
+            Direction.SOUTH, Block.box(6.5D, 4.0D, 0.0D, 9.5D, 6.0D, 3.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 6.5D, 3.0D, 6.0D, 9.5D),
+            Direction.WEST, Block.box(13.0D, 4.0D, 6.5D, 16.0D, 6.0D, 9.5D)));
     private static final Map<Direction, VoxelShape> TROPICAL_FISH_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(7.0D, 4.0D, 10.0D, 9.0D, 7.0D, 16.0D),
             Direction.SOUTH, Block.box(7.0D, 4.0D, 0.0D, 9.0D, 7.0D, 6.0D),
@@ -267,6 +277,10 @@ public class EffectWallSkullBlock extends WallSkullBlock {
         } if (EffectSkullBlock.Types.FOX_RED.equals(this.getType()) ||
                 EffectSkullBlock.Types.FOX_SNOW.equals(this.getType())) {
             return FOX_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.FROG_TEMPERATE.equals(this.getType()) ||
+                EffectSkullBlock.Types.FROG_WARM.equals(this.getType()) ||
+                EffectSkullBlock.Types.FROG_COLD.equals(this.getType())) {
+            return FROG_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.HORSE_WHITE.equals(this.getType()) ||
                 EffectSkullBlock.Types.HORSE_CREAMY.equals(this.getType()) ||
                 EffectSkullBlock.Types.HORSE_CHESTNUT.equals(this.getType()) ||
@@ -448,6 +462,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
         } if (EffectSkullBlock.Types.STRIDER.equals(this.getType()) ||
                 EffectSkullBlock.Types.STRIDER_COLD.equals(this.getType())) {
             return STRIDER_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.TADPOLE.equals(this.getType())) {
+            return TADPOLE_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.TROPICAL_FISH.equals(this.getType())) {
             return TROPICAL_FISH_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.TURTLE.equals(this.getType())) {
@@ -494,7 +510,9 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                     blockState.is(ModBlocks.SHULKER_WALL_HEAD_GREEN.get()) || blockState.is(ModBlocks.SHULKER_WALL_HEAD_RED.get()) ||
                     blockState.is(ModBlocks.SHULKER_WALL_HEAD_BLACK.get()) || blockState.is(ModBlocks.SNIFFER_WALL_HEAD.get()) ||
                     blockState.is(ModBlocks.BEE_WALL_HEAD.get()) || blockState.is(ModBlocks.BEE_WALL_HEAD_ANGRY.get()) ||
-                    blockState.is(ModBlocks.BEE_WALL_HEAD_POLLEN.get()) || blockState.is(ModBlocks.BEE_WALL_HEAD_ANGRY_POLLEN.get());
+                    blockState.is(ModBlocks.BEE_WALL_HEAD_POLLEN.get()) || blockState.is(ModBlocks.BEE_WALL_HEAD_ANGRY_POLLEN.get()) ||
+                    blockState.is(ModBlocks.TADPOLE_WALL_HEAD.get()) || blockState.is(ModBlocks.FROG_WALL_HEAD_TEMPERATE.get()) ||
+                    blockState.is(ModBlocks.FROG_WALL_HEAD_WARM.get()) || blockState.is(ModBlocks.FROG_WALL_HEAD_COLD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);

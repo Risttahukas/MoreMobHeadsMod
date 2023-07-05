@@ -87,6 +87,9 @@ public class MoreMobHeadsMod
             event.accept(ModItems.EVOKER_HEAD);
             event.accept(ModItems.FOX_HEAD_RED);
             event.accept(ModItems.FOX_HEAD_SNOW);
+            event.accept(ModItems.FROG_HEAD_TEMPERATE);
+            event.accept(ModItems.FROG_HEAD_WARM);
+            event.accept(ModItems.FROG_HEAD_COLD);
             event.accept(ModItems.GHAST_HEAD);
             event.accept(ModItems.GLOW_SQUID_HEAD);
             event.accept(ModItems.HORSE_HEAD_WHITE);
@@ -275,6 +278,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.STRAY_SKULL);
             event.accept(ModItems.STRIDER_HEAD);
             event.accept(ModItems.STRIDER_HEAD_COLD);
+            event.accept(ModItems.TADPOLE_HEAD);
             event.accept(ModItems.TRADER_LLAMA_HEAD_CREAMY);
             event.accept(ModItems.TRADER_LLAMA_HEAD_WHITE);
             event.accept(ModItems.TRADER_LLAMA_HEAD_BROWN);

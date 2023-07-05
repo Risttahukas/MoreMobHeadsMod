@@ -79,6 +79,9 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.EVOKER, new ResourceLocation("textures/entity/illager/evoker.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.FOX_RED, new ResourceLocation("textures/entity/fox/fox.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.FOX_SNOW, new ResourceLocation("textures/entity/fox/snow_fox.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.FROG_TEMPERATE, new ResourceLocation("textures/entity/frog/temperate_frog.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.FROG_WARM, new ResourceLocation("textures/entity/frog/warm_frog.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.FROG_COLD, new ResourceLocation("textures/entity/frog/cold_frog.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.GHAST, new ResourceLocation("textures/entity/ghast/ghast.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.GLOW_SQUID, new ResourceLocation("textures/entity/squid/glow_squid.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_WHITE, new ResourceLocation("textures/entity/horse/horse_white.png"));
@@ -264,6 +267,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.STRAY, new ResourceLocation("textures/entity/skeleton/stray.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.STRIDER, new ResourceLocation("textures/entity/strider/strider.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.STRIDER_COLD, new ResourceLocation("textures/entity/strider/strider_cold.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.TADPOLE, new ResourceLocation("textures/entity/tadpole/tadpole.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TRADER_LLAMA_CREAMY, new ResourceLocation("textures/entity/llama/creamy.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TRADER_LLAMA_WHITE, new ResourceLocation("textures/entity/llama/white.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TRADER_LLAMA_BROWN, new ResourceLocation("textures/entity/llama/brown.png"));
@@ -335,7 +339,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
             } else if (skullModelBase instanceof AbstractHorseHeadModel || skullModelBase instanceof PolarBearHeadModel ||
                     skullModelBase instanceof SnowGolemHeadModel) {
                 horizontalTranslation = 0.28125F;
-            } else if (skullModelBase instanceof PandaHeadModel) {
+            } else if (skullModelBase instanceof PandaHeadModel || skullModelBase instanceof FrogHeadModel) {
                 horizontalTranslation = 0.21875F;
             } else if (skullModelBase instanceof BeeHeadModel) {
                 horizontalTranslation = 0.1875F;
@@ -347,6 +351,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
                 horizontalTranslation = 0.265625F;
             } else if (skullModelBase instanceof RavagerHeadModel) {
                 verticalTranslation = 0.203125F;
+            } else if (skullModelBase instanceof TadpoleHeadModel) {
+                horizontalTranslation = 0.40625F;
             }
             poseStack.translate(0.5F - (float)direction.getStepX() * horizontalTranslation, verticalTranslation,
                     0.5F - (float)direction.getStepZ() * horizontalTranslation);
@@ -436,6 +442,9 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.EVOKER, new IllagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ILLAGER_HEAD)));
         builder.put(EffectSkullBlock.Types.FOX_RED, new FoxHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.FOX_HEAD)));
         builder.put(EffectSkullBlock.Types.FOX_SNOW, new FoxHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.FOX_HEAD)));
+        builder.put(EffectSkullBlock.Types.FROG_TEMPERATE, new FrogHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.FROG_HEAD)));
+        builder.put(EffectSkullBlock.Types.FROG_WARM, new FrogHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.FROG_HEAD)));
+        builder.put(EffectSkullBlock.Types.FROG_COLD, new FrogHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.FROG_HEAD)));
         builder.put(EffectSkullBlock.Types.GHAST, new GhastHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.GHAST_HEAD)));
         builder.put(EffectSkullBlock.Types.GLOW_SQUID, new GlowSquidHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SQUID_HEAD)));
         builder.put(EffectSkullBlock.Types.HORSE_WHITE, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.NONE));
@@ -621,6 +630,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.STRAY, new StraySkullModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.MOB_SKULL), entityModelSet.bakeLayer(ModBlockEntityModelLayers.STRAY_SKULL_CLOTHES)));
         builder.put(EffectSkullBlock.Types.STRIDER, new StriderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.STRIDER_HEAD)));
         builder.put(EffectSkullBlock.Types.STRIDER_COLD, new StriderHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.STRIDER_HEAD)));
+        builder.put(EffectSkullBlock.Types.TADPOLE, new TadpoleHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.TADPOLE_HEAD)));
         builder.put(EffectSkullBlock.Types.TRADER_LLAMA_CREAMY, new LlamaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD_DECOR), "trader"));
         builder.put(EffectSkullBlock.Types.TRADER_LLAMA_WHITE, new LlamaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD_DECOR), "trader"));
         builder.put(EffectSkullBlock.Types.TRADER_LLAMA_BROWN, new LlamaHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.LLAMA_HEAD_DECOR), "trader"));
