@@ -10,6 +10,7 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> SHULKER_HEAD = tag("shulker_head");
         public static final TagKey<Item> COLORED_SHULKER_HEAD = tag("colored_shulker_head");
+        public static final TagKey<Item> COLORED_SHEEP_HEAD = tag("colored_sheep_head");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(MoreMobHeadsMod.MOD_ID, name));

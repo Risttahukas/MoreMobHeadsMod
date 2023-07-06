@@ -67,5 +67,22 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.tag(ModTags.Items.COLORED_SHULKER_HEAD).add(ModItems.SHULKER_HEAD_GREEN.get());
         this.tag(ModTags.Items.COLORED_SHULKER_HEAD).add(ModItems.SHULKER_HEAD_RED.get());
         this.tag(ModTags.Items.COLORED_SHULKER_HEAD).add(ModItems.SHULKER_HEAD_BLACK.get());
+
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_WHITE.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_ORANGE.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_MAGENTA.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_LIGHT_BLUE.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_YELLOW.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_LIME.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_PINK.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_GRAY.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_LIGHT_GRAY.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_CYAN.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_PURPLE.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_BLUE.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_BROWN.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHEEP_HEAD_GREEN.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHULKER_HEAD_RED.get());
+        this.tag(ModTags.Items.COLORED_SHEEP_HEAD).add(ModItems.SHULKER_HEAD_BLACK.get());
     }
 }

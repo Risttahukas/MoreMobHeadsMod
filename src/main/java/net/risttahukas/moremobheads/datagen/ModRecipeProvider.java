@@ -120,5 +120,103 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.BLACK_DYE)
                 .unlockedBy("has_shulker_head", has(ModTags.Items.SHULKER_HEAD))
                 .save(finishedRecipeConsumer);
+
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_WHITE.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.WHITE_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_ORANGE.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.ORANGE_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_MAGENTA.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.MAGENTA_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_LIGHT_BLUE.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.LIGHT_BLUE_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_YELLOW.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.YELLOW_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_LIME.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.LIME_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_PINK.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.PINK_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_GRAY.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.GRAY_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_LIGHT_GRAY.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.LIGHT_GRAY_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_CYAN.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.CYAN_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.SHULKER_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_PURPLE.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.PURPLE_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_BLUE.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.BLUE_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_BROWN.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.BROWN_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_GREEN.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.GREEN_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_RED.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.RED_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_BLACK.get())
+                .requires(ModTags.Items.COLORED_SHEEP_HEAD)
+                .requires(Items.BLACK_DYE)
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
     }
 }
