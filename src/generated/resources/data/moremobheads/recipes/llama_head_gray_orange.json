@@ -3,13 +3,13 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "moremobheads:shulker_head"
+      "tag": "moremobheads:gray_llama_head"
     },
     {
-      "item": "minecraft:water_bucket"
+      "item": "minecraft:orange_carpet"
     }
   ],
   "result": {
-    "item": "moremobheads:shulker_head"
+    "item": "moremobheads:llama_head_gray_orange"
   }
 }

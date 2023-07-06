@@ -20,9 +20,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> finishedRecipeConsumer) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHULKER_HEAD.get())
-                .requires(ModTags.Items.COLORED_SHULKER_HEAD)
+                .requires(ModTags.Items.SHULKER_HEAD)
                 .requires(Items.WATER_BUCKET)
-                .unlockedBy("has_colored_shulker_head", has(ModTags.Items.COLORED_SHULKER_HEAD))
+                .unlockedBy("has_shulker_head", has(ModTags.Items.SHULKER_HEAD))
                 .save(finishedRecipeConsumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHULKER_HEAD_WHITE.get())
@@ -180,7 +180,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_CYAN.get())
                 .requires(ModTags.Items.COLORED_SHEEP_HEAD)
                 .requires(Items.CYAN_DYE)
-                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.SHULKER_HEAD))
+                .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
                 .save(finishedRecipeConsumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SHEEP_HEAD_PURPLE.get())
@@ -217,6 +217,418 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModTags.Items.COLORED_SHEEP_HEAD)
                 .requires(Items.BLACK_DYE)
                 .unlockedBy("has_colored_sheep_head", has(ModTags.Items.COLORED_SHEEP_HEAD))
+                .save(finishedRecipeConsumer);
+
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_WHITE.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.WHITE_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_ORANGE.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.ORANGE_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_MAGENTA.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.MAGENTA_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_LIGHT_BLUE.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.LIGHT_BLUE_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_YELLOW.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.YELLOW_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_LIME.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.LIME_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_PINK.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.PINK_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_GRAY.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.GRAY_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_LIGHT_GRAY.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.LIGHT_GRAY_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_CYAN.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.CYAN_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_PURPLE.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.PURPLE_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_BLUE.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.BLUE_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_BROWN.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.BROWN_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_GREEN.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.GREEN_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_RED.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.RED_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_CREAMY_BLACK.get())
+                .requires(ModTags.Items.CREAMY_LLAMA_HEAD)
+                .requires(Items.BLACK_CARPET)
+                .unlockedBy("has_creamy_llama_head", has(ModTags.Items.CREAMY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_WHITE.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.WHITE_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_ORANGE.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.ORANGE_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_MAGENTA.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.MAGENTA_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_LIGHT_BLUE.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.LIGHT_BLUE_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_YELLOW.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.YELLOW_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_LIME.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.LIME_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_PINK.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.PINK_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_GRAY.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.GRAY_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_LIGHT_GRAY.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.LIGHT_GRAY_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_CYAN.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.CYAN_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_PURPLE.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.PURPLE_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_BLUE.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.BLUE_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_BROWN.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.BROWN_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_GREEN.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.GREEN_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_RED.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.RED_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_WHITE_BLACK.get())
+                .requires(ModTags.Items.WHITE_LLAMA_HEAD)
+                .requires(Items.BLACK_CARPET)
+                .unlockedBy("has_white_llama_head", has(ModTags.Items.WHITE_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_WHITE.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.WHITE_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_ORANGE.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.ORANGE_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_MAGENTA.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.MAGENTA_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_LIGHT_BLUE.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.LIGHT_BLUE_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_YELLOW.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.YELLOW_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_LIME.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.LIME_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_PINK.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.PINK_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_GRAY.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.GRAY_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_LIGHT_GRAY.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.LIGHT_GRAY_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_CYAN.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.CYAN_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_PURPLE.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.PURPLE_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_BLUE.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.BLUE_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_BROWN.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.BROWN_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_GREEN.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.GREEN_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_RED.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.RED_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_BROWN_BLACK.get())
+                .requires(ModTags.Items.BROWN_LLAMA_HEAD)
+                .requires(Items.BLACK_CARPET)
+                .unlockedBy("has_brown_llama_head", has(ModTags.Items.BROWN_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_WHITE.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.WHITE_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_ORANGE.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.ORANGE_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_MAGENTA.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.MAGENTA_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_LIGHT_BLUE.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.LIGHT_BLUE_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_YELLOW.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.YELLOW_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_LIME.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.LIME_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_PINK.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.PINK_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_GRAY.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.GRAY_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_LIGHT_GRAY.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.LIGHT_GRAY_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_CYAN.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.CYAN_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_PURPLE.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.PURPLE_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_BLUE.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.BLUE_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_BROWN.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.BROWN_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_GREEN.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.GREEN_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_RED.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.RED_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.LLAMA_HEAD_GRAY_BLACK.get())
+                .requires(ModTags.Items.GRAY_LLAMA_HEAD)
+                .requires(Items.BLACK_CARPET)
+                .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
                 .save(finishedRecipeConsumer);
     }
 }

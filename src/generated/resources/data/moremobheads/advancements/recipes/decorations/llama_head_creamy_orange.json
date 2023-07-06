@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_shulker_head": {
+    "has_creamy_llama_head": {
       "conditions": {
         "items": [
           {
-            "tag": "moremobheads:shulker_head"
+            "tag": "moremobheads:creamy_llama_head"
           }
         ]
       },
@@ -13,20 +13,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "moremobheads:shulker_head"
+        "recipe": "moremobheads:llama_head_creamy_orange"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_shulker_head",
+      "has_creamy_llama_head",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "moremobheads:shulker_head"
+      "moremobheads:llama_head_creamy_orange"
     ]
   },
   "sends_telemetry_event": false

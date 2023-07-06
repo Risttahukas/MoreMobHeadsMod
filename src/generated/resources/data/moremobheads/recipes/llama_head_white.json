@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "moremobheads:white_llama_head"
+    }
+  ],
+  "result": {
+    "item": "moremobheads:llama_head_white"
+  }
+}

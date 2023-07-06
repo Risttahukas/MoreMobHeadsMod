@@ -1,32 +1,32 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_shulker_head": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moremobheads:llama_head_white_lime"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_llama_head": {
       "conditions": {
         "items": [
           {
-            "tag": "moremobheads:shulker_head"
+            "tag": "moremobheads:white_llama_head"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "moremobheads:shulker_head"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_shulker_head",
+      "has_white_llama_head",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "moremobheads:shulker_head"
+      "moremobheads:llama_head_white_lime"
     ]
   },
   "sends_telemetry_event": false

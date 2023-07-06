@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "moremobheads:creamy_llama_head"
+    },
+    {
+      "item": "minecraft:white_carpet"
+    }
+  ],
+  "result": {
+    "item": "moremobheads:llama_head_creamy_white"
+  }
+}
