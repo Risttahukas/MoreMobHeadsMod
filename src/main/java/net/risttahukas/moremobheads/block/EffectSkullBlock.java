@@ -227,7 +227,7 @@ public class EffectSkullBlock extends SkullBlock {
             return STRIDER_SHAPE;
         } if (Types.TADPOLE.equals(this.getType())) {
             return TADPOLE_SHAPE;
-        } if (Types.TROPICAL_FISH.equals(this.getType())) {
+        } if (Types.TROPICAL_FISH.equals(this.getType()) || Types.SILVERFISH.equals(this.getType())) {
             return TROPICAL_FISH_SHAPE;
         } if (Types.WANDERING_TRADER.equals(this.getType()) || Types.WITCH.equals(this.getType()) ||
                 Types.EVOKER.equals(this.getType()) || Types.ILLUSIONER.equals(this.getType()) ||
@@ -494,6 +494,7 @@ public class EffectSkullBlock extends SkullBlock {
         SHULKER_GREEN,
         SHULKER_RED,
         SHULKER_BLACK,
+        SILVERFISH,
         SLIME,
         SNIFFER,
         SNOW_GOLEM,

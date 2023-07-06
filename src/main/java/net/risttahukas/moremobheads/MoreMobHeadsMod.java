@@ -270,6 +270,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.SHULKER_HEAD_RED);
             event.accept(ModItems.SHULKER_HEAD_BLACK);
             event.accept(Items.SKELETON_SKULL);
+            event.accept(ModItems.SILVERFISH_HEAD);
             event.accept(ModItems.SLIME_HEAD);
             event.accept(ModItems.SNIFFER_HEAD);
             event.accept(ModItems.SNOW_GOLEM_HEAD);

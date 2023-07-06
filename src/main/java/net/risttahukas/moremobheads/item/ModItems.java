@@ -878,6 +878,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.SHULKER_HEAD_BLACK.get(), ModBlocks.SHULKER_WALL_HEAD_BLACK.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> SILVERFISH_HEAD = ITEMS.register("silverfish_head", () ->
+            new EffectSkullItem(ModBlocks.SILVERFISH_HEAD.get(), ModBlocks.SILVERFISH_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> SLIME_HEAD = ITEMS.register("slime_head", () ->
             new EffectSkullItem(ModBlocks.SLIME_HEAD.get(), ModBlocks.SLIME_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

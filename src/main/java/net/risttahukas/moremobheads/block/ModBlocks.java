@@ -1526,6 +1526,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SHULKER_BLACK, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(SHULKER_HEAD_BLACK).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> SILVERFISH_HEAD = BLOCKS.register("silverfish_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.SILVERFISH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SILVERFISH_WALL_HEAD = BLOCKS.register("silverfish_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.SILVERFISH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(SILVERFISH_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> SLIME_HEAD = BLOCKS.register("slime_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.SLIME, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

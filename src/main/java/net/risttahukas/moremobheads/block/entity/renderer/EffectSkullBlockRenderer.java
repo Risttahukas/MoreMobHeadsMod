@@ -259,6 +259,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHULKER_GREEN, new ResourceLocation("textures/entity/shulker/shulker_green.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHULKER_RED, new ResourceLocation("textures/entity/shulker/shulker_red.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SHULKER_BLACK, new ResourceLocation("textures/entity/shulker/shulker_black.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.SILVERFISH, new ResourceLocation("textures/entity/silverfish.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SLIME, new ResourceLocation("textures/entity/slime/slime.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SNIFFER, new ResourceLocation("textures/entity/sniffer/sniffer.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.SNOW_GOLEM, new ResourceLocation("textures/entity/snow_golem.png"));
@@ -310,7 +311,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
             float horizontalTranslation = 0.25F;
             float verticalTranslation = 0.25F;
             if (skullModelBase instanceof AxolotlHeadModel || skullModelBase instanceof CatHeadModel ||
-                    skullModelBase instanceof WolfHeadModel) {
+                    skullModelBase instanceof WolfHeadModel || skullModelBase instanceof SilverfishHeadModel) {
                 horizontalTranslation = 0.375F;
             } else if (skullModelBase instanceof AllayHeadModel || skullModelBase instanceof OcelotHeadModel ||
                     skullModelBase instanceof WardenHeadModel || skullModelBase instanceof PhantomHeadModel) {
@@ -622,6 +623,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.SHULKER_GREEN, new ShulkerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHULKER_HEAD)));
         builder.put(EffectSkullBlock.Types.SHULKER_RED, new ShulkerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHULKER_HEAD)));
         builder.put(EffectSkullBlock.Types.SHULKER_BLACK, new ShulkerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SHULKER_HEAD)));
+        builder.put(EffectSkullBlock.Types.SILVERFISH, new SilverfishHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SILVERFISH_HEAD)));
         builder.put(EffectSkullBlock.Types.SLIME, new SlimeHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SLIME_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.SLIME_HEAD_OUTER_LAYER)));
         builder.put(EffectSkullBlock.Types.SNIFFER, new SnifferHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SNIFFER_HEAD)));
         builder.put(EffectSkullBlock.Types.SNOW_GOLEM, new SnowGolemHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.SNOW_GOLEM_HEAD)));

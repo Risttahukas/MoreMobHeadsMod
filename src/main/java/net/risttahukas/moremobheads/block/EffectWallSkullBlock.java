@@ -171,6 +171,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 10.0D, 8.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 5.0D, 8.0D, 10.0D, 11.0D),
             Direction.WEST, Block.box(8.0D, 4.0D, 5.0D, 16.0D, 10.0D, 11.0D)));
+    private static final Map<Direction, VoxelShape> SILVERFISH_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(6.0D, 4.0D, 12.0D, 10.0D, 7.0D, 16.0D),
+            Direction.SOUTH, Block.box(6.0D, 4.0D, 0.0D, 10.0D, 7.0D, 4.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 6.0D, 4.0D, 7.0D, 10.0D),
+            Direction.WEST, Block.box(12.0D, 4.0D, 6.0D, 16.0D, 7.0D, 10.0D)));
     private static final Map<Direction, VoxelShape> SNIFFER_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.75D, 4.0D, 6.0D, 11.25D, 11.5D, 16.0D),
             Direction.SOUTH, Block.box(4.75D, 4.0D, 0.0D, 11.25D, 11.5D, 10.0D),
@@ -454,6 +459,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                 EffectSkullBlock.Types.SHEEP_BLACK.equals(this.getType()) ||
                 EffectSkullBlock.Types.SHEEP_RAINBOW.equals(this.getType())) {
             return SHEEP_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.SILVERFISH.equals(this.getType())) {
+            return SILVERFISH_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.SNIFFER.equals(this.getType())) {
             return SNIFFER_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.SQUID.equals(this.getType()) ||
