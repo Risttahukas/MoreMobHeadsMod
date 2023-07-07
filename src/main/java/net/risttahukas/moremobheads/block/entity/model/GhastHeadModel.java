@@ -55,18 +55,18 @@ public class GhastHeadModel extends SkullModel {
     }
 
     @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer,
-                               int p_103817_, int p_103818_,
-                               float p_103819_, float p_103820_, float p_103821_, float p_103822_) {
-        poseStack.scale(0.5F, 0.5F, 0.5F);
-        this.head.render(poseStack, vertexConsumer, p_103817_, p_103818_, p_103819_, p_103820_, p_103821_, p_103822_);
-    }
-
-    @Override
     public void setupAnim(float animationTickCount, float p_103812_, float p_103813_) {
         super.setupAnim(animationTickCount, p_103812_, p_103813_);
         for(int i = 0; i < this.tentacles.length; ++i) {
             this.tentacles[i].xRot = 0.2F * Mth.sin(animationTickCount * 0.3F + (float)i) + 0.4F;
         }
+    }
+
+    @Override
+    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer,
+                               int p_103817_, int p_103818_,
+                               float p_103819_, float p_103820_, float p_103821_, float p_103822_) {
+        poseStack.scale(0.5F, 0.5F, 0.5F);
+        this.head.render(poseStack, vertexConsumer, p_103817_, p_103818_, p_103819_, p_103820_, p_103821_, p_103822_);
     }
 }

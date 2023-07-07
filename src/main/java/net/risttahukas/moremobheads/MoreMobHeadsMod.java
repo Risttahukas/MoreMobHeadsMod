@@ -93,6 +93,8 @@ public class MoreMobHeadsMod
             event.accept(ModItems.FROG_HEAD_COLD);
             event.accept(ModItems.GHAST_HEAD);
             event.accept(ModItems.GLOW_SQUID_HEAD);
+            event.accept(ModItems.GUARDIAN_HEAD);
+            event.accept(ModItems.GUARDIAN_ELDER_HEAD);
             event.accept(ModItems.HORSE_HEAD_WHITE);
             event.accept(ModItems.HORSE_HEAD_CREAMY);
             event.accept(ModItems.HORSE_HEAD_CHESTNUT);

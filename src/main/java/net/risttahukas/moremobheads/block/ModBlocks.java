@@ -308,6 +308,20 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GLOW_SQUID, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(GLOW_SQUID_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> GUARDIAN_HEAD = BLOCKS.register("guardian_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.GUARDIAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> GUARDIAN_WALL_HEAD = BLOCKS.register("guardian_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GUARDIAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(GUARDIAN_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> GUARDIAN_ELDER_HEAD = BLOCKS.register("guardian_elder_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.GUARDIAN_ELDER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> GUARDIAN_ELDER_WALL_HEAD = BLOCKS.register("guardian_elder_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GUARDIAN_ELDER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(GUARDIAN_ELDER_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> HORSE_HEAD_WHITE = BLOCKS.register("horse_head_white",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_WHITE, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

@@ -35,6 +35,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 7.0D, 12.0D);
     protected static final VoxelShape DONKEY_SHAPE =
             Block.box(4.955D, 0.0D, 4.955D, 11.045D, 9.57D, 11.045D);
+    protected static final VoxelShape ELDER_GUARDIAN_SHAPE =
+            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
     protected static final VoxelShape ENDERMITE_SHAPE =
             Block.box(6.0D, 0.0D, 6.0D, 10.0D, 3.0D, 10.0D);
     protected static final VoxelShape FROG_SHAPE =
@@ -118,6 +120,8 @@ public class EffectSkullBlock extends SkullBlock {
             return DOLPHIN_SHAPE;
         } if (Types.DONKEY.equals(this.getType())) {
             return DONKEY_SHAPE;
+        } if (Types.GUARDIAN_ELDER.equals(this.getType())) {
+            return ELDER_GUARDIAN_SHAPE;
         } if (Types.ENDERMITE.equals(this.getType())) {
             return ENDERMITE_SHAPE;
         } if (Types.FROG_TEMPERATE.equals(this.getType()) || Types.FROG_WARM.equals(this.getType()) ||
@@ -271,7 +275,8 @@ public class EffectSkullBlock extends SkullBlock {
                     blockState.is(ModBlocks.BEE_HEAD.get()) || blockState.is(ModBlocks.BEE_HEAD_ANGRY.get()) ||
                     blockState.is(ModBlocks.BEE_HEAD_POLLEN.get()) || blockState.is(ModBlocks.BEE_HEAD_ANGRY_POLLEN.get()) ||
                     blockState.is(ModBlocks.TADPOLE_HEAD.get()) || blockState.is(ModBlocks.FROG_HEAD_TEMPERATE.get()) ||
-                    blockState.is(ModBlocks.FROG_HEAD_WARM.get()) || blockState.is(ModBlocks.FROG_HEAD_COLD.get());
+                    blockState.is(ModBlocks.FROG_HEAD_WARM.get()) || blockState.is(ModBlocks.FROG_HEAD_COLD.get()) ||
+                    blockState.is(ModBlocks.GUARDIAN_HEAD.get()) || blockState.is(ModBlocks.GUARDIAN_ELDER_HEAD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);
@@ -324,6 +329,8 @@ public class EffectSkullBlock extends SkullBlock {
         FROG_COLD,
         GHAST,
         GLOW_SQUID,
+        GUARDIAN,
+        GUARDIAN_ELDER,
         HORSE_WHITE,
         HORSE_CREAMY,
         HORSE_CHESTNUT,
