@@ -61,6 +61,7 @@ public class ModBlockEntities {
                             ModBlocks.GOAT_HEAD_SCREAMING.get(), ModBlocks.GOAT_WALL_HEAD_SCREAMING.get(),
                             ModBlocks.GUARDIAN_HEAD.get(), ModBlocks.GUARDIAN_WALL_HEAD.get(),
                             ModBlocks.GUARDIAN_ELDER_HEAD.get(), ModBlocks.GUARDIAN_ELDER_WALL_HEAD.get(),
+                            ModBlocks.HOGLIN_HEAD.get(), ModBlocks.HOGLIN_WALL_HEAD.get(),
                             ModBlocks.HORSE_HEAD_WHITE.get(), ModBlocks.HORSE_WALL_HEAD_WHITE.get(),
                             ModBlocks.HORSE_HEAD_CREAMY.get(), ModBlocks.HORSE_WALL_HEAD_CREAMY.get(),
                             ModBlocks.HORSE_HEAD_CHESTNUT.get(), ModBlocks.HORSE_WALL_HEAD_CHESTNUT.get(),
@@ -260,6 +261,7 @@ public class ModBlockEntities {
                             ModBlocks.WOLF_HEAD.get(), ModBlocks.WOLF_WALL_HEAD.get(),
                             ModBlocks.WOLF_HEAD_TAME.get(), ModBlocks.WOLF_WALL_HEAD_TAME.get(),
                             ModBlocks.WOLF_HEAD_ANGRY.get(), ModBlocks.WOLF_WALL_HEAD_ANGRY.get(),
+                            ModBlocks.ZOGLIN_HEAD.get(), ModBlocks.ZOGLIN_WALL_HEAD.get(),
                             ModBlocks.ZOMBIFIED_PIGLIN_HEAD.get(), ModBlocks.ZOMBIFIED_PIGLIN_WALL_HEAD.get())
                     .build(null));
 

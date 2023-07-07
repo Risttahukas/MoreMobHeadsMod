@@ -41,6 +41,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(6.0D, 0.0D, 6.0D, 10.0D, 3.0D, 10.0D);
     protected static final VoxelShape FROG_SHAPE =
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 5.0D, 12.0D);
+    protected static final VoxelShape HOGLIN_SHAPE =
+            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 3.0D, 12.0D);
     protected static final VoxelShape HORSE_SHAPE =
             Block.box(4.15D, 0.0D, 4.15D, 11.85D, 12.1D, 11.85D);
     protected static final VoxelShape HUSK_SHAPE =
@@ -128,6 +130,8 @@ public class EffectSkullBlock extends SkullBlock {
         } if (Types.FROG_TEMPERATE.equals(this.getType()) || Types.FROG_WARM.equals(this.getType()) ||
                 Types.FROG_COLD.equals(this.getType())) {
             return FROG_SHAPE;
+        } if (Types.HOGLIN.equals(this.getType()) || Types.ZOGLIN.equals(this.getType())) {
+            return HOGLIN_SHAPE;
         } if (Types.HORSE_WHITE.equals(this.getType()) || Types.HORSE_CREAMY.equals(this.getType()) ||
                 Types.HORSE_CHESTNUT.equals(this.getType()) || Types.HORSE_BROWN.equals(this.getType()) ||
                 Types.HORSE_BLACK.equals(this.getType()) || Types.HORSE_GRAY.equals(this.getType()) ||
@@ -334,6 +338,7 @@ public class EffectSkullBlock extends SkullBlock {
         GLOW_SQUID,
         GUARDIAN,
         GUARDIAN_ELDER,
+        HOGLIN,
         HORSE_WHITE,
         HORSE_CREAMY,
         HORSE_CHESTNUT,
@@ -533,6 +538,7 @@ public class EffectSkullBlock extends SkullBlock {
         WOLF,
         WOLF_TAME,
         WOLF_ANGRY,
+        ZOGLIN,
         ZOMBIFIED_PIGLIN
     }
 }

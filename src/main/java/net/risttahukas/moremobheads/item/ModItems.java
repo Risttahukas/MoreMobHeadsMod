@@ -198,6 +198,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.GUARDIAN_ELDER_HEAD.get(), ModBlocks.GUARDIAN_ELDER_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
 
+    public static final RegistryObject<Item> HOGLIN_HEAD = ITEMS.register("hoglin_head", () ->
+            new EffectSkullItem(ModBlocks.HOGLIN_HEAD.get(), ModBlocks.HOGLIN_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> HORSE_HEAD_WHITE = ITEMS.register("horse_head_white", () ->
             new EffectSkullItem(ModBlocks.HORSE_HEAD_WHITE.get(), ModBlocks.HORSE_WALL_HEAD_WHITE.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
@@ -992,6 +996,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> WOLF_HEAD_ANGRY = ITEMS.register("wolf_head_angry", () ->
             new EffectSkullItem(ModBlocks.WOLF_HEAD_ANGRY.get(), ModBlocks.WOLF_WALL_HEAD_ANGRY.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOGLIN_HEAD = ITEMS.register("zoglin_head", () ->
+            new EffectSkullItem(ModBlocks.ZOGLIN_HEAD.get(), ModBlocks.ZOGLIN_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> ZOMBIFIED_PIGLIN_HEAD = ITEMS.register("zombified_piglin_head", () ->

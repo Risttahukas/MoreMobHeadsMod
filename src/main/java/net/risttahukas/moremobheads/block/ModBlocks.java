@@ -336,6 +336,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GUARDIAN_ELDER, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(GUARDIAN_ELDER_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> HOGLIN_HEAD = BLOCKS.register("hoglin_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.HOGLIN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> HOGLIN_WALL_HEAD = BLOCKS.register("hoglin_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.HOGLIN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(HOGLIN_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> HORSE_HEAD_WHITE = BLOCKS.register("horse_head_white",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.HORSE_WHITE, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
@@ -1728,6 +1735,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> WOLF_WALL_HEAD_ANGRY = BLOCKS.register("wolf_wall_head_angry",
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.WOLF_ANGRY, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(WOLF_HEAD_ANGRY).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOGLIN_HEAD = BLOCKS.register("zoglin_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOGLIN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOGLIN_WALL_HEAD = BLOCKS.register("zoglin_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOGLIN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOGLIN_HEAD).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> ZOMBIFIED_PIGLIN_HEAD = BLOCKS.register("zombified_piglin_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIFIED_PIGLIN, BlockBehaviour.Properties.of()

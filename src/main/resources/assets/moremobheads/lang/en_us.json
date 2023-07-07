@@ -45,6 +45,7 @@
   "block.moremobheads.goat_head_screaming": "Screaming Goat Head",
   "block.moremobheads.guardian_head": "Guardian Head",
   "block.moremobheads.guardian_elder_head": "Elder Guardian Head",
+  "block.moremobheads.hoglin_head": "Hoglin Head",
   "block.moremobheads.horse_head_white": "Horse Head",
   "block.moremobheads.horse_head_creamy": "Horse Head",
   "block.moremobheads.horse_head_chestnut": "Horse Head",
@@ -244,6 +245,7 @@
   "block.moremobheads.wolf_head": "Wolf Head",
   "block.moremobheads.wolf_head_tame": "Tamed Wolf Head",
   "block.moremobheads.wolf_head_angry": "Angry Wolf Head",
+  "block.moremobheads.zoglin_head": "Zoglin Head",
   "block.moremobheads.zombified_piglin_head": "Zombified Piglin Head",
 
   "creativemodetab.mob_heads_tab": "Mob Heads"

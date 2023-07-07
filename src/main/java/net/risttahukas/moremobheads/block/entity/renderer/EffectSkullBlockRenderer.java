@@ -89,6 +89,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.GOAT_SCREAMING, new ResourceLocation("textures/entity/goat/goat.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.GUARDIAN, new ResourceLocation("textures/entity/guardian.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.GUARDIAN_ELDER, new ResourceLocation("textures/entity/guardian_elder.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.HOGLIN, new ResourceLocation("textures/entity/hoglin/hoglin.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_WHITE, new ResourceLocation("textures/entity/horse/horse_white.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_CREAMY, new ResourceLocation("textures/entity/horse/horse_creamy.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.HORSE_CHESTNUT, new ResourceLocation("textures/entity/horse/horse_chestnut.png"));
@@ -288,6 +289,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WOLF, new ResourceLocation("textures/entity/wolf/wolf.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WOLF_TAME, new ResourceLocation("textures/entity/wolf/wolf_tame.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WOLF_ANGRY, new ResourceLocation("textures/entity/wolf/wolf_angry.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.ZOGLIN, new ResourceLocation("textures/entity/hoglin/zoglin.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.ZOMBIFIED_PIGLIN, new ResourceLocation("textures/entity/piglin/zombified_piglin.png"));
     }
 
@@ -362,7 +364,10 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
                 horizontalTranslation = 0.40625F;
             } else if (skullModelBase instanceof ElderGuardianHeadModel) {
                 horizontalTranslation = 0.125F;
+            } else if (skullModelBase instanceof HoglinHeadModel) {
+                horizontalTranslation = 0.203125F;
             }
+
             poseStack.translate(0.5F - (float)direction.getStepX() * horizontalTranslation, verticalTranslation,
                     0.5F - (float)direction.getStepZ() * horizontalTranslation);
         }
@@ -461,6 +466,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.GOAT_SCREAMING, new GoatHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.GOAT_HEAD)));
         builder.put(EffectSkullBlock.Types.GUARDIAN, new GuardianHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.GUARDIAN_HEAD)));
         builder.put(EffectSkullBlock.Types.GUARDIAN_ELDER, new ElderGuardianHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.GUARDIAN_HEAD)));
+        builder.put(EffectSkullBlock.Types.HOGLIN, new HoglinHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HOGLIN_HEAD)));
         builder.put(EffectSkullBlock.Types.HORSE_WHITE, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.NONE));
         builder.put(EffectSkullBlock.Types.HORSE_CREAMY, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.NONE));
         builder.put(EffectSkullBlock.Types.HORSE_CHESTNUT, new HorseHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.HORSE_HEAD_MARKINGS), Markings.NONE));
@@ -660,6 +666,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.WOLF, new WolfHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WOLF_HEAD)));
         builder.put(EffectSkullBlock.Types.WOLF_TAME, new WolfHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WOLF_HEAD)));
         builder.put(EffectSkullBlock.Types.WOLF_ANGRY, new WolfHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WOLF_HEAD)));
+        builder.put(EffectSkullBlock.Types.ZOGLIN, new HoglinHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.HOGLIN_HEAD)));
         builder.put(EffectSkullBlock.Types.ZOMBIFIED_PIGLIN, new PiglinHeadModel(entityModelSet.bakeLayer(ModelLayers.PIGLIN_HEAD)));
         ModLoader.get().postEvent(new EntityRenderersEvent.CreateSkullModels(builder, entityModelSet));
         return builder.build();

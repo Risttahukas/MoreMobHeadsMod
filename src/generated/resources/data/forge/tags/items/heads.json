@@ -46,6 +46,7 @@
     "moremobheads:goat_head_screaming",
     "moremobheads:guardian_head",
     "moremobheads:guardian_elder_head",
+    "moremobheads:hoglin_head",
     "moremobheads:horse_head_white",
     "moremobheads:horse_head_creamy",
     "moremobheads:horse_head_chestnut",
@@ -245,6 +246,7 @@
     "moremobheads:wolf_head",
     "moremobheads:wolf_head_tame",
     "moremobheads:wolf_head_angry",
+    "moremobheads:zoglin_head",
     "moremobheads:zombified_piglin_head"
   ]
 }

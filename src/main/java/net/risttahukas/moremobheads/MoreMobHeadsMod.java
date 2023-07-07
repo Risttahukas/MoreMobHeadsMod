@@ -95,7 +95,9 @@ public class MoreMobHeadsMod
             event.accept(ModItems.GLOW_SQUID_HEAD);
             event.accept(ModItems.GOAT_HEAD);
             event.accept(ModItems.GOAT_HEAD_SCREAMING);
+            event.accept(ModItems.GUARDIAN_HEAD);
             event.accept(ModItems.GUARDIAN_ELDER_HEAD);
+            event.accept(ModItems.HOGLIN_HEAD);
             event.accept(ModItems.HORSE_HEAD_WHITE);
             event.accept(ModItems.HORSE_HEAD_CREAMY);
             event.accept(ModItems.HORSE_HEAD_CHESTNUT);
@@ -299,6 +301,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.WOLF_HEAD_TAME);
             event.accept(ModItems.WOLF_HEAD_ANGRY);
             event.accept(Items.WITHER_SKELETON_SKULL);
+            event.accept(ModItems.ZOGLIN_HEAD);
             event.accept(Items.ZOMBIE_HEAD);
             event.accept(ModItems.ZOMBIFIED_PIGLIN_HEAD);
         }
