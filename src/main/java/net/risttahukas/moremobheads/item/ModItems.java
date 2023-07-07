@@ -182,6 +182,14 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.GLOW_SQUID_HEAD.get(), ModBlocks.GLOW_SQUID_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> GOAT_HEAD = ITEMS.register("goat_head", () ->
+            new EffectSkullItem(ModBlocks.GOAT_HEAD.get(), ModBlocks.GOAT_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> GOAT_HEAD_SCREAMING = ITEMS.register("goat_head_screaming", () ->
+            new EffectSkullItem(ModBlocks.GOAT_HEAD_SCREAMING.get(), ModBlocks.GOAT_WALL_HEAD_SCREAMING.get(),
+                    (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
+
     public static final RegistryObject<Item> GUARDIAN_HEAD = ITEMS.register("guardian_head", () ->
             new EffectSkullItem(ModBlocks.GUARDIAN_HEAD.get(), ModBlocks.GUARDIAN_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

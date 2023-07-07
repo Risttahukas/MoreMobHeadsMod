@@ -308,6 +308,20 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GLOW_SQUID, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(GLOW_SQUID_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> GOAT_HEAD = BLOCKS.register("goat_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.GOAT, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> GOAT_WALL_HEAD = BLOCKS.register("goat_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GOAT, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(GOAT_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> GOAT_HEAD_SCREAMING = BLOCKS.register("goat_head_screaming",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.GOAT_SCREAMING, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> GOAT_WALL_HEAD_SCREAMING = BLOCKS.register("goat_wall_head_screaming",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.GOAT_SCREAMING, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(GOAT_HEAD_SCREAMING).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> GUARDIAN_HEAD = BLOCKS.register("guardian_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.GUARDIAN, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

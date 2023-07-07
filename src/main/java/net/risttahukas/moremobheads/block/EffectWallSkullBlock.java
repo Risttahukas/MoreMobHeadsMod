@@ -106,6 +106,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.5D, 4.0D, 0.0D, 11.5D, 9.0D, 9.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.5D, 9.0D, 9.0D, 11.5D),
             Direction.WEST, Block.box(7.0D, 4.0D, 4.5D, 16.0D, 9.0D, 11.5D)));
+    private static final Map<Direction, VoxelShape> GOAT_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(5.5D, 4.0D, 6.0D, 10.5D, 11.0D, 16.0D),
+            Direction.SOUTH, Block.box(5.5D, 4.0D, 0.0D, 10.5D, 11.0D, 10.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 5.5D, 10.0D, 11.0D, 10.5D),
+            Direction.WEST, Block.box(6.0D, 4.0D, 5.5D, 16.0D, 11.0D, 10.5D)));
     private static final Map<Direction, VoxelShape> HORSE_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.7D, 3.0D, 8.3D, 11.3D, 15.1D, 16.0D),
             Direction.SOUTH, Block.box(4.7D, 3.0D, 0.0D, 11.3D, 15.1D, 7.7D),
@@ -300,6 +305,9 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                 EffectSkullBlock.Types.FROG_WARM.equals(this.getType()) ||
                 EffectSkullBlock.Types.FROG_COLD.equals(this.getType())) {
             return FROG_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.GOAT.equals(this.getType()) ||
+                EffectSkullBlock.Types.GOAT_SCREAMING.equals(this.getType())) {
+            return GOAT_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.HORSE_WHITE.equals(this.getType()) ||
                 EffectSkullBlock.Types.HORSE_CREAMY.equals(this.getType()) ||
                 EffectSkullBlock.Types.HORSE_CHESTNUT.equals(this.getType()) ||

@@ -57,6 +57,8 @@ public class ModBlockEntities {
                             ModBlocks.FROG_HEAD_COLD.get(), ModBlocks.FROG_WALL_HEAD_COLD.get(),
                             ModBlocks.GHAST_HEAD.get(), ModBlocks.GHAST_WALL_HEAD.get(),
                             ModBlocks.GLOW_SQUID_HEAD.get(), ModBlocks.GLOW_SQUID_WALL_HEAD.get(),
+                            ModBlocks.GOAT_HEAD.get(), ModBlocks.GOAT_WALL_HEAD.get(),
+                            ModBlocks.GOAT_HEAD_SCREAMING.get(), ModBlocks.GOAT_WALL_HEAD_SCREAMING.get(),
                             ModBlocks.GUARDIAN_HEAD.get(), ModBlocks.GUARDIAN_WALL_HEAD.get(),
                             ModBlocks.GUARDIAN_ELDER_HEAD.get(), ModBlocks.GUARDIAN_ELDER_WALL_HEAD.get(),
                             ModBlocks.HORSE_HEAD_WHITE.get(), ModBlocks.HORSE_WALL_HEAD_WHITE.get(),

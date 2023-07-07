@@ -116,7 +116,8 @@ public class EffectSkullBlock extends SkullBlock {
             return COD_SHAPE;
         } if (Types.DOLPHIN.equals(this.getType()) || Types.BEE.equals(this.getType()) ||
                 Types.BEE_ANGRY.equals(this.getType()) || Types.BEE_POLLEN.equals(this.getType()) ||
-                Types.BEE_ANGRY_POLLEN.equals(this.getType())) {
+                Types.BEE_ANGRY_POLLEN.equals(this.getType()) || Types.GOAT.equals(this.getType()) ||
+                Types.GOAT_SCREAMING.equals(this.getType())) {
             return DOLPHIN_SHAPE;
         } if (Types.DONKEY.equals(this.getType())) {
             return DONKEY_SHAPE;
@@ -328,6 +329,8 @@ public class EffectSkullBlock extends SkullBlock {
         FROG_WARM,
         FROG_COLD,
         GHAST,
+        GOAT,
+        GOAT_SCREAMING,
         GLOW_SQUID,
         GUARDIAN,
         GUARDIAN_ELDER,
