@@ -100,7 +100,9 @@ public class EffectSkullHeadLayer<T extends LivingEntity, M extends EntityModel<
 
                 if (skullblock$type == EffectSkullBlock.Types.SHEEP_RAINBOW ||
                         skullblock$type == EffectSkullBlock.Types.CREEPER_CHARGED ||
-                        skullblock$type == EffectSkullBlock.Types.WARDEN) {
+                        skullblock$type == EffectSkullBlock.Types.WARDEN ||
+                        skullblock$type == EffectSkullBlock.Types.WITHER_SHIELD ||
+                        skullblock$type == EffectSkullBlock.Types.WITHER_INVULNERABLE_SHIELD) {
                     float tickCount = (float) ClientEvents.time + Minecraft.getInstance().getPartialTick();
                     animationProgress = tickCount / 2.0F;
                 }

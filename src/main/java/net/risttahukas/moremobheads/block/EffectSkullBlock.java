@@ -81,6 +81,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(4.5D, 0.0D, 4.5D, 11.5D, 11.0D, 11.5D);
     protected static final VoxelShape VILLAGER_SHAPE =
             Block.box(4.25D, 0.0D, 4.25D, 11.75D, 9.375D, 11.75D);
+    protected static final VoxelShape WITHER_SHAPE =
+            Block.box(3.0D, 0.0D, 3.0D, 13.0D, 11.0D, 13.0D);
     protected static final VoxelShape WOLF_SHAPE =
             Block.box(5.0D, 0.0D, 5.0D, 11.0D, 6.0D, 11.0D);
 
@@ -246,6 +248,9 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.EVOKER.equals(this.getType()) || Types.ILLUSIONER.equals(this.getType()) ||
                 Types.PILLAGER.equals(this.getType()) || Types.VINDICATOR.equals(this.getType())) {
             return VILLAGER_SHAPE;
+        } if (Types.WITHER.equals(this.getType()) || Types.WITHER_INVULNERABLE.equals(this.getType()) ||
+                Types.WITHER_SHIELD.equals(this.getType()) || Types.WITHER_INVULNERABLE_SHIELD.equals(this.getType())) {
+            return WITHER_SHAPE;
         } if (Types.WOLF.equals(this.getType()) || Types.WOLF_TAME.equals(this.getType()) ||
                 Types.WOLF_ANGRY.equals(this.getType())) {
             return WOLF_SHAPE;
@@ -281,7 +286,8 @@ public class EffectSkullBlock extends SkullBlock {
                     blockState.is(ModBlocks.BEE_HEAD_POLLEN.get()) || blockState.is(ModBlocks.BEE_HEAD_ANGRY_POLLEN.get()) ||
                     blockState.is(ModBlocks.TADPOLE_HEAD.get()) || blockState.is(ModBlocks.FROG_HEAD_TEMPERATE.get()) ||
                     blockState.is(ModBlocks.FROG_HEAD_WARM.get()) || blockState.is(ModBlocks.FROG_HEAD_COLD.get()) ||
-                    blockState.is(ModBlocks.GUARDIAN_HEAD.get()) || blockState.is(ModBlocks.GUARDIAN_ELDER_HEAD.get());
+                    blockState.is(ModBlocks.GUARDIAN_HEAD.get()) || blockState.is(ModBlocks.GUARDIAN_ELDER_HEAD.get()) ||
+                    blockState.is(ModBlocks.WITHER_HEAD_SHIELD.get()) || blockState.is(ModBlocks.WITHER_HEAD_INVULNERABLE_SHIELD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);
@@ -535,6 +541,10 @@ public class EffectSkullBlock extends SkullBlock {
         WANDERING_TRADER,
         WARDEN,
         WITCH,
+        WITHER,
+        WITHER_INVULNERABLE,
+        WITHER_SHIELD,
+        WITHER_INVULNERABLE_SHIELD,
         WOLF,
         WOLF_TAME,
         WOLF_ANGRY,

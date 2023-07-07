@@ -241,6 +241,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 5.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 5.0D, 12.0D, 12.0D),
             Direction.WEST, Block.box(11.0D, 4.0D, 4.0D, 16.0D, 12.0D, 12.0D)));
+    private static final Map<Direction, VoxelShape> WITHER_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(0.0D, 4.0D, 8.0D, 16.0D, 15.0D, 16.0D),
+            Direction.SOUTH, Block.box(0.0D, 4.0D, 0.0D, 16.0D, 15.0D, 8.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 0.0D, 8.0D, 15.0D, 16.0D),
+            Direction.WEST, Block.box(8.0D, 4.0D, 0.0D, 16.0D, 15.0D, 16.0D)));
     private static final Map<Direction, VoxelShape> WOLF_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(5.0D, 4.0D, 12.0D, 11.0D, 10.0D, 16.0D),
             Direction.SOUTH, Block.box(5.0D, 4.0D, 0.0D, 11.0D, 10.0D, 4.0D),
@@ -514,6 +519,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return VILLAGER_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.WARDEN.equals(this.getType())) {
             return WARDEN_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.WITHER.equals(this.getType()) ||
+                EffectSkullBlock.Types.WITHER_INVULNERABLE.equals(this.getType()) ||
+                EffectSkullBlock.Types.WITHER_SHIELD.equals(this.getType()) ||
+                EffectSkullBlock.Types.WITHER_INVULNERABLE_SHIELD.equals(this.getType())) {
+            return WITHER_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.WOLF.equals(this.getType()) ||
                 EffectSkullBlock.Types.WOLF_TAME.equals(this.getType()) ||
                 EffectSkullBlock.Types.WOLF_ANGRY.equals(this.getType())) {
@@ -550,7 +560,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                     blockState.is(ModBlocks.BEE_WALL_HEAD_POLLEN.get()) || blockState.is(ModBlocks.BEE_WALL_HEAD_ANGRY_POLLEN.get()) ||
                     blockState.is(ModBlocks.TADPOLE_WALL_HEAD.get()) || blockState.is(ModBlocks.FROG_WALL_HEAD_TEMPERATE.get()) ||
                     blockState.is(ModBlocks.FROG_WALL_HEAD_WARM.get()) || blockState.is(ModBlocks.FROG_WALL_HEAD_COLD.get()) ||
-                    blockState.is(ModBlocks.GUARDIAN_WALL_HEAD.get()) || blockState.is(ModBlocks.GUARDIAN_ELDER_WALL_HEAD.get());
+                    blockState.is(ModBlocks.GUARDIAN_WALL_HEAD.get()) || blockState.is(ModBlocks.GUARDIAN_ELDER_WALL_HEAD.get()) ||
+                    blockState.is(ModBlocks.WITHER_WALL_HEAD_SHIELD.get()) || blockState.is(ModBlocks.WITHER_WALL_HEAD_INVULNERABLE_SHIELD.get());
             if (flag) {
                 return createTickerHelper(tBlockEntityType, ModBlockEntities.EFFECT_SKULL.get(),
                         EffectSkullBlockEntity::animation);

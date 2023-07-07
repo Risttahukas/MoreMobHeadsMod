@@ -19,10 +19,10 @@ public class ChargedCreeperHeadModel extends SkullModel {
     protected final ModelPart headCharge;
     protected int tickCount = 0;
 
-    public ChargedCreeperHeadModel(ModelPart skinModelPart, ModelPart woolModelPart) {
+    public ChargedCreeperHeadModel(ModelPart skinModelPart, ModelPart chargeModelPart) {
         super(skinModelPart);
-        this.rootCharge = woolModelPart;
-        this.headCharge = woolModelPart.getChild("head");
+        this.rootCharge = chargeModelPart;
+        this.headCharge = chargeModelPart.getChild("head");
     }
 
     public static MeshDefinition createCreeperHeadChargeModel() {

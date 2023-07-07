@@ -286,6 +286,10 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WANDERING_TRADER, new ResourceLocation("textures/entity/wandering_trader.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WARDEN, new ResourceLocation("textures/entity/warden/warden.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WITCH, new ResourceLocation("textures/entity/witch.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.WITHER, new ResourceLocation("textures/entity/wither/wither.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.WITHER_INVULNERABLE, new ResourceLocation("textures/entity/wither/wither_invulnerable.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.WITHER_SHIELD, new ResourceLocation("textures/entity/wither/wither.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.WITHER_INVULNERABLE_SHIELD, new ResourceLocation("textures/entity/wither/wither_invulnerable.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WOLF, new ResourceLocation("textures/entity/wolf/wolf.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WOLF_TAME, new ResourceLocation("textures/entity/wolf/wolf_tame.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.WOLF_ANGRY, new ResourceLocation("textures/entity/wolf/wolf_angry.png"));
@@ -403,6 +407,8 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
             tropicalFishHeadModelA.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else if (skullModelBase instanceof WardenHeadModel wardenHeadModel) {
             wardenHeadModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+        } else if (skullModelBase instanceof WitherHeadArmorModel witherHeadArmorModel) {
+            witherHeadArmorModel.renderToBuffer(poseStack, vertexconsumer, multiBufferSource, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         } else {
             skullModelBase.renderToBuffer(poseStack, vertexconsumer, p_173669_, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         }
@@ -663,6 +669,10 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.WANDERING_TRADER, new VillagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.VILLAGER_HEAD)));
         builder.put(EffectSkullBlock.Types.WARDEN, new WardenHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WARDEN_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.WARDEN_HEAD_EMISSIVE)));
         builder.put(EffectSkullBlock.Types.WITCH, new WitchHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WITCH_HEAD)));
+        builder.put(EffectSkullBlock.Types.WITHER, new WitherHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WITHER_HEAD)));
+        builder.put(EffectSkullBlock.Types.WITHER_INVULNERABLE, new WitherHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WITHER_HEAD)));
+        builder.put(EffectSkullBlock.Types.WITHER_SHIELD, new WitherHeadArmorModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WITHER_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.WITHER_HEAD_ARMOR)));
+        builder.put(EffectSkullBlock.Types.WITHER_INVULNERABLE_SHIELD, new WitherHeadArmorModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WITHER_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.WITHER_HEAD_ARMOR)));
         builder.put(EffectSkullBlock.Types.WOLF, new WolfHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WOLF_HEAD)));
         builder.put(EffectSkullBlock.Types.WOLF_TAME, new WolfHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WOLF_HEAD)));
         builder.put(EffectSkullBlock.Types.WOLF_ANGRY, new WolfHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.WOLF_HEAD)));

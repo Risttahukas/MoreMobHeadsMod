@@ -1715,6 +1715,34 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.WITCH, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(WITCH_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> WITHER_HEAD = BLOCKS.register("wither_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.WITHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> WITHER_WALL_HEAD = BLOCKS.register("wither_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.WITHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(WITHER_HEAD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> WITHER_HEAD_INVULNERABLE = BLOCKS.register("wither_head_invulnerable",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.WITHER_INVULNERABLE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> WITHER_WALL_HEAD_INVULNERABLE = BLOCKS.register("wither_wall_head_invulnerable",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.WITHER_INVULNERABLE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(WITHER_HEAD_INVULNERABLE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> WITHER_HEAD_SHIELD = BLOCKS.register("wither_head_shield",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.WITHER_SHIELD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> WITHER_WALL_HEAD_SHIELD = BLOCKS.register("wither_wall_head_shield",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.WITHER_SHIELD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(WITHER_HEAD_SHIELD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> WITHER_HEAD_INVULNERABLE_SHIELD = BLOCKS.register("wither_head_invulnerable_shield",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.WITHER_INVULNERABLE_SHIELD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> WITHER_WALL_HEAD_INVULNERABLE_SHIELD = BLOCKS.register("wither_wall_head_invulnerable_shield",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.WITHER_INVULNERABLE_SHIELD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(WITHER_HEAD_INVULNERABLE_SHIELD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> WOLF_HEAD = BLOCKS.register("wolf_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.WOLF, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

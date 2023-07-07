@@ -24,7 +24,9 @@ public class EffectSkullBlockEntity extends SkullBlockEntity {
         if (level.hasNeighborSignal(blockPos) ||
                 blockState.is(ModBlocks.SHEEP_HEAD_RAINBOW.get()) || blockState.is(ModBlocks.SHEEP_WALL_HEAD_RAINBOW.get()) ||
                 blockState.is(ModBlocks.CREEPER_HEAD_CHARGED.get()) || blockState.is(ModBlocks.CREEPER_WALL_HEAD_CHARGED.get()) ||
-                blockState.is(ModBlocks.WARDEN_HEAD.get()) || blockState.is(ModBlocks.WARDEN_WALL_HEAD.get())) {
+                blockState.is(ModBlocks.WARDEN_HEAD.get()) || blockState.is(ModBlocks.WARDEN_WALL_HEAD.get()) ||
+                blockState.is(ModBlocks.WITHER_HEAD_SHIELD.get()) || blockState.is(ModBlocks.WITHER_WALL_HEAD_SHIELD.get()) ||
+                blockState.is(ModBlocks.WITHER_HEAD_INVULNERABLE_SHIELD.get()) || blockState.is(ModBlocks.WITHER_WALL_HEAD_INVULNERABLE_SHIELD.get())) {
             effectSkullBlockEntity.isAnimating = true;
             ++effectSkullBlockEntity.animationTickCount;
         } else {

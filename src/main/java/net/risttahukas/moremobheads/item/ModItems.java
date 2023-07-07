@@ -986,6 +986,22 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.WITCH_HEAD.get(), ModBlocks.WITCH_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> WITHER_HEAD = ITEMS.register("wither_head", () ->
+            new EffectSkullItem(ModBlocks.WITHER_HEAD.get(), ModBlocks.WITHER_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
+
+    public static final RegistryObject<Item> WITHER_HEAD_INVULNERABLE = ITEMS.register("wither_head_invulnerable", () ->
+            new EffectSkullItem(ModBlocks.WITHER_HEAD_INVULNERABLE.get(), ModBlocks.WITHER_WALL_HEAD_INVULNERABLE.get(),
+                    (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
+
+    public static final RegistryObject<Item> WITHER_HEAD_SHIELD = ITEMS.register("wither_head_shield", () ->
+            new EffectSkullItem(ModBlocks.WITHER_HEAD_SHIELD.get(), ModBlocks.WITHER_WALL_HEAD_SHIELD.get(),
+                    (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
+
+    public static final RegistryObject<Item> WITHER_HEAD_INVULNERABLE_SHIELD = ITEMS.register("wither_head_invulnerable_shield", () ->
+            new EffectSkullItem(ModBlocks.WITHER_HEAD_INVULNERABLE_SHIELD.get(), ModBlocks.WITHER_WALL_HEAD_INVULNERABLE_SHIELD.get(),
+                    (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
+
     public static final RegistryObject<Item> WOLF_HEAD = ITEMS.register("wolf_head", () ->
             new EffectSkullItem(ModBlocks.WOLF_HEAD.get(), ModBlocks.WOLF_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

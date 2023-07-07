@@ -68,6 +68,8 @@ public class ModBlockEntityModelLayers {
     public static final ModelLayerLocation WARDEN_HEAD = register("warden_head");
     public static final ModelLayerLocation WARDEN_HEAD_EMISSIVE = register("warden_head_emissive");
     public static final ModelLayerLocation WITCH_HEAD = register("witch_head");
+    public static final ModelLayerLocation WITHER_HEAD = register("wither_head");
+    public static final ModelLayerLocation WITHER_HEAD_ARMOR = register("wither_head_armor");
     public static final ModelLayerLocation WOLF_HEAD = register("wolf_head");
 
     private static ModelLayerLocation register(String layer) {

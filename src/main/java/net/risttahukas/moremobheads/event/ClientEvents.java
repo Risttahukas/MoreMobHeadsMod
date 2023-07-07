@@ -140,6 +140,8 @@ public class ClientEvents {
             event.registerLayerDefinition(ModBlockEntityModelLayers.WARDEN_HEAD, WardenHeadModel::createWardenHeadLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.WARDEN_HEAD_EMISSIVE, WardenHeadModel::createWardenHeadEmissiveLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.WITCH_HEAD, WitchHeadModel::createWitchHeadLayer);
+            event.registerLayerDefinition(ModBlockEntityModelLayers.WITHER_HEAD, WitherHeadModel::createWitherHeadLayer);
+            event.registerLayerDefinition(ModBlockEntityModelLayers.WITHER_HEAD_ARMOR, WitherHeadArmorModel::createWitherHeadArmorLayer);
             event.registerLayerDefinition(ModBlockEntityModelLayers.WOLF_HEAD, WolfHeadModel::createWolfHeadLayer);
         }
 
