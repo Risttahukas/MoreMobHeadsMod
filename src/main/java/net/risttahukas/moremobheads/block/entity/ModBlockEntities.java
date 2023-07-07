@@ -48,6 +48,7 @@ public class ModBlockEntities {
                             ModBlocks.DONKEY_HEAD.get(), ModBlocks.DONKEY_WALL_HEAD.get(),
                             ModBlocks.DROWNED_HEAD.get(), ModBlocks.DROWNED_WALL_HEAD.get(),
                             ModBlocks.ENDERMAN_HEAD.get(), ModBlocks.ENDERMAN_WALL_HEAD.get(),
+                            ModBlocks.ENDERMITE_HEAD.get(), ModBlocks.ENDERMITE_WALL_HEAD.get(),
                             ModBlocks.EVOKER_HEAD.get(), ModBlocks.EVOKER_WALL_HEAD.get(),
                             ModBlocks.FOX_HEAD_RED.get(), ModBlocks.FOX_WALL_HEAD_RED.get(),
                             ModBlocks.FOX_HEAD_SNOW.get(), ModBlocks.FOX_WALL_HEAD_SNOW.get(),

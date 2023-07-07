@@ -35,6 +35,8 @@ public class EffectSkullBlock extends SkullBlock {
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 7.0D, 12.0D);
     protected static final VoxelShape DONKEY_SHAPE =
             Block.box(4.955D, 0.0D, 4.955D, 11.045D, 9.57D, 11.045D);
+    protected static final VoxelShape ENDERMITE_SHAPE =
+            Block.box(6.0D, 0.0D, 6.0D, 10.0D, 3.0D, 10.0D);
     protected static final VoxelShape FROG_SHAPE =
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 5.0D, 12.0D);
     protected static final VoxelShape HORSE_SHAPE =
@@ -116,6 +118,8 @@ public class EffectSkullBlock extends SkullBlock {
             return DOLPHIN_SHAPE;
         } if (Types.DONKEY.equals(this.getType())) {
             return DONKEY_SHAPE;
+        } if (Types.ENDERMITE.equals(this.getType())) {
+            return ENDERMITE_SHAPE;
         } if (Types.FROG_TEMPERATE.equals(this.getType()) || Types.FROG_WARM.equals(this.getType()) ||
                 Types.FROG_COLD.equals(this.getType())) {
             return FROG_SHAPE;
@@ -311,6 +315,7 @@ public class EffectSkullBlock extends SkullBlock {
         DONKEY,
         DROWNED,
         ENDERMAN,
+        ENDERMITE,
         EVOKER,
         FOX_RED,
         FOX_SNOW,

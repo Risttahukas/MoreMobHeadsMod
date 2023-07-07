@@ -245,6 +245,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ENDERMAN, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(ENDERMAN_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> ENDERMITE_HEAD = BLOCKS.register("endermite_head",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ENDERMITE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ENDERMITE_WALL_HEAD = BLOCKS.register("endermite_wall_head",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ENDERMITE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ENDERMITE_HEAD).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> EVOKER_HEAD = BLOCKS.register("evoker_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.EVOKER, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

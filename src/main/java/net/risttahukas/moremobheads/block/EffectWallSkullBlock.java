@@ -86,6 +86,11 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             Direction.SOUTH, Block.box(5.39D, 4.0D, 0.0D, 10.61D, 13.57D, 6.09D),
             Direction.EAST, Block.box(0.0D, 4.0D, 5.39D, 6.09D, 13.57D, 10.61D),
             Direction.WEST, Block.box(9.91D, 4.0D, 5.39D, 16.0D, 13.57D, 10.61D)));
+    private static final Map<Direction, VoxelShape> ENDERMITE_AABBS = Maps.newEnumMap(ImmutableMap.of(
+            Direction.NORTH, Block.box(6.0D, 4.0D, 14.0D, 10.0D, 7.0D, 16.0D),
+            Direction.SOUTH, Block.box(6.0D, 4.0D, 0.0D, 10.0D, 7.0D, 2.0D),
+            Direction.EAST, Block.box(0.0D, 4.0D, 6.0D, 2.0D, 7.0D, 10.0D),
+            Direction.WEST, Block.box(14.0D, 4.0D, 6.0D, 16.0D, 7.0D, 10.0D)));
     private static final Map<Direction, VoxelShape> FOX_AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.0D, 4.0D, 10.0D, 12.0D, 10.0D, 16.0D),
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 10.0D, 6.0D),
@@ -279,6 +284,8 @@ public class EffectWallSkullBlock extends WallSkullBlock {
             return DOLPHIN_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.DONKEY.equals(this.getType())) {
             return DONKEY_AABBS.get(blockState.getValue(FACING));
+        } if (EffectSkullBlock.Types.ENDERMITE.equals(this.getType())) {
+            return ENDERMITE_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.FOX_RED.equals(this.getType()) ||
                 EffectSkullBlock.Types.FOX_SNOW.equals(this.getType())) {
             return FOX_AABBS.get(blockState.getValue(FACING));

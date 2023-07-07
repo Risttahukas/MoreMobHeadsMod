@@ -146,6 +146,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.ENDERMAN_HEAD.get(), ModBlocks.ENDERMAN_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> ENDERMITE_HEAD = ITEMS.register("endermite_head", () ->
+            new EffectSkullItem(ModBlocks.ENDERMITE_HEAD.get(), ModBlocks.ENDERMITE_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> EVOKER_HEAD = ITEMS.register("evoker_head", () ->
             new EffectSkullItem(ModBlocks.EVOKER_HEAD.get(), ModBlocks.EVOKER_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
