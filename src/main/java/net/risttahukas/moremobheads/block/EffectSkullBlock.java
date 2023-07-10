@@ -246,7 +246,63 @@ public class EffectSkullBlock extends SkullBlock {
             return TROPICAL_FISH_SHAPE;
         } if (Types.WANDERING_TRADER.equals(this.getType()) || Types.WITCH.equals(this.getType()) ||
                 Types.EVOKER.equals(this.getType()) || Types.ILLUSIONER.equals(this.getType()) ||
-                Types.PILLAGER.equals(this.getType()) || Types.VINDICATOR.equals(this.getType())) {
+                Types.PILLAGER.equals(this.getType()) || Types.VINDICATOR.equals(this.getType()) ||
+                Types.VILLAGER_DESERT.equals(this.getType()) || Types.VILLAGER_DESERT_ARMORER.equals(this.getType()) ||
+                Types.VILLAGER_DESERT_BUTCHER.equals(this.getType()) || Types.VILLAGER_DESERT_CARTOGRAPHER.equals(this.getType()) ||
+                Types.VILLAGER_DESERT_CLERIC.equals(this.getType()) || Types.VILLAGER_DESERT_FARMER.equals(this.getType()) ||
+                Types.VILLAGER_DESERT_FISHERMAN.equals(this.getType()) || Types.VILLAGER_DESERT_FLETCHER.equals(this.getType()) ||
+                Types.VILLAGER_DESERT_LEATHERWORKER.equals(this.getType()) || Types.VILLAGER_DESERT_LIBRARIAN.equals(this.getType()) ||
+                Types.VILLAGER_DESERT_MASON.equals(this.getType()) || Types.VILLAGER_DESERT_SHEPHERD.equals(this.getType()) ||
+                Types.VILLAGER_DESERT_TOOLSMITH.equals(this.getType()) || Types.VILLAGER_DESERT_WEAPONSMITH.equals(this.getType()) ||
+                Types.VILLAGER_DESERT_NITWIT.equals(this.getType()) ||
+                Types.VILLAGER_JUNGLE.equals(this.getType()) || Types.VILLAGER_JUNGLE_ARMORER.equals(this.getType()) ||
+                Types.VILLAGER_JUNGLE_BUTCHER.equals(this.getType()) || Types.VILLAGER_JUNGLE_CARTOGRAPHER.equals(this.getType()) ||
+                Types.VILLAGER_JUNGLE_CLERIC.equals(this.getType()) || Types.VILLAGER_JUNGLE_FARMER.equals(this.getType()) ||
+                Types.VILLAGER_JUNGLE_FISHERMAN.equals(this.getType()) || Types.VILLAGER_JUNGLE_FLETCHER.equals(this.getType()) ||
+                Types.VILLAGER_JUNGLE_LEATHERWORKER.equals(this.getType()) || Types.VILLAGER_JUNGLE_LIBRARIAN.equals(this.getType()) ||
+                Types.VILLAGER_JUNGLE_MASON.equals(this.getType()) || Types.VILLAGER_JUNGLE_SHEPHERD.equals(this.getType()) ||
+                Types.VILLAGER_JUNGLE_TOOLSMITH.equals(this.getType()) || Types.VILLAGER_JUNGLE_WEAPONSMITH.equals(this.getType()) ||
+                Types.VILLAGER_JUNGLE_NITWIT.equals(this.getType()) ||
+                Types.VILLAGER_PLAINS.equals(this.getType()) || Types.VILLAGER_PLAINS_ARMORER.equals(this.getType()) ||
+                Types.VILLAGER_PLAINS_BUTCHER.equals(this.getType()) || Types.VILLAGER_PLAINS_CARTOGRAPHER.equals(this.getType()) ||
+                Types.VILLAGER_PLAINS_CLERIC.equals(this.getType()) || Types.VILLAGER_PLAINS_FARMER.equals(this.getType()) ||
+                Types.VILLAGER_PLAINS_FISHERMAN.equals(this.getType()) || Types.VILLAGER_PLAINS_FLETCHER.equals(this.getType()) ||
+                Types.VILLAGER_PLAINS_LEATHERWORKER.equals(this.getType()) || Types.VILLAGER_PLAINS_LIBRARIAN.equals(this.getType()) ||
+                Types.VILLAGER_PLAINS_MASON.equals(this.getType()) || Types.VILLAGER_PLAINS_SHEPHERD.equals(this.getType()) ||
+                Types.VILLAGER_PLAINS_TOOLSMITH.equals(this.getType()) || Types.VILLAGER_PLAINS_WEAPONSMITH.equals(this.getType()) ||
+                Types.VILLAGER_PLAINS_NITWIT.equals(this.getType()) ||
+                Types.VILLAGER_SAVANNA.equals(this.getType()) || Types.VILLAGER_SAVANNA_ARMORER.equals(this.getType()) ||
+                Types.VILLAGER_SAVANNA_BUTCHER.equals(this.getType()) || Types.VILLAGER_SAVANNA_CARTOGRAPHER.equals(this.getType()) ||
+                Types.VILLAGER_SAVANNA_CLERIC.equals(this.getType()) || Types.VILLAGER_SAVANNA_FARMER.equals(this.getType()) ||
+                Types.VILLAGER_SAVANNA_FISHERMAN.equals(this.getType()) || Types.VILLAGER_SAVANNA_FLETCHER.equals(this.getType()) ||
+                Types.VILLAGER_SAVANNA_LEATHERWORKER.equals(this.getType()) || Types.VILLAGER_SAVANNA_LIBRARIAN.equals(this.getType()) ||
+                Types.VILLAGER_SAVANNA_MASON.equals(this.getType()) || Types.VILLAGER_SAVANNA_SHEPHERD.equals(this.getType()) ||
+                Types.VILLAGER_SAVANNA_TOOLSMITH.equals(this.getType()) || Types.VILLAGER_SAVANNA_WEAPONSMITH.equals(this.getType()) ||
+                Types.VILLAGER_SAVANNA_NITWIT.equals(this.getType()) ||
+                Types.VILLAGER_SNOW.equals(this.getType()) || Types.VILLAGER_SNOW_ARMORER.equals(this.getType()) ||
+                Types.VILLAGER_SNOW_BUTCHER.equals(this.getType()) || Types.VILLAGER_SNOW_CARTOGRAPHER.equals(this.getType()) ||
+                Types.VILLAGER_SNOW_CLERIC.equals(this.getType()) || Types.VILLAGER_SNOW_FARMER.equals(this.getType()) ||
+                Types.VILLAGER_SNOW_FISHERMAN.equals(this.getType()) || Types.VILLAGER_SNOW_FLETCHER.equals(this.getType()) ||
+                Types.VILLAGER_SNOW_LEATHERWORKER.equals(this.getType()) || Types.VILLAGER_SNOW_LIBRARIAN.equals(this.getType()) ||
+                Types.VILLAGER_SNOW_MASON.equals(this.getType()) || Types.VILLAGER_SNOW_SHEPHERD.equals(this.getType()) ||
+                Types.VILLAGER_SNOW_TOOLSMITH.equals(this.getType()) || Types.VILLAGER_SNOW_WEAPONSMITH.equals(this.getType()) ||
+                Types.VILLAGER_SNOW_NITWIT.equals(this.getType()) ||
+                Types.VILLAGER_SWAMP.equals(this.getType()) || Types.VILLAGER_SWAMP_ARMORER.equals(this.getType()) ||
+                Types.VILLAGER_SWAMP_BUTCHER.equals(this.getType()) || Types.VILLAGER_SWAMP_CARTOGRAPHER.equals(this.getType()) ||
+                Types.VILLAGER_SWAMP_CLERIC.equals(this.getType()) || Types.VILLAGER_SWAMP_FARMER.equals(this.getType()) ||
+                Types.VILLAGER_SWAMP_FISHERMAN.equals(this.getType()) || Types.VILLAGER_SWAMP_FLETCHER.equals(this.getType()) ||
+                Types.VILLAGER_SWAMP_LEATHERWORKER.equals(this.getType()) || Types.VILLAGER_SWAMP_LIBRARIAN.equals(this.getType()) ||
+                Types.VILLAGER_SWAMP_MASON.equals(this.getType()) || Types.VILLAGER_SWAMP_SHEPHERD.equals(this.getType()) ||
+                Types.VILLAGER_SWAMP_TOOLSMITH.equals(this.getType()) || Types.VILLAGER_SWAMP_WEAPONSMITH.equals(this.getType()) ||
+                Types.VILLAGER_SWAMP_NITWIT.equals(this.getType()) ||
+                Types.VILLAGER_TAIGA.equals(this.getType()) || Types.VILLAGER_TAIGA_ARMORER.equals(this.getType()) ||
+                Types.VILLAGER_TAIGA_BUTCHER.equals(this.getType()) || Types.VILLAGER_TAIGA_CARTOGRAPHER.equals(this.getType()) ||
+                Types.VILLAGER_TAIGA_CLERIC.equals(this.getType()) || Types.VILLAGER_TAIGA_FARMER.equals(this.getType()) ||
+                Types.VILLAGER_TAIGA_FISHERMAN.equals(this.getType()) || Types.VILLAGER_TAIGA_FLETCHER.equals(this.getType()) ||
+                Types.VILLAGER_TAIGA_LEATHERWORKER.equals(this.getType()) || Types.VILLAGER_TAIGA_LIBRARIAN.equals(this.getType()) ||
+                Types.VILLAGER_TAIGA_MASON.equals(this.getType()) || Types.VILLAGER_TAIGA_SHEPHERD.equals(this.getType()) ||
+                Types.VILLAGER_TAIGA_TOOLSMITH.equals(this.getType()) || Types.VILLAGER_TAIGA_WEAPONSMITH.equals(this.getType()) ||
+                Types.VILLAGER_TAIGA_NITWIT.equals(this.getType())) {
             return VILLAGER_SHAPE;
         } if (Types.WITHER.equals(this.getType()) || Types.WITHER_INVULNERABLE.equals(this.getType()) ||
                 Types.WITHER_SHIELD.equals(this.getType()) || Types.WITHER_INVULNERABLE_SHIELD.equals(this.getType())) {
@@ -537,6 +593,111 @@ public class EffectSkullBlock extends SkullBlock {
         TROPICAL_FISH,
         TURTLE,
         VEX,
+        VILLAGER_DESERT,
+        VILLAGER_DESERT_ARMORER,
+        VILLAGER_DESERT_BUTCHER,
+        VILLAGER_DESERT_CARTOGRAPHER,
+        VILLAGER_DESERT_CLERIC,
+        VILLAGER_DESERT_FARMER,
+        VILLAGER_DESERT_FISHERMAN,
+        VILLAGER_DESERT_FLETCHER,
+        VILLAGER_DESERT_LEATHERWORKER,
+        VILLAGER_DESERT_LIBRARIAN,
+        VILLAGER_DESERT_MASON,
+        VILLAGER_DESERT_SHEPHERD,
+        VILLAGER_DESERT_TOOLSMITH,
+        VILLAGER_DESERT_WEAPONSMITH,
+        VILLAGER_DESERT_NITWIT,
+        VILLAGER_JUNGLE,
+        VILLAGER_JUNGLE_ARMORER,
+        VILLAGER_JUNGLE_BUTCHER,
+        VILLAGER_JUNGLE_CARTOGRAPHER,
+        VILLAGER_JUNGLE_CLERIC,
+        VILLAGER_JUNGLE_FARMER,
+        VILLAGER_JUNGLE_FISHERMAN,
+        VILLAGER_JUNGLE_FLETCHER,
+        VILLAGER_JUNGLE_LEATHERWORKER,
+        VILLAGER_JUNGLE_LIBRARIAN,
+        VILLAGER_JUNGLE_MASON,
+        VILLAGER_JUNGLE_SHEPHERD,
+        VILLAGER_JUNGLE_TOOLSMITH,
+        VILLAGER_JUNGLE_WEAPONSMITH,
+        VILLAGER_JUNGLE_NITWIT,
+        VILLAGER_PLAINS,
+        VILLAGER_PLAINS_ARMORER,
+        VILLAGER_PLAINS_BUTCHER,
+        VILLAGER_PLAINS_CARTOGRAPHER,
+        VILLAGER_PLAINS_CLERIC,
+        VILLAGER_PLAINS_FARMER,
+        VILLAGER_PLAINS_FISHERMAN,
+        VILLAGER_PLAINS_FLETCHER,
+        VILLAGER_PLAINS_LEATHERWORKER,
+        VILLAGER_PLAINS_LIBRARIAN,
+        VILLAGER_PLAINS_MASON,
+        VILLAGER_PLAINS_SHEPHERD,
+        VILLAGER_PLAINS_TOOLSMITH,
+        VILLAGER_PLAINS_WEAPONSMITH,
+        VILLAGER_PLAINS_NITWIT,
+        VILLAGER_SAVANNA,
+        VILLAGER_SAVANNA_ARMORER,
+        VILLAGER_SAVANNA_BUTCHER,
+        VILLAGER_SAVANNA_CARTOGRAPHER,
+        VILLAGER_SAVANNA_CLERIC,
+        VILLAGER_SAVANNA_FARMER,
+        VILLAGER_SAVANNA_FISHERMAN,
+        VILLAGER_SAVANNA_FLETCHER,
+        VILLAGER_SAVANNA_LEATHERWORKER,
+        VILLAGER_SAVANNA_LIBRARIAN,
+        VILLAGER_SAVANNA_MASON,
+        VILLAGER_SAVANNA_SHEPHERD,
+        VILLAGER_SAVANNA_TOOLSMITH,
+        VILLAGER_SAVANNA_WEAPONSMITH,
+        VILLAGER_SAVANNA_NITWIT,
+        VILLAGER_SNOW,
+        VILLAGER_SNOW_ARMORER,
+        VILLAGER_SNOW_BUTCHER,
+        VILLAGER_SNOW_CARTOGRAPHER,
+        VILLAGER_SNOW_CLERIC,
+        VILLAGER_SNOW_FARMER,
+        VILLAGER_SNOW_FISHERMAN,
+        VILLAGER_SNOW_FLETCHER,
+        VILLAGER_SNOW_LEATHERWORKER,
+        VILLAGER_SNOW_LIBRARIAN,
+        VILLAGER_SNOW_MASON,
+        VILLAGER_SNOW_SHEPHERD,
+        VILLAGER_SNOW_TOOLSMITH,
+        VILLAGER_SNOW_WEAPONSMITH,
+        VILLAGER_SNOW_NITWIT,
+        VILLAGER_SWAMP,
+        VILLAGER_SWAMP_ARMORER,
+        VILLAGER_SWAMP_BUTCHER,
+        VILLAGER_SWAMP_CARTOGRAPHER,
+        VILLAGER_SWAMP_CLERIC,
+        VILLAGER_SWAMP_FARMER,
+        VILLAGER_SWAMP_FISHERMAN,
+        VILLAGER_SWAMP_FLETCHER,
+        VILLAGER_SWAMP_LEATHERWORKER,
+        VILLAGER_SWAMP_LIBRARIAN,
+        VILLAGER_SWAMP_MASON,
+        VILLAGER_SWAMP_SHEPHERD,
+        VILLAGER_SWAMP_TOOLSMITH,
+        VILLAGER_SWAMP_WEAPONSMITH,
+        VILLAGER_SWAMP_NITWIT,
+        VILLAGER_TAIGA,
+        VILLAGER_TAIGA_ARMORER,
+        VILLAGER_TAIGA_BUTCHER,
+        VILLAGER_TAIGA_CARTOGRAPHER,
+        VILLAGER_TAIGA_CLERIC,
+        VILLAGER_TAIGA_FARMER,
+        VILLAGER_TAIGA_FISHERMAN,
+        VILLAGER_TAIGA_FLETCHER,
+        VILLAGER_TAIGA_LEATHERWORKER,
+        VILLAGER_TAIGA_LIBRARIAN,
+        VILLAGER_TAIGA_MASON,
+        VILLAGER_TAIGA_SHEPHERD,
+        VILLAGER_TAIGA_TOOLSMITH,
+        VILLAGER_TAIGA_WEAPONSMITH,
+        VILLAGER_TAIGA_NITWIT,
         VINDICATOR,
         WANDERING_TRADER,
         WARDEN,
