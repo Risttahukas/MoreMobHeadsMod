@@ -195,7 +195,63 @@ public class EffectSkullBlock extends SkullBlock {
                 Types.LLAMA_CREAMY_BLACK.equals(this.getType()) || Types.LLAMA_WHITE_BLACK.equals(this.getType()) ||
                 Types.LLAMA_BROWN_BLACK.equals(this.getType()) || Types.LLAMA_GRAY_BLACK.equals(this.getType()) ||
                 Types.TRADER_LLAMA_CREAMY.equals(this.getType()) || Types.TRADER_LLAMA_WHITE.equals(this.getType()) ||
-                Types.TRADER_LLAMA_BROWN.equals(this.getType()) || Types.TRADER_LLAMA_GRAY.equals(this.getType())) {
+                Types.TRADER_LLAMA_BROWN.equals(this.getType()) || Types.TRADER_LLAMA_GRAY.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_DESERT.equals(this.getType()) || Types.ZOMBIE_VILLAGER_DESERT_ARMORER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_DESERT_BUTCHER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_DESERT_CARTOGRAPHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_DESERT_CLERIC.equals(this.getType()) || Types.ZOMBIE_VILLAGER_DESERT_FARMER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_DESERT_FISHERMAN.equals(this.getType()) || Types.ZOMBIE_VILLAGER_DESERT_FLETCHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_DESERT_LEATHERWORKER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_DESERT_LIBRARIAN.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_DESERT_MASON.equals(this.getType()) || Types.ZOMBIE_VILLAGER_DESERT_SHEPHERD.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_DESERT_TOOLSMITH.equals(this.getType()) || Types.ZOMBIE_VILLAGER_DESERT_WEAPONSMITH.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_DESERT_NITWIT.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_JUNGLE.equals(this.getType()) || Types.ZOMBIE_VILLAGER_JUNGLE_ARMORER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_JUNGLE_BUTCHER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_JUNGLE_CARTOGRAPHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_JUNGLE_CLERIC.equals(this.getType()) || Types.ZOMBIE_VILLAGER_JUNGLE_FARMER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_JUNGLE_FISHERMAN.equals(this.getType()) || Types.ZOMBIE_VILLAGER_JUNGLE_FLETCHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_JUNGLE_LEATHERWORKER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_JUNGLE_LIBRARIAN.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_JUNGLE_MASON.equals(this.getType()) || Types.ZOMBIE_VILLAGER_JUNGLE_SHEPHERD.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_JUNGLE_TOOLSMITH.equals(this.getType()) || Types.ZOMBIE_VILLAGER_JUNGLE_WEAPONSMITH.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_JUNGLE_NITWIT.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_PLAINS.equals(this.getType()) || Types.ZOMBIE_VILLAGER_PLAINS_ARMORER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_PLAINS_BUTCHER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_PLAINS_CARTOGRAPHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_PLAINS_CLERIC.equals(this.getType()) || Types.ZOMBIE_VILLAGER_PLAINS_FARMER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_PLAINS_FISHERMAN.equals(this.getType()) || Types.ZOMBIE_VILLAGER_PLAINS_FLETCHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_PLAINS_LEATHERWORKER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_PLAINS_LIBRARIAN.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_PLAINS_MASON.equals(this.getType()) || Types.ZOMBIE_VILLAGER_PLAINS_SHEPHERD.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_PLAINS_TOOLSMITH.equals(this.getType()) || Types.ZOMBIE_VILLAGER_PLAINS_WEAPONSMITH.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_PLAINS_NITWIT.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SAVANNA.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SAVANNA_ARMORER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SAVANNA_BUTCHER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SAVANNA_CARTOGRAPHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SAVANNA_CLERIC.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SAVANNA_FARMER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SAVANNA_FISHERMAN.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SAVANNA_FLETCHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SAVANNA_LEATHERWORKER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SAVANNA_LIBRARIAN.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SAVANNA_MASON.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SAVANNA_SHEPHERD.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SAVANNA_TOOLSMITH.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SAVANNA_WEAPONSMITH.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SAVANNA_NITWIT.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SNOW.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SNOW_ARMORER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SNOW_BUTCHER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SNOW_CARTOGRAPHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SNOW_CLERIC.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SNOW_FARMER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SNOW_FISHERMAN.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SNOW_FLETCHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SNOW_LEATHERWORKER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SNOW_LIBRARIAN.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SNOW_MASON.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SNOW_SHEPHERD.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SNOW_TOOLSMITH.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SNOW_WEAPONSMITH.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SNOW_NITWIT.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SWAMP.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SWAMP_ARMORER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SWAMP_BUTCHER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SWAMP_CARTOGRAPHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SWAMP_CLERIC.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SWAMP_FARMER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SWAMP_FISHERMAN.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SWAMP_FLETCHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SWAMP_LEATHERWORKER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SWAMP_LIBRARIAN.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SWAMP_MASON.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SWAMP_SHEPHERD.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SWAMP_TOOLSMITH.equals(this.getType()) || Types.ZOMBIE_VILLAGER_SWAMP_WEAPONSMITH.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_SWAMP_NITWIT.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_TAIGA.equals(this.getType()) || Types.ZOMBIE_VILLAGER_TAIGA_ARMORER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_TAIGA_BUTCHER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_TAIGA_CARTOGRAPHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_TAIGA_CLERIC.equals(this.getType()) || Types.ZOMBIE_VILLAGER_TAIGA_FARMER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_TAIGA_FISHERMAN.equals(this.getType()) || Types.ZOMBIE_VILLAGER_TAIGA_FLETCHER.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_TAIGA_LEATHERWORKER.equals(this.getType()) || Types.ZOMBIE_VILLAGER_TAIGA_LIBRARIAN.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_TAIGA_MASON.equals(this.getType()) || Types.ZOMBIE_VILLAGER_TAIGA_SHEPHERD.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_TAIGA_TOOLSMITH.equals(this.getType()) || Types.ZOMBIE_VILLAGER_TAIGA_WEAPONSMITH.equals(this.getType()) ||
+                Types.ZOMBIE_VILLAGER_TAIGA_NITWIT.equals(this.getType())) {
             return IRON_GOLEM_SHAPE;
         } if (Types.MULE.equals(this.getType())) {
             return MULE_SHAPE;
@@ -710,6 +766,111 @@ public class EffectSkullBlock extends SkullBlock {
         WOLF_TAME,
         WOLF_ANGRY,
         ZOGLIN,
+        ZOMBIE_VILLAGER_DESERT,
+        ZOMBIE_VILLAGER_DESERT_ARMORER,
+        ZOMBIE_VILLAGER_DESERT_BUTCHER,
+        ZOMBIE_VILLAGER_DESERT_CARTOGRAPHER,
+        ZOMBIE_VILLAGER_DESERT_CLERIC,
+        ZOMBIE_VILLAGER_DESERT_FARMER,
+        ZOMBIE_VILLAGER_DESERT_FISHERMAN,
+        ZOMBIE_VILLAGER_DESERT_FLETCHER,
+        ZOMBIE_VILLAGER_DESERT_LEATHERWORKER,
+        ZOMBIE_VILLAGER_DESERT_LIBRARIAN,
+        ZOMBIE_VILLAGER_DESERT_MASON,
+        ZOMBIE_VILLAGER_DESERT_SHEPHERD,
+        ZOMBIE_VILLAGER_DESERT_TOOLSMITH,
+        ZOMBIE_VILLAGER_DESERT_WEAPONSMITH,
+        ZOMBIE_VILLAGER_DESERT_NITWIT,
+        ZOMBIE_VILLAGER_JUNGLE,
+        ZOMBIE_VILLAGER_JUNGLE_ARMORER,
+        ZOMBIE_VILLAGER_JUNGLE_BUTCHER,
+        ZOMBIE_VILLAGER_JUNGLE_CARTOGRAPHER,
+        ZOMBIE_VILLAGER_JUNGLE_CLERIC,
+        ZOMBIE_VILLAGER_JUNGLE_FARMER,
+        ZOMBIE_VILLAGER_JUNGLE_FISHERMAN,
+        ZOMBIE_VILLAGER_JUNGLE_FLETCHER,
+        ZOMBIE_VILLAGER_JUNGLE_LEATHERWORKER,
+        ZOMBIE_VILLAGER_JUNGLE_LIBRARIAN,
+        ZOMBIE_VILLAGER_JUNGLE_MASON,
+        ZOMBIE_VILLAGER_JUNGLE_SHEPHERD,
+        ZOMBIE_VILLAGER_JUNGLE_TOOLSMITH,
+        ZOMBIE_VILLAGER_JUNGLE_WEAPONSMITH,
+        ZOMBIE_VILLAGER_JUNGLE_NITWIT,
+        ZOMBIE_VILLAGER_PLAINS,
+        ZOMBIE_VILLAGER_PLAINS_ARMORER,
+        ZOMBIE_VILLAGER_PLAINS_BUTCHER,
+        ZOMBIE_VILLAGER_PLAINS_CARTOGRAPHER,
+        ZOMBIE_VILLAGER_PLAINS_CLERIC,
+        ZOMBIE_VILLAGER_PLAINS_FARMER,
+        ZOMBIE_VILLAGER_PLAINS_FISHERMAN,
+        ZOMBIE_VILLAGER_PLAINS_FLETCHER,
+        ZOMBIE_VILLAGER_PLAINS_LEATHERWORKER,
+        ZOMBIE_VILLAGER_PLAINS_LIBRARIAN,
+        ZOMBIE_VILLAGER_PLAINS_MASON,
+        ZOMBIE_VILLAGER_PLAINS_SHEPHERD,
+        ZOMBIE_VILLAGER_PLAINS_TOOLSMITH,
+        ZOMBIE_VILLAGER_PLAINS_WEAPONSMITH,
+        ZOMBIE_VILLAGER_PLAINS_NITWIT,
+        ZOMBIE_VILLAGER_SAVANNA,
+        ZOMBIE_VILLAGER_SAVANNA_ARMORER,
+        ZOMBIE_VILLAGER_SAVANNA_BUTCHER,
+        ZOMBIE_VILLAGER_SAVANNA_CARTOGRAPHER,
+        ZOMBIE_VILLAGER_SAVANNA_CLERIC,
+        ZOMBIE_VILLAGER_SAVANNA_FARMER,
+        ZOMBIE_VILLAGER_SAVANNA_FISHERMAN,
+        ZOMBIE_VILLAGER_SAVANNA_FLETCHER,
+        ZOMBIE_VILLAGER_SAVANNA_LEATHERWORKER,
+        ZOMBIE_VILLAGER_SAVANNA_LIBRARIAN,
+        ZOMBIE_VILLAGER_SAVANNA_MASON,
+        ZOMBIE_VILLAGER_SAVANNA_SHEPHERD,
+        ZOMBIE_VILLAGER_SAVANNA_TOOLSMITH,
+        ZOMBIE_VILLAGER_SAVANNA_WEAPONSMITH,
+        ZOMBIE_VILLAGER_SAVANNA_NITWIT,
+        ZOMBIE_VILLAGER_SNOW,
+        ZOMBIE_VILLAGER_SNOW_ARMORER,
+        ZOMBIE_VILLAGER_SNOW_BUTCHER,
+        ZOMBIE_VILLAGER_SNOW_CARTOGRAPHER,
+        ZOMBIE_VILLAGER_SNOW_CLERIC,
+        ZOMBIE_VILLAGER_SNOW_FARMER,
+        ZOMBIE_VILLAGER_SNOW_FISHERMAN,
+        ZOMBIE_VILLAGER_SNOW_FLETCHER,
+        ZOMBIE_VILLAGER_SNOW_LEATHERWORKER,
+        ZOMBIE_VILLAGER_SNOW_LIBRARIAN,
+        ZOMBIE_VILLAGER_SNOW_MASON,
+        ZOMBIE_VILLAGER_SNOW_SHEPHERD,
+        ZOMBIE_VILLAGER_SNOW_TOOLSMITH,
+        ZOMBIE_VILLAGER_SNOW_WEAPONSMITH,
+        ZOMBIE_VILLAGER_SNOW_NITWIT,
+        ZOMBIE_VILLAGER_SWAMP,
+        ZOMBIE_VILLAGER_SWAMP_ARMORER,
+        ZOMBIE_VILLAGER_SWAMP_BUTCHER,
+        ZOMBIE_VILLAGER_SWAMP_CARTOGRAPHER,
+        ZOMBIE_VILLAGER_SWAMP_CLERIC,
+        ZOMBIE_VILLAGER_SWAMP_FARMER,
+        ZOMBIE_VILLAGER_SWAMP_FISHERMAN,
+        ZOMBIE_VILLAGER_SWAMP_FLETCHER,
+        ZOMBIE_VILLAGER_SWAMP_LEATHERWORKER,
+        ZOMBIE_VILLAGER_SWAMP_LIBRARIAN,
+        ZOMBIE_VILLAGER_SWAMP_MASON,
+        ZOMBIE_VILLAGER_SWAMP_SHEPHERD,
+        ZOMBIE_VILLAGER_SWAMP_TOOLSMITH,
+        ZOMBIE_VILLAGER_SWAMP_WEAPONSMITH,
+        ZOMBIE_VILLAGER_SWAMP_NITWIT,
+        ZOMBIE_VILLAGER_TAIGA,
+        ZOMBIE_VILLAGER_TAIGA_ARMORER,
+        ZOMBIE_VILLAGER_TAIGA_BUTCHER,
+        ZOMBIE_VILLAGER_TAIGA_CARTOGRAPHER,
+        ZOMBIE_VILLAGER_TAIGA_CLERIC,
+        ZOMBIE_VILLAGER_TAIGA_FARMER,
+        ZOMBIE_VILLAGER_TAIGA_FISHERMAN,
+        ZOMBIE_VILLAGER_TAIGA_FLETCHER,
+        ZOMBIE_VILLAGER_TAIGA_LEATHERWORKER,
+        ZOMBIE_VILLAGER_TAIGA_LIBRARIAN,
+        ZOMBIE_VILLAGER_TAIGA_MASON,
+        ZOMBIE_VILLAGER_TAIGA_SHEPHERD,
+        ZOMBIE_VILLAGER_TAIGA_TOOLSMITH,
+        ZOMBIE_VILLAGER_TAIGA_WEAPONSMITH,
+        ZOMBIE_VILLAGER_TAIGA_NITWIT,
         ZOMBIFIED_PIGLIN
     }
 }

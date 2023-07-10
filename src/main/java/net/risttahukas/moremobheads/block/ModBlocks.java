@@ -2506,6 +2506,741 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOGLIN, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(ZOGLIN_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT = BLOCKS.register("zombie_villager_head_desert",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT = BLOCKS.register("zombie_villager_wall_head_desert",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_ARMORER = BLOCKS.register("zombie_villager_head_desert_armorer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_ARMORER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_ARMORER = BLOCKS.register("zombie_villager_wall_head_desert_armorer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_ARMORER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_ARMORER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_BUTCHER = BLOCKS.register("zombie_villager_head_desert_butcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_BUTCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_BUTCHER = BLOCKS.register("zombie_villager_wall_head_desert_butcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_BUTCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_BUTCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_CARTOGRAPHER = BLOCKS.register("zombie_villager_head_desert_cartographer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_CARTOGRAPHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_CARTOGRAPHER = BLOCKS.register("zombie_villager_wall_head_desert_cartographer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_CARTOGRAPHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_CARTOGRAPHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_CLERIC = BLOCKS.register("zombie_villager_head_desert_cleric",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_CLERIC, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_CLERIC = BLOCKS.register("zombie_villager_wall_head_desert_cleric",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_CLERIC, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_CLERIC).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_FARMER = BLOCKS.register("zombie_villager_head_desert_farmer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_FARMER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_FARMER = BLOCKS.register("zombie_villager_wall_head_desert_farmer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_FARMER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_FARMER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_FISHERMAN = BLOCKS.register("zombie_villager_head_desert_fisherman",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_FISHERMAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_FISHERMAN = BLOCKS.register("zombie_villager_wall_head_desert_fisherman",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_FISHERMAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_FISHERMAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_FLETCHER = BLOCKS.register("zombie_villager_head_desert_fletcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_FLETCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_FLETCHER = BLOCKS.register("zombie_villager_wall_head_desert_fletcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_FLETCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_FLETCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_LEATHERWORKER = BLOCKS.register("zombie_villager_head_desert_leatherworker",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_LEATHERWORKER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_LEATHERWORKER = BLOCKS.register("zombie_villager_wall_head_desert_leatherworker",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_LEATHERWORKER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_LEATHERWORKER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_LIBRARIAN = BLOCKS.register("zombie_villager_head_desert_librarian",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_LIBRARIAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_LIBRARIAN = BLOCKS.register("zombie_villager_wall_head_desert_librarian",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_LIBRARIAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_LIBRARIAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_MASON = BLOCKS.register("zombie_villager_head_desert_mason",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_MASON, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_MASON = BLOCKS.register("zombie_villager_wall_head_desert_mason",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_MASON, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_MASON).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_SHEPHERD = BLOCKS.register("zombie_villager_head_desert_shepherd",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_SHEPHERD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_SHEPHERD = BLOCKS.register("zombie_villager_wall_head_desert_shepherd",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_SHEPHERD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_SHEPHERD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_TOOLSMITH = BLOCKS.register("zombie_villager_head_desert_toolsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_TOOLSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_TOOLSMITH = BLOCKS.register("zombie_villager_wall_head_desert_toolsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_TOOLSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_TOOLSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_WEAPONSMITH = BLOCKS.register("zombie_villager_head_desert_weaponsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_WEAPONSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_WEAPONSMITH = BLOCKS.register("zombie_villager_wall_head_desert_weaponsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_WEAPONSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_WEAPONSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_DESERT_NITWIT = BLOCKS.register("zombie_villager_head_desert_nitwit",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_NITWIT, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_DESERT_NITWIT = BLOCKS.register("zombie_villager_wall_head_desert_nitwit",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_DESERT_NITWIT, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_DESERT_NITWIT).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE = BLOCKS.register("zombie_villager_head_jungle",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE = BLOCKS.register("zombie_villager_wall_head_jungle",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_ARMORER = BLOCKS.register("zombie_villager_head_jungle_armorer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_ARMORER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_ARMORER = BLOCKS.register("zombie_villager_wall_head_jungle_armorer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_ARMORER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_ARMORER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_BUTCHER = BLOCKS.register("zombie_villager_head_jungle_butcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_BUTCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_BUTCHER = BLOCKS.register("zombie_villager_wall_head_jungle_butcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_BUTCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_BUTCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_CARTOGRAPHER = BLOCKS.register("zombie_villager_head_jungle_cartographer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_CARTOGRAPHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_CARTOGRAPHER = BLOCKS.register("zombie_villager_wall_head_jungle_cartographer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_CARTOGRAPHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_CARTOGRAPHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_CLERIC = BLOCKS.register("zombie_villager_head_jungle_cleric",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_CLERIC, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_CLERIC = BLOCKS.register("zombie_villager_wall_head_jungle_cleric",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_CLERIC, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_CLERIC).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_FARMER = BLOCKS.register("zombie_villager_head_jungle_farmer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_FARMER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_FARMER = BLOCKS.register("zombie_villager_wall_head_jungle_farmer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_FARMER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_FARMER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_FISHERMAN = BLOCKS.register("zombie_villager_head_jungle_fisherman",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_FISHERMAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_FISHERMAN = BLOCKS.register("zombie_villager_wall_head_jungle_fisherman",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_FISHERMAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_FISHERMAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_FLETCHER = BLOCKS.register("zombie_villager_head_jungle_fletcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_FLETCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_FLETCHER = BLOCKS.register("zombie_villager_wall_head_jungle_fletcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_FLETCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_FLETCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_LEATHERWORKER = BLOCKS.register("zombie_villager_head_jungle_leatherworker",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_LEATHERWORKER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_LEATHERWORKER = BLOCKS.register("zombie_villager_wall_head_jungle_leatherworker",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_LEATHERWORKER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_LEATHERWORKER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_LIBRARIAN = BLOCKS.register("zombie_villager_head_jungle_librarian",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_LIBRARIAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_LIBRARIAN = BLOCKS.register("zombie_villager_wall_head_jungle_librarian",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_LIBRARIAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_LIBRARIAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_MASON = BLOCKS.register("zombie_villager_head_jungle_mason",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_MASON, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_MASON = BLOCKS.register("zombie_villager_wall_head_jungle_mason",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_MASON, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_MASON).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_SHEPHERD = BLOCKS.register("zombie_villager_head_jungle_shepherd",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_SHEPHERD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_SHEPHERD = BLOCKS.register("zombie_villager_wall_head_jungle_shepherd",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_SHEPHERD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_SHEPHERD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_TOOLSMITH = BLOCKS.register("zombie_villager_head_jungle_toolsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_TOOLSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_TOOLSMITH = BLOCKS.register("zombie_villager_wall_head_jungle_toolsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_TOOLSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_TOOLSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_WEAPONSMITH = BLOCKS.register("zombie_villager_head_jungle_weaponsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_WEAPONSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_WEAPONSMITH = BLOCKS.register("zombie_villager_wall_head_jungle_weaponsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_WEAPONSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_WEAPONSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_JUNGLE_NITWIT = BLOCKS.register("zombie_villager_head_jungle_nitwit",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_NITWIT, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_NITWIT = BLOCKS.register("zombie_villager_wall_head_jungle_nitwit",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_JUNGLE_NITWIT, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_JUNGLE_NITWIT).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS = BLOCKS.register("zombie_villager_head_plains",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS = BLOCKS.register("zombie_villager_wall_head_plains",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_ARMORER = BLOCKS.register("zombie_villager_head_plains_armorer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_ARMORER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_ARMORER = BLOCKS.register("zombie_villager_wall_head_plains_armorer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_ARMORER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_ARMORER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_BUTCHER = BLOCKS.register("zombie_villager_head_plains_butcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_BUTCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_BUTCHER = BLOCKS.register("zombie_villager_wall_head_plains_butcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_BUTCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_BUTCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_CARTOGRAPHER = BLOCKS.register("zombie_villager_head_plains_cartographer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_CARTOGRAPHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_CARTOGRAPHER = BLOCKS.register("zombie_villager_wall_head_plains_cartographer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_CARTOGRAPHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_CARTOGRAPHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_CLERIC = BLOCKS.register("zombie_villager_head_plains_cleric",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_CLERIC, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_CLERIC = BLOCKS.register("zombie_villager_wall_head_plains_cleric",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_CLERIC, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_CLERIC).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_FARMER = BLOCKS.register("zombie_villager_head_plains_farmer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_FARMER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_FARMER = BLOCKS.register("zombie_villager_wall_head_plains_farmer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_FARMER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_FARMER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_FISHERMAN = BLOCKS.register("zombie_villager_head_plains_fisherman",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_FISHERMAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_FISHERMAN = BLOCKS.register("zombie_villager_wall_head_plains_fisherman",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_FISHERMAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_FISHERMAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_FLETCHER = BLOCKS.register("zombie_villager_head_plains_fletcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_FLETCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_FLETCHER = BLOCKS.register("zombie_villager_wall_head_plains_fletcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_FLETCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_FLETCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_LEATHERWORKER = BLOCKS.register("zombie_villager_head_plains_leatherworker",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_LEATHERWORKER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_LEATHERWORKER = BLOCKS.register("zombie_villager_wall_head_plains_leatherworker",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_LEATHERWORKER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_LEATHERWORKER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_LIBRARIAN = BLOCKS.register("zombie_villager_head_plains_librarian",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_LIBRARIAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_LIBRARIAN = BLOCKS.register("zombie_villager_wall_head_plains_librarian",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_LIBRARIAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_LIBRARIAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_MASON = BLOCKS.register("zombie_villager_head_plains_mason",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_MASON, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_MASON = BLOCKS.register("zombie_villager_wall_head_plains_mason",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_MASON, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_MASON).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_SHEPHERD = BLOCKS.register("zombie_villager_head_plains_shepherd",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_SHEPHERD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_SHEPHERD = BLOCKS.register("zombie_villager_wall_head_plains_shepherd",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_SHEPHERD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_SHEPHERD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_TOOLSMITH = BLOCKS.register("zombie_villager_head_plains_toolsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_TOOLSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_TOOLSMITH = BLOCKS.register("zombie_villager_wall_head_plains_toolsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_TOOLSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_TOOLSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_WEAPONSMITH = BLOCKS.register("zombie_villager_head_plains_weaponsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_WEAPONSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_WEAPONSMITH = BLOCKS.register("zombie_villager_wall_head_plains_weaponsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_WEAPONSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_WEAPONSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_PLAINS_NITWIT = BLOCKS.register("zombie_villager_head_plains_nitwit",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_NITWIT, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_NITWIT = BLOCKS.register("zombie_villager_wall_head_plains_nitwit",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_PLAINS_NITWIT, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_PLAINS_NITWIT).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA = BLOCKS.register("zombie_villager_head_savanna",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA = BLOCKS.register("zombie_villager_wall_head_savanna",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_ARMORER = BLOCKS.register("zombie_villager_head_savanna_armorer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_ARMORER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_ARMORER = BLOCKS.register("zombie_villager_wall_head_savanna_armorer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_ARMORER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_ARMORER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_BUTCHER = BLOCKS.register("zombie_villager_head_savanna_butcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_BUTCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_BUTCHER = BLOCKS.register("zombie_villager_wall_head_savanna_butcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_BUTCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_BUTCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_CARTOGRAPHER = BLOCKS.register("zombie_villager_head_savanna_cartographer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_CARTOGRAPHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_CARTOGRAPHER = BLOCKS.register("zombie_villager_wall_head_savanna_cartographer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_CARTOGRAPHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_CARTOGRAPHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_CLERIC = BLOCKS.register("zombie_villager_head_savanna_cleric",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_CLERIC, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_CLERIC = BLOCKS.register("zombie_villager_wall_head_savanna_cleric",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_CLERIC, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_CLERIC).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_FARMER = BLOCKS.register("zombie_villager_head_savanna_farmer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_FARMER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_FARMER = BLOCKS.register("zombie_villager_wall_head_savanna_farmer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_FARMER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_FARMER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_FISHERMAN = BLOCKS.register("zombie_villager_head_savanna_fisherman",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_FISHERMAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_FISHERMAN = BLOCKS.register("zombie_villager_wall_head_savanna_fisherman",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_FISHERMAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_FISHERMAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_FLETCHER = BLOCKS.register("zombie_villager_head_savanna_fletcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_FLETCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_FLETCHER = BLOCKS.register("zombie_villager_wall_head_savanna_fletcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_FLETCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_FLETCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_LEATHERWORKER = BLOCKS.register("zombie_villager_head_savanna_leatherworker",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_LEATHERWORKER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_LEATHERWORKER = BLOCKS.register("zombie_villager_wall_head_savanna_leatherworker",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_LEATHERWORKER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_LEATHERWORKER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_LIBRARIAN = BLOCKS.register("zombie_villager_head_savanna_librarian",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_LIBRARIAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_LIBRARIAN = BLOCKS.register("zombie_villager_wall_head_savanna_librarian",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_LIBRARIAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_LIBRARIAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_MASON = BLOCKS.register("zombie_villager_head_savanna_mason",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_MASON, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_MASON = BLOCKS.register("zombie_villager_wall_head_savanna_mason",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_MASON, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_MASON).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_SHEPHERD = BLOCKS.register("zombie_villager_head_savanna_shepherd",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_SHEPHERD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_SHEPHERD = BLOCKS.register("zombie_villager_wall_head_savanna_shepherd",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_SHEPHERD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_SHEPHERD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_TOOLSMITH = BLOCKS.register("zombie_villager_head_savanna_toolsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_TOOLSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_TOOLSMITH = BLOCKS.register("zombie_villager_wall_head_savanna_toolsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_TOOLSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_TOOLSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_WEAPONSMITH = BLOCKS.register("zombie_villager_head_savanna_weaponsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_WEAPONSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_WEAPONSMITH = BLOCKS.register("zombie_villager_wall_head_savanna_weaponsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_WEAPONSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_WEAPONSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SAVANNA_NITWIT = BLOCKS.register("zombie_villager_head_savanna_nitwit",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_NITWIT, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_NITWIT = BLOCKS.register("zombie_villager_wall_head_savanna_nitwit",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SAVANNA_NITWIT, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SAVANNA_NITWIT).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW = BLOCKS.register("zombie_villager_head_snow",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW = BLOCKS.register("zombie_villager_wall_head_snow",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_ARMORER = BLOCKS.register("zombie_villager_head_snow_armorer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_ARMORER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_ARMORER = BLOCKS.register("zombie_villager_wall_head_snow_armorer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_ARMORER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_ARMORER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_BUTCHER = BLOCKS.register("zombie_villager_head_snow_butcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_BUTCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_BUTCHER = BLOCKS.register("zombie_villager_wall_head_snow_butcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_BUTCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_BUTCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_CARTOGRAPHER = BLOCKS.register("zombie_villager_head_snow_cartographer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_CARTOGRAPHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_CARTOGRAPHER = BLOCKS.register("zombie_villager_wall_head_snow_cartographer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_CARTOGRAPHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_CARTOGRAPHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_CLERIC = BLOCKS.register("zombie_villager_head_snow_cleric",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_CLERIC, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_CLERIC = BLOCKS.register("zombie_villager_wall_head_snow_cleric",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_CLERIC, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_CLERIC).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_FARMER = BLOCKS.register("zombie_villager_head_snow_farmer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_FARMER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_FARMER = BLOCKS.register("zombie_villager_wall_head_snow_farmer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_FARMER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_FARMER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_FISHERMAN = BLOCKS.register("zombie_villager_head_snow_fisherman",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_FISHERMAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_FISHERMAN = BLOCKS.register("zombie_villager_wall_head_snow_fisherman",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_FISHERMAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_FISHERMAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_FLETCHER = BLOCKS.register("zombie_villager_head_snow_fletcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_FLETCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_FLETCHER = BLOCKS.register("zombie_villager_wall_head_snow_fletcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_FLETCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_FLETCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_LEATHERWORKER = BLOCKS.register("zombie_villager_head_snow_leatherworker",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_LEATHERWORKER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_LEATHERWORKER = BLOCKS.register("zombie_villager_wall_head_snow_leatherworker",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_LEATHERWORKER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_LEATHERWORKER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_LIBRARIAN = BLOCKS.register("zombie_villager_head_snow_librarian",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_LIBRARIAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_LIBRARIAN = BLOCKS.register("zombie_villager_wall_head_snow_librarian",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_LIBRARIAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_LIBRARIAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_MASON = BLOCKS.register("zombie_villager_head_snow_mason",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_MASON, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_MASON = BLOCKS.register("zombie_villager_wall_head_snow_mason",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_MASON, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_MASON).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_SHEPHERD = BLOCKS.register("zombie_villager_head_snow_shepherd",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_SHEPHERD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_SHEPHERD = BLOCKS.register("zombie_villager_wall_head_snow_shepherd",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_SHEPHERD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_SHEPHERD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_TOOLSMITH = BLOCKS.register("zombie_villager_head_snow_toolsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_TOOLSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_TOOLSMITH = BLOCKS.register("zombie_villager_wall_head_snow_toolsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_TOOLSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_TOOLSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_WEAPONSMITH = BLOCKS.register("zombie_villager_head_snow_weaponsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_WEAPONSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_WEAPONSMITH = BLOCKS.register("zombie_villager_wall_head_snow_weaponsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_WEAPONSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_WEAPONSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SNOW_NITWIT = BLOCKS.register("zombie_villager_head_snow_nitwit",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_NITWIT, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SNOW_NITWIT = BLOCKS.register("zombie_villager_wall_head_snow_nitwit",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SNOW_NITWIT, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SNOW_NITWIT).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP = BLOCKS.register("zombie_villager_head_swamp",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP = BLOCKS.register("zombie_villager_wall_head_swamp",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_ARMORER = BLOCKS.register("zombie_villager_head_swamp_armorer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_ARMORER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_ARMORER = BLOCKS.register("zombie_villager_wall_head_swamp_armorer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_ARMORER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_ARMORER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_BUTCHER = BLOCKS.register("zombie_villager_head_swamp_butcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_BUTCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_BUTCHER = BLOCKS.register("zombie_villager_wall_head_swamp_butcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_BUTCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_BUTCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_CARTOGRAPHER = BLOCKS.register("zombie_villager_head_swamp_cartographer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_CARTOGRAPHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_CARTOGRAPHER = BLOCKS.register("zombie_villager_wall_head_swamp_cartographer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_CARTOGRAPHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_CARTOGRAPHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_CLERIC = BLOCKS.register("zombie_villager_head_swamp_cleric",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_CLERIC, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_CLERIC = BLOCKS.register("zombie_villager_wall_head_swamp_cleric",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_CLERIC, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_CLERIC).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_FARMER = BLOCKS.register("zombie_villager_head_swamp_farmer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_FARMER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_FARMER = BLOCKS.register("zombie_villager_wall_head_swamp_farmer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_FARMER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_FARMER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_FISHERMAN = BLOCKS.register("zombie_villager_head_swamp_fisherman",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_FISHERMAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_FISHERMAN = BLOCKS.register("zombie_villager_wall_head_swamp_fisherman",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_FISHERMAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_FISHERMAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_FLETCHER = BLOCKS.register("zombie_villager_head_swamp_fletcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_FLETCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_FLETCHER = BLOCKS.register("zombie_villager_wall_head_swamp_fletcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_FLETCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_FLETCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_LEATHERWORKER = BLOCKS.register("zombie_villager_head_swamp_leatherworker",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_LEATHERWORKER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_LEATHERWORKER = BLOCKS.register("zombie_villager_wall_head_swamp_leatherworker",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_LEATHERWORKER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_LEATHERWORKER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_LIBRARIAN = BLOCKS.register("zombie_villager_head_swamp_librarian",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_LIBRARIAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_LIBRARIAN = BLOCKS.register("zombie_villager_wall_head_swamp_librarian",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_LIBRARIAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_LIBRARIAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_MASON = BLOCKS.register("zombie_villager_head_swamp_mason",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_MASON, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_MASON = BLOCKS.register("zombie_villager_wall_head_swamp_mason",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_MASON, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_MASON).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_SHEPHERD = BLOCKS.register("zombie_villager_head_swamp_shepherd",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_SHEPHERD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_SHEPHERD = BLOCKS.register("zombie_villager_wall_head_swamp_shepherd",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_SHEPHERD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_SHEPHERD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_TOOLSMITH = BLOCKS.register("zombie_villager_head_swamp_toolsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_TOOLSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_TOOLSMITH = BLOCKS.register("zombie_villager_wall_head_swamp_toolsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_TOOLSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_TOOLSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_WEAPONSMITH = BLOCKS.register("zombie_villager_head_swamp_weaponsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_WEAPONSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_WEAPONSMITH = BLOCKS.register("zombie_villager_wall_head_swamp_weaponsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_WEAPONSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_WEAPONSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_SWAMP_NITWIT = BLOCKS.register("zombie_villager_head_swamp_nitwit",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_NITWIT, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_NITWIT = BLOCKS.register("zombie_villager_wall_head_swamp_nitwit",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_SWAMP_NITWIT, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_SWAMP_NITWIT).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA = BLOCKS.register("zombie_villager_head_taiga",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA = BLOCKS.register("zombie_villager_wall_head_taiga",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_ARMORER = BLOCKS.register("zombie_villager_head_taiga_armorer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_ARMORER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_ARMORER = BLOCKS.register("zombie_villager_wall_head_taiga_armorer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_ARMORER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_ARMORER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_BUTCHER = BLOCKS.register("zombie_villager_head_taiga_butcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_BUTCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_BUTCHER = BLOCKS.register("zombie_villager_wall_head_taiga_butcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_BUTCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_BUTCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_CARTOGRAPHER = BLOCKS.register("zombie_villager_head_taiga_cartographer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_CARTOGRAPHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_CARTOGRAPHER = BLOCKS.register("zombie_villager_wall_head_taiga_cartographer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_CARTOGRAPHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_CARTOGRAPHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_CLERIC = BLOCKS.register("zombie_villager_head_taiga_cleric",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_CLERIC, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_CLERIC = BLOCKS.register("zombie_villager_wall_head_taiga_cleric",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_CLERIC, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_CLERIC).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_FARMER = BLOCKS.register("zombie_villager_head_taiga_farmer",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_FARMER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_FARMER = BLOCKS.register("zombie_villager_wall_head_taiga_farmer",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_FARMER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_FARMER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_FISHERMAN = BLOCKS.register("zombie_villager_head_taiga_fisherman",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_FISHERMAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_FISHERMAN = BLOCKS.register("zombie_villager_wall_head_taiga_fisherman",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_FISHERMAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_FISHERMAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_FLETCHER = BLOCKS.register("zombie_villager_head_taiga_fletcher",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_FLETCHER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_FLETCHER = BLOCKS.register("zombie_villager_wall_head_taiga_fletcher",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_FLETCHER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_FLETCHER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_LEATHERWORKER = BLOCKS.register("zombie_villager_head_taiga_leatherworker",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_LEATHERWORKER, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_LEATHERWORKER = BLOCKS.register("zombie_villager_wall_head_taiga_leatherworker",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_LEATHERWORKER, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_LEATHERWORKER).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_LIBRARIAN = BLOCKS.register("zombie_villager_head_taiga_librarian",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_LIBRARIAN, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_LIBRARIAN = BLOCKS.register("zombie_villager_wall_head_taiga_librarian",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_LIBRARIAN, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_LIBRARIAN).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_MASON = BLOCKS.register("zombie_villager_head_taiga_mason",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_MASON, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_MASON = BLOCKS.register("zombie_villager_wall_head_taiga_mason",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_MASON, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_MASON).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_SHEPHERD = BLOCKS.register("zombie_villager_head_taiga_shepherd",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_SHEPHERD, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_SHEPHERD = BLOCKS.register("zombie_villager_wall_head_taiga_shepherd",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_SHEPHERD, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_SHEPHERD).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_TOOLSMITH = BLOCKS.register("zombie_villager_head_taiga_toolsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_TOOLSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_TOOLSMITH = BLOCKS.register("zombie_villager_wall_head_taiga_toolsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_TOOLSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_TOOLSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_WEAPONSMITH = BLOCKS.register("zombie_villager_head_taiga_weaponsmith",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_WEAPONSMITH, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_WEAPONSMITH = BLOCKS.register("zombie_villager_wall_head_taiga_weaponsmith",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_WEAPONSMITH, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_WEAPONSMITH).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_HEAD_TAIGA_NITWIT = BLOCKS.register("zombie_villager_head_taiga_nitwit",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_NITWIT, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_NITWIT = BLOCKS.register("zombie_villager_wall_head_taiga_nitwit",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.ZOMBIE_VILLAGER_TAIGA_NITWIT, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(ZOMBIE_VILLAGER_HEAD_TAIGA_NITWIT).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> ZOMBIFIED_PIGLIN_HEAD = BLOCKS.register("zombified_piglin_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.ZOMBIFIED_PIGLIN, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));

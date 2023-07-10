@@ -18,18 +18,18 @@ import java.util.Set;
 
 @OnlyIn(Dist.CLIENT)
 public class VillagerHeadModel extends AbstractVillagerHeadModel {
-    private static final Set<VillagerType> fullHatTypes = Set.of(
+    protected static final Set<VillagerType> fullHatTypes = Set.of(
             VillagerType.DESERT,
             VillagerType.SNOW
     );
-    private static final Set<VillagerProfession> fullHatProfessions = Set.of(
+    protected static final Set<VillagerProfession> fullHatProfessions = Set.of(
             VillagerProfession.FARMER,
             VillagerProfession.FISHERMAN,
             VillagerProfession.FLETCHER,
             VillagerProfession.LIBRARIAN,
             VillagerProfession.SHEPHERD
     );
-    private static final Set<VillagerProfession> partialHatProfessions = Set.of(
+    protected static final Set<VillagerProfession> partialHatProfessions = Set.of(
             VillagerProfession.BUTCHER
     );
     private final ModelPart rootType;
@@ -69,11 +69,11 @@ public class VillagerHeadModel extends AbstractVillagerHeadModel {
         }
     }
 
-    private ResourceLocation getResourceLocation(String category, ResourceLocation resourceLocation) {
+    protected ResourceLocation getResourceLocation(String category, ResourceLocation resourceLocation) {
         return resourceLocation.withPath((path) -> "textures/entity/" + this.path + "/" + category + "/" + path + ".png");
     }
 
-    public boolean renderTypeHat(VillagerType villagerType, VillagerProfession villagerProfession) {
+    protected boolean renderTypeHat(VillagerType villagerType, VillagerProfession villagerProfession) {
         return (!fullHatProfessions.contains(villagerProfession) && !partialHatProfessions.contains(villagerProfession) || partialHatProfessions.contains(villagerProfession) && !fullHatTypes.contains(villagerType));
     }
 }

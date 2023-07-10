@@ -1438,6 +1438,426 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.ZOGLIN_HEAD.get(), ModBlocks.ZOGLIN_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT = ITEMS.register("zombie_villager_head_desert", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_ARMORER = ITEMS.register("zombie_villager_head_desert_armorer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_ARMORER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_ARMORER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_BUTCHER = ITEMS.register("zombie_villager_head_desert_butcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_BUTCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_BUTCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_CARTOGRAPHER = ITEMS.register("zombie_villager_head_desert_cartographer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_CARTOGRAPHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_CARTOGRAPHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_CLERIC = ITEMS.register("zombie_villager_head_desert_cleric", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_CLERIC.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_CLERIC.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_FARMER = ITEMS.register("zombie_villager_head_desert_farmer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_FARMER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_FARMER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_FISHERMAN = ITEMS.register("zombie_villager_head_desert_fisherman", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_FISHERMAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_FISHERMAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_FLETCHER = ITEMS.register("zombie_villager_head_desert_fletcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_FLETCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_FLETCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_LEATHERWORKER = ITEMS.register("zombie_villager_head_desert_leatherworker", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_LEATHERWORKER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_LEATHERWORKER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_LIBRARIAN = ITEMS.register("zombie_villager_head_desert_librarian", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_LIBRARIAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_LIBRARIAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_MASON = ITEMS.register("zombie_villager_head_desert_mason", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_MASON.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_MASON.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_SHEPHERD = ITEMS.register("zombie_villager_head_desert_shepherd", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_SHEPHERD.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_SHEPHERD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_TOOLSMITH = ITEMS.register("zombie_villager_head_desert_toolsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_TOOLSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_TOOLSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_WEAPONSMITH = ITEMS.register("zombie_villager_head_desert_weaponsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_WEAPONSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_WEAPONSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_DESERT_NITWIT = ITEMS.register("zombie_villager_head_desert_nitwit", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_DESERT_NITWIT.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_DESERT_NITWIT.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE = ITEMS.register("zombie_villager_head_jungle", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_ARMORER = ITEMS.register("zombie_villager_head_jungle_armorer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_ARMORER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_ARMORER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_BUTCHER = ITEMS.register("zombie_villager_head_jungle_butcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_BUTCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_BUTCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_CARTOGRAPHER = ITEMS.register("zombie_villager_head_jungle_cartographer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_CARTOGRAPHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_CARTOGRAPHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_CLERIC = ITEMS.register("zombie_villager_head_jungle_cleric", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_CLERIC.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_CLERIC.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_FARMER = ITEMS.register("zombie_villager_head_jungle_farmer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_FARMER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_FARMER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_FISHERMAN = ITEMS.register("zombie_villager_head_jungle_fisherman", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_FISHERMAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_FISHERMAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_FLETCHER = ITEMS.register("zombie_villager_head_jungle_fletcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_FLETCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_FLETCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_LEATHERWORKER = ITEMS.register("zombie_villager_head_jungle_leatherworker", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_LEATHERWORKER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_LEATHERWORKER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_LIBRARIAN = ITEMS.register("zombie_villager_head_jungle_librarian", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_LIBRARIAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_LIBRARIAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_MASON = ITEMS.register("zombie_villager_head_jungle_mason", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_MASON.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_MASON.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_SHEPHERD = ITEMS.register("zombie_villager_head_jungle_shepherd", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_SHEPHERD.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_SHEPHERD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_TOOLSMITH = ITEMS.register("zombie_villager_head_jungle_toolsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_TOOLSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_TOOLSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_WEAPONSMITH = ITEMS.register("zombie_villager_head_jungle_weaponsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_WEAPONSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_WEAPONSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_JUNGLE_NITWIT = ITEMS.register("zombie_villager_head_jungle_nitwit", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_JUNGLE_NITWIT.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_JUNGLE_NITWIT.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS = ITEMS.register("zombie_villager_head_plains", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_ARMORER = ITEMS.register("zombie_villager_head_plains_armorer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_ARMORER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_ARMORER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_BUTCHER = ITEMS.register("zombie_villager_head_plains_butcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_BUTCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_BUTCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_CARTOGRAPHER = ITEMS.register("zombie_villager_head_plains_cartographer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_CARTOGRAPHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_CARTOGRAPHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_CLERIC = ITEMS.register("zombie_villager_head_plains_cleric", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_CLERIC.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_CLERIC.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_FARMER = ITEMS.register("zombie_villager_head_plains_farmer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_FARMER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_FARMER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_FISHERMAN = ITEMS.register("zombie_villager_head_plains_fisherman", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_FISHERMAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_FISHERMAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_FLETCHER = ITEMS.register("zombie_villager_head_plains_fletcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_FLETCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_FLETCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_LEATHERWORKER = ITEMS.register("zombie_villager_head_plains_leatherworker", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_LEATHERWORKER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_LEATHERWORKER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_LIBRARIAN = ITEMS.register("zombie_villager_head_plains_librarian", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_LIBRARIAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_LIBRARIAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_MASON = ITEMS.register("zombie_villager_head_plains_mason", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_MASON.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_MASON.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_SHEPHERD = ITEMS.register("zombie_villager_head_plains_shepherd", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_SHEPHERD.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_SHEPHERD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_TOOLSMITH = ITEMS.register("zombie_villager_head_plains_toolsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_TOOLSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_TOOLSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_WEAPONSMITH = ITEMS.register("zombie_villager_head_plains_weaponsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_WEAPONSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_WEAPONSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_PLAINS_NITWIT = ITEMS.register("zombie_villager_head_plains_nitwit", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_PLAINS_NITWIT.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_PLAINS_NITWIT.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA = ITEMS.register("zombie_villager_head_savanna", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_ARMORER = ITEMS.register("zombie_villager_head_savanna_armorer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_ARMORER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_ARMORER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_BUTCHER = ITEMS.register("zombie_villager_head_savanna_butcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_BUTCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_BUTCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_CARTOGRAPHER = ITEMS.register("zombie_villager_head_savanna_cartographer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_CARTOGRAPHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_CARTOGRAPHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_CLERIC = ITEMS.register("zombie_villager_head_savanna_cleric", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_CLERIC.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_CLERIC.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_FARMER = ITEMS.register("zombie_villager_head_savanna_farmer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_FARMER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_FARMER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_FISHERMAN = ITEMS.register("zombie_villager_head_savanna_fisherman", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_FISHERMAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_FISHERMAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_FLETCHER = ITEMS.register("zombie_villager_head_savanna_fletcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_FLETCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_FLETCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_LEATHERWORKER = ITEMS.register("zombie_villager_head_savanna_leatherworker", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_LEATHERWORKER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_LEATHERWORKER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_LIBRARIAN = ITEMS.register("zombie_villager_head_savanna_librarian", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_LIBRARIAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_LIBRARIAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_MASON = ITEMS.register("zombie_villager_head_savanna_mason", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_MASON.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_MASON.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_SHEPHERD = ITEMS.register("zombie_villager_head_savanna_shepherd", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_SHEPHERD.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_SHEPHERD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_TOOLSMITH = ITEMS.register("zombie_villager_head_savanna_toolsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_TOOLSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_TOOLSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_WEAPONSMITH = ITEMS.register("zombie_villager_head_savanna_weaponsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_WEAPONSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_WEAPONSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SAVANNA_NITWIT = ITEMS.register("zombie_villager_head_savanna_nitwit", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SAVANNA_NITWIT.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SAVANNA_NITWIT.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW = ITEMS.register("zombie_villager_head_snow", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_ARMORER = ITEMS.register("zombie_villager_head_snow_armorer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_ARMORER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_ARMORER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_BUTCHER = ITEMS.register("zombie_villager_head_snow_butcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_BUTCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_BUTCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_CARTOGRAPHER = ITEMS.register("zombie_villager_head_snow_cartographer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_CARTOGRAPHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_CARTOGRAPHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_CLERIC = ITEMS.register("zombie_villager_head_snow_cleric", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_CLERIC.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_CLERIC.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_FARMER = ITEMS.register("zombie_villager_head_snow_farmer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_FARMER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_FARMER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_FISHERMAN = ITEMS.register("zombie_villager_head_snow_fisherman", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_FISHERMAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_FISHERMAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_FLETCHER = ITEMS.register("zombie_villager_head_snow_fletcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_FLETCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_FLETCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_LEATHERWORKER = ITEMS.register("zombie_villager_head_snow_leatherworker", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_LEATHERWORKER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_LEATHERWORKER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_LIBRARIAN = ITEMS.register("zombie_villager_head_snow_librarian", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_LIBRARIAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_LIBRARIAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_MASON = ITEMS.register("zombie_villager_head_snow_mason", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_MASON.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_MASON.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_SHEPHERD = ITEMS.register("zombie_villager_head_snow_shepherd", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_SHEPHERD.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_SHEPHERD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_TOOLSMITH = ITEMS.register("zombie_villager_head_snow_toolsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_TOOLSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_TOOLSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_WEAPONSMITH = ITEMS.register("zombie_villager_head_snow_weaponsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_WEAPONSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_WEAPONSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SNOW_NITWIT = ITEMS.register("zombie_villager_head_snow_nitwit", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SNOW_NITWIT.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SNOW_NITWIT.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP = ITEMS.register("zombie_villager_head_swamp", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_ARMORER = ITEMS.register("zombie_villager_head_swamp_armorer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_ARMORER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_ARMORER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_BUTCHER = ITEMS.register("zombie_villager_head_swamp_butcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_BUTCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_BUTCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_CARTOGRAPHER = ITEMS.register("zombie_villager_head_swamp_cartographer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_CARTOGRAPHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_CARTOGRAPHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_CLERIC = ITEMS.register("zombie_villager_head_swamp_cleric", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_CLERIC.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_CLERIC.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_FARMER = ITEMS.register("zombie_villager_head_swamp_farmer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_FARMER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_FARMER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_FISHERMAN = ITEMS.register("zombie_villager_head_swamp_fisherman", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_FISHERMAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_FISHERMAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_FLETCHER = ITEMS.register("zombie_villager_head_swamp_fletcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_FLETCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_FLETCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_LEATHERWORKER = ITEMS.register("zombie_villager_head_swamp_leatherworker", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_LEATHERWORKER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_LEATHERWORKER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_LIBRARIAN = ITEMS.register("zombie_villager_head_swamp_librarian", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_LIBRARIAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_LIBRARIAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_MASON = ITEMS.register("zombie_villager_head_swamp_mason", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_MASON.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_MASON.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_SHEPHERD = ITEMS.register("zombie_villager_head_swamp_shepherd", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_SHEPHERD.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_SHEPHERD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_TOOLSMITH = ITEMS.register("zombie_villager_head_swamp_toolsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_TOOLSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_TOOLSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_WEAPONSMITH = ITEMS.register("zombie_villager_head_swamp_weaponsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_WEAPONSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_WEAPONSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_SWAMP_NITWIT = ITEMS.register("zombie_villager_head_swamp_nitwit", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_SWAMP_NITWIT.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_SWAMP_NITWIT.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA = ITEMS.register("zombie_villager_head_taiga", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_ARMORER = ITEMS.register("zombie_villager_head_taiga_armorer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_ARMORER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_ARMORER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_BUTCHER = ITEMS.register("zombie_villager_head_taiga_butcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_BUTCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_BUTCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_CARTOGRAPHER = ITEMS.register("zombie_villager_head_taiga_cartographer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_CARTOGRAPHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_CARTOGRAPHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_CLERIC = ITEMS.register("zombie_villager_head_taiga_cleric", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_CLERIC.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_CLERIC.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_FARMER = ITEMS.register("zombie_villager_head_taiga_farmer", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_FARMER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_FARMER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_FISHERMAN = ITEMS.register("zombie_villager_head_taiga_fisherman", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_FISHERMAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_FISHERMAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_FLETCHER = ITEMS.register("zombie_villager_head_taiga_fletcher", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_FLETCHER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_FLETCHER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_LEATHERWORKER = ITEMS.register("zombie_villager_head_taiga_leatherworker", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_LEATHERWORKER.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_LEATHERWORKER.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_LIBRARIAN = ITEMS.register("zombie_villager_head_taiga_librarian", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_LIBRARIAN.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_LIBRARIAN.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_MASON = ITEMS.register("zombie_villager_head_taiga_mason", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_MASON.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_MASON.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_SHEPHERD = ITEMS.register("zombie_villager_head_taiga_shepherd", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_SHEPHERD.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_SHEPHERD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_TOOLSMITH = ITEMS.register("zombie_villager_head_taiga_toolsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_TOOLSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_TOOLSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_WEAPONSMITH = ITEMS.register("zombie_villager_head_taiga_weaponsmith", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_WEAPONSMITH.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_WEAPONSMITH.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> ZOMBIE_VILLAGER_HEAD_TAIGA_NITWIT = ITEMS.register("zombie_villager_head_taiga_nitwit", () ->
+            new EffectSkullItem(ModBlocks.ZOMBIE_VILLAGER_HEAD_TAIGA_NITWIT.get(), ModBlocks.ZOMBIE_VILLAGER_WALL_HEAD_TAIGA_NITWIT.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> ZOMBIFIED_PIGLIN_HEAD = ITEMS.register("zombified_piglin_head", () ->
             new EffectSkullItem(ModBlocks.ZOMBIFIED_PIGLIN_HEAD.get(), ModBlocks.ZOMBIFIED_PIGLIN_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
