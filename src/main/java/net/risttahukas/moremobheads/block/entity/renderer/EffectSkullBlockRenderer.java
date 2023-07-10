@@ -546,8 +546,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
                 verticalTranslation = 0.125F;
             } else if (skullModelBase instanceof CaveSpiderHeadModel) {
                 horizontalTranslation = 0.325F;
-            } else if (skullModelBase instanceof ChickenHeadModel || skullModelBase instanceof ParrotHeadModel ||
-                    skullModelBase instanceof EndermiteHeadModel) {
+            } else if (skullModelBase instanceof ParrotHeadModel || skullModelBase instanceof EndermiteHeadModel) {
                 horizontalTranslation = 0.4375F;
             } else if (skullModelBase instanceof CowHeadModel || skullModelBase instanceof DolphinHeadModel ||
                     skullModelBase instanceof SquidHeadModel || skullModelBase instanceof FoxHeadModel ||
@@ -576,7 +575,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
                 horizontalTranslation = 0.265625F;
             } else if (skullModelBase instanceof RavagerHeadModel) {
                 verticalTranslation = 0.203125F;
-            } else if (skullModelBase instanceof TadpoleHeadModel) {
+            } else if (skullModelBase instanceof ChickenHeadModel || skullModelBase instanceof TadpoleHeadModel) {
                 horizontalTranslation = 0.40625F;
             } else if (skullModelBase instanceof ElderGuardianHeadModel) {
                 horizontalTranslation = 0.125F;

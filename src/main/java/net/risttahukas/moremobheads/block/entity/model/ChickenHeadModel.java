@@ -20,13 +20,13 @@ public class ChickenHeadModel extends SkullModel {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
         PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0)
-                .addBox(-2.0F, -6.0F, -2.0F, 4.0F, 6.0F, 3.0F),
+                .addBox(-2.0F, -6.0F, -1.5F, 4.0F, 6.0F, 3.0F),
                 PartPose.ZERO);
         head.addOrReplaceChild("beak", CubeListBuilder.create().texOffs(14, 0)
-                .addBox(-2.0F, -4.0F, -4.0F, 4.0F, 2.0F, 2.0F),
+                .addBox(-2.0F, -4.0F, -3.5F, 4.0F, 2.0F, 2.0F),
                 PartPose.ZERO);
         head.addOrReplaceChild("red_thing", CubeListBuilder.create().texOffs(14, 4)
-                .addBox(-1.0F, -2.0F, -3.0F, 2.0F, 2.0F, 2.0F),
+                .addBox(-1.0F, -2.0F, -2.5F, 2.0F, 2.0F, 2.0F),
                 PartPose.ZERO);
         return meshdefinition;
     }
