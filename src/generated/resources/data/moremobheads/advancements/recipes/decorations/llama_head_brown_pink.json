@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brown_llama_head": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "moremobheads:brown_llama_head"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moremobheads:llama_head_brown_pink"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_brown_llama_head",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "moremobheads:llama_head_brown_pink"
+    ]
+  },
+  "sends_telemetry_event": false
+}
