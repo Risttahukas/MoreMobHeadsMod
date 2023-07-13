@@ -15,6 +15,7 @@ import net.risttahukas.moremobheads.block.ModBlocks;
 import net.risttahukas.moremobheads.block.entity.ModBlockEntities;
 import net.risttahukas.moremobheads.item.ModCreativeModeTabs;
 import net.risttahukas.moremobheads.item.ModItems;
+import net.risttahukas.moremobheads.loot.ModLootModifiers;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -35,6 +36,8 @@ public class MoreMobHeadsMod
         ModBlocks.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
