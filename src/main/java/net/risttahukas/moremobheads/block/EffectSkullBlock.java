@@ -264,7 +264,7 @@ public class EffectSkullBlock extends SkullBlock {
             return PANDA_SHAPE;
         } if (Types.PARROT_RED_BLUE.equals(this.getType()) || Types.PARROT_BLUE.equals(this.getType()) ||
                 Types.PARROT_GREEN.equals(this.getType()) || Types.PARROT_YELLOW_BLUE.equals(this.getType()) ||
-                Types.PARROT_GREY.equals(this.getType())) {
+                Types.PARROT_GRAY.equals(this.getType())) {
             return PARROT_SHAPE;
         } if (Types.PHANTOM.equals(this.getType())) {
             return PHANTOM_SHAPE;
@@ -417,11 +417,11 @@ public class EffectSkullBlock extends SkullBlock {
         AXOLOTL_CYAN,
         AXOLOTL_BLUE,
         BAT,
-        BLAZE,
         BEE,
         BEE_ANGRY,
         BEE_POLLEN,
         BEE_ANGRY_POLLEN,
+        BLAZE,
         CAMEL,
         CAT_TABBY,
         CAT_BLACK,
@@ -581,7 +581,7 @@ public class EffectSkullBlock extends SkullBlock {
         PARROT_BLUE,
         PARROT_GREEN,
         PARROT_YELLOW_BLUE,
-        PARROT_GREY,
+        PARROT_GRAY,
         PHANTOM,
         PIG,
         PIGLIN_BRUTE,

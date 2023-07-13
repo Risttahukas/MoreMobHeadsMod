@@ -1211,12 +1211,12 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PARROT_YELLOW_BLUE, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(PARROT_HEAD_YELLOW_BLUE).pushReaction(PushReaction.DESTROY)));
 
-    public static final RegistryObject<Block> PARROT_HEAD_GREY = BLOCKS.register("parrot_head_grey",
-            () -> new EffectSkullBlock(EffectSkullBlock.Types.PARROT_GREY, BlockBehaviour.Properties.of()
+    public static final RegistryObject<Block> PARROT_HEAD_GRAY = BLOCKS.register("parrot_head_gray",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.PARROT_GRAY, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.SKELETON).strength(1.0F).pushReaction(PushReaction.DESTROY)));
-    public static final RegistryObject<Block> PARROT_WALL_HEAD_GREY = BLOCKS.register("parrot_wall_head_grey",
-            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PARROT_GREY, BlockBehaviour.Properties.of().strength(1.0F)
-                    .lootFrom(PARROT_HEAD_GREY).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> PARROT_WALL_HEAD_GRAY = BLOCKS.register("parrot_wall_head_gray",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.PARROT_GRAY, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(PARROT_HEAD_GRAY).pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> PHANTOM_HEAD = BLOCKS.register("phantom_head",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.PHANTOM, BlockBehaviour.Properties.of()

@@ -558,7 +558,7 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                 EffectSkullBlock.Types.PARROT_BLUE.equals(this.getType()) ||
                 EffectSkullBlock.Types.PARROT_GREEN.equals(this.getType()) ||
                 EffectSkullBlock.Types.PARROT_YELLOW_BLUE.equals(this.getType()) ||
-                EffectSkullBlock.Types.PARROT_GREY.equals(this.getType())) {
+                EffectSkullBlock.Types.PARROT_GRAY.equals(this.getType())) {
             return PARROT_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.PHANTOM.equals(this.getType())) {
             return PHANTOM_AABBS.get(blockState.getValue(FACING));

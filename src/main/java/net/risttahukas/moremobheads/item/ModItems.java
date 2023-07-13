@@ -698,8 +698,8 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.PARROT_HEAD_YELLOW_BLUE.get(), ModBlocks.PARROT_WALL_HEAD_YELLOW_BLUE.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
-    public static final RegistryObject<Item> PARROT_HEAD_GREY = ITEMS.register("parrot_head_grey", () ->
-            new EffectSkullItem(ModBlocks.PARROT_HEAD_GREY.get(), ModBlocks.PARROT_WALL_HEAD_GREY.get(),
+    public static final RegistryObject<Item> PARROT_HEAD_GRAY = ITEMS.register("parrot_head_gray", () ->
+            new EffectSkullItem(ModBlocks.PARROT_HEAD_GRAY.get(), ModBlocks.PARROT_WALL_HEAD_GRAY.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> PHANTOM_HEAD = ITEMS.register("phantom_head", () ->
