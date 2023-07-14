@@ -3,7 +3,14 @@
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "minecraft:entities/blaze"
+      "loot_table_id": "minecraft:entities/creeper"
+    },
+    {
+      "condition": "entity_properties",
+      "predicate": {
+        "nbt": "{powered:1b}"
+      },
+      "entity": "this"
     },
     {
       "condition": "minecraft:killed_by_player"
@@ -14,5 +21,5 @@
       "looting_multiplier": 0.01
     }
   ],
-  "item": "moremobheads:blaze_head"
+  "item": "moremobheads:creeper_head_charged"
 }

@@ -1,0 +1,28 @@
+{
+  "type": "moremobheads:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/sheep/brown"
+    },
+    {
+      "condition": "minecraft:killed_by_player"
+    },
+    {
+      "condition": "inverted",
+      "term": {
+        "condition": "entity_properties",
+        "predicate": {
+          "nbt": "{CustomName:\"{\\\"text\\\":\\\"jeb_\\\"}\"}"
+        },
+        "entity": "this"
+      }
+    },
+    {
+      "chance": 0.025,
+      "condition": "minecraft:random_chance_with_looting",
+      "looting_multiplier": 0.01
+    }
+  ],
+  "item": "moremobheads:sheep_head_brown"
+}

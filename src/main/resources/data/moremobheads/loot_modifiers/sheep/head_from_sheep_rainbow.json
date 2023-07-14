@@ -2,8 +2,12 @@
   "type": "moremobheads:add_item",
   "conditions": [
     {
-      "condition": "forge:loot_table_id",
-      "loot_table_id": "minecraft:entities/blaze"
+      "condition": "entity_properties",
+      "predicate": {
+        "type": "sheep",
+        "nbt": "{CustomName:\"{\\\"text\\\":\\\"jeb_\\\"}\"}"
+      },
+      "entity": "this"
     },
     {
       "condition": "minecraft:killed_by_player"
@@ -14,5 +18,5 @@
       "looting_multiplier": 0.01
     }
   ],
-  "item": "moremobheads:blaze_head"
+  "item": "moremobheads:sheep_head_rainbow"
 }

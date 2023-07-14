@@ -3,7 +3,14 @@
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "minecraft:entities/blaze"
+      "loot_table_id": "minecraft:entities/parrot"
+    },
+    {
+      "condition": "entity_properties",
+      "predicate": {
+        "nbt": "{Variant:0}"
+      },
+      "entity": "this"
     },
     {
       "condition": "minecraft:killed_by_player"
@@ -14,5 +21,5 @@
       "looting_multiplier": 0.01
     }
   ],
-  "item": "moremobheads:blaze_head"
+  "item": "moremobheads:parrot_head_red_blue"
 }
