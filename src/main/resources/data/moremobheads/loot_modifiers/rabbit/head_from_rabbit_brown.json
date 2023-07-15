@@ -1,0 +1,35 @@
+{
+  "type": "moremobheads:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/rabbit"
+    },
+    {
+      "condition": "entity_properties",
+      "predicate": {
+        "nbt": "{RabbitType:0}"
+      },
+      "entity": "this"
+    },
+    {
+      "condition": "inverted",
+      "term": {
+        "condition": "entity_properties",
+        "predicate": {
+          "nbt": "{CustomName:\"{\\\"text\\\":\\\"Toast\\\"}\"}"
+        },
+        "entity": "this"
+      }
+    },
+    {
+      "condition": "minecraft:killed_by_player"
+    },
+    {
+      "chance": 0.025,
+      "condition": "minecraft:random_chance_with_looting",
+      "looting_multiplier": 0.01
+    }
+  ],
+  "item": "moremobheads:rabbit_head_brown"
+}

@@ -1,0 +1,138 @@
+{
+  "type": "moremobheads:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/shulker"
+    },
+    {
+      "condition": "inverted",
+      "term": {
+        "condition": "any_of",
+        "terms": [
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:0b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:1b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:2b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:3b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:4b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:5b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:6b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:7b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:8b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:9b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:10b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:11b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:12b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:13b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:14b}"
+            },
+            "entity": "this"
+          },
+          {
+            "condition": "entity_properties",
+            "predicate": {
+              "nbt": "{Color:15b}"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "minecraft:killed_by_player"
+    },
+    {
+      "chance": 0.025,
+      "condition": "minecraft:random_chance_with_looting",
+      "looting_multiplier": 0.01
+    }
+  ],
+  "item": "moremobheads:shulker_head"
+}
