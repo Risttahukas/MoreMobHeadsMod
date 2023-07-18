@@ -256,10 +256,6 @@
     "moremobheads:villager/taiga/head_from_villager_taiga_weaponsmith",
     "moremobheads:villager/taiga/head_from_villager_taiga_nitwit",
 
-    "moremobheads:wolf/head_from_wolf",
-    "moremobheads:wolf/head_from_wolf_tame",
-    "moremobheads:wolf/head_from_wolf_angry",
-
     "moremobheads:zombie_villager/desert/head_from_zombie_villager_desert",
     "moremobheads:zombie_villager/desert/head_from_zombie_villager_desert_armorer",
     "moremobheads:zombie_villager/desert/head_from_zombie_villager_desert_butcher",
@@ -417,7 +413,6 @@
     "moremobheads:head_from_wandering_trader",
     "moremobheads:head_from_warden",
     "moremobheads:head_from_witch",
-    "moremobheads:head_from_wither",
     "moremobheads:head_from_zoglin",
     "moremobheads:head_from_zombie",
     "moremobheads:head_from_zombified_piglin"

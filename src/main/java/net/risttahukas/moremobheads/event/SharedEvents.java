@@ -26,6 +26,7 @@ import net.minecraft.world.entity.monster.warden.Warden;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.npc.VillagerData;
 import net.minecraft.world.entity.npc.WanderingTrader;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
@@ -48,6 +49,7 @@ public class SharedEvents {
         @SubscribeEvent
         public static void onLivingDropsEvent(LivingDropsEvent event) {
             LivingEntity entity = event.getEntity();
+            RandomSource randomSource = entity.getRandom();
             if (!entity.level().isClientSide) {
                 Entity sourceEntity = event.getSource().getEntity();
                 if (sourceEntity != entity && sourceEntity instanceof Creeper creeper) {
@@ -510,8 +512,7 @@ public class SharedEvents {
                         } else if (entity instanceof Witch) {
                             headToDrop = ModItems.WITCH_HEAD.get();
                         } else if (entity instanceof WitherBoss) {
-                            RandomSource randomsource = RandomSource.create();
-                            if (randomsource.nextFloat() < 0.5) {
+                            if (randomSource.nextFloat() < 0.5) {
                                 headToDrop = ModItems.WITHER_HEAD_INVULNERABLE.get();
                             } else {
                                 headToDrop = ModItems.WITHER_HEAD.get();
@@ -662,6 +663,24 @@ public class SharedEvents {
                             entity.spawnAtLocation(headToDrop);
                         }
 
+                    }
+                } else if (sourceEntity != entity && sourceEntity instanceof Player) {
+                    Item headToDrop = null;
+                    float chance = 0.025F;
+                    float lootingMultiplier = 0.01F;
+                    if (entity instanceof WitherBoss) {
+                        if (randomSource.nextFloat() < 0.5) {
+                            headToDrop = ModItems.WITHER_HEAD_INVULNERABLE.get();
+                        } else {
+                            headToDrop = ModItems.WITHER_HEAD.get();
+                        }
+                    } else if (entity instanceof Wolf wolf) {
+                        headToDrop = wolf.isTame() ? ModItems.WOLF_HEAD_TAME.get() : wolf.isAngry() ? ModItems.WOLF_HEAD_ANGRY.get() : ModItems.WOLF_HEAD.get();
+                    }
+                    if (headToDrop != null) {
+                        if (randomSource.nextFloat() < chance + lootingMultiplier * event.getLootingLevel()) {
+                            entity.spawnAtLocation(headToDrop);
+                        }
                     }
                 }
             }
