@@ -9,12 +9,15 @@ import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.layers.CustomHeadLayer;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.SkullBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.InputEvent;
+import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.client.event.RenderLivingEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -28,6 +31,7 @@ import net.risttahukas.moremobheads.block.entity.model.*;
 import net.risttahukas.moremobheads.block.entity.renderer.EffectSkullBlockRenderer;
 import net.risttahukas.moremobheads.entity.renderer.layers.EffectSkullHeadLayer;
 import net.risttahukas.moremobheads.item.EffectSkullItem;
+import net.risttahukas.moremobheads.util.ModKeyBindings;
 
 import java.util.List;
 import java.util.Map;
@@ -63,6 +67,14 @@ public class ClientEvents {
             Minecraft minecraft = Minecraft.getInstance();
             if (!minecraft.isPaused()) {
                 time++;
+            }
+        }
+
+        @SubscribeEvent
+        public static void onKeyInput(InputEvent.Key inputEvent) {
+            if (ModKeyBindings.HEAD_EFFECT_KEY.consumeClick()) {
+                assert Minecraft.getInstance().player != null;
+                Minecraft.getInstance().player.sendSystemMessage(Component.literal("This key will one day activate active effects on heads"));
             }
         }
 
@@ -190,6 +202,11 @@ public class ClientEvents {
                     }
                 }
             }
+        }
+
+        @SubscribeEvent
+        public static void onKeyRegister(RegisterKeyMappingsEvent registerKeyMappingsEvent) {
+            registerKeyMappingsEvent.register(ModKeyBindings.HEAD_EFFECT_KEY);
         }
 
     }

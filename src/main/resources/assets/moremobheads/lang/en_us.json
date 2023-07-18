@@ -462,5 +462,8 @@
   "block.moremobheads.zombie_villager_head_taiga_nitwit": "Taiga Zombie Nitwit Head",
   "block.moremobheads.zombified_piglin_head": "Zombified Piglin Head",
 
-  "creativemodetab.mob_heads_tab": "Mob Heads"
+  "creativemodetab.mob_heads_tab": "Mob Heads",
+
+  "key.category.moremobheads": "More Mob Heads",
+  "key.moremobheads.activate_head_effect": "Activate Head Effect (WIP)"
 }
