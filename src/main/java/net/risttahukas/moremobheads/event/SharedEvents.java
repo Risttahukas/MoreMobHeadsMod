@@ -50,22 +50,6 @@ public class SharedEvents {
                                     drops.add(dropToAdd);
                                 }
                             }
-                        } else if (entity instanceof WitherSkeleton witherSkeleton) {
-                            Collection<ItemEntity> drops = event.getDrops();
-                            ItemEntity dropToRemove = null;
-                            boolean skullFound = false;
-                            for (ItemEntity drop : drops) {
-                                if (drop.getItem().getItem() == Items.WITHER_SKELETON_SKULL) {
-                                    if (skullFound) {
-                                        dropToRemove = drop;
-                                    } else {
-                                        skullFound = true;
-                                    }
-                                }
-                            }
-                            if (dropToRemove != null) {
-                                drops.remove(dropToRemove);
-                            }
                         }
 
                         if (creeper.canDropMobsSkull()) {
@@ -78,6 +62,19 @@ public class SharedEvents {
 
                         }
                     } else {
+                        if (entity instanceof WitherSkeleton witherSkeleton) {
+                            Collection<ItemEntity> drops = event.getDrops();
+                            ItemEntity dropToRemove = null;
+                            for (ItemEntity drop : drops) {
+                                if (drop.getItem().getItem() == Items.WITHER_SKELETON_SKULL) {
+                                    dropToRemove = drop;
+                                }
+                            }
+                            if (dropToRemove != null) {
+                                drops.remove(dropToRemove);
+                            }
+                        }
+
                         Player player = (Player) sourceEntity;
                         Item headToDrop = ModLootHelper.getHeadFromMob(entity);
 
