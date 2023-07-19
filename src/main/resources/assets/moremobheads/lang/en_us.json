@@ -464,6 +464,8 @@
 
   "creativemodetab.mob_heads_tab": "Mob Heads",
 
+  "enchantment.moremobheads.beheading": "Beheading",
+
   "key.category.moremobheads": "More Mob Heads",
   "key.moremobheads.activate_head_effect": "Activate Head Effect (WIP)"
 }

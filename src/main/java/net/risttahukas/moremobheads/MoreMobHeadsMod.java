@@ -13,6 +13,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.risttahukas.moremobheads.block.ModBlocks;
 import net.risttahukas.moremobheads.block.entity.ModBlockEntities;
+import net.risttahukas.moremobheads.enchantment.ModEnchantments;
 import net.risttahukas.moremobheads.item.ModCreativeModeTabs;
 import net.risttahukas.moremobheads.item.ModItems;
 import net.risttahukas.moremobheads.loot.ModLootModifiers;
@@ -38,6 +39,8 @@ public class MoreMobHeadsMod
         ModBlockEntities.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+
+        ModEnchantments.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -409,10 +412,10 @@ public class MoreMobHeadsMod
             event.accept(ModItems.WITHER_HEAD_INVULNERABLE);
             event.accept(ModItems.WITHER_HEAD_SHIELD);
             event.accept(ModItems.WITHER_HEAD_INVULNERABLE_SHIELD);
+            event.accept(Items.WITHER_SKELETON_SKULL);
             event.accept(ModItems.WOLF_HEAD);
             event.accept(ModItems.WOLF_HEAD_TAME);
             event.accept(ModItems.WOLF_HEAD_ANGRY);
-            event.accept(Items.WITHER_SKELETON_SKULL);
             event.accept(ModItems.ZOGLIN_HEAD);
             event.accept(Items.ZOMBIE_HEAD);
             event.accept(ModItems.ZOMBIE_VILLAGER_HEAD_DESERT);
