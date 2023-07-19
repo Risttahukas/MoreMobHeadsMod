@@ -465,6 +465,7 @@
   "creativemodetab.mob_heads_tab": "Mob Heads",
 
   "enchantment.moremobheads.beheading": "Beheading",
+  "enchantment.moremobheads.beheading.desc": "Makes mob heads far more likely to drop, but has no effect on other drops",
 
   "key.category.moremobheads": "More Mob Heads",
   "key.moremobheads.activate_head_effect": "Activate Head Effect (WIP)"
