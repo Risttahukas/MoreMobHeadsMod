@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "moremobheads:vex_head_charging"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "moremobheads:blocks/vex_head_charging"
+}

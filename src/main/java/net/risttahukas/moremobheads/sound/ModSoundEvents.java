@@ -198,7 +198,6 @@ public class ModSoundEvents {
 
     public static final Holder.Reference<SoundEvent> NOTE_BLOCK_IMITATE_VEX =
             registerSoundEventForHolder("block.note_block.imitate.vex");
-
     public static final Holder.Reference<SoundEvent> NOTE_BLOCK_IMITATE_VEX_CHARGING =
             registerSoundEventForHolder("block.note_block.imitate.vex_charging");
 

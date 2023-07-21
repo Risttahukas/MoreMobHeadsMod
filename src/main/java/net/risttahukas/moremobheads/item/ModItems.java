@@ -970,6 +970,10 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.VEX_HEAD.get(), ModBlocks.VEX_WALL_HEAD.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
+    public static final RegistryObject<Item> VEX_HEAD_CHARGING = ITEMS.register("vex_head_charging", () ->
+            new EffectSkullItem(ModBlocks.VEX_HEAD_CHARGING.get(), ModBlocks.VEX_WALL_HEAD_CHARGING.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
     public static final RegistryObject<Item> VILLAGER_HEAD_DESERT = ITEMS.register("villager_head_desert", () ->
             new EffectSkullItem(ModBlocks.VILLAGER_HEAD_DESERT.get(), ModBlocks.VILLAGER_WALL_HEAD_DESERT.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));

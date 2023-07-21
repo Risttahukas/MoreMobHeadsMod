@@ -342,8 +342,12 @@ public class ModLootHelper {
             headToDrop = ModItems.TROPICAL_FISH_HEAD.get();
         } else if (entity instanceof Turtle) {
             headToDrop = ModItems.TURTLE_HEAD.get();
-        } else if (entity instanceof Vex) {
-            headToDrop = ModItems.VEX_HEAD.get();
+        } else if (entity instanceof Vex vex) {
+            if (vex.isCharging()) {
+                headToDrop = ModItems.VEX_HEAD_CHARGING.get();
+            } else {
+                headToDrop = ModItems.VEX_HEAD.get();
+            }
         } else if (entity instanceof Villager villager) {
             VillagerData villagerdata = villager.getVillagerData();
             String villagerType = BuiltInRegistries.VILLAGER_TYPE.getKey(villagerdata.getType()).toString();
@@ -642,6 +646,7 @@ public class ModLootHelper {
         float baseChance = 0.025F;
         if (beheadingLevel > 0) {
             baseChance = 0;
+            lootingLevel = 0;
         }
         float lootingMultiplier = 0.01F;
         float beheadingMultiplier = 0.05F;

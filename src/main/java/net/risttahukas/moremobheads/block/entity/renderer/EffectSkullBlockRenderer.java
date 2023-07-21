@@ -284,6 +284,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TROPICAL_FISH, new ResourceLocation("textures/entity/fish/tropical_a.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TURTLE, new ResourceLocation("textures/entity/turtle/big_sea_turtle.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VEX, new ResourceLocation("textures/entity/illager/vex.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.VEX_CHARGING, new ResourceLocation("textures/entity/illager/vex_charging.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VILLAGER_DESERT, new ResourceLocation("textures/entity/villager/villager.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VILLAGER_DESERT_ARMORER, new ResourceLocation("textures/entity/villager/villager.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VILLAGER_DESERT_BUTCHER, new ResourceLocation("textures/entity/villager/villager.png"));
@@ -878,6 +879,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.TROPICAL_FISH, new TropicalFishHeadModelA(entityModelSet.bakeLayer(ModBlockEntityModelLayers.TROPICAL_FISH_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.TROPICAL_FISH_HEAD_PATTERN), "kob", 1, 0));
         builder.put(EffectSkullBlock.Types.TURTLE, new TurtleHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.TURTLE_HEAD)));
         builder.put(EffectSkullBlock.Types.VEX, new AllayHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ALLAY_HEAD)));
+        builder.put(EffectSkullBlock.Types.VEX_CHARGING, new AllayHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ALLAY_HEAD)));
         builder.put(EffectSkullBlock.Types.VILLAGER_DESERT, new VillagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.VILLAGER_HEAD), VillagerType.DESERT, VillagerProfession.NONE));
         builder.put(EffectSkullBlock.Types.VILLAGER_DESERT_ARMORER, new VillagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.VILLAGER_HEAD), VillagerType.DESERT, VillagerProfession.ARMORER));
         builder.put(EffectSkullBlock.Types.VILLAGER_DESERT_BUTCHER, new VillagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.VILLAGER_HEAD), VillagerType.DESERT, VillagerProfession.BUTCHER));

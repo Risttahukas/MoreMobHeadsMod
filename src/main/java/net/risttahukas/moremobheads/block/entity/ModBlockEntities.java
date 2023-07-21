@@ -254,6 +254,7 @@ public class ModBlockEntities {
                             ModBlocks.TROPICAL_FISH_HEAD.get(), ModBlocks.TROPICAL_FISH_WALL_HEAD.get(),
                             ModBlocks.TURTLE_HEAD.get(), ModBlocks.TURTLE_WALL_HEAD.get(),
                             ModBlocks.VEX_HEAD.get(), ModBlocks.VEX_WALL_HEAD.get(),
+                            ModBlocks.VEX_HEAD_CHARGING.get(), ModBlocks.VEX_WALL_HEAD_CHARGING.get(),
                             ModBlocks.VILLAGER_HEAD_DESERT.get(), ModBlocks.VILLAGER_WALL_HEAD_DESERT.get(),
                             ModBlocks.VILLAGER_HEAD_DESERT_ARMORER.get(), ModBlocks.VILLAGER_WALL_HEAD_DESERT_ARMORER.get(),
                             ModBlocks.VILLAGER_HEAD_DESERT_BUTCHER.get(), ModBlocks.VILLAGER_WALL_HEAD_DESERT_BUTCHER.get(),

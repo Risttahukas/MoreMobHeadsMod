@@ -94,7 +94,8 @@ public class EffectSkullBlock extends SkullBlock {
     @Override
     public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter,
                                         BlockPos blockPos, CollisionContext collisionContext) {
-        if (Types.ALLAY.equals(this.getType()) || Types.VEX.equals(this.getType())) {
+        if (Types.ALLAY.equals(this.getType()) || Types.VEX.equals(this.getType()) ||
+                Types.VEX_CHARGING.equals(this.getType())) {
             return ALLAY_SHAPE;
         } if (Types.AXOLOTL_LUCY.equals(this.getType()) || Types.AXOLOTL_WILD.equals(this.getType()) ||
                 Types.AXOLOTL_GOLD.equals(this.getType()) || Types.AXOLOTL_CYAN.equals(this.getType()) ||
@@ -649,6 +650,7 @@ public class EffectSkullBlock extends SkullBlock {
         TROPICAL_FISH,
         TURTLE,
         VEX,
+        VEX_CHARGING,
         VILLAGER_DESERT,
         VILLAGER_DESERT_ARMORER,
         VILLAGER_DESERT_BUTCHER,

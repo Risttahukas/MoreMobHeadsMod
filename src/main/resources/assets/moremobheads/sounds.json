@@ -650,6 +650,15 @@
     ],
     "subtitle": "subtitles.entity.vex.ambient"
   },
+  "block.note_block.imitate.vex_charging": {
+    "sounds": [
+      {
+        "name": "entity.vex.charge",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.entity.vex.charge"
+  },
 
   "block.note_block.imitate.villager": {
     "sounds": [

@@ -5,7 +5,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Creeper;
-import net.minecraft.world.entity.monster.WitherSkeleton;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -62,23 +61,22 @@ public class SharedEvents {
 
                         }
                     } else {
-                        if (entity instanceof WitherSkeleton witherSkeleton) {
+                        Player player = (Player) sourceEntity;
+                        Item headToDrop = ModLootHelper.getHeadFromMob(entity);
+
+                        if (headToDrop != null) {
+                            //Ensure a mob can't drop two heads
                             Collection<ItemEntity> drops = event.getDrops();
                             ItemEntity dropToRemove = null;
                             for (ItemEntity drop : drops) {
-                                if (drop.getItem().getItem() == Items.WITHER_SKELETON_SKULL) {
+                                if (drop.getItem().getItem() == headToDrop) {
                                     dropToRemove = drop;
                                 }
                             }
                             if (dropToRemove != null) {
                                 drops.remove(dropToRemove);
                             }
-                        }
 
-                        Player player = (Player) sourceEntity;
-                        Item headToDrop = ModLootHelper.getHeadFromMob(entity);
-
-                        if (headToDrop != null) {
                             if (randomSource.nextFloat() < ModLootHelper.getHeadDropChance(entity, event.getLootingLevel(), ModEnchantmentHelper.getMobBeheading(player))) {
                                 entity.spawnAtLocation(headToDrop);
                             }

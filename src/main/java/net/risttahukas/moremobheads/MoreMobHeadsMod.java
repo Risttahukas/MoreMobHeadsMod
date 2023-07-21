@@ -299,6 +299,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.TROPICAL_FISH_HEAD);
             event.accept(ModItems.TURTLE_HEAD);
             event.accept(ModItems.VEX_HEAD);
+            event.accept(ModItems.VEX_HEAD_CHARGING);
             event.accept(ModItems.VILLAGER_HEAD_DESERT);
             event.accept(ModItems.VILLAGER_HEAD_DESERT_ARMORER);
             event.accept(ModItems.VILLAGER_HEAD_DESERT_BUTCHER);

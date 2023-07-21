@@ -1687,6 +1687,13 @@ public class ModBlocks {
             () -> new EffectWallSkullBlock(EffectSkullBlock.Types.VEX, BlockBehaviour.Properties.of().strength(1.0F)
                     .lootFrom(VEX_HEAD).pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> VEX_HEAD_CHARGING = BLOCKS.register("vex_head_charging",
+            () -> new EffectSkullBlock(EffectSkullBlock.Types.VEX_CHARGING, BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.valueOf("VEX_CHARGING")).strength(1.0F).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> VEX_WALL_HEAD_CHARGING = BLOCKS.register("vex_wall_head_charging",
+            () -> new EffectWallSkullBlock(EffectSkullBlock.Types.VEX_CHARGING, BlockBehaviour.Properties.of().strength(1.0F)
+                    .lootFrom(VEX_HEAD_CHARGING).pushReaction(PushReaction.DESTROY)));
+
     public static final RegistryObject<Block> VILLAGER_HEAD_DESERT = BLOCKS.register("villager_head_desert",
             () -> new EffectSkullBlock(EffectSkullBlock.Types.VILLAGER_DESERT, BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.valueOf("VILLAGER")).strength(1.0F).pushReaction(PushReaction.DESTROY)));

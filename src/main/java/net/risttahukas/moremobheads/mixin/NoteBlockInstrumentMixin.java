@@ -211,7 +211,6 @@ public class NoteBlockInstrumentMixin {
 
     private static final NoteBlockInstrument VEX = addVariant("VEX", "vex",
             ModSoundEvents.NOTE_BLOCK_IMITATE_VEX);
-
     private static final NoteBlockInstrument VEX_CHARGING = addVariant("VEX_CHARGING", "vex_charging",
             ModSoundEvents.NOTE_BLOCK_IMITATE_VEX_CHARGING);
 
