@@ -4,7 +4,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.SkullModel;
-import net.minecraft.client.model.SkullModelBase;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.layers.CustomHeadLayer;
@@ -13,7 +12,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.block.SkullBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.InputEvent;
@@ -23,7 +21,6 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.risttahukas.moremobheads.MoreMobHeadsMod;
 import net.risttahukas.moremobheads.block.entity.ModBlockEntities;
 import net.risttahukas.moremobheads.block.entity.ModBlockEntityModelLayers;
@@ -33,7 +30,6 @@ import net.risttahukas.moremobheads.entity.renderer.layers.EffectSkullHeadLayer;
 import net.risttahukas.moremobheads.item.EffectSkullItem;
 import net.risttahukas.moremobheads.util.ModKeyBindings;
 
-import java.util.List;
 import java.util.Map;
 
 @SuppressWarnings("unused")
@@ -164,16 +160,11 @@ public class ClientEvents {
             Map<EntityType<?>, EntityRenderer<?>> renderers = Minecraft.getInstance().getEntityRenderDispatcher().renderers;
             for(Map.Entry<EntityType<?>, EntityRenderer<?>> renderer : renderers.entrySet()) {
                 if (renderer.getValue() instanceof LivingEntityRenderer<?, ?> livingEntityRenderer) {
-                    List<? extends RenderLayer<?, ?>> layers = ObfuscationReflectionHelper
-                            .getPrivateValue(LivingEntityRenderer.class, livingEntityRenderer,"layers");
-                    assert layers != null;
                     boolean flag = false;
-                    for (RenderLayer<?, ?> layer : layers) {
+                    for (RenderLayer<?, ?> layer : livingEntityRenderer.layers) {
                         if (layer instanceof CustomHeadLayer customHeadLayer) {
                             flag = true;
-                            final Map<SkullBlock.Type, SkullModelBase> skullModels =
-                                    EffectSkullBlockRenderer.createSkullRenderers(Minecraft.getInstance().getEntityModels());
-                            ObfuscationReflectionHelper.setPrivateValue(CustomHeadLayer.class, customHeadLayer, skullModels, "skullModels");
+                            customHeadLayer.skullModels = EffectSkullBlockRenderer.createSkullRenderers(Minecraft.getInstance().getEntityModels());
                         }
                     }
                     if (flag) {
@@ -185,16 +176,11 @@ public class ClientEvents {
             Map<String, EntityRenderer<? extends Player>> skins = Minecraft.getInstance().getEntityRenderDispatcher().getSkinMap();
             for(Map.Entry<String, EntityRenderer<? extends Player>> renderer : skins.entrySet()) {
                 if (renderer.getValue() instanceof LivingEntityRenderer<?, ?> livingEntityRenderer) {
-                    List<? extends RenderLayer<?, ?>> layers = ObfuscationReflectionHelper
-                            .getPrivateValue(LivingEntityRenderer.class, livingEntityRenderer,"layers");
-                    assert layers != null;
                     boolean flag = false;
-                    for (RenderLayer<?, ?> layer : layers) {
+                    for (RenderLayer<?, ?> layer : livingEntityRenderer.layers) {
                         if (layer instanceof CustomHeadLayer customHeadLayer) {
                             flag = true;
-                            final Map<SkullBlock.Type, SkullModelBase> skullModels =
-                                    EffectSkullBlockRenderer.createSkullRenderers(Minecraft.getInstance().getEntityModels());
-                            ObfuscationReflectionHelper.setPrivateValue(CustomHeadLayer.class, customHeadLayer, skullModels, "skullModels");
+                            customHeadLayer.skullModels = EffectSkullBlockRenderer.createSkullRenderers(Minecraft.getInstance().getEntityModels());
                         }
                     }
                     if (flag) {
