@@ -21,8 +21,7 @@ public class EffectSkullItem extends StandingAndWallBlockItem {
         consumer.accept(new IClientItemExtensions() {
             @Override
             public BlockEntityWithoutLevelRenderer getCustomRenderer() {
-                return new EffectSkullItemRenderer(Minecraft.getInstance().getBlockEntityRenderDispatcher(),
-                        Minecraft.getInstance().getEntityModels());
+                return EffectSkullItemRenderer.getInstance();
             }
         });
     }
