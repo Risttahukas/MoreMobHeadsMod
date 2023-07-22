@@ -261,7 +261,9 @@ public class EffectWallSkullBlock extends WallSkullBlock {
     @Override
     public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter,
                                         BlockPos blockPos, CollisionContext collisionContext) {
-        if (EffectSkullBlock.Types.ALLAY.equals(this.getType()) || EffectSkullBlock.Types.VEX.equals(this.getType())) {
+        if (EffectSkullBlock.Types.ALLAY.equals(this.getType()) ||
+                EffectSkullBlock.Types.VEX.equals(this.getType()) ||
+                EffectSkullBlock.Types.VEX_CHARGING.equals(this.getType())) {
             return ALLAY_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.AXOLOTL_LUCY.equals(this.getType()) ||
                 EffectSkullBlock.Types.AXOLOTL_WILD.equals(this.getType()) ||
@@ -558,7 +560,7 @@ public class EffectWallSkullBlock extends WallSkullBlock {
                 EffectSkullBlock.Types.PARROT_BLUE.equals(this.getType()) ||
                 EffectSkullBlock.Types.PARROT_GREEN.equals(this.getType()) ||
                 EffectSkullBlock.Types.PARROT_YELLOW_BLUE.equals(this.getType()) ||
-                EffectSkullBlock.Types.PARROT_GREY.equals(this.getType())) {
+                EffectSkullBlock.Types.PARROT_GRAY.equals(this.getType())) {
             return PARROT_AABBS.get(blockState.getValue(FACING));
         } if (EffectSkullBlock.Types.PHANTOM.equals(this.getType())) {
             return PHANTOM_AABBS.get(blockState.getValue(FACING));

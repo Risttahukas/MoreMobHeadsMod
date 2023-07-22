@@ -1,6 +1,5 @@
 package net.risttahukas.moremobheads.item.renderer;
 
-import com.mojang.authlib.GameProfile;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.SkullModelBase;
@@ -14,17 +13,27 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.AbstractSkullBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SkullBlock;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.risttahukas.moremobheads.block.EffectSkullBlock;
 import net.risttahukas.moremobheads.block.entity.renderer.EffectSkullBlockRenderer;
 import net.risttahukas.moremobheads.event.ClientEvents;
 
 import java.util.Map;
 
+@OnlyIn(Dist.CLIENT)
 public class EffectSkullItemRenderer extends BlockEntityWithoutLevelRenderer {
     private final Map<SkullBlock.Type, SkullModelBase> skullModels;
+
+    private static final EffectSkullItemRenderer instance =
+            new EffectSkullItemRenderer(Minecraft.getInstance().getBlockEntityRenderDispatcher(),
+            Minecraft.getInstance().getEntityModels());
+
+    public static EffectSkullItemRenderer getInstance() {
+        return instance;
+    }
 
     public EffectSkullItemRenderer(BlockEntityRenderDispatcher blockEntityRenderDispatcher, EntityModelSet entityModelSet) {
         super(blockEntityRenderDispatcher, entityModelSet);
@@ -38,11 +47,10 @@ public class EffectSkullItemRenderer extends BlockEntityWithoutLevelRenderer {
         Item item = itemStack.getItem();
         if (item instanceof BlockItem blockItem) {
             Block block = blockItem.getBlock();
-            if (block instanceof EffectSkullBlock) {
-                GameProfile gameprofile = null;
-                SkullBlock.Type type = ((AbstractSkullBlock)block).getType();
+            if (block instanceof EffectSkullBlock effectSkullBlock) {
+                SkullBlock.Type type = effectSkullBlock.getType();
                 SkullModelBase skullmodelbase = this.skullModels.get(type);
-                RenderType rendertype = SkullBlockRenderer.getRenderType(type, gameprofile);
+                RenderType rendertype = SkullBlockRenderer.getRenderType(type, null);
                 if (type == EffectSkullBlock.Types.SHEEP_RAINBOW || type == EffectSkullBlock.Types.CREEPER_CHARGED ||
                         type == EffectSkullBlock.Types.WARDEN || type == EffectSkullBlock.Types.WITHER_SHIELD ||
                         type == EffectSkullBlock.Types.WITHER_INVULNERABLE_SHIELD) {

@@ -216,7 +216,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_BLUE, new ResourceLocation("textures/entity/parrot/parrot_blue.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_GREEN, new ResourceLocation("textures/entity/parrot/parrot_green.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_YELLOW_BLUE, new ResourceLocation("textures/entity/parrot/parrot_yellow_blue.png"));
-        SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_GREY, new ResourceLocation("textures/entity/parrot/parrot_grey.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.PARROT_GRAY, new ResourceLocation("textures/entity/parrot/parrot_grey.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PHANTOM, new ResourceLocation("textures/entity/phantom.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PIG, new ResourceLocation("textures/entity/pig/pig.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.PIGLIN_BRUTE, new ResourceLocation("textures/entity/piglin/piglin_brute.png"));
@@ -284,6 +284,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TROPICAL_FISH, new ResourceLocation("textures/entity/fish/tropical_a.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.TURTLE, new ResourceLocation("textures/entity/turtle/big_sea_turtle.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VEX, new ResourceLocation("textures/entity/illager/vex.png"));
+        SKIN_BY_TYPE.put(EffectSkullBlock.Types.VEX_CHARGING, new ResourceLocation("textures/entity/illager/vex_charging.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VILLAGER_DESERT, new ResourceLocation("textures/entity/villager/villager.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VILLAGER_DESERT_ARMORER, new ResourceLocation("textures/entity/villager/villager.png"));
         SKIN_BY_TYPE.put(EffectSkullBlock.Types.VILLAGER_DESERT_BUTCHER, new ResourceLocation("textures/entity/villager/villager.png"));
@@ -810,7 +811,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.PARROT_BLUE, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_GREEN, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PARROT_YELLOW_BLUE, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
-        builder.put(EffectSkullBlock.Types.PARROT_GREY, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
+        builder.put(EffectSkullBlock.Types.PARROT_GRAY, new ParrotHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PARROT_HEAD)));
         builder.put(EffectSkullBlock.Types.PHANTOM, new PhantomHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PHANTOM_HEAD)));
         builder.put(EffectSkullBlock.Types.PIG, new PigHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.PIG_HEAD)));
         builder.put(EffectSkullBlock.Types.PIGLIN_BRUTE, new PiglinHeadModel(entityModelSet.bakeLayer(ModelLayers.PIGLIN_HEAD)));
@@ -878,6 +879,7 @@ public class EffectSkullBlockRenderer extends SkullBlockRenderer implements Bloc
         builder.put(EffectSkullBlock.Types.TROPICAL_FISH, new TropicalFishHeadModelA(entityModelSet.bakeLayer(ModBlockEntityModelLayers.TROPICAL_FISH_HEAD), entityModelSet.bakeLayer(ModBlockEntityModelLayers.TROPICAL_FISH_HEAD_PATTERN), "kob", 1, 0));
         builder.put(EffectSkullBlock.Types.TURTLE, new TurtleHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.TURTLE_HEAD)));
         builder.put(EffectSkullBlock.Types.VEX, new AllayHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ALLAY_HEAD)));
+        builder.put(EffectSkullBlock.Types.VEX_CHARGING, new AllayHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.ALLAY_HEAD)));
         builder.put(EffectSkullBlock.Types.VILLAGER_DESERT, new VillagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.VILLAGER_HEAD), VillagerType.DESERT, VillagerProfession.NONE));
         builder.put(EffectSkullBlock.Types.VILLAGER_DESERT_ARMORER, new VillagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.VILLAGER_HEAD), VillagerType.DESERT, VillagerProfession.ARMORER));
         builder.put(EffectSkullBlock.Types.VILLAGER_DESERT_BUTCHER, new VillagerHeadModel(entityModelSet.bakeLayer(ModBlockEntityModelLayers.VILLAGER_HEAD), VillagerType.DESERT, VillagerProfession.BUTCHER));

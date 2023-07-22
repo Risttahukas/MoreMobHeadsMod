@@ -6,11 +6,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "moremobheads:parrot_head_grey"
+          "name": "moremobheads:vex_head_charging"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "moremobheads:blocks/parrot_head_grey"
+  "random_sequence": "moremobheads:blocks/vex_head_charging"
 }

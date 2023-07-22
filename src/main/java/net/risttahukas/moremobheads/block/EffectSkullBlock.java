@@ -94,7 +94,8 @@ public class EffectSkullBlock extends SkullBlock {
     @Override
     public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter,
                                         BlockPos blockPos, CollisionContext collisionContext) {
-        if (Types.ALLAY.equals(this.getType()) || Types.VEX.equals(this.getType())) {
+        if (Types.ALLAY.equals(this.getType()) || Types.VEX.equals(this.getType()) ||
+                Types.VEX_CHARGING.equals(this.getType())) {
             return ALLAY_SHAPE;
         } if (Types.AXOLOTL_LUCY.equals(this.getType()) || Types.AXOLOTL_WILD.equals(this.getType()) ||
                 Types.AXOLOTL_GOLD.equals(this.getType()) || Types.AXOLOTL_CYAN.equals(this.getType()) ||
@@ -264,7 +265,7 @@ public class EffectSkullBlock extends SkullBlock {
             return PANDA_SHAPE;
         } if (Types.PARROT_RED_BLUE.equals(this.getType()) || Types.PARROT_BLUE.equals(this.getType()) ||
                 Types.PARROT_GREEN.equals(this.getType()) || Types.PARROT_YELLOW_BLUE.equals(this.getType()) ||
-                Types.PARROT_GREY.equals(this.getType())) {
+                Types.PARROT_GRAY.equals(this.getType())) {
             return PARROT_SHAPE;
         } if (Types.PHANTOM.equals(this.getType())) {
             return PHANTOM_SHAPE;
@@ -417,11 +418,11 @@ public class EffectSkullBlock extends SkullBlock {
         AXOLOTL_CYAN,
         AXOLOTL_BLUE,
         BAT,
-        BLAZE,
         BEE,
         BEE_ANGRY,
         BEE_POLLEN,
         BEE_ANGRY_POLLEN,
+        BLAZE,
         CAMEL,
         CAT_TABBY,
         CAT_BLACK,
@@ -581,7 +582,7 @@ public class EffectSkullBlock extends SkullBlock {
         PARROT_BLUE,
         PARROT_GREEN,
         PARROT_YELLOW_BLUE,
-        PARROT_GREY,
+        PARROT_GRAY,
         PHANTOM,
         PIG,
         PIGLIN_BRUTE,
@@ -649,6 +650,7 @@ public class EffectSkullBlock extends SkullBlock {
         TROPICAL_FISH,
         TURTLE,
         VEX,
+        VEX_CHARGING,
         VILLAGER_DESERT,
         VILLAGER_DESERT_ARMORER,
         VILLAGER_DESERT_BUTCHER,

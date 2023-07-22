@@ -698,8 +698,8 @@ public class ModItems {
             new EffectSkullItem(ModBlocks.PARROT_HEAD_YELLOW_BLUE.get(), ModBlocks.PARROT_WALL_HEAD_YELLOW_BLUE.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
-    public static final RegistryObject<Item> PARROT_HEAD_GREY = ITEMS.register("parrot_head_grey", () ->
-            new EffectSkullItem(ModBlocks.PARROT_HEAD_GREY.get(), ModBlocks.PARROT_WALL_HEAD_GREY.get(),
+    public static final RegistryObject<Item> PARROT_HEAD_GRAY = ITEMS.register("parrot_head_gray", () ->
+            new EffectSkullItem(ModBlocks.PARROT_HEAD_GRAY.get(), ModBlocks.PARROT_WALL_HEAD_GRAY.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> PHANTOM_HEAD = ITEMS.register("phantom_head", () ->
@@ -968,6 +968,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> VEX_HEAD = ITEMS.register("vex_head", () ->
             new EffectSkullItem(ModBlocks.VEX_HEAD.get(), ModBlocks.VEX_WALL_HEAD.get(),
+                    (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
+
+    public static final RegistryObject<Item> VEX_HEAD_CHARGING = ITEMS.register("vex_head_charging", () ->
+            new EffectSkullItem(ModBlocks.VEX_HEAD_CHARGING.get(), ModBlocks.VEX_WALL_HEAD_CHARGING.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> VILLAGER_HEAD_DESERT = ITEMS.register("villager_head_desert", () ->

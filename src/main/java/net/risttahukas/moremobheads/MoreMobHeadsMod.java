@@ -13,8 +13,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.risttahukas.moremobheads.block.ModBlocks;
 import net.risttahukas.moremobheads.block.entity.ModBlockEntities;
+import net.risttahukas.moremobheads.enchantment.ModEnchantments;
 import net.risttahukas.moremobheads.item.ModCreativeModeTabs;
 import net.risttahukas.moremobheads.item.ModItems;
+import net.risttahukas.moremobheads.loot.ModLootModifiers;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -35,6 +37,10 @@ public class MoreMobHeadsMod
         ModBlocks.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
+
+        ModEnchantments.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -222,7 +228,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.PARROT_HEAD_BLUE);
             event.accept(ModItems.PARROT_HEAD_GREEN);
             event.accept(ModItems.PARROT_HEAD_YELLOW_BLUE);
-            event.accept(ModItems.PARROT_HEAD_GREY);
+            event.accept(ModItems.PARROT_HEAD_GRAY);
             event.accept(ModItems.PHANTOM_HEAD);
             event.accept(ModItems.PIG_HEAD);
             event.accept(Items.PIGLIN_HEAD);
@@ -293,6 +299,7 @@ public class MoreMobHeadsMod
             event.accept(ModItems.TROPICAL_FISH_HEAD);
             event.accept(ModItems.TURTLE_HEAD);
             event.accept(ModItems.VEX_HEAD);
+            event.accept(ModItems.VEX_HEAD_CHARGING);
             event.accept(ModItems.VILLAGER_HEAD_DESERT);
             event.accept(ModItems.VILLAGER_HEAD_DESERT_ARMORER);
             event.accept(ModItems.VILLAGER_HEAD_DESERT_BUTCHER);
@@ -406,10 +413,10 @@ public class MoreMobHeadsMod
             event.accept(ModItems.WITHER_HEAD_INVULNERABLE);
             event.accept(ModItems.WITHER_HEAD_SHIELD);
             event.accept(ModItems.WITHER_HEAD_INVULNERABLE_SHIELD);
+            event.accept(Items.WITHER_SKELETON_SKULL);
             event.accept(ModItems.WOLF_HEAD);
             event.accept(ModItems.WOLF_HEAD_TAME);
             event.accept(ModItems.WOLF_HEAD_ANGRY);
-            event.accept(Items.WITHER_SKELETON_SKULL);
             event.accept(ModItems.ZOGLIN_HEAD);
             event.accept(Items.ZOMBIE_HEAD);
             event.accept(ModItems.ZOMBIE_VILLAGER_HEAD_DESERT);
