@@ -29,4 +29,4 @@ A clear and concise description of what you expected to happen.
 A clear and concise description of what actually happened.
 
 ### Logs
-Attach the latest.log file. If you encountered a crash, also add the crash log file.
+Attach the latest.log file (unless it is clearly unnecessary). If you encountered a crash, also add the crash log file.
