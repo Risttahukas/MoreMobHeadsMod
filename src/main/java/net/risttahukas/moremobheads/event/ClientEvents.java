@@ -7,7 +7,9 @@ import net.minecraft.client.model.SkullModel;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.layers.CustomHeadLayer;
+import net.minecraft.client.renderer.entity.layers.DrownedOuterLayer;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
+import net.minecraft.client.renderer.entity.layers.StrayClothingLayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -38,12 +40,23 @@ public class ClientEvents {
 
     @Mod.EventBusSubscriber(modid = MoreMobHeadsMod.MOD_ID, value = Dist.CLIENT)
     public static class ClientForgeEvents {
+
         @SubscribeEvent
         public static void renderHeadPre(RenderLivingEvent.Pre<?, ?> event) {
             EntityModel<?> model = event.getRenderer().getModel();
             if (model instanceof HumanoidModel<?> humanoidModel) {
                 if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof EffectSkullItem) {
                     humanoidModel.head.visible = false;
+                    humanoidModel.hat.visible = false;
+                    for (RenderLayer<?, ?> layer : event.getRenderer().layers) {
+                        if (layer instanceof StrayClothingLayer strayClothingLayer) {
+                            strayClothingLayer.layerModel.head.visible = false;
+                            strayClothingLayer.layerModel.hat.visible = false;
+                        } else if (layer instanceof DrownedOuterLayer drownedOuterLayer) {
+                            drownedOuterLayer.model.head.visible = false;
+                            drownedOuterLayer.model.hat.visible = false;
+                        }
+                    }
                 }
             }
         }
@@ -54,6 +67,16 @@ public class ClientEvents {
             if (model instanceof HumanoidModel<?> humanoidModel) {
                 if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof EffectSkullItem) {
                     humanoidModel.head.visible = true;
+                    humanoidModel.hat.visible = true;
+                    for (RenderLayer<?, ?> layer : event.getRenderer().layers) {
+                        if (layer instanceof StrayClothingLayer strayClothingLayer) {
+                            strayClothingLayer.layerModel.head.visible = true;
+                            strayClothingLayer.layerModel.hat.visible = true;
+                        } else if (layer instanceof DrownedOuterLayer drownedOuterLayer) {
+                            drownedOuterLayer.model.head.visible = true;
+                            drownedOuterLayer.model.hat.visible = true;
+                        }
+                    }
                 }
             }
         }
