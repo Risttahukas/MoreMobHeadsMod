@@ -31,6 +31,8 @@ import net.risttahukas.moremobheads.block.entity.model.*;
 import net.risttahukas.moremobheads.block.entity.renderer.EffectSkullBlockRenderer;
 import net.risttahukas.moremobheads.entity.renderer.layers.EffectSkullHeadLayer;
 import net.risttahukas.moremobheads.item.EffectSkullItem;
+import net.risttahukas.moremobheads.networking.ModMessages;
+import net.risttahukas.moremobheads.networking.packet.HeadSoundC2SPacket;
 import net.risttahukas.moremobheads.util.ModKeyBindings;
 
 import java.util.Map;
@@ -99,12 +101,11 @@ public class ClientEvents {
                         player.sendSystemMessage(Component.literal("This key will one day activate active effects on heads"));
                     }
                     if (ModKeyBindings.HEAD_SOUND_KEY.consumeClick()) {
-                        player.level().playSound(player, player.getX(), player.getY(), player.getZ(), effectSkullItem.getSound(), player.getSoundSource(), 3.0F, 1.0F);
+                        ModMessages.sendToServer(new HeadSoundC2SPacket());
                     }
                 }
             }
         }
-
     }
 
     @Mod.EventBusSubscriber(modid = MoreMobHeadsMod.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
