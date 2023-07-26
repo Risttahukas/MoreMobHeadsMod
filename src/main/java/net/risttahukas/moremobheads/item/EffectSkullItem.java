@@ -1,8 +1,8 @@
 package net.risttahukas.moremobheads.item;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
@@ -10,7 +10,7 @@ import net.risttahukas.moremobheads.item.renderer.EffectSkullItemRenderer;
 
 import java.util.function.Consumer;
 
-public class EffectSkullItem extends StandingAndWallBlockItem {
+public abstract class EffectSkullItem extends StandingAndWallBlockItem {
     public EffectSkullItem(Block skull, Block wallSkull, Properties properties, Direction direction) {
         super(skull, wallSkull, properties, direction);
     }
@@ -25,4 +25,6 @@ public class EffectSkullItem extends StandingAndWallBlockItem {
             }
         });
     }
+
+    public abstract SoundEvent getSound();
 }

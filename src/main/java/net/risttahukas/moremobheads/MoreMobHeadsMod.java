@@ -17,6 +17,7 @@ import net.risttahukas.moremobheads.enchantment.ModEnchantments;
 import net.risttahukas.moremobheads.item.ModCreativeModeTabs;
 import net.risttahukas.moremobheads.item.ModItems;
 import net.risttahukas.moremobheads.loot.ModLootModifiers;
+import net.risttahukas.moremobheads.networking.ModMessages;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -50,7 +51,7 @@ public class MoreMobHeadsMod
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(ModMessages::register);
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

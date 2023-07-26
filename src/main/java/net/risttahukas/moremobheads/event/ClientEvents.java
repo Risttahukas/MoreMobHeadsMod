@@ -4,10 +4,13 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.SkullModel;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.layers.CustomHeadLayer;
+import net.minecraft.client.renderer.entity.layers.DrownedOuterLayer;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
+import net.minecraft.client.renderer.entity.layers.StrayClothingLayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -28,6 +31,8 @@ import net.risttahukas.moremobheads.block.entity.model.*;
 import net.risttahukas.moremobheads.block.entity.renderer.EffectSkullBlockRenderer;
 import net.risttahukas.moremobheads.entity.renderer.layers.EffectSkullHeadLayer;
 import net.risttahukas.moremobheads.item.EffectSkullItem;
+import net.risttahukas.moremobheads.networking.ModMessages;
+import net.risttahukas.moremobheads.networking.packet.HeadSoundC2SPacket;
 import net.risttahukas.moremobheads.util.ModKeyBindings;
 
 import java.util.Map;
@@ -38,12 +43,23 @@ public class ClientEvents {
 
     @Mod.EventBusSubscriber(modid = MoreMobHeadsMod.MOD_ID, value = Dist.CLIENT)
     public static class ClientForgeEvents {
+
         @SubscribeEvent
         public static void renderHeadPre(RenderLivingEvent.Pre<?, ?> event) {
             EntityModel<?> model = event.getRenderer().getModel();
             if (model instanceof HumanoidModel<?> humanoidModel) {
                 if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof EffectSkullItem) {
                     humanoidModel.head.visible = false;
+                    humanoidModel.hat.visible = false;
+                    for (RenderLayer<?, ?> layer : event.getRenderer().layers) {
+                        if (layer instanceof StrayClothingLayer strayClothingLayer) {
+                            strayClothingLayer.layerModel.head.visible = false;
+                            strayClothingLayer.layerModel.hat.visible = false;
+                        } else if (layer instanceof DrownedOuterLayer drownedOuterLayer) {
+                            drownedOuterLayer.model.head.visible = false;
+                            drownedOuterLayer.model.hat.visible = false;
+                        }
+                    }
                 }
             }
         }
@@ -54,6 +70,16 @@ public class ClientEvents {
             if (model instanceof HumanoidModel<?> humanoidModel) {
                 if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof EffectSkullItem) {
                     humanoidModel.head.visible = true;
+                    humanoidModel.hat.visible = true;
+                    for (RenderLayer<?, ?> layer : event.getRenderer().layers) {
+                        if (layer instanceof StrayClothingLayer strayClothingLayer) {
+                            strayClothingLayer.layerModel.head.visible = true;
+                            strayClothingLayer.layerModel.hat.visible = true;
+                        } else if (layer instanceof DrownedOuterLayer drownedOuterLayer) {
+                            drownedOuterLayer.model.head.visible = true;
+                            drownedOuterLayer.model.hat.visible = true;
+                        }
+                    }
                 }
             }
         }
@@ -68,12 +94,18 @@ public class ClientEvents {
 
         @SubscribeEvent
         public static void onKeyInput(InputEvent.Key inputEvent) {
-            if (ModKeyBindings.HEAD_EFFECT_KEY.consumeClick()) {
-                assert Minecraft.getInstance().player != null;
-                Minecraft.getInstance().player.sendSystemMessage(Component.literal("This key will one day activate active effects on heads"));
+            LocalPlayer player = Minecraft.getInstance().player;
+            if (player != null) {
+                if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof EffectSkullItem effectSkullItem) {
+                    if (ModKeyBindings.HEAD_EFFECT_KEY.consumeClick()) {
+                        player.sendSystemMessage(Component.literal("This key will one day activate active effects on heads"));
+                    }
+                    if (ModKeyBindings.HEAD_SOUND_KEY.consumeClick()) {
+                        ModMessages.sendToServer(new HeadSoundC2SPacket());
+                    }
+                }
             }
         }
-
     }
 
     @Mod.EventBusSubscriber(modid = MoreMobHeadsMod.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -193,6 +225,7 @@ public class ClientEvents {
         @SubscribeEvent
         public static void onKeyRegister(RegisterKeyMappingsEvent registerKeyMappingsEvent) {
             registerKeyMappingsEvent.register(ModKeyBindings.HEAD_EFFECT_KEY);
+            registerKeyMappingsEvent.register(ModKeyBindings.HEAD_SOUND_KEY);
         }
 
     }
