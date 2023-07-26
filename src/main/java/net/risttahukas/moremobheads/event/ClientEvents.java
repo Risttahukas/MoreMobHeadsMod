@@ -4,6 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.SkullModel;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.layers.CustomHeadLayer;
@@ -91,9 +92,16 @@ public class ClientEvents {
 
         @SubscribeEvent
         public static void onKeyInput(InputEvent.Key inputEvent) {
-            if (ModKeyBindings.HEAD_EFFECT_KEY.consumeClick()) {
-                assert Minecraft.getInstance().player != null;
-                Minecraft.getInstance().player.sendSystemMessage(Component.literal("This key will one day activate active effects on heads"));
+            LocalPlayer player = Minecraft.getInstance().player;
+            if (player != null) {
+                if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof EffectSkullItem effectSkullItem) {
+                    if (ModKeyBindings.HEAD_EFFECT_KEY.consumeClick()) {
+                        player.sendSystemMessage(Component.literal("This key will one day activate active effects on heads"));
+                    }
+                    if (ModKeyBindings.HEAD_SOUND_KEY.consumeClick()) {
+                        player.level().playSound(player, player.getX(), player.getY(), player.getZ(), effectSkullItem.getSound(), player.getSoundSource(), 3.0F, 1.0F);
+                    }
+                }
             }
         }
 
@@ -216,6 +224,7 @@ public class ClientEvents {
         @SubscribeEvent
         public static void onKeyRegister(RegisterKeyMappingsEvent registerKeyMappingsEvent) {
             registerKeyMappingsEvent.register(ModKeyBindings.HEAD_EFFECT_KEY);
+            registerKeyMappingsEvent.register(ModKeyBindings.HEAD_SOUND_KEY);
         }
 
     }
