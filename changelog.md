@@ -1,3 +1,5 @@
+### 0.2.1
+* made mob sounds playable for heads that exist in vanilla
 ### 0.2.0
 * fixed issue with some head parts still rendering while wearing a mob head
 * fixed a crash when pressing keybindings in main menu

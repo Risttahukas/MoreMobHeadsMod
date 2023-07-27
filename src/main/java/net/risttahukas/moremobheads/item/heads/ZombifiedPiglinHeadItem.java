@@ -13,6 +13,6 @@ public class ZombifiedPiglinHeadItem extends EffectSkullItem {
 
     @Override
     public SoundEvent getSound() {
-        return ModSoundEvents.NOTE_BLOCK_IMITATE_ZOMBIE_VILLAGER.get();
+        return ModSoundEvents.NOTE_BLOCK_IMITATE_ZOMBIFIED_PIGLIN.get();
     }
 }
