@@ -15,6 +15,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.InputEvent;
@@ -96,7 +98,11 @@ public class ClientEvents {
         public static void onKeyInput(InputEvent.Key inputEvent) {
             LocalPlayer player = Minecraft.getInstance().player;
             if (player != null) {
-                if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof EffectSkullItem effectSkullItem) {
+                Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
+                if (headItem instanceof EffectSkullItem effectSkullItem ||
+                        headItem == Items.SKELETON_SKULL || headItem == Items.WITHER_SKELETON_SKULL ||
+                        headItem == Items.ZOMBIE_HEAD || headItem == Items.CREEPER_HEAD ||
+                        headItem == Items.DRAGON_HEAD || headItem == Items.PIGLIN_HEAD) {
                     if (ModKeyBindings.HEAD_EFFECT_KEY.consumeClick()) {
                         player.sendSystemMessage(Component.literal("This key will one day activate active effects on heads"));
                     }
