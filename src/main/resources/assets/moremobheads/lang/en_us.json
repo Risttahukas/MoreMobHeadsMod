@@ -470,5 +470,9 @@
 
   "key.category.moremobheads": "More Mob Heads",
   "key.moremobheads.activate_head_effect": "Activate Head Effect (WIP)",
-  "key.moremobheads.make_head_sound": "Make Head Sound (WIP)"
+  "key.moremobheads.make_head_sound": "Make Head Sound (WIP)",
+
+  "tooltip.moremobheads.effects": "Effects:",
+
+  "head_effects.moremobheads.fireproof": "Fireproof"
 }
