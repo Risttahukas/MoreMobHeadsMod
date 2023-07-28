@@ -9,6 +9,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -17,9 +19,11 @@ import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.EntityHitResult;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -144,7 +148,8 @@ public class SharedEvents {
 
         @SubscribeEvent
         public static void onProjectileImpactEvent(ProjectileImpactEvent event) {
-            if (event.getProjectile() instanceof ThrownPotion thrownPotion) {
+            Projectile projectile = event.getProjectile();
+            if (projectile instanceof ThrownPotion thrownPotion) {
                 ItemStack itemstack = thrownPotion.getItem();
                 Potion potion = PotionUtils.getPotion(itemstack);
                 List<MobEffectInstance> list = PotionUtils.getMobEffects(itemstack);
@@ -158,6 +163,39 @@ public class SharedEvents {
                                 if (headEffect == HeadEffects.HYDROPHOBIC) {
                                     player.hurt(thrownPotion.damageSources().indirectMagic(thrownPotion, thrownPotion.getOwner()), 1.0F);
                                 }
+                            }
+                        }
+                    }
+                }
+            } else if (projectile instanceof Snowball snowball) {
+                if ((event.getImpactResult() == ProjectileImpactEvent.ImpactResult.DEFAULT ||
+                        event.getImpactResult() == ProjectileImpactEvent.ImpactResult.STOP_AT_CURRENT) &&
+                        event.getRayTraceResult() instanceof EntityHitResult entityHitResult) {
+                    if (entityHitResult.getEntity() instanceof Player player) {
+                        Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
+                        if (headItem instanceof EffectSkullItem effectSkullItem) {
+                            for (AbstractHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
+                                if (headEffect == HeadEffects.CRYOPHOBIC) {
+                                    player.hurt(snowball.damageSources().thrown(snowball, snowball.getOwner()), 3.0F);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @SubscribeEvent
+        public static void onLivingDamageEvent(LivingDamageEvent event) {
+            LivingEntity target = event.getEntity();
+            if (event.getSource() == target.damageSources().freeze()) {
+                if (target instanceof Player player) {
+                    Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
+                    if (headItem instanceof EffectSkullItem effectSkullItem) {
+                        for (AbstractHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
+                            if (headEffect == HeadEffects.CRYOPHOBIC) {
+                                event.setAmount(event.getAmount() * 5);
+                                System.out.println(event.getAmount());
                             }
                         }
                     }

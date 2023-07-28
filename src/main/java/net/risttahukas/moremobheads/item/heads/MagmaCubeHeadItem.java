@@ -20,6 +20,6 @@ public class MagmaCubeHeadItem extends EffectSkullItem {
     }
 
     public ImmutableList<AbstractHeadEffect> getPassiveHeadEffects() {
-        return ImmutableList.of(HeadEffects.FIREPROOF);
+        return ImmutableList.of(HeadEffects.CRYOPHOBIC, HeadEffects.FIREPROOF);
     }
 }

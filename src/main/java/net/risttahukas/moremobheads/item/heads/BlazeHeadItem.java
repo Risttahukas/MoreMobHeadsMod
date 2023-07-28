@@ -20,6 +20,6 @@ public class BlazeHeadItem extends EffectSkullItem {
     }
 
     public ImmutableList<AbstractHeadEffect> getPassiveHeadEffects() {
-        return ImmutableList.of(HeadEffects.FIREPROOF, HeadEffects.HYDROPHOBIC);
+        return ImmutableList.of(HeadEffects.CRYOPHOBIC, HeadEffects.FIREPROOF, HeadEffects.HYDROPHOBIC);
     }
 }
