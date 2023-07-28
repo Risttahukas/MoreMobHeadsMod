@@ -474,8 +474,10 @@
 
   "tooltip.moremobheads.passive_effects": "Effects:",
 
+  "head_effects.moremobheads.amphibian": "Amphibian",
   "head_effects.moremobheads.cryophobic": "Cryophobic",
   "head_effects.moremobheads.fireproof": "Fireproof",
+  "head_effects.moremobheads.hydrophilic": "Hydrophilic",
   "head_effects.moremobheads.hydrophobic": "Hydrophobic",
   "head_effects.moremobheads.slow_falling": "Slow Falling"
 }

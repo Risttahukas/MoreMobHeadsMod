@@ -3,10 +3,9 @@ package net.risttahukas.moremobheads.item.heads;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.Block;
-import net.risttahukas.moremobheads.item.EffectSkullItem;
 import net.risttahukas.moremobheads.sound.ModSoundEvents;
 
-public class CodHeadItem extends EffectSkullItem {
+public class CodHeadItem extends AbstractFishHeadItem {
     public CodHeadItem(Block skull, Block wallSkull, Properties properties, Direction direction) {
         super(skull, wallSkull, properties, direction);
     }

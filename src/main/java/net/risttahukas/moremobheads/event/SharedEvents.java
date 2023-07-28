@@ -126,7 +126,7 @@ public class SharedEvents {
 
         @SubscribeEvent
         public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-            if (event.side.isServer()) {
+            if (event.side.isServer() && event.phase == TickEvent.Phase.START) {
                 event.player.getCapability(PlayerHeadSoundCooldownProvider.PLAYER_HEAD_SOUND_COOLDOWN).ifPresent(cooldown -> {
                     if (cooldown.getCooldown() > 0) {
                         cooldown.reduceCooldown();
@@ -139,6 +139,14 @@ public class SharedEvents {
                         if (headEffect == HeadEffects.HYDROPHOBIC) {
                             if (player.isInWaterRainOrBubble()) {
                                 player.hurt(player.damageSources().drown(), 1.0F);
+                            }
+                        } else if (headEffect == HeadEffects.HYDROPHILIC) {
+                            if (!player.isInWaterOrBubble() && !player.getAbilities().invulnerable) {
+                                if (player.getAirSupply() == -20) {
+                                    player.setAirSupply(0);
+                                    player.hurt(player.damageSources().dryOut(), 2.0F);
+                                }
+                                player.setAirSupply(player.getAirSupply() - 5);
                             }
                         }
                     }
