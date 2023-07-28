@@ -25,8 +25,6 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public abstract class EffectSkullItem extends StandingAndWallBlockItem implements Equipable {
-    private static final ImmutableList<AbstractHeadEffect> PASSIVE_HEAD_EFFECTS = ImmutableList.of();
-
     public EffectSkullItem(Block skull, Block wallSkull, Properties properties, Direction direction) {
         super(skull, wallSkull, properties, direction);
     }
@@ -45,7 +43,7 @@ public abstract class EffectSkullItem extends StandingAndWallBlockItem implement
     public abstract SoundEvent getSound();
 
     public ImmutableList<AbstractHeadEffect> getPassiveHeadEffects() {
-        return PASSIVE_HEAD_EFFECTS;
+        return ImmutableList.of();
     }
 
     @Override
@@ -57,7 +55,7 @@ public abstract class EffectSkullItem extends StandingAndWallBlockItem implement
     public void appendHoverText(ItemStack itemStack, @Nullable Level level, List<Component> components, TooltipFlag tooltipFlag) {
         ImmutableList<AbstractHeadEffect> passiveHeadEffects = getPassiveHeadEffects();
         if (!passiveHeadEffects.isEmpty()) {
-            components.add(Component.translatable("tooltip.moremobheads.effects").withStyle(ChatFormatting.GRAY));
+            components.add(Component.translatable("tooltip.moremobheads.passive_effects").withStyle(ChatFormatting.GRAY));
             for (AbstractHeadEffect headEffect : passiveHeadEffects) {
                 components.add(headEffect.getName());
             }
@@ -75,6 +73,7 @@ public abstract class EffectSkullItem extends StandingAndWallBlockItem implement
     private void evaluateHeadEffects(Player player) {
         for (AbstractHeadEffect headEffect : getPassiveHeadEffects()) {
             for (MobEffect mobEffect : headEffect.getPassivePotionEffects()) {
+                player.isSensitiveToWater();
                 if (!player.hasEffect(mobEffect)) {
                     player.addEffect(new MobEffectInstance(mobEffect, 1, 0, false, false, false));
                 }

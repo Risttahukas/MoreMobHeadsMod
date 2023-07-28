@@ -2,26 +2,39 @@ package net.risttahukas.moremobheads.event;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.phys.AABB;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.risttahukas.moremobheads.MoreMobHeadsMod;
 import net.risttahukas.moremobheads.capability.PlayerHeadSoundCooldownProvider;
+import net.risttahukas.moremobheads.effect.AbstractHeadEffect;
+import net.risttahukas.moremobheads.effect.HeadEffects;
 import net.risttahukas.moremobheads.enchantment.ModEnchantmentHelper;
+import net.risttahukas.moremobheads.item.EffectSkullItem;
 import net.risttahukas.moremobheads.item.ModItems;
 import net.risttahukas.moremobheads.loot.ModLootHelper;
 
 import java.util.Collection;
+import java.util.List;
 
 @SuppressWarnings("unused")
 public class SharedEvents {
@@ -115,6 +128,40 @@ public class SharedEvents {
                         cooldown.reduceCooldown();
                     }
                 });
+                Player player = event.player;
+                Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
+                if (headItem instanceof EffectSkullItem effectSkullItem) {
+                    for (AbstractHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
+                        if (headEffect == HeadEffects.HYDROPHOBIC) {
+                            if (player.isInWaterRainOrBubble()) {
+                                player.hurt(player.damageSources().drown(), 1.0F);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @SubscribeEvent
+        public static void onProjectileImpactEvent(ProjectileImpactEvent event) {
+            if (event.getProjectile() instanceof ThrownPotion thrownPotion) {
+                ItemStack itemstack = thrownPotion.getItem();
+                Potion potion = PotionUtils.getPotion(itemstack);
+                List<MobEffectInstance> list = PotionUtils.getMobEffects(itemstack);
+                if (potion == Potions.WATER && list.isEmpty()) {
+                    AABB aabb = thrownPotion.getBoundingBox().inflate(4.0D, 2.0D, 4.0D);
+                    for(Player player : thrownPotion.level().getEntitiesOfClass(Player.class, aabb)) {
+                        double d = thrownPotion.distanceToSqr(player);
+                        Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
+                        if (headItem instanceof EffectSkullItem effectSkullItem) {
+                            for (AbstractHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
+                                if (headEffect == HeadEffects.HYDROPHOBIC) {
+                                    player.hurt(thrownPotion.damageSources().indirectMagic(thrownPotion, thrownPotion.getOwner()), 1.0F);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

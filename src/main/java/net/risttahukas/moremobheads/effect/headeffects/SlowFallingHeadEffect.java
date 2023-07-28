@@ -8,15 +8,15 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.risttahukas.moremobheads.effect.AbstractHeadEffect;
 
-public class FireproofHeadEffect extends AbstractHeadEffect {
+public class SlowFallingHeadEffect extends AbstractHeadEffect {
 
     @Override
     public MutableComponent getName() {
-        return Component.translatable("head_effects.moremobheads.fireproof").withStyle(ChatFormatting.GOLD);
+        return Component.translatable("head_effects.moremobheads.slow_falling").withStyle(ChatFormatting.WHITE);
     }
 
     @Override
     public ImmutableList<MobEffect> getPassivePotionEffects() {
-        return ImmutableList.of(MobEffects.FIRE_RESISTANCE);
+        return ImmutableList.of(MobEffects.SLOW_FALLING);
     }
 }

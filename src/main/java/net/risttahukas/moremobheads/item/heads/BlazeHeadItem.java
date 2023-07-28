@@ -10,8 +10,6 @@ import net.risttahukas.moremobheads.item.EffectSkullItem;
 import net.risttahukas.moremobheads.sound.ModSoundEvents;
 
 public class BlazeHeadItem extends EffectSkullItem {
-    private static final ImmutableList<AbstractHeadEffect> PASSIVE_HEAD_EFFECTS = ImmutableList.of(HeadEffects.FIREPROOF);
-
     public BlazeHeadItem(Block skull, Block wallSkull, Properties properties, Direction direction) {
         super(skull, wallSkull, properties, direction);
     }
@@ -22,6 +20,6 @@ public class BlazeHeadItem extends EffectSkullItem {
     }
 
     public ImmutableList<AbstractHeadEffect> getPassiveHeadEffects() {
-        return PASSIVE_HEAD_EFFECTS;
+        return ImmutableList.of(HeadEffects.FIREPROOF, HeadEffects.HYDROPHOBIC);
     }
 }
