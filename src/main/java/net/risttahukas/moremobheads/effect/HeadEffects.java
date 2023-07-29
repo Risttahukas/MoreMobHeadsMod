@@ -11,6 +11,7 @@ public class HeadEffects {
     public static final AbstractPassiveHeadEffect HYDROPHILIC = new HydrophilicHeadEffect();
     public static final AbstractPassiveHeadEffect HYDROPHOBIC = new HydrophobicHeadEffect();
     public static final AbstractPassiveHeadEffect SLOW_FALLING = new SlowFallingHeadEffect();
+    public static final AbstractPassiveHeadEffect THERMOPHOBIC = new ThermophobicHeadEffect();
 
 
     public static final AbstractActiveHeadEffect SNOWBALL = new SnowballHeadEffect();

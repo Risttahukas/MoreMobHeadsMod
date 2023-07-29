@@ -2,6 +2,7 @@ package net.risttahukas.moremobheads.event;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
@@ -175,6 +176,10 @@ public class SharedEvents {
                             }
                             if (flag) {
                                 player.setSecondsOnFire(8);
+                            }
+                        } else if (headEffect == HeadEffects.THERMOPHOBIC) {
+                            if (player.level().getBiome(player.blockPosition()).is(BiomeTags.SNOW_GOLEM_MELTS)) {
+                                player.hurt(player.damageSources().onFire(), 1.0F);
                             }
                         }
                     }

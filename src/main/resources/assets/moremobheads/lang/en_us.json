@@ -482,6 +482,7 @@
   "head_effects.moremobheads.hydrophilic": "Hydrophilic",
   "head_effects.moremobheads.hydrophobic": "Hydrophobic",
   "head_effects.moremobheads.slow_falling": "Slow Falling",
+  "head_effects.moremobheads.thermophobic": "Thermophobic",
 
   "active_head_effects.moremobheads.snowball": "Snowball"
 }
