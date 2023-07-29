@@ -30,6 +30,7 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.risttahukas.moremobheads.MoreMobHeadsMod;
+import net.risttahukas.moremobheads.capability.PlayerHeadActiveEffectCooldownProvider;
 import net.risttahukas.moremobheads.capability.PlayerHeadSoundCooldownProvider;
 import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 import net.risttahukas.moremobheads.effect.HeadEffects;
@@ -108,8 +109,12 @@ public class SharedEvents {
         public static void onAttachCapabilitiesEvent(AttachCapabilitiesEvent<Entity> event) {
             if (event.getObject() instanceof Player) {
                 if (!event.getObject().getCapability(PlayerHeadSoundCooldownProvider.PLAYER_HEAD_SOUND_COOLDOWN).isPresent()) {
-                    event.addCapability(new ResourceLocation(MoreMobHeadsMod.MOD_ID, "properties"),
+                    event.addCapability(new ResourceLocation(MoreMobHeadsMod.MOD_ID, "player_head_sound_cooldown"),
                             new PlayerHeadSoundCooldownProvider());
+                }
+                if (!event.getObject().getCapability(PlayerHeadActiveEffectCooldownProvider.PLAYER_HEAD_ACTIVE_EFFECT_COOLDOWN).isPresent()) {
+                    event.addCapability(new ResourceLocation(MoreMobHeadsMod.MOD_ID, "player_head_active_effect_cooldown"),
+                            new PlayerHeadActiveEffectCooldownProvider());
                 }
             }
         }
@@ -121,6 +126,9 @@ public class SharedEvents {
                 event.getOriginal().getCapability(PlayerHeadSoundCooldownProvider.PLAYER_HEAD_SOUND_COOLDOWN).ifPresent(oldStore ->
                         event.getEntity().getCapability(PlayerHeadSoundCooldownProvider.PLAYER_HEAD_SOUND_COOLDOWN).ifPresent(newStore ->
                                 newStore.copyFrom(oldStore)));
+                event.getOriginal().getCapability(PlayerHeadActiveEffectCooldownProvider.PLAYER_HEAD_ACTIVE_EFFECT_COOLDOWN).ifPresent(oldStore ->
+                        event.getEntity().getCapability(PlayerHeadActiveEffectCooldownProvider.PLAYER_HEAD_ACTIVE_EFFECT_COOLDOWN).ifPresent(newStore ->
+                                newStore.copyFrom(oldStore)));
                 event.getOriginal().invalidateCaps();
             }
         }
@@ -131,6 +139,11 @@ public class SharedEvents {
             if (event.side.isServer() && event.phase == TickEvent.Phase.START) {
                 Player player = event.player;
                 player.getCapability(PlayerHeadSoundCooldownProvider.PLAYER_HEAD_SOUND_COOLDOWN).ifPresent(cooldown -> {
+                    if (cooldown.getCooldown() > 0) {
+                        cooldown.reduceCooldown();
+                    }
+                });
+                player.getCapability(PlayerHeadActiveEffectCooldownProvider.PLAYER_HEAD_ACTIVE_EFFECT_COOLDOWN).ifPresent(cooldown -> {
                     if (cooldown.getCooldown() > 0) {
                         cooldown.reduceCooldown();
                     }

@@ -11,7 +11,6 @@ import net.minecraft.client.renderer.entity.layers.CustomHeadLayer;
 import net.minecraft.client.renderer.entity.layers.DrownedOuterLayer;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.client.renderer.entity.layers.StrayClothingLayer;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
@@ -34,6 +33,7 @@ import net.risttahukas.moremobheads.block.entity.renderer.EffectSkullBlockRender
 import net.risttahukas.moremobheads.entity.renderer.layers.EffectSkullHeadLayer;
 import net.risttahukas.moremobheads.item.EffectSkullItem;
 import net.risttahukas.moremobheads.networking.ModMessages;
+import net.risttahukas.moremobheads.networking.packet.HeadActiveEffectC2SPacket;
 import net.risttahukas.moremobheads.networking.packet.HeadSoundC2SPacket;
 import net.risttahukas.moremobheads.util.ModKeyBindings;
 
@@ -99,12 +99,12 @@ public class ClientEvents {
             LocalPlayer player = Minecraft.getInstance().player;
             if (player != null) {
                 Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
-                if (headItem instanceof EffectSkullItem effectSkullItem ||
+                if (headItem instanceof EffectSkullItem ||
                         headItem == Items.SKELETON_SKULL || headItem == Items.WITHER_SKELETON_SKULL ||
                         headItem == Items.ZOMBIE_HEAD || headItem == Items.CREEPER_HEAD ||
                         headItem == Items.DRAGON_HEAD || headItem == Items.PIGLIN_HEAD) {
                     if (ModKeyBindings.HEAD_EFFECT_KEY.consumeClick()) {
-                        player.sendSystemMessage(Component.literal("This key will one day activate active effects on heads"));
+                        ModMessages.sendToServer(new HeadActiveEffectC2SPacket());
                     }
                     if (ModKeyBindings.HEAD_SOUND_KEY.consumeClick()) {
                         ModMessages.sendToServer(new HeadSoundC2SPacket());

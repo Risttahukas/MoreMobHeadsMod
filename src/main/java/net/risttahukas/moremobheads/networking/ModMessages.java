@@ -7,6 +7,7 @@ import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.simple.SimpleChannel;
 import net.risttahukas.moremobheads.MoreMobHeadsMod;
+import net.risttahukas.moremobheads.networking.packet.HeadActiveEffectC2SPacket;
 import net.risttahukas.moremobheads.networking.packet.HeadSoundC2SPacket;
 
 public class ModMessages {
@@ -31,6 +32,12 @@ public class ModMessages {
                 .decoder(HeadSoundC2SPacket::new)
                 .encoder(HeadSoundC2SPacket::toBytes)
                 .consumerMainThread(HeadSoundC2SPacket::handle)
+                .add();
+
+        simpleChannel.messageBuilder(HeadActiveEffectC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(HeadActiveEffectC2SPacket::new)
+                .encoder(HeadActiveEffectC2SPacket::toBytes)
+                .consumerMainThread(HeadActiveEffectC2SPacket::handle)
                 .add();
     }
 

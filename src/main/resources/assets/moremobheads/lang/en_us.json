@@ -469,11 +469,11 @@
   "enchantment.moremobheads.beheading.desc": "Makes mob heads far more likely to drop, but has no effect on other drops",
 
   "key.category.moremobheads": "More Mob Heads",
-  "key.moremobheads.activate_head_effect": "Activate Head Effect (WIP)",
-  "key.moremobheads.make_head_sound": "Make Head Sound (WIP)",
+  "key.moremobheads.activate_head_effect": "Activate Head Effect",
+  "key.moremobheads.make_head_sound": "Make Head Sound",
 
   "tooltip.moremobheads.passive_effects": "Passive Effects:",
-  "tooltip.moremobheads.active_effects": "Active Effects:",
+  "tooltip.moremobheads.active_effect": "Active Effect:",
 
   "head_effects.moremobheads.amphibian": "Amphibian",
   "head_effects.moremobheads.cryophobic": "Cryophobic",

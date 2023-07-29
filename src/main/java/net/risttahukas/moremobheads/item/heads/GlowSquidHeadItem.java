@@ -3,10 +3,9 @@ package net.risttahukas.moremobheads.item.heads;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.Block;
-import net.risttahukas.moremobheads.item.EffectSkullItem;
 import net.risttahukas.moremobheads.sound.ModSoundEvents;
 
-public class GlowSquidHeadItem extends EffectSkullItem {
+public class GlowSquidHeadItem extends SquidHeadItem {
     public GlowSquidHeadItem(Block skull, Block wallSkull, Properties properties, Direction direction) {
         super(skull, wallSkull, properties, direction);
     }

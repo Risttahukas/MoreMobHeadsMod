@@ -67,7 +67,7 @@ public abstract class EffectSkullItem extends StandingAndWallBlockItem implement
             }
         }
         if (activeHeadEffect != null) {
-            components.add(Component.translatable("tooltip.moremobheads.active_effects").withStyle(ChatFormatting.GRAY));
+            components.add(Component.translatable("tooltip.moremobheads.active_effect").withStyle(ChatFormatting.GRAY));
             components.add(activeHeadEffect.getName());
         }
     }
