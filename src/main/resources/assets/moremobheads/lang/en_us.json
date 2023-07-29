@@ -472,11 +472,13 @@
   "key.moremobheads.activate_head_effect": "Activate Head Effect (WIP)",
   "key.moremobheads.make_head_sound": "Make Head Sound (WIP)",
 
-  "tooltip.moremobheads.passive_effects": "Effects:",
+  "tooltip.moremobheads.passive_effects": "Passive Effects:",
+  "tooltip.moremobheads.active_effects": "Active Effects:",
 
   "head_effects.moremobheads.amphibian": "Amphibian",
   "head_effects.moremobheads.cryophobic": "Cryophobic",
   "head_effects.moremobheads.fireproof": "Fireproof",
+  "head_effects.moremobheads.heliophobic": "Heliophobic",
   "head_effects.moremobheads.hydrophilic": "Hydrophilic",
   "head_effects.moremobheads.hydrophobic": "Hydrophobic",
   "head_effects.moremobheads.slow_falling": "Slow Falling"

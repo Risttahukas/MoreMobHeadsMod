@@ -1,5 +1,6 @@
 package net.risttahukas.moremobheads.event;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -30,7 +31,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.risttahukas.moremobheads.MoreMobHeadsMod;
 import net.risttahukas.moremobheads.capability.PlayerHeadSoundCooldownProvider;
-import net.risttahukas.moremobheads.effect.AbstractHeadEffect;
+import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 import net.risttahukas.moremobheads.effect.HeadEffects;
 import net.risttahukas.moremobheads.enchantment.ModEnchantmentHelper;
 import net.risttahukas.moremobheads.item.EffectSkullItem;
@@ -124,18 +125,19 @@ public class SharedEvents {
             }
         }
 
+        @SuppressWarnings("deprecation")
         @SubscribeEvent
         public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
             if (event.side.isServer() && event.phase == TickEvent.Phase.START) {
-                event.player.getCapability(PlayerHeadSoundCooldownProvider.PLAYER_HEAD_SOUND_COOLDOWN).ifPresent(cooldown -> {
+                Player player = event.player;
+                player.getCapability(PlayerHeadSoundCooldownProvider.PLAYER_HEAD_SOUND_COOLDOWN).ifPresent(cooldown -> {
                     if (cooldown.getCooldown() > 0) {
                         cooldown.reduceCooldown();
                     }
                 });
-                Player player = event.player;
                 Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
                 if (headItem instanceof EffectSkullItem effectSkullItem) {
-                    for (AbstractHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
+                    for (AbstractPassiveHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
                         if (headEffect == HeadEffects.HYDROPHOBIC) {
                             if (player.isInWaterRainOrBubble()) {
                                 player.hurt(player.damageSources().drown(), 1.0F);
@@ -147,6 +149,19 @@ public class SharedEvents {
                                     player.hurt(player.damageSources().dryOut(), 2.0F);
                                 }
                                 player.setAirSupply(player.getAirSupply() - 5);
+                            }
+                        } else if (headEffect == HeadEffects.HELIOPHOBIC) {
+                            boolean flag = false;
+                            if (player.level().isDay()) {
+                                float f = player.getLightLevelDependentMagicValue();
+                                BlockPos blockpos = BlockPos.containing(player.getX(), player.getEyeY(), player.getZ());
+                                boolean moist = player.isInWaterRainOrBubble() || player.isInPowderSnow || player.wasInPowderSnow;
+                                if (f > 0.5F && player.getRandom().nextFloat() * 30.0F < (f - 0.4F) * 2.0F && !moist && player.level().canSeeSky(blockpos)) {
+                                    flag = true;
+                                }
+                            }
+                            if (flag) {
+                                player.setSecondsOnFire(8);
                             }
                         }
                     }
@@ -167,7 +182,7 @@ public class SharedEvents {
                         double d = thrownPotion.distanceToSqr(player);
                         Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
                         if (headItem instanceof EffectSkullItem effectSkullItem) {
-                            for (AbstractHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
+                            for (AbstractPassiveHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
                                 if (headEffect == HeadEffects.HYDROPHOBIC) {
                                     player.hurt(thrownPotion.damageSources().indirectMagic(thrownPotion, thrownPotion.getOwner()), 1.0F);
                                 }
@@ -182,7 +197,7 @@ public class SharedEvents {
                     if (entityHitResult.getEntity() instanceof Player player) {
                         Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
                         if (headItem instanceof EffectSkullItem effectSkullItem) {
-                            for (AbstractHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
+                            for (AbstractPassiveHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
                                 if (headEffect == HeadEffects.CRYOPHOBIC) {
                                     player.hurt(snowball.damageSources().thrown(snowball, snowball.getOwner()), 3.0F);
                                 }
@@ -200,7 +215,7 @@ public class SharedEvents {
                 if (target instanceof Player player) {
                     Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
                     if (headItem instanceof EffectSkullItem effectSkullItem) {
-                        for (AbstractHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
+                        for (AbstractPassiveHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
                             if (headEffect == HeadEffects.CRYOPHOBIC) {
                                 event.setAmount(event.getAmount() * 5);
                                 System.out.println(event.getAmount());
