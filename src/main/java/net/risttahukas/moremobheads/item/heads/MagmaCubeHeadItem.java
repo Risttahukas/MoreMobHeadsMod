@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableList;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.Block;
-import net.risttahukas.moremobheads.effect.AbstractHeadEffect;
+import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 import net.risttahukas.moremobheads.effect.HeadEffects;
 import net.risttahukas.moremobheads.item.EffectSkullItem;
 import net.risttahukas.moremobheads.sound.ModSoundEvents;
@@ -19,7 +19,7 @@ public class MagmaCubeHeadItem extends EffectSkullItem {
         return ModSoundEvents.NOTE_BLOCK_IMITATE_MAGMA_CUBE.get();
     }
 
-    public ImmutableList<AbstractHeadEffect> getPassiveHeadEffects() {
+    public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
         return ImmutableList.of(HeadEffects.CRYOPHOBIC, HeadEffects.FIREPROOF);
     }
 }

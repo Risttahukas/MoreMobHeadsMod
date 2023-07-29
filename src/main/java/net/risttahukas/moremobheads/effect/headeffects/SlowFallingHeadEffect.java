@@ -6,9 +6,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
-import net.risttahukas.moremobheads.effect.AbstractHeadEffect;
+import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 
-public class SlowFallingHeadEffect extends AbstractHeadEffect {
+public class SlowFallingHeadEffect extends AbstractPassiveHeadEffect {
 
     @Override
     public MutableComponent getName() {

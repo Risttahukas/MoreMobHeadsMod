@@ -3,9 +3,9 @@ package net.risttahukas.moremobheads.effect.headeffects;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.risttahukas.moremobheads.effect.AbstractHeadEffect;
+import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 
-public class HydrophobicHeadEffect extends AbstractHeadEffect {
+public class HydrophobicHeadEffect extends AbstractPassiveHeadEffect {
 
     @Override
     public MutableComponent getName() {
