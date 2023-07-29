@@ -16,7 +16,6 @@ import net.risttahukas.moremobheads.block.entity.ModBlockEntities;
 import net.risttahukas.moremobheads.enchantment.ModEnchantments;
 import net.risttahukas.moremobheads.item.ModCreativeModeTabs;
 import net.risttahukas.moremobheads.item.ModItems;
-import net.risttahukas.moremobheads.loot.ModLootModifiers;
 import net.risttahukas.moremobheads.networking.ModMessages;
 import org.slf4j.Logger;
 
@@ -38,8 +37,6 @@ public class MoreMobHeadsMod
         ModBlocks.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
-
-        ModLootModifiers.register(modEventBus);
 
         ModEnchantments.register(modEventBus);
 
