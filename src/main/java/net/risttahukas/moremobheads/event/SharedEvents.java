@@ -3,6 +3,7 @@ package net.risttahukas.moremobheads.event;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
@@ -25,6 +26,7 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -181,6 +183,11 @@ public class SharedEvents {
                             if (player.level().getBiome(player.blockPosition()).is(BiomeTags.SNOW_GOLEM_MELTS)) {
                                 player.hurt(player.damageSources().onFire(), 1.0F);
                             }
+                        } else if (headEffect == HeadEffects.FREEZE_IMMUNE) {
+                            int i = player.getTicksFrozen();
+                            if (i != 0) {
+                                player.setTicksFrozen(Math.max(0, i - 3));
+                            }
                         }
                     }
                 }
@@ -229,19 +236,37 @@ public class SharedEvents {
         @SubscribeEvent
         public static void onLivingDamageEvent(LivingDamageEvent event) {
             LivingEntity target = event.getEntity();
-            if (event.getSource() == target.damageSources().freeze()) {
+            if (event.getSource().is(DamageTypeTags.IS_FREEZING)) {
                 if (target instanceof Player player) {
                     Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
                     if (headItem instanceof EffectSkullItem effectSkullItem) {
                         for (AbstractPassiveHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
                             if (headEffect == HeadEffects.CRYOPHOBIC) {
                                 event.setAmount(event.getAmount() * 5);
-                                System.out.println(event.getAmount());
                             }
                         }
                     }
                 }
             }
         }
+
+        @SubscribeEvent
+        public static void onLivingAttackEvent(LivingAttackEvent event) {
+            LivingEntity target = event.getEntity();
+            if (event.getSource().is(DamageTypeTags.IS_FREEZING)) {
+                if (target instanceof Player player) {
+                    Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
+                    if (headItem instanceof EffectSkullItem effectSkullItem) {
+                        for (AbstractPassiveHeadEffect headEffect : effectSkullItem.getPassiveHeadEffects()) {
+                            if (headEffect == HeadEffects.FREEZE_IMMUNE) {
+                                event.setCanceled(true);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
     }
 }

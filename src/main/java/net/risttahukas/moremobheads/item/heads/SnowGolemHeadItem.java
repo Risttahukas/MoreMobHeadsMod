@@ -22,7 +22,7 @@ public class SnowGolemHeadItem extends EffectSkullItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        return ImmutableList.of(HeadEffects.HYDROPHOBIC, HeadEffects.THERMOPHOBIC);
+        return ImmutableList.of(HeadEffects.FREEZE_IMMUNE, HeadEffects.HYDROPHOBIC, HeadEffects.THERMOPHOBIC);
     }
 
     @Override
