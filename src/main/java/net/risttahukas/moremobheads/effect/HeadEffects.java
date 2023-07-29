@@ -1,5 +1,6 @@
 package net.risttahukas.moremobheads.effect;
 
+import net.risttahukas.moremobheads.effect.activeheadeffects.SnowballHeadEffect;
 import net.risttahukas.moremobheads.effect.headeffects.*;
 
 public class HeadEffects {
@@ -10,4 +11,7 @@ public class HeadEffects {
     public static final AbstractPassiveHeadEffect HYDROPHILIC = new HydrophilicHeadEffect();
     public static final AbstractPassiveHeadEffect HYDROPHOBIC = new HydrophobicHeadEffect();
     public static final AbstractPassiveHeadEffect SLOW_FALLING = new SlowFallingHeadEffect();
+
+
+    public static final AbstractActiveHeadEffect SNOWBALL = new SnowballHeadEffect();
 }

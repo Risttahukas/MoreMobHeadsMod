@@ -19,6 +19,7 @@ public class MagmaCubeHeadItem extends EffectSkullItem {
         return ModSoundEvents.NOTE_BLOCK_IMITATE_MAGMA_CUBE.get();
     }
 
+    @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
         return ImmutableList.of(HeadEffects.CRYOPHOBIC, HeadEffects.FIREPROOF);
     }

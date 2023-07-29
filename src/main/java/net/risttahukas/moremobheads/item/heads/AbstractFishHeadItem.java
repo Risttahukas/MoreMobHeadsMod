@@ -12,6 +12,7 @@ public abstract class AbstractFishHeadItem extends EffectSkullItem {
         super(skull, wallSkull, properties, direction);
     }
 
+    @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
         return ImmutableList.of(HeadEffects.HYDROPHILIC);
     }

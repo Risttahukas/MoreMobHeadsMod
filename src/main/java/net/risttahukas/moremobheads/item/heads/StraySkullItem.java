@@ -19,6 +19,7 @@ public class StraySkullItem extends EffectSkullItem {
         return ModSoundEvents.NOTE_BLOCK_IMITATE_STRAY.get();
     }
 
+    @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
         return ImmutableList.of(HeadEffects.HELIOPHOBIC);
     }

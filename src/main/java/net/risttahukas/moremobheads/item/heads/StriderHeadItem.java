@@ -19,6 +19,7 @@ public class StriderHeadItem extends EffectSkullItem {
         return ModSoundEvents.NOTE_BLOCK_IMITATE_STRIDER.get();
     }
 
+    @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
         return ImmutableList.of(HeadEffects.CRYOPHOBIC, HeadEffects.FIREPROOF, HeadEffects.HYDROPHOBIC);
     }

@@ -19,6 +19,7 @@ public class AxolotlHeadItem extends EffectSkullItem {
         return ModSoundEvents.NOTE_BLOCK_IMITATE_AXOLOTL.get();
     }
 
+    @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
         return ImmutableList.of(HeadEffects.AMPHIBIAN);
     }

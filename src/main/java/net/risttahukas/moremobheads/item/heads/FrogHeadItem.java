@@ -19,6 +19,7 @@ public class FrogHeadItem extends EffectSkullItem {
         return ModSoundEvents.NOTE_BLOCK_IMITATE_FROG.get();
     }
 
+    @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
         return ImmutableList.of(HeadEffects.AMPHIBIAN);
     }

@@ -19,6 +19,7 @@ public class ZombifiedPiglinHeadItem extends EffectSkullItem {
         return ModSoundEvents.NOTE_BLOCK_IMITATE_ZOMBIFIED_PIGLIN.get();
     }
 
+    @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
         return ImmutableList.of(HeadEffects.FIREPROOF);
     }

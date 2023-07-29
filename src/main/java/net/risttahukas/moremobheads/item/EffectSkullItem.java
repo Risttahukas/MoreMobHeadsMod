@@ -17,6 +17,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import net.risttahukas.moremobheads.effect.AbstractActiveHeadEffect;
 import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 import net.risttahukas.moremobheads.item.renderer.EffectSkullItemRenderer;
 import org.jetbrains.annotations.Nullable;
@@ -46,6 +47,10 @@ public abstract class EffectSkullItem extends StandingAndWallBlockItem implement
         return ImmutableList.of();
     }
 
+    public @Nullable AbstractActiveHeadEffect getActiveHeadEffect() {
+        return null;
+    }
+
     @Override
     public EquipmentSlot getEquipmentSlot() {
         return EquipmentSlot.HEAD;
@@ -54,11 +59,16 @@ public abstract class EffectSkullItem extends StandingAndWallBlockItem implement
     @Override
     public void appendHoverText(ItemStack itemStack, @Nullable Level level, List<Component> components, TooltipFlag tooltipFlag) {
         ImmutableList<AbstractPassiveHeadEffect> passiveHeadEffects = getPassiveHeadEffects();
+        AbstractActiveHeadEffect activeHeadEffect = getActiveHeadEffect();
         if (!passiveHeadEffects.isEmpty()) {
             components.add(Component.translatable("tooltip.moremobheads.passive_effects").withStyle(ChatFormatting.GRAY));
             for (AbstractPassiveHeadEffect headEffect : passiveHeadEffects) {
                 components.add(headEffect.getName());
             }
+        }
+        if (activeHeadEffect != null) {
+            components.add(Component.translatable("tooltip.moremobheads.active_effects").withStyle(ChatFormatting.GRAY));
+            components.add(activeHeadEffect.getName());
         }
     }
 

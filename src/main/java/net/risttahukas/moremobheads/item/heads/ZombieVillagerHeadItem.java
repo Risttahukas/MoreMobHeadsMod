@@ -19,6 +19,7 @@ public class ZombieVillagerHeadItem extends EffectSkullItem {
         return ModSoundEvents.NOTE_BLOCK_IMITATE_ZOMBIE_VILLAGER.get();
     }
 
+    @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
         return ImmutableList.of(HeadEffects.HELIOPHOBIC);
     }
