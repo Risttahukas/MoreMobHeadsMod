@@ -13,11 +13,6 @@ public class TraderLlamaHeadItem extends LlamaHeadItem {
     }
 
     @Override
-    public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        return ImmutableList.of(HeadEffects.TRADER);
-    }
-
-    @Override
     public AbstractActiveHeadEffect getActiveHeadEffect() {
         return HeadEffects.TRADER_SPIT;
     }
