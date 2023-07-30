@@ -21,6 +21,6 @@ public class DrownedHeadItem extends EffectSkullItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        return ImmutableList.of(HeadEffects.HELIOPHOBIC);
+        return ImmutableList.of(HeadEffects.HELIOPHOBIC, HeadEffects.UNDEAD);
     }
 }

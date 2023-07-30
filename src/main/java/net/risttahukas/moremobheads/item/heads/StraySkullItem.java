@@ -21,6 +21,6 @@ public class StraySkullItem extends EffectSkullItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        return ImmutableList.of(HeadEffects.FREEZE_IMMUNE, HeadEffects.HELIOPHOBIC);
+        return ImmutableList.of(HeadEffects.FREEZE_IMMUNE, HeadEffects.HELIOPHOBIC, HeadEffects.UNDEAD);
     }
 }

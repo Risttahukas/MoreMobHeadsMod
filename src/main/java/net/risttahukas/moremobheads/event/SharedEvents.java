@@ -8,7 +8,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,6 +21,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.entity.projectile.ThrownPotion;
+import net.minecraft.world.food.FoodData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -32,8 +36,10 @@ import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
+import net.minecraftforge.event.entity.living.MobEffectEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.risttahukas.moremobheads.MoreMobHeadsMod;
@@ -202,6 +208,23 @@ public class SharedEvents {
                             if (i != 0) {
                                 player.setTicksFrozen(Math.max(0, i - 3));
                             }
+                        } else if (headEffect == HeadEffects.UNDEAD) {
+                            if (player.hasEffect(MobEffects.REGENERATION)) {
+                                player.removeEffect(MobEffects.REGENERATION);
+                            } if (player.hasEffect(MobEffects.POISON)) {
+                                player.removeEffect(MobEffects.POISON);
+                            } if (player.hasEffect(MobEffects.SATURATION)) {
+                                player.removeEffect(MobEffects.SATURATION);
+                            } if (player.hasEffect(MobEffects.HUNGER)) {
+                                player.removeEffect(MobEffects.HUNGER);
+                            }
+                            FoodData foodData = player.getFoodData();
+                            if (foodData.getExhaustionLevel() > 3.9F) {
+                                foodData.setExhaustion(3.9F);
+                            }
+                            if (foodData.getFoodLevel() > 17) {
+                                foodData.setFoodLevel(17);
+                            }
                         }
                     }
                 }
@@ -268,21 +291,21 @@ public class SharedEvents {
         @SubscribeEvent
         public static void onLivingDamageEvent(LivingDamageEvent event) {
             LivingEntity target = event.getEntity();
-            if (event.getSource().is(DamageTypeTags.IS_FREEZING)) {
-                if (target instanceof Player player) {
-                    Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
-                    if (headItem instanceof EffectSkullItem ||
-                            headItem == Items.SKELETON_SKULL || headItem == Items.WITHER_SKELETON_SKULL ||
-                            headItem == Items.ZOMBIE_HEAD || headItem == Items.CREEPER_HEAD ||
-                            headItem == Items.DRAGON_HEAD || headItem == Items.PIGLIN_HEAD) {
-                        ImmutableList<AbstractPassiveHeadEffect> headEffects;
-                        if (headItem instanceof EffectSkullItem effectSkullItem) {
-                            headEffects = effectSkullItem.getPassiveHeadEffects();
-                        } else {
-                            headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
-                        }
-                        for (AbstractPassiveHeadEffect headEffect : headEffects) {
-                            if (headEffect == HeadEffects.CRYOPHOBIC) {
+            if (target instanceof Player player && !target.level().isClientSide()) {
+                Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
+                if (headItem instanceof EffectSkullItem ||
+                        headItem == Items.SKELETON_SKULL || headItem == Items.WITHER_SKELETON_SKULL ||
+                        headItem == Items.ZOMBIE_HEAD || headItem == Items.CREEPER_HEAD ||
+                        headItem == Items.DRAGON_HEAD || headItem == Items.PIGLIN_HEAD) {
+                    ImmutableList<AbstractPassiveHeadEffect> headEffects;
+                    if (headItem instanceof EffectSkullItem effectSkullItem) {
+                        headEffects = effectSkullItem.getPassiveHeadEffects();
+                    } else {
+                        headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
+                    }
+                    for (AbstractPassiveHeadEffect headEffect : headEffects) {
+                        if (headEffect == HeadEffects.CRYOPHOBIC) {
+                            if (event.getSource().is(DamageTypeTags.IS_FREEZING)) {
                                 event.setAmount(event.getAmount() * 5);
                             }
                         }
@@ -294,22 +317,54 @@ public class SharedEvents {
         @SubscribeEvent
         public static void onLivingAttackEvent(LivingAttackEvent event) {
             LivingEntity target = event.getEntity();
-            if (event.getSource().is(DamageTypeTags.IS_FREEZING)) {
-                if (target instanceof Player player) {
-                    Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
-                    if (headItem instanceof EffectSkullItem ||
-                            headItem == Items.SKELETON_SKULL || headItem == Items.WITHER_SKELETON_SKULL ||
-                            headItem == Items.ZOMBIE_HEAD || headItem == Items.CREEPER_HEAD ||
-                            headItem == Items.DRAGON_HEAD || headItem == Items.PIGLIN_HEAD) {
-                        ImmutableList<AbstractPassiveHeadEffect> headEffects;
-                        if (headItem instanceof EffectSkullItem effectSkullItem) {
-                            headEffects = effectSkullItem.getPassiveHeadEffects();
-                        } else {
-                            headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
-                        }
-                        for (AbstractPassiveHeadEffect headEffect : headEffects) {
-                            if (headEffect == HeadEffects.FREEZE_IMMUNE) {
+            if (target instanceof Player player && !target.level().isClientSide()) {
+                Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
+                if (headItem instanceof EffectSkullItem ||
+                        headItem == Items.SKELETON_SKULL || headItem == Items.WITHER_SKELETON_SKULL ||
+                        headItem == Items.ZOMBIE_HEAD || headItem == Items.CREEPER_HEAD ||
+                        headItem == Items.DRAGON_HEAD || headItem == Items.PIGLIN_HEAD) {
+                    ImmutableList<AbstractPassiveHeadEffect> headEffects;
+                    if (headItem instanceof EffectSkullItem effectSkullItem) {
+                        headEffects = effectSkullItem.getPassiveHeadEffects();
+                    } else {
+                        headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
+                    }
+                    for (AbstractPassiveHeadEffect headEffect : headEffects) {
+                        if (headEffect == HeadEffects.FREEZE_IMMUNE) {
+                            if (event.getSource().is(DamageTypeTags.IS_FREEZING)) {
                                 event.setCanceled(true);
+                            }
+                        } else if (headEffect == HeadEffects.UNDEAD) {
+                            if (event.getSource().is(DamageTypeTags.IS_DROWNING) || event.getSource().is(DamageTypes.STARVE)) {
+                                event.setCanceled(true);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @SubscribeEvent
+        public static void onMobEffectApplicableEvent(MobEffectEvent.Applicable event) {
+            LivingEntity target = event.getEntity();
+            if (target instanceof Player player && !target.level().isClientSide()) {
+                Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
+                if (headItem instanceof EffectSkullItem ||
+                        headItem == Items.SKELETON_SKULL || headItem == Items.WITHER_SKELETON_SKULL ||
+                        headItem == Items.ZOMBIE_HEAD || headItem == Items.CREEPER_HEAD ||
+                        headItem == Items.DRAGON_HEAD || headItem == Items.PIGLIN_HEAD) {
+                    ImmutableList<AbstractPassiveHeadEffect> headEffects;
+                    if (headItem instanceof EffectSkullItem effectSkullItem) {
+                        headEffects = effectSkullItem.getPassiveHeadEffects();
+                    } else {
+                        headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
+                    }
+                    for (AbstractPassiveHeadEffect headEffect : headEffects) {
+                        if (headEffect == HeadEffects.UNDEAD) {
+                            MobEffect mobEffect = event.getEffectInstance().getEffect();
+                            if (mobEffect == MobEffects.REGENERATION || mobEffect == MobEffects.POISON ||
+                                    mobEffect == MobEffects.SATURATION || mobEffect == MobEffects.HUNGER) {
+                                event.setResult(Event.Result.DENY);
                             }
                         }
                     }

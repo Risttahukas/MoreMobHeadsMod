@@ -21,6 +21,6 @@ public class ZombifiedPiglinHeadItem extends EffectSkullItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        return ImmutableList.of(HeadEffects.FIREPROOF);
+        return ImmutableList.of(HeadEffects.FIREPROOF, HeadEffects.UNDEAD);
     }
 }
