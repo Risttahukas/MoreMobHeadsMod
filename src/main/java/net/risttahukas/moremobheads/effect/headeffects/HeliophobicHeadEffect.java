@@ -11,4 +11,9 @@ public class HeliophobicHeadEffect extends AbstractPassiveHeadEffect {
     public MutableComponent getName() {
         return Component.translatable("head_effects.moremobheads.heliophobic").withStyle(ChatFormatting.YELLOW);
     }
+
+    @Override
+    public MutableComponent getDesc() {
+        return Component.translatable("head_effects.moremobheads.heliophobic.desc").withStyle(ChatFormatting.YELLOW);
+    }
 }

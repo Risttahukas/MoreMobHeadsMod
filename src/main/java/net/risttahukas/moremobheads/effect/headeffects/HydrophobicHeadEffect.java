@@ -11,4 +11,9 @@ public class HydrophobicHeadEffect extends AbstractPassiveHeadEffect {
     public MutableComponent getName() {
         return Component.translatable("head_effects.moremobheads.hydrophobic").withStyle(ChatFormatting.BLUE);
     }
+
+    @Override
+    public MutableComponent getDesc() {
+        return Component.translatable("head_effects.moremobheads.hydrophobic.desc").withStyle(ChatFormatting.BLUE);
+    }
 }

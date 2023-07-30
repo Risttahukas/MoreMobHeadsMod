@@ -11,4 +11,9 @@ public class UndeadHeadEffect extends AbstractPassiveHeadEffect {
     public MutableComponent getName() {
         return Component.translatable("head_effects.moremobheads.undead").withStyle(ChatFormatting.DARK_RED);
     }
+
+    @Override
+    public MutableComponent getDesc() {
+        return Component.translatable("head_effects.moremobheads.undead.desc").withStyle(ChatFormatting.DARK_RED);
+    }
 }

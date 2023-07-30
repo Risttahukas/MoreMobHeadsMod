@@ -16,6 +16,11 @@ public class FireproofHeadEffect extends AbstractPassiveHeadEffect {
     }
 
     @Override
+    public MutableComponent getDesc() {
+        return Component.translatable("head_effects.moremobheads.fireproof.desc").withStyle(ChatFormatting.GOLD);
+    }
+
+    @Override
     public ImmutableList<MobEffect> getPassivePotionEffects() {
         return ImmutableList.of(MobEffects.FIRE_RESISTANCE);
     }

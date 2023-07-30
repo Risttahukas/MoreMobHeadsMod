@@ -11,4 +11,9 @@ public class CryophobicHeadEffect extends AbstractPassiveHeadEffect {
     public MutableComponent getName() {
         return Component.translatable("head_effects.moremobheads.cryophobic").withStyle(ChatFormatting.WHITE);
     }
+
+    @Override
+    public MutableComponent getDesc() {
+        return Component.translatable("head_effects.moremobheads.cryophobic.desc").withStyle(ChatFormatting.WHITE);
+    }
 }

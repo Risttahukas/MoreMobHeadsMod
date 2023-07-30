@@ -11,4 +11,9 @@ public class TraderHeadEffect extends AbstractPassiveHeadEffect {
     public MutableComponent getName() {
         return Component.translatable("head_effects.moremobheads.trader").withStyle(ChatFormatting.BLUE);
     }
+
+    @Override
+    public MutableComponent getDesc() {
+        return Component.translatable("head_effects.moremobheads.trader.desc").withStyle(ChatFormatting.BLUE);
+    }
 }

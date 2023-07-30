@@ -13,6 +13,11 @@ public class SpitHeadEffect extends AbstractActiveHeadEffect {
     }
 
     @Override
+    public MutableComponent getDesc() {
+        return Component.translatable("active_head_effects.moremobheads.spit.desc").withStyle(ChatFormatting.WHITE);
+    }
+
+    @Override
     public int getCooldown() {
         return 5;
     }

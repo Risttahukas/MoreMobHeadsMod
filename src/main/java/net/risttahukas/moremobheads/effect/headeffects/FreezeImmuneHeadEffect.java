@@ -11,4 +11,9 @@ public class FreezeImmuneHeadEffect extends AbstractPassiveHeadEffect {
     public MutableComponent getName() {
         return Component.translatable("head_effects.moremobheads.freeze_immune").withStyle(ChatFormatting.WHITE);
     }
+
+    @Override
+    public MutableComponent getDesc() {
+        return Component.translatable("head_effects.moremobheads.freeze_immune.desc").withStyle(ChatFormatting.WHITE);
+    }
 }

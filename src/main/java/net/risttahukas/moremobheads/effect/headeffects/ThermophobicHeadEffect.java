@@ -11,4 +11,9 @@ public class ThermophobicHeadEffect extends AbstractPassiveHeadEffect {
     public MutableComponent getName() {
         return Component.translatable("head_effects.moremobheads.thermophobic").withStyle(ChatFormatting.GOLD);
     }
+
+    @Override
+    public MutableComponent getDesc() {
+        return Component.translatable("head_effects.moremobheads.thermophobic.desc").withStyle(ChatFormatting.GOLD);
+    }
 }

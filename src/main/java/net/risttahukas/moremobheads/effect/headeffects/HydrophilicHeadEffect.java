@@ -16,6 +16,11 @@ public class HydrophilicHeadEffect extends AbstractPassiveHeadEffect {
     }
 
     @Override
+    public MutableComponent getDesc() {
+        return Component.translatable("head_effects.moremobheads.hydrophilic.desc").withStyle(ChatFormatting.AQUA);
+    }
+
+    @Override
     public ImmutableList<MobEffect> getPassivePotionEffects() {
         return ImmutableList.of(MobEffects.WATER_BREATHING);
     }

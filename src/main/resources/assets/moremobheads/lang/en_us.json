@@ -474,6 +474,9 @@
 
   "tooltip.moremobheads.passive_effects": "Passive Effects:",
   "tooltip.moremobheads.active_effect": "Active Effect:",
+  "tooltip.moremobheads.active_effect.cooldown": "Cooldown:",
+  "tooltip.moremobheads.tick.singular": "tick",
+  "tooltip.moremobheads.tick.plural": "ticks",
 
   "head_effects.moremobheads.amphibian": "Amphibian",
   "head_effects.moremobheads.cryophobic": "Cryophobic",
@@ -488,5 +491,20 @@
   "head_effects.moremobheads.undead": "Undead",
 
   "active_head_effects.moremobheads.snowball": "Snowball",
-  "active_head_effects.moremobheads.spit": "Spit"
+  "active_head_effects.moremobheads.spit": "Spit",
+
+  "head_effects.moremobheads.amphibian.desc": "You can breathe both underwater and in air",
+  "head_effects.moremobheads.cryophobic.desc": "You take extra damage from freezing and snowballs",
+  "head_effects.moremobheads.fireproof.desc": "You are immune to fire",
+  "head_effects.moremobheads.freeze_immune.desc": "You are immune to freezing",
+  "head_effects.moremobheads.heliophobic.desc": "The Sun is a deadly laser",
+  "head_effects.moremobheads.hydrophilic.desc": "You can only breathe underwater",
+  "head_effects.moremobheads.hydrophobic.desc": "Water harms you",
+  "head_effects.moremobheads.slow_falling.desc": "You fall slowly",
+  "head_effects.moremobheads.thermophobic.desc": "Hot environments harm you",
+  "head_effects.moremobheads.trader.desc": "Trader",
+  "head_effects.moremobheads.undead.desc": "Matters of the living, such as breathing and eating, don't concern you\nYou are not affected by Poison and Regeneration\nYou don't need to eat, but no food can fully satisfy you",
+
+  "active_head_effects.moremobheads.snowball.desc": "Shoot a Snowball",
+  "active_head_effects.moremobheads.spit.desc": "Spit like a Llama"
 }

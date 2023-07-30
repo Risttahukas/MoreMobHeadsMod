@@ -2,6 +2,7 @@ package net.risttahukas.moremobheads.event;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -45,6 +46,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.risttahukas.moremobheads.MoreMobHeadsMod;
 import net.risttahukas.moremobheads.capability.PlayerHeadActiveEffectCooldownProvider;
 import net.risttahukas.moremobheads.capability.PlayerHeadSoundCooldownProvider;
+import net.risttahukas.moremobheads.effect.AbstractActiveHeadEffect;
 import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 import net.risttahukas.moremobheads.effect.HeadEffects;
 import net.risttahukas.moremobheads.effect.ModHeadEffectHelper;
@@ -379,15 +381,34 @@ public class SharedEvents {
                     headItem == Items.ZOMBIE_HEAD || headItem == Items.CREEPER_HEAD ||
                     headItem == Items.DRAGON_HEAD || headItem == Items.PIGLIN_HEAD) {
                 ImmutableList<AbstractPassiveHeadEffect> passiveHeadEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
+                AbstractActiveHeadEffect activeHeadEffect = ModHeadEffectHelper.getActiveEffectFromHead(headItem);
+                List<Component> components = event.getToolTip();
+                int i = 0;
+                if (!(components.size() == 0)) {
+                    i = 1;
+                }
                 if (!passiveHeadEffects.isEmpty()) {
-                    List<Component> components = event.getToolTip();
-                    int i = 0;
-                    if (!(components.size() == 0)) {
-                        i = 1;
-                    }
                     components.add(i++, Component.translatable("tooltip.moremobheads.passive_effects").withStyle(ChatFormatting.GRAY));
                     for (AbstractPassiveHeadEffect headEffect : passiveHeadEffects) {
-                        components.add(i++, headEffect.getName());
+                        if (Screen.hasShiftDown()) {
+                            components.add(i++, headEffect.getDesc());
+                        } else {
+                            components.add(i++, headEffect.getName());
+                        }
+                    }
+                }
+                if (activeHeadEffect != null) {
+                    components.add(i++, Component.translatable("tooltip.moremobheads.active_effect").withStyle(ChatFormatting.GRAY));
+                    if (Screen.hasShiftDown()) {
+                        components.add(i++, activeHeadEffect.getDesc());
+                        components.add(i, Component.translatable("tooltip.moremobheads.active_effect.cooldown")
+                                .append(" " + activeHeadEffect.getCooldown() + " ")
+                                .append(Component.translatable(activeHeadEffect.getCooldown() == 1 ?
+                                        "tooltip.moremobheads.tick.singular" :
+                                        "tooltip.moremobheads.tick.plural"))
+                                .withStyle(ChatFormatting.GRAY));
+                    } else {
+                        components.add(i, activeHeadEffect.getName());
                     }
                 }
             }

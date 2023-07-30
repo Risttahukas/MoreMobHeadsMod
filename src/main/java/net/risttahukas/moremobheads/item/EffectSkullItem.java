@@ -2,6 +2,7 @@ package net.risttahukas.moremobheads.item;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -63,12 +64,26 @@ public abstract class EffectSkullItem extends StandingAndWallBlockItem implement
         if (!passiveHeadEffects.isEmpty()) {
             components.add(Component.translatable("tooltip.moremobheads.passive_effects").withStyle(ChatFormatting.GRAY));
             for (AbstractPassiveHeadEffect headEffect : passiveHeadEffects) {
-                components.add(headEffect.getName());
+                if (Screen.hasShiftDown()) {
+                    components.add(headEffect.getDesc());
+                } else {
+                    components.add(headEffect.getName());
+                }
             }
         }
         if (activeHeadEffect != null) {
             components.add(Component.translatable("tooltip.moremobheads.active_effect").withStyle(ChatFormatting.GRAY));
-            components.add(activeHeadEffect.getName());
+            if (Screen.hasShiftDown()) {
+                components.add(activeHeadEffect.getDesc());
+                components.add(Component.translatable("tooltip.moremobheads.active_effect.cooldown")
+                        .append(" " + activeHeadEffect.getCooldown() + " ")
+                        .append(Component.translatable(activeHeadEffect.getCooldown() == 1 ?
+                                "tooltip.moremobheads.tick.singular" :
+                                "tooltip.moremobheads.tick.plural"))
+                        .withStyle(ChatFormatting.GRAY));
+            } else {
+                components.add(activeHeadEffect.getName());
+            }
         }
     }
 

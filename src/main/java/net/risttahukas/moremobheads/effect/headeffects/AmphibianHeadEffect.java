@@ -16,6 +16,11 @@ public class AmphibianHeadEffect extends AbstractPassiveHeadEffect {
     }
 
     @Override
+    public MutableComponent getDesc() {
+        return Component.translatable("head_effects.moremobheads.amphibian.desc").withStyle(ChatFormatting.DARK_AQUA);
+    }
+
+    @Override
     public ImmutableList<MobEffect> getPassivePotionEffects() {
         return ImmutableList.of(MobEffects.WATER_BREATHING);
     }

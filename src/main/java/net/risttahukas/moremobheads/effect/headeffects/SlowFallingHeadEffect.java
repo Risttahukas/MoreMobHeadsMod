@@ -16,6 +16,11 @@ public class SlowFallingHeadEffect extends AbstractPassiveHeadEffect {
     }
 
     @Override
+    public MutableComponent getDesc() {
+        return Component.translatable("head_effects.moremobheads.slow_falling.desc").withStyle(ChatFormatting.WHITE);
+    }
+
+    @Override
     public ImmutableList<MobEffect> getPassivePotionEffects() {
         return ImmutableList.of(MobEffects.SLOW_FALLING);
     }
