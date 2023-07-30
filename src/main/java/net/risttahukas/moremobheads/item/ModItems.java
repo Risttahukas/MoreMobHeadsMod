@@ -944,19 +944,19 @@ public class ModItems {
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> TRADER_LLAMA_HEAD_CREAMY = ITEMS.register("trader_llama_head_creamy", () ->
-            new LlamaHeadItem(ModBlocks.TRADER_LLAMA_HEAD_CREAMY.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_CREAMY.get(),
+            new TraderLlamaHeadItem(ModBlocks.TRADER_LLAMA_HEAD_CREAMY.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_CREAMY.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> TRADER_LLAMA_HEAD_WHITE = ITEMS.register("trader_llama_head_white", () ->
-            new LlamaHeadItem(ModBlocks.TRADER_LLAMA_HEAD_WHITE.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_WHITE.get(),
+            new TraderLlamaHeadItem(ModBlocks.TRADER_LLAMA_HEAD_WHITE.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_WHITE.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> TRADER_LLAMA_HEAD_BROWN = ITEMS.register("trader_llama_head_brown", () ->
-            new LlamaHeadItem(ModBlocks.TRADER_LLAMA_HEAD_BROWN.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_BROWN.get(),
+            new TraderLlamaHeadItem(ModBlocks.TRADER_LLAMA_HEAD_BROWN.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_BROWN.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> TRADER_LLAMA_HEAD_GRAY = ITEMS.register("trader_llama_head_gray", () ->
-            new LlamaHeadItem(ModBlocks.TRADER_LLAMA_HEAD_GRAY.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_GRAY.get(),
+            new TraderLlamaHeadItem(ModBlocks.TRADER_LLAMA_HEAD_GRAY.get(), ModBlocks.TRADER_LLAMA_WALL_HEAD_GRAY.get(),
                     (new Item.Properties()).rarity(Rarity.UNCOMMON), Direction.DOWN));
 
     public static final RegistryObject<Item> TROPICAL_FISH_HEAD = ITEMS.register("tropical_fish_head", () ->
