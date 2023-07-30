@@ -3,6 +3,7 @@ package net.risttahukas.moremobheads.item.heads;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
+import net.risttahukas.moremobheads.config.MoreMobHeadsModCommonConfigs;
 import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 import net.risttahukas.moremobheads.effect.HeadEffects;
 import net.risttahukas.moremobheads.item.EffectSkullItem;
@@ -14,6 +15,9 @@ public abstract class AbstractFishHeadItem extends EffectSkullItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        return ImmutableList.of(HeadEffects.HYDROPHILIC);
+        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get()) {
+            return ImmutableList.of(HeadEffects.HYDROPHILIC);
+        }
+        return ImmutableList.of();
     }
 }

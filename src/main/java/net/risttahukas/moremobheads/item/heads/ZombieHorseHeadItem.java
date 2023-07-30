@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.Block;
+import net.risttahukas.moremobheads.config.MoreMobHeadsModCommonConfigs;
 import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 import net.risttahukas.moremobheads.effect.HeadEffects;
 import net.risttahukas.moremobheads.sound.ModSoundEvents;
@@ -20,6 +21,9 @@ public class ZombieHorseHeadItem extends HorseHeadItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        return ImmutableList.of(HeadEffects.UNDEAD);
+        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get()) {
+            return ImmutableList.of(HeadEffects.UNDEAD);
+        }
+        return ImmutableList.of();
     }
 }

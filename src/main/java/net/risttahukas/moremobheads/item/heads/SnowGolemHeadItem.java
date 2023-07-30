@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.Block;
+import net.risttahukas.moremobheads.config.MoreMobHeadsModCommonConfigs;
 import net.risttahukas.moremobheads.effect.AbstractActiveHeadEffect;
 import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 import net.risttahukas.moremobheads.effect.HeadEffects;
@@ -22,11 +23,17 @@ public class SnowGolemHeadItem extends EffectSkullItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        return ImmutableList.of(HeadEffects.FREEZE_IMMUNE, HeadEffects.HYDROPHOBIC, HeadEffects.THERMOPHOBIC);
+        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get()) {
+            return ImmutableList.of(HeadEffects.FREEZE_IMMUNE, HeadEffects.HYDROPHOBIC, HeadEffects.THERMOPHOBIC);
+        }
+        return ImmutableList.of();
     }
 
     @Override
     public AbstractActiveHeadEffect getActiveHeadEffect() {
-        return HeadEffects.SNOWBALL;
+        if (MoreMobHeadsModCommonConfigs.ENABLE_ACTIVE_HEAD_EFFECTS.get()) {
+            return HeadEffects.SNOWBALL;
+        }
+        return null;
     }
 }

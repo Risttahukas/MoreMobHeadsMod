@@ -7,12 +7,15 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.risttahukas.moremobheads.block.ModBlocks;
 import net.risttahukas.moremobheads.block.entity.ModBlockEntities;
+import net.risttahukas.moremobheads.config.MoreMobHeadsModCommonConfigs;
 import net.risttahukas.moremobheads.enchantment.ModEnchantments;
 import net.risttahukas.moremobheads.item.ModCreativeModeTabs;
 import net.risttahukas.moremobheads.item.ModItems;
@@ -41,6 +44,8 @@ public class MoreMobHeadsMod
         ModEnchantments.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MoreMobHeadsModCommonConfigs.SPEC, MOD_ID + "-common.toml");
 
         MinecraftForge.EVENT_BUS.register(this);
 
