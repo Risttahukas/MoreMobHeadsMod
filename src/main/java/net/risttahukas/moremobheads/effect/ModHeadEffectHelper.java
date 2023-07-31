@@ -11,18 +11,18 @@ public class ModHeadEffectHelper {
         if (!MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get()) {
             return ImmutableList.of();
         }
-        if (headItem == Items.SKELETON_SKULL) {
+        if (headItem == Items.CREEPER_HEAD && MoreMobHeadsModCommonConfigs.ENABLE_CREEPER_HEAD_EFFECTS.get()) {
+            return ImmutableList.of();
+        } else if (headItem == Items.DRAGON_HEAD && MoreMobHeadsModCommonConfigs.ENABLE_DRAGON_HEAD_EFFECTS.get()) {
+            return ImmutableList.of();
+        } else if (headItem == Items.PIGLIN_HEAD && MoreMobHeadsModCommonConfigs.ENABLE_PIGLIN_HEAD_EFFECTS.get()) {
+            return ImmutableList.of();
+        } else if (headItem == Items.SKELETON_SKULL && MoreMobHeadsModCommonConfigs.ENABLE_SKELETON_SKULL_EFFECTS.get()) {
             return ImmutableList.of(HeadEffects.HELIOPHOBIC, HeadEffects.UNDEAD);
-        } else if (headItem == Items.WITHER_SKELETON_SKULL) {
+        } else if (headItem == Items.WITHER_SKELETON_SKULL && MoreMobHeadsModCommonConfigs.ENABLE_WITHER_SKELETON_SKULL_EFFECTS.get()) {
             return ImmutableList.of(HeadEffects.UNDEAD);
-        } else if (headItem == Items.ZOMBIE_HEAD) {
+        } else if (headItem == Items.ZOMBIE_HEAD && MoreMobHeadsModCommonConfigs.ENABLE_ZOMBIE_HEAD_EFFECTS.get()) {
             return ImmutableList.of(HeadEffects.HELIOPHOBIC, HeadEffects.UNDEAD);
-        } else if (headItem == Items.CREEPER_HEAD) {
-            return ImmutableList.of();
-        } else if (headItem == Items.DRAGON_HEAD) {
-            return ImmutableList.of();
-        } else if (headItem == Items.PIGLIN_HEAD) {
-            return ImmutableList.of();
         }
         return ImmutableList.of();
     }
@@ -31,17 +31,17 @@ public class ModHeadEffectHelper {
         if (!MoreMobHeadsModCommonConfigs.ENABLE_ACTIVE_HEAD_EFFECTS.get()) {
             return null;
         }
-        if (headItem == Items.SKELETON_SKULL) {
+        if (headItem == Items.CREEPER_HEAD && MoreMobHeadsModCommonConfigs.ENABLE_CREEPER_HEAD_EFFECTS.get()) {
             return null;
-        } else if (headItem == Items.WITHER_SKELETON_SKULL) {
+        } else if (headItem == Items.DRAGON_HEAD && MoreMobHeadsModCommonConfigs.ENABLE_DRAGON_HEAD_EFFECTS.get()) {
             return null;
-        } else if (headItem == Items.ZOMBIE_HEAD) {
+        } else if (headItem == Items.PIGLIN_HEAD && MoreMobHeadsModCommonConfigs.ENABLE_PIGLIN_HEAD_EFFECTS.get()) {
             return null;
-        } else if (headItem == Items.CREEPER_HEAD) {
+        } else if (headItem == Items.SKELETON_SKULL && MoreMobHeadsModCommonConfigs.ENABLE_SKELETON_SKULL_EFFECTS.get()) {
             return null;
-        } else if (headItem == Items.DRAGON_HEAD) {
+        } else if (headItem == Items.WITHER_SKELETON_SKULL && MoreMobHeadsModCommonConfigs.ENABLE_WITHER_SKELETON_SKULL_EFFECTS.get()) {
             return null;
-        } else if (headItem == Items.PIGLIN_HEAD) {
+        } else if (headItem == Items.ZOMBIE_HEAD && MoreMobHeadsModCommonConfigs.ENABLE_ZOMBIE_HEAD_EFFECTS.get()) {
             return null;
         }
         return null;

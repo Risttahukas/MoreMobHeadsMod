@@ -23,7 +23,7 @@ public class SnowGolemHeadItem extends EffectSkullItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get()) {
+        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_SNOW_GOLEM_HEAD_EFFECTS.get()) {
             return ImmutableList.of(HeadEffects.FREEZE_IMMUNE, HeadEffects.HYDROPHOBIC, HeadEffects.THERMOPHOBIC);
         }
         return ImmutableList.of();
@@ -31,7 +31,7 @@ public class SnowGolemHeadItem extends EffectSkullItem {
 
     @Override
     public AbstractActiveHeadEffect getActiveHeadEffect() {
-        if (MoreMobHeadsModCommonConfigs.ENABLE_ACTIVE_HEAD_EFFECTS.get()) {
+        if (MoreMobHeadsModCommonConfigs.ENABLE_ACTIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_SNOW_GOLEM_HEAD_EFFECTS.get()) {
             return HeadEffects.SNOWBALL;
         }
         return null;

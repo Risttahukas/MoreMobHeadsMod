@@ -22,7 +22,7 @@ public class ZoglinHeadItem extends EffectSkullItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get()) {
+        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_ZOGLIN_HEAD_EFFECTS.get()) {
             return ImmutableList.of(HeadEffects.FIREPROOF, HeadEffects.UNDEAD);
         }
         return ImmutableList.of();

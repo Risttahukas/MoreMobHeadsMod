@@ -22,8 +22,8 @@ public class ZombieVillagerHeadItem extends EffectSkullItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get()) {
-            return ImmutableList.of(HeadEffects.HELIOPHOBIC);
+        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_ZOMBIE_VILLAGER_HEAD_EFFECTS.get()) {
+            return ImmutableList.of(HeadEffects.HELIOPHOBIC, HeadEffects.UNDEAD);
         }
         return ImmutableList.of();
     }

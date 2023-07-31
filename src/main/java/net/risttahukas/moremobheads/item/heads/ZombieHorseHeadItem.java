@@ -21,7 +21,7 @@ public class ZombieHorseHeadItem extends HorseHeadItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get()) {
+        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_HORSE_ZOMBIE_HEAD_EFFECTS.get()) {
             return ImmutableList.of(HeadEffects.UNDEAD);
         }
         return ImmutableList.of();

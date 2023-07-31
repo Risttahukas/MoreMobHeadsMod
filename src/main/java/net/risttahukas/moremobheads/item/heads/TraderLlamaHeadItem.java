@@ -13,7 +13,7 @@ public class TraderLlamaHeadItem extends LlamaHeadItem {
 
     @Override
     public AbstractActiveHeadEffect getActiveHeadEffect() {
-        if (MoreMobHeadsModCommonConfigs.ENABLE_ACTIVE_HEAD_EFFECTS.get()) {
+        if (MoreMobHeadsModCommonConfigs.ENABLE_ACTIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_TRADER_LLAMA_HEAD_EFFECTS.get()) {
             return HeadEffects.TRADER_SPIT;
         }
         return null;

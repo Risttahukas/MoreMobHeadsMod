@@ -21,7 +21,7 @@ public class GhastHeadItem extends EffectSkullItem {
     }
 
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get()) {
+        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_GHAST_HEAD_EFFECTS.get()) {
             return ImmutableList.of(HeadEffects.FIREPROOF);
         }
         return ImmutableList.of();

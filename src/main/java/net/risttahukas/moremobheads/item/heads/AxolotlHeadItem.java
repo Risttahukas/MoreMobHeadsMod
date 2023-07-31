@@ -22,7 +22,7 @@ public class AxolotlHeadItem extends EffectSkullItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get()) {
+        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_AXOLOTL_HEAD_EFFECTS.get()) {
             return ImmutableList.of(HeadEffects.AMPHIBIAN);
         }
         return ImmutableList.of();

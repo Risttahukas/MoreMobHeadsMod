@@ -22,7 +22,7 @@ public class StriderHeadItem extends EffectSkullItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get()) {
+        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_STRIDER_HEAD_EFFECTS.get()) {
             return ImmutableList.of(HeadEffects.CRYOPHOBIC, HeadEffects.FIREPROOF, HeadEffects.HYDROPHOBIC);
         }
         return ImmutableList.of();

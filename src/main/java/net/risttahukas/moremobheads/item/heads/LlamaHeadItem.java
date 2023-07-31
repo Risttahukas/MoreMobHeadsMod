@@ -21,7 +21,7 @@ public class LlamaHeadItem extends EffectSkullItem {
 
     @Override
     public AbstractActiveHeadEffect getActiveHeadEffect() {
-        if (MoreMobHeadsModCommonConfigs.ENABLE_ACTIVE_HEAD_EFFECTS.get()) {
+        if (MoreMobHeadsModCommonConfigs.ENABLE_ACTIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_LLAMA_HEAD_EFFECTS.get()) {
             return HeadEffects.SPIT;
         }
         return null;

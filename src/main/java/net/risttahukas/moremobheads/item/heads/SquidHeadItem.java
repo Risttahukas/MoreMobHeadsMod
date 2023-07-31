@@ -22,7 +22,7 @@ public class SquidHeadItem extends EffectSkullItem {
 
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
-        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get()) {
+        if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_SQUID_HEAD_EFFECTS.get()) {
             return ImmutableList.of(HeadEffects.HYDROPHILIC);
         }
         return ImmutableList.of();
