@@ -95,6 +95,7 @@ public class MoreMobHeadsModCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ENDERIC_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_FIREPROOF_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_FREEZE_IMMUNE_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_HEAVY_DUTY_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_HELIOPHOBIC_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_HYDROPHILIC_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_HYDROPHOBIC_EFFECT;
@@ -284,6 +285,8 @@ public class MoreMobHeadsModCommonConfigs {
                 .define("Enable Fireproof effect", true);
         ENABLE_FREEZE_IMMUNE_EFFECT = BUILDER.comment("Should the Freeze Immune effect be used?")
                 .define("Enable Freeze Immune effect", true);
+        ENABLE_HEAVY_DUTY_EFFECT = BUILDER.comment("Should the Heavy-Duty effect be used?")
+                .define("Enable Heavy-Duty effect", true);
         ENABLE_HELIOPHOBIC_EFFECT = BUILDER.comment("Should the Heliophobic effect be used?")
                 .define("Enable Heliophobic effect", true);
         ENABLE_HYDROPHILIC_EFFECT = BUILDER.comment("Should the Hydrophilic effect be used?")

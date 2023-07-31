@@ -10,22 +10,22 @@ import net.minecraft.world.effect.MobEffects;
 import net.risttahukas.moremobheads.config.MoreMobHeadsModCommonConfigs;
 import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 
-public class AmphibianHeadEffect extends AbstractPassiveHeadEffect {
+public class HeavyDutyHeadEffect extends AbstractPassiveHeadEffect {
 
     @Override
     public MutableComponent getName() {
-        return Component.translatable("head_effects.moremobheads.amphibian").withStyle(ChatFormatting.DARK_AQUA);
+        return Component.translatable("head_effects.moremobheads.heavy_duty").withStyle(ChatFormatting.GRAY);
     }
 
     @Override
     public MutableComponent getDesc() {
-        return Component.translatable("head_effects.moremobheads.amphibian.desc").withStyle(ChatFormatting.DARK_AQUA);
+        return Component.translatable("head_effects.moremobheads.heavy_duty.desc").withStyle(ChatFormatting.GRAY);
     }
 
     @Override
     public ImmutableList<Pair<MobEffect, Integer>> getPassivePotionEffects() {
-        if (MoreMobHeadsModCommonConfigs.ENABLE_AMPHIBIAN_EFFECT.get()) {
-            return ImmutableList.of(Pair.of(MobEffects.WATER_BREATHING, 0));
+        if (MoreMobHeadsModCommonConfigs.ENABLE_HEAVY_DUTY_EFFECT.get()) {
+            return ImmutableList.of(Pair.of(MobEffects.DAMAGE_RESISTANCE, 1), Pair.of(MobEffects.MOVEMENT_SLOWDOWN, 0));
         }
         return ImmutableList.of();
     }

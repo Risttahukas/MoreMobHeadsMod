@@ -11,6 +11,7 @@ public class HeadEffects {
     public static final AbstractPassiveHeadEffect ENDERIC = new EndericHeadEffect();
     public static final AbstractPassiveHeadEffect FIREPROOF = new FireproofHeadEffect();
     public static final AbstractPassiveHeadEffect FREEZE_IMMUNE = new FreezeImmuneHeadEffect();
+    public static final AbstractPassiveHeadEffect HEAVY_DUTY = new HeavyDutyHeadEffect();
     public static final AbstractPassiveHeadEffect HELIOPHOBIC = new HeliophobicHeadEffect();
     public static final AbstractPassiveHeadEffect HYDROPHILIC = new HydrophilicHeadEffect();
     public static final AbstractPassiveHeadEffect HYDROPHOBIC = new HydrophobicHeadEffect();

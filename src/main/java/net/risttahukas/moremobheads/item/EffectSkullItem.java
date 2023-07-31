@@ -1,6 +1,7 @@
 package net.risttahukas.moremobheads.item;
 
 import com.google.common.collect.ImmutableList;
+import com.mojang.datafixers.util.Pair;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
@@ -97,11 +98,10 @@ public abstract class EffectSkullItem extends StandingAndWallBlockItem implement
 
     private void evaluateHeadEffects(Player player) {
         for (AbstractPassiveHeadEffect headEffect : getPassiveHeadEffects()) {
-            for (MobEffect mobEffect : headEffect.getPassivePotionEffects()) {
-                player.isSensitiveToWater();
-                if (!player.hasEffect(mobEffect)) {
-                    player.addEffect(new MobEffectInstance(mobEffect, 1, 0, false, false, false));
-                }
+            for (Pair<MobEffect, Integer> pair : headEffect.getPassivePotionEffects()) {
+                MobEffect mobEffect = pair.getFirst();
+                int amplifier = pair.getSecond();
+                player.addEffect(new MobEffectInstance(mobEffect, 2, amplifier, false, false, false));
             }
         }
     }

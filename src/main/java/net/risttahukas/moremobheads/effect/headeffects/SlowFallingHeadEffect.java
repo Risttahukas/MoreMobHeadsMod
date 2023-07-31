@@ -1,6 +1,7 @@
 package net.risttahukas.moremobheads.effect.headeffects;
 
 import com.google.common.collect.ImmutableList;
+import com.mojang.datafixers.util.Pair;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -22,9 +23,9 @@ public class SlowFallingHeadEffect extends AbstractPassiveHeadEffect {
     }
 
     @Override
-    public ImmutableList<MobEffect> getPassivePotionEffects() {
+    public ImmutableList<Pair<MobEffect, Integer>> getPassivePotionEffects() {
         if (MoreMobHeadsModCommonConfigs.ENABLE_SLOW_FALLING_EFFECT.get()) {
-            return ImmutableList.of(MobEffects.SLOW_FALLING);
+            return ImmutableList.of(Pair.of(MobEffects.SLOW_FALLING, 0));
         }
         return ImmutableList.of();
     }
