@@ -90,6 +90,20 @@ public class MoreMobHeadsModCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ZOMBIE_VILLAGER_HEAD_EFFECTS;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ZOMBIFIED_PIGLIN_HEAD_EFFECTS;
 
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_AMPHIBIAN_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_CRYOPHOBIC_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_FIREPROOF_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_FREEZE_IMMUNE_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_HELIOPHOBIC_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_HYDROPHILIC_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_HYDROPHOBIC_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SLOW_FALLING_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_THERMOPHOBIC_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_UNDEAD_EFFECT;
+
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SNOWBALL_ACTIVE_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SPIT_ACTIVE_EFFECT;
+
     static {
         BUILDER.push("Configs for More Mob Heads Mod");
 
@@ -258,6 +272,32 @@ public class MoreMobHeadsModCommonConfigs {
                 .define("Enable Zombie Villager head effects", true);
         ENABLE_ZOMBIFIED_PIGLIN_HEAD_EFFECTS = BUILDER.comment("Should Zombified Piglin heads have effects?")
                 .define("Enable Zombified Piglin head effects", true);
+
+        ENABLE_AMPHIBIAN_EFFECT = BUILDER.comment("Should the Amphibian effect be used?")
+                .define("Enable Amphibian effect", true);
+        ENABLE_CRYOPHOBIC_EFFECT = BUILDER.comment("Should the Cryophobic effect be used?")
+                .define("Enable Cryophobic effect", true);
+        ENABLE_FIREPROOF_EFFECT = BUILDER.comment("Should the Fireproof effect be used?")
+                .define("Enable Fireproof effect", true);
+        ENABLE_FREEZE_IMMUNE_EFFECT = BUILDER.comment("Should the Freeze Immune effect be used?")
+                .define("Enable Freeze Immune effect", true);
+        ENABLE_HELIOPHOBIC_EFFECT = BUILDER.comment("Should the Heliophobic effect be used?")
+                .define("Enable Heliophobic effect", true);
+        ENABLE_HYDROPHILIC_EFFECT = BUILDER.comment("Should the Hydrophilic effect be used?")
+                .define("Enable Hydrophilic effect", true);
+        ENABLE_HYDROPHOBIC_EFFECT = BUILDER.comment("Should the Hydrophobic effect be used?")
+                .define("Enable Hydrophobic effect", true);
+        ENABLE_SLOW_FALLING_EFFECT = BUILDER.comment("Should the Slow Falling effect be used?")
+                .define("Enable Slow Falling effect", true);
+        ENABLE_THERMOPHOBIC_EFFECT = BUILDER.comment("Should the Thermophobic effect be used?")
+                .define("Enable Thermophobic effect", true);
+        ENABLE_UNDEAD_EFFECT = BUILDER.comment("Should the Undead effect be used?")
+                .define("Enable Undead effect", true);
+
+        ENABLE_SNOWBALL_ACTIVE_EFFECT = BUILDER.comment("Should the Snowball effect be activated?")
+                .define("Enable Snowball active effect", true);
+        ENABLE_SPIT_ACTIVE_EFFECT = BUILDER.comment("Should the Spit effect be activated?")
+                .define("Enable Spit active effect", true);
 
         BUILDER.pop();
         SPEC = BUILDER.build();

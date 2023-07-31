@@ -6,6 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
+import net.risttahukas.moremobheads.config.MoreMobHeadsModCommonConfigs;
 import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 
 public class SlowFallingHeadEffect extends AbstractPassiveHeadEffect {
@@ -22,6 +23,9 @@ public class SlowFallingHeadEffect extends AbstractPassiveHeadEffect {
 
     @Override
     public ImmutableList<MobEffect> getPassivePotionEffects() {
-        return ImmutableList.of(MobEffects.SLOW_FALLING);
+        if (MoreMobHeadsModCommonConfigs.ENABLE_SLOW_FALLING_EFFECT.get()) {
+            return ImmutableList.of(MobEffects.SLOW_FALLING);
+        }
+        return ImmutableList.of();
     }
 }

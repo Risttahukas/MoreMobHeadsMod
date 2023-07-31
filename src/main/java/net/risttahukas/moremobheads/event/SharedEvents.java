@@ -46,6 +46,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.risttahukas.moremobheads.MoreMobHeadsMod;
 import net.risttahukas.moremobheads.capability.PlayerHeadActiveEffectCooldownProvider;
 import net.risttahukas.moremobheads.capability.PlayerHeadSoundCooldownProvider;
+import net.risttahukas.moremobheads.config.MoreMobHeadsModCommonConfigs;
 import net.risttahukas.moremobheads.effect.AbstractActiveHeadEffect;
 import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 import net.risttahukas.moremobheads.effect.HeadEffects;
@@ -176,11 +177,11 @@ public class SharedEvents {
                         headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
                     }
                     for (AbstractPassiveHeadEffect headEffect : headEffects) {
-                        if (headEffect == HeadEffects.HYDROPHOBIC) {
+                        if (headEffect == HeadEffects.HYDROPHOBIC && MoreMobHeadsModCommonConfigs.ENABLE_HYDROPHOBIC_EFFECT.get()) {
                             if (player.isInWaterRainOrBubble()) {
                                 player.hurt(player.damageSources().drown(), 1.0F);
                             }
-                        } else if (headEffect == HeadEffects.HYDROPHILIC) {
+                        } else if (headEffect == HeadEffects.HYDROPHILIC && MoreMobHeadsModCommonConfigs.ENABLE_HYDROPHILIC_EFFECT.get()) {
                             if (!player.isInWaterOrBubble() && !player.getAbilities().invulnerable) {
                                 if (player.getAirSupply() == -20) {
                                     player.setAirSupply(0);
@@ -188,7 +189,7 @@ public class SharedEvents {
                                 }
                                 player.setAirSupply(player.getAirSupply() - 5);
                             }
-                        } else if (headEffect == HeadEffects.HELIOPHOBIC) {
+                        } else if (headEffect == HeadEffects.HELIOPHOBIC && MoreMobHeadsModCommonConfigs.ENABLE_HELIOPHOBIC_EFFECT.get()) {
                             boolean flag = false;
                             if (player.level().isDay()) {
                                 float f = player.getLightLevelDependentMagicValue();
@@ -201,16 +202,16 @@ public class SharedEvents {
                             if (flag) {
                                 player.setSecondsOnFire(8);
                             }
-                        } else if (headEffect == HeadEffects.THERMOPHOBIC) {
+                        } else if (headEffect == HeadEffects.THERMOPHOBIC && MoreMobHeadsModCommonConfigs.ENABLE_THERMOPHOBIC_EFFECT.get()) {
                             if (player.level().getBiome(player.blockPosition()).is(BiomeTags.SNOW_GOLEM_MELTS)) {
                                 player.hurt(player.damageSources().onFire(), 1.0F);
                             }
-                        } else if (headEffect == HeadEffects.FREEZE_IMMUNE) {
+                        } else if (headEffect == HeadEffects.FREEZE_IMMUNE && MoreMobHeadsModCommonConfigs.ENABLE_FREEZE_IMMUNE_EFFECT.get()) {
                             int i = player.getTicksFrozen();
                             if (i != 0) {
                                 player.setTicksFrozen(Math.max(0, i - 3));
                             }
-                        } else if (headEffect == HeadEffects.UNDEAD) {
+                        } else if (headEffect == HeadEffects.UNDEAD && MoreMobHeadsModCommonConfigs.ENABLE_UNDEAD_EFFECT.get()) {
                             if (player.hasEffect(MobEffects.REGENERATION)) {
                                 player.removeEffect(MobEffects.REGENERATION);
                             } if (player.hasEffect(MobEffects.POISON)) {
@@ -256,7 +257,7 @@ public class SharedEvents {
                                 headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
                             }
                             for (AbstractPassiveHeadEffect headEffect : headEffects) {
-                                if (headEffect == HeadEffects.HYDROPHOBIC) {
+                                if (headEffect == HeadEffects.HYDROPHOBIC && MoreMobHeadsModCommonConfigs.ENABLE_HYDROPHOBIC_EFFECT.get()) {
                                     player.hurt(thrownPotion.damageSources().indirectMagic(thrownPotion, thrownPotion.getOwner()), 1.0F);
                                 }
                             }
@@ -280,7 +281,7 @@ public class SharedEvents {
                                 headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
                             }
                             for (AbstractPassiveHeadEffect headEffect : headEffects) {
-                                if (headEffect == HeadEffects.CRYOPHOBIC) {
+                                if (headEffect == HeadEffects.CRYOPHOBIC && MoreMobHeadsModCommonConfigs.ENABLE_CRYOPHOBIC_EFFECT.get()) {
                                     player.hurt(snowball.damageSources().thrown(snowball, snowball.getOwner()), 3.0F);
                                 }
                             }
@@ -306,7 +307,7 @@ public class SharedEvents {
                         headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
                     }
                     for (AbstractPassiveHeadEffect headEffect : headEffects) {
-                        if (headEffect == HeadEffects.CRYOPHOBIC) {
+                        if (headEffect == HeadEffects.CRYOPHOBIC && MoreMobHeadsModCommonConfigs.ENABLE_CRYOPHOBIC_EFFECT.get()) {
                             if (event.getSource().is(DamageTypeTags.IS_FREEZING)) {
                                 event.setAmount(event.getAmount() * 5);
                             }
@@ -332,11 +333,11 @@ public class SharedEvents {
                         headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
                     }
                     for (AbstractPassiveHeadEffect headEffect : headEffects) {
-                        if (headEffect == HeadEffects.FREEZE_IMMUNE) {
+                        if (headEffect == HeadEffects.FREEZE_IMMUNE && MoreMobHeadsModCommonConfigs.ENABLE_FREEZE_IMMUNE_EFFECT.get()) {
                             if (event.getSource().is(DamageTypeTags.IS_FREEZING)) {
                                 event.setCanceled(true);
                             }
-                        } else if (headEffect == HeadEffects.UNDEAD) {
+                        } else if (headEffect == HeadEffects.UNDEAD && MoreMobHeadsModCommonConfigs.ENABLE_UNDEAD_EFFECT.get()) {
                             if (event.getSource().is(DamageTypeTags.IS_DROWNING) || event.getSource().is(DamageTypes.STARVE)) {
                                 event.setCanceled(true);
                             }
@@ -362,7 +363,7 @@ public class SharedEvents {
                         headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
                     }
                     for (AbstractPassiveHeadEffect headEffect : headEffects) {
-                        if (headEffect == HeadEffects.UNDEAD) {
+                        if (headEffect == HeadEffects.UNDEAD && MoreMobHeadsModCommonConfigs.ENABLE_UNDEAD_EFFECT.get()) {
                             MobEffect mobEffect = event.getEffectInstance().getEffect();
                             if (mobEffect == MobEffects.REGENERATION || mobEffect == MobEffects.POISON ||
                                     mobEffect == MobEffects.SATURATION || mobEffect == MobEffects.HUNGER) {
