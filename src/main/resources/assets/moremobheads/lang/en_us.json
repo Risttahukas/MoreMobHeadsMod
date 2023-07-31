@@ -480,6 +480,7 @@
 
   "head_effects.moremobheads.amphibian": "Amphibian",
   "head_effects.moremobheads.cryophobic": "Cryophobic",
+  "head_effects.moremobheads.enderic": "Enderic",
   "head_effects.moremobheads.fireproof": "Fireproof",
   "head_effects.moremobheads.freeze_immune": "Freeze Immune",
   "head_effects.moremobheads.heliophobic": "Heliophobic",
@@ -495,6 +496,7 @@
 
   "head_effects.moremobheads.amphibian.desc": "You can breathe both underwater and in air",
   "head_effects.moremobheads.cryophobic.desc": "You take extra damage from freezing and snowballs",
+  "head_effects.moremobheads.enderic.desc": "You can use ender pearls without taking damage and safely interact with the denizens of The End",
   "head_effects.moremobheads.fireproof.desc": "You are immune to fire",
   "head_effects.moremobheads.freeze_immune.desc": "You are immune to freezing",
   "head_effects.moremobheads.heliophobic.desc": "The Sun is a deadly laser",

@@ -6,6 +6,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.util.RandomSource;
@@ -33,6 +34,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.EntityTeleportEvent;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
@@ -341,6 +343,30 @@ public class SharedEvents {
                             if (event.getSource().is(DamageTypeTags.IS_DROWNING) || event.getSource().is(DamageTypes.STARVE)) {
                                 event.setCanceled(true);
                             }
+                        }
+                    }
+                }
+            }
+        }
+
+        @SubscribeEvent
+        public static void onEnderPearlTeleportEvent(EntityTeleportEvent.EnderPearl event) {
+            ServerPlayer player = event.getPlayer();
+            if (!player.level().isClientSide()) {
+                Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
+                if (headItem instanceof EffectSkullItem ||
+                        headItem == Items.SKELETON_SKULL || headItem == Items.WITHER_SKELETON_SKULL ||
+                        headItem == Items.ZOMBIE_HEAD || headItem == Items.CREEPER_HEAD ||
+                        headItem == Items.DRAGON_HEAD || headItem == Items.PIGLIN_HEAD) {
+                    ImmutableList<AbstractPassiveHeadEffect> headEffects;
+                    if (headItem instanceof EffectSkullItem effectSkullItem) {
+                        headEffects = effectSkullItem.getPassiveHeadEffects();
+                    } else {
+                        headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
+                    }
+                    for (AbstractPassiveHeadEffect headEffect : headEffects) {
+                        if (headEffect == HeadEffects.ENDERIC && MoreMobHeadsModCommonConfigs.ENABLE_ENDERIC_EFFECT.get()) {
+                            event.setAttackDamage(0);
                         }
                     }
                 }
