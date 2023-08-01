@@ -20,7 +20,7 @@ public class ModHeadEffectHelper {
         } else if (headItem == Items.SKELETON_SKULL && MoreMobHeadsModCommonConfigs.ENABLE_SKELETON_SKULL_EFFECTS.get()) {
             return ImmutableList.of(HeadEffects.HELIOPHOBIC, HeadEffects.UNDEAD);
         } else if (headItem == Items.WITHER_SKELETON_SKULL && MoreMobHeadsModCommonConfigs.ENABLE_WITHER_SKELETON_SKULL_EFFECTS.get()) {
-            return ImmutableList.of(HeadEffects.UNDEAD);
+            return ImmutableList.of(HeadEffects.DECAYING, HeadEffects.UNDEAD);
         } else if (headItem == Items.ZOMBIE_HEAD && MoreMobHeadsModCommonConfigs.ENABLE_ZOMBIE_HEAD_EFFECTS.get()) {
             return ImmutableList.of(HeadEffects.HELIOPHOBIC, HeadEffects.UNDEAD);
         }

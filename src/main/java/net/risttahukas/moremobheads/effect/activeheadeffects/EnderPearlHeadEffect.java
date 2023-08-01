@@ -19,6 +19,6 @@ public class EnderPearlHeadEffect extends AbstractActiveHeadEffect {
 
     @Override
     public int getCooldown() {
-        return 10;
+        return 200;
     }
 }

@@ -9,6 +9,7 @@ import net.risttahukas.moremobheads.effect.headeffects.*;
 public class HeadEffects {
     public static final AbstractPassiveHeadEffect AMPHIBIAN = new AmphibianHeadEffect();
     public static final AbstractPassiveHeadEffect CRYOPHOBIC = new CryophobicHeadEffect();
+    public static final AbstractPassiveHeadEffect DECAYING = new DecayingHeadEffect();
     public static final AbstractPassiveHeadEffect ENDERIC = new EndericHeadEffect();
     public static final AbstractPassiveHeadEffect FIREPROOF = new FireproofHeadEffect();
     public static final AbstractPassiveHeadEffect FREEZE_IMMUNE = new FreezeImmuneHeadEffect();

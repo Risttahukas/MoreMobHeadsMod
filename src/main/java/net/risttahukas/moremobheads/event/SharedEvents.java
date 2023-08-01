@@ -1,6 +1,7 @@
 package net.risttahukas.moremobheads.event;
 
 import com.google.common.collect.ImmutableList;
+import com.mojang.datafixers.util.Pair;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
@@ -177,6 +178,13 @@ public class SharedEvents {
                         headEffects = effectSkullItem.getPassiveHeadEffects();
                     } else {
                         headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
+                        for (AbstractPassiveHeadEffect headEffect : headEffects) {
+                            for (Pair<MobEffect, Integer> pair : headEffect.getPassivePotionEffects()) {
+                                MobEffect mobEffect = pair.getFirst();
+                                int amplifier = pair.getSecond();
+                                player.addEffect(new MobEffectInstance(mobEffect, 2, amplifier, false, false, false));
+                            }
+                        }
                     }
                     for (AbstractPassiveHeadEffect headEffect : headEffects) {
                         if (headEffect == HeadEffects.HYDROPHOBIC && MoreMobHeadsModCommonConfigs.ENABLE_HYDROPHOBIC_EFFECT.get()) {
