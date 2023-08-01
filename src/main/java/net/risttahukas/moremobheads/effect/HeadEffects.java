@@ -1,5 +1,6 @@
 package net.risttahukas.moremobheads.effect;
 
+import net.risttahukas.moremobheads.effect.activeheadeffects.EnderPearlHeadEffect;
 import net.risttahukas.moremobheads.effect.activeheadeffects.SnowballHeadEffect;
 import net.risttahukas.moremobheads.effect.activeheadeffects.SpitHeadEffect;
 import net.risttahukas.moremobheads.effect.activeheadeffects.TraderSpitHeadEffect;
@@ -21,6 +22,7 @@ public class HeadEffects {
     public static final AbstractPassiveHeadEffect UNDEAD = new UndeadHeadEffect();
 
 
+    public static final AbstractActiveHeadEffect ENDER_PEARL = new EnderPearlHeadEffect();
     public static final AbstractActiveHeadEffect SNOWBALL = new SnowballHeadEffect();
     public static final AbstractActiveHeadEffect SPIT = new SpitHeadEffect();
     public static final AbstractActiveHeadEffect TRADER_SPIT = new TraderSpitHeadEffect();

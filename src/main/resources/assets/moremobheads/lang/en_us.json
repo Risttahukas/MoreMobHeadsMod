@@ -492,6 +492,7 @@
   "head_effects.moremobheads.trader": "Trader",
   "head_effects.moremobheads.undead": "Undead",
 
+  "active_head_effects.moremobheads.ender_pearl": "Ender Pearl",
   "active_head_effects.moremobheads.snowball": "Snowball",
   "active_head_effects.moremobheads.spit": "Spit",
 
@@ -509,6 +510,7 @@
   "head_effects.moremobheads.trader.desc": "Trader",
   "head_effects.moremobheads.undead.desc": "Matters of the living, such as breathing and eating, don't concern you\nYou are not affected by Poison and Regeneration\nYou don't need to eat, but no food can fully satisfy you",
 
+  "active_head_effects.moremobheads.ender_pearl.desc": "Throw an Ender Pearl",
   "active_head_effects.moremobheads.snowball.desc": "Shoot a Snowball",
   "active_head_effects.moremobheads.spit.desc": "Spit like a Llama"
 }

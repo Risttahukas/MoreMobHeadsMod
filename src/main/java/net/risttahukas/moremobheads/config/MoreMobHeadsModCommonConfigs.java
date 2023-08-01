@@ -103,6 +103,7 @@ public class MoreMobHeadsModCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_THERMOPHOBIC_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_UNDEAD_EFFECT;
 
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ENDER_PEARL_ACTIVE_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SNOWBALL_ACTIVE_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SPIT_ACTIVE_EFFECT;
 
@@ -300,6 +301,8 @@ public class MoreMobHeadsModCommonConfigs {
         ENABLE_UNDEAD_EFFECT = BUILDER.comment("Should the Undead effect be used?")
                 .define("Enable Undead effect", true);
 
+        ENABLE_ENDER_PEARL_ACTIVE_EFFECT = BUILDER.comment("Should the Ender Pearl effect be activated?")
+                .define("Enable Ender Pearl active effect", true);
         ENABLE_SNOWBALL_ACTIVE_EFFECT = BUILDER.comment("Should the Snowball effect be activated?")
                 .define("Enable Snowball active effect", true);
         ENABLE_SPIT_ACTIVE_EFFECT = BUILDER.comment("Should the Spit effect be activated?")

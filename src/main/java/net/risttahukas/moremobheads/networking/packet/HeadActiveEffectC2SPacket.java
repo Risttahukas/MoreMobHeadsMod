@@ -6,6 +6,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.projectile.Snowball;
+import net.minecraft.world.entity.projectile.ThrownEnderpearl;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.network.NetworkEvent;
 import net.risttahukas.moremobheads.capability.PlayerHeadActiveEffectCooldownProvider;
@@ -48,7 +49,12 @@ public class HeadActiveEffectC2SPacket {
                 if (activeHeadEffect != null) {
                     player.getCapability(PlayerHeadActiveEffectCooldownProvider.PLAYER_HEAD_ACTIVE_EFFECT_COOLDOWN).ifPresent(cooldown -> {
                         if (cooldown.getCooldown() == 0) {
-                            if (activeHeadEffect == HeadEffects.SNOWBALL && MoreMobHeadsModCommonConfigs.ENABLE_SNOWBALL_ACTIVE_EFFECT.get()) {
+                            if (activeHeadEffect == HeadEffects.ENDER_PEARL && MoreMobHeadsModCommonConfigs.ENABLE_ENDER_PEARL_ACTIVE_EFFECT.get()) {
+                                ThrownEnderpearl thrownEnderpearl = new ThrownEnderpearl(level, player);
+                                thrownEnderpearl.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
+                                level.playSound(null, player.blockPosition(), SoundEvents.ENDER_PEARL_THROW, player.getSoundSource(), 1.0F, 0.4F / (player.getRandom().nextFloat() * 0.4F + 0.8F));
+                                level.addFreshEntity(thrownEnderpearl);
+                            } else if (activeHeadEffect == HeadEffects.SNOWBALL && MoreMobHeadsModCommonConfigs.ENABLE_SNOWBALL_ACTIVE_EFFECT.get()) {
                                 Snowball snowball = new Snowball(level, player);
                                 snowball.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
                                 level.playSound(null, player.blockPosition(), SoundEvents.SNOW_GOLEM_SHOOT, player.getSoundSource(), 1.0F, 0.4F / (player.getRandom().nextFloat() * 0.4F + 0.8F));

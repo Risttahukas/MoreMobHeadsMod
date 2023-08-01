@@ -23,7 +23,7 @@ public class DrownedHeadItem extends EffectSkullItem {
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
         if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_DROWNED_HEAD_EFFECTS.get()) {
-            return ImmutableList.of(HeadEffects.HELIOPHOBIC, HeadEffects.UNDEAD);
+            return ImmutableList.of(HeadEffects.AMPHIBIAN, HeadEffects.HELIOPHOBIC, HeadEffects.UNDEAD);
         }
         return ImmutableList.of();
     }
