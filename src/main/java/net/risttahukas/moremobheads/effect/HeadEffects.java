@@ -17,6 +17,7 @@ public class HeadEffects {
     public static final AbstractPassiveHeadEffect HELIOPHOBIC = new HeliophobicHeadEffect();
     public static final AbstractPassiveHeadEffect HYDROPHILIC = new HydrophilicHeadEffect();
     public static final AbstractPassiveHeadEffect HYDROPHOBIC = new HydrophobicHeadEffect();
+    public static final AbstractPassiveHeadEffect OTHERWORLDLY_SHIELD = new OtherworldlyShieldHeadEffect();
     public static final AbstractPassiveHeadEffect SLOW_FALLING = new SlowFallingHeadEffect();
     public static final AbstractPassiveHeadEffect THERMOPHOBIC = new ThermophobicHeadEffect();
     public static final AbstractPassiveHeadEffect TRADER = new TraderHeadEffect();

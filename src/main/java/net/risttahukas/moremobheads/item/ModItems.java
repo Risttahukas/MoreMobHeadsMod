@@ -1420,11 +1420,11 @@ public class ModItems {
                     (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
 
     public static final RegistryObject<Item> WITHER_HEAD_SHIELD = ITEMS.register("wither_head_shield", () ->
-            new WitherHeadItem(ModBlocks.WITHER_HEAD_SHIELD.get(), ModBlocks.WITHER_WALL_HEAD_SHIELD.get(),
+            new ShieldedWitherHeadItem(ModBlocks.WITHER_HEAD_SHIELD.get(), ModBlocks.WITHER_WALL_HEAD_SHIELD.get(),
                     (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
 
     public static final RegistryObject<Item> WITHER_HEAD_INVULNERABLE_SHIELD = ITEMS.register("wither_head_invulnerable_shield", () ->
-            new WitherHeadItem(ModBlocks.WITHER_HEAD_INVULNERABLE_SHIELD.get(), ModBlocks.WITHER_WALL_HEAD_INVULNERABLE_SHIELD.get(),
+            new ShieldedWitherHeadItem(ModBlocks.WITHER_HEAD_INVULNERABLE_SHIELD.get(), ModBlocks.WITHER_WALL_HEAD_INVULNERABLE_SHIELD.get(),
                     (new Item.Properties()).rarity(Rarity.RARE), Direction.DOWN));
 
     public static final RegistryObject<Item> WOLF_HEAD = ITEMS.register("wolf_head", () ->
