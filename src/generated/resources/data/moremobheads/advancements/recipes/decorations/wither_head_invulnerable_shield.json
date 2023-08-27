@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_invulnerable_wither_head": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moremobheads:wither_head_invulnerable"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moremobheads:wither_head_invulnerable_shield"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_invulnerable_wither_head",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "moremobheads:wither_head_invulnerable_shield"
+    ]
+  },
+  "sends_telemetry_event": false
+}

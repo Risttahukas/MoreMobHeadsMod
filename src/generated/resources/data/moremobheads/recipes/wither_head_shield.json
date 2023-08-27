@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "W": {
+      "item": "moremobheads:wither_head"
+    }
+  },
+  "pattern": [
+    "NNN",
+    "NWN",
+    "NNN"
+  ],
+  "result": {
+    "item": "moremobheads:wither_head_shield"
+  },
+  "show_notification": true
+}

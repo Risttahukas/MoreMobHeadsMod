@@ -1,10 +1,7 @@
 package net.risttahukas.moremobheads.datagen;
 
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.risttahukas.moremobheads.item.ModItems;
@@ -629,6 +626,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModTags.Items.GRAY_LLAMA_HEAD)
                 .requires(Items.BLACK_CARPET)
                 .unlockedBy("has_gray_llama_head", has(ModTags.Items.GRAY_LLAMA_HEAD))
+                .save(finishedRecipeConsumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.WITHER_HEAD_SHIELD.get())
+                .define('W', ModItems.WITHER_HEAD.get())
+                .define('N', Items.NETHER_STAR)
+                .pattern("NNN")
+                .pattern("NWN")
+                .pattern("NNN")
+                .unlockedBy("has_wither_head", has(ModItems.WITHER_HEAD.get()))
+                .save(finishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.WITHER_HEAD_INVULNERABLE_SHIELD.get())
+                .define('W', ModItems.WITHER_HEAD_INVULNERABLE.get())
+                .define('N', Items.NETHER_STAR)
+                .pattern("NNN")
+                .pattern("NWN")
+                .pattern("NNN")
+                .unlockedBy("has_invulnerable_wither_head", has(ModItems.WITHER_HEAD_INVULNERABLE.get()))
                 .save(finishedRecipeConsumer);
     }
 }
