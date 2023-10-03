@@ -37,10 +37,7 @@ import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityTeleportEvent;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.entity.living.LivingDamageEvent;
-import net.minecraftforge.event.entity.living.LivingDropsEvent;
-import net.minecraftforge.event.entity.living.MobEffectEvent;
+import net.minecraftforge.event.entity.living.*;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -191,14 +188,6 @@ public class SharedEvents {
                             if (player.isInWaterRainOrBubble()) {
                                 player.hurt(player.damageSources().drown(), 1.0F);
                             }
-                        } else if (headEffect == HeadEffects.HYDROPHILIC && MoreMobHeadsModCommonConfigs.ENABLE_HYDROPHILIC_EFFECT.get()) {
-                            if (!player.isInWaterOrBubble() && !player.getAbilities().invulnerable) {
-                                if (player.getAirSupply() == -20) {
-                                    player.setAirSupply(0);
-                                    player.hurt(player.damageSources().dryOut(), 2.0F);
-                                }
-                                player.setAirSupply(player.getAirSupply() - 5);
-                            }
                         } else if (headEffect == HeadEffects.HELIOPHOBIC && MoreMobHeadsModCommonConfigs.ENABLE_HELIOPHOBIC_EFFECT.get()) {
                             boolean flag = false;
                             if (player.level().isDay()) {
@@ -237,6 +226,34 @@ public class SharedEvents {
                             }
                             if (foodData.getFoodLevel() > 17) {
                                 foodData.setFoodLevel(17);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @SubscribeEvent
+        public static void onLivingBreatheEvent(LivingBreatheEvent event) {
+            if (event.getEntity() instanceof Player player) {
+                Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
+                if (headItem instanceof EffectSkullItem ||
+                        headItem == Items.SKELETON_SKULL || headItem == Items.WITHER_SKELETON_SKULL ||
+                        headItem == Items.ZOMBIE_HEAD || headItem == Items.CREEPER_HEAD ||
+                        headItem == Items.DRAGON_HEAD || headItem == Items.PIGLIN_HEAD) {
+                    ImmutableList<AbstractPassiveHeadEffect> headEffects;
+                    if (headItem instanceof EffectSkullItem effectSkullItem) {
+                        headEffects = effectSkullItem.getPassiveHeadEffects();
+                    } else {
+                        headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
+                    }
+                    for (AbstractPassiveHeadEffect headEffect : headEffects) {
+                        if (headEffect == HeadEffects.HYDROPHILIC && MoreMobHeadsModCommonConfigs.ENABLE_HYDROPHILIC_EFFECT.get()) {
+                            if (!player.isUnderWater() && !player.getAbilities().invulnerable) {
+                                event.setCanBreathe(false);
+                            } else if (player.isUnderWater()) {
+                                event.setCanBreathe(true);
+                                event.setCanRefillAir(true);
                             }
                         }
                     }
