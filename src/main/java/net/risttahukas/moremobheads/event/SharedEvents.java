@@ -11,6 +11,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -21,6 +22,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.entity.projectile.ThrownPotion;
@@ -33,6 +35,7 @@ import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityTeleportEvent;
@@ -322,6 +325,8 @@ public class SharedEvents {
         public static void onLivingHurtEvent(LivingHurtEvent event) {
             LivingEntity target = event.getEntity();
             if (target instanceof Player player && !target.level().isClientSide()) {
+                DamageSource damageSource = event.getSource();
+                Entity attackingEntity = damageSource.getDirectEntity();
                 Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
                 if (headItem instanceof EffectSkullItem ||
                         headItem == Items.SKELETON_SKULL || headItem == Items.WITHER_SKELETON_SKULL ||
@@ -335,8 +340,27 @@ public class SharedEvents {
                     }
                     for (AbstractPassiveHeadEffect headEffect : headEffects) {
                         if (headEffect == HeadEffects.CRYOPHOBIC && MoreMobHeadsModCommonConfigs.ENABLE_CRYOPHOBIC_EFFECT.get()) {
-                            if (event.getSource().is(DamageTypeTags.IS_FREEZING)) {
+                            if (damageSource.is(DamageTypeTags.IS_FREEZING)) {
                                 event.setAmount(event.getAmount() * 5);
+                            }
+                        } else if (headEffect == HeadEffects.TURTLE_SHELL && MoreMobHeadsModCommonConfigs.ENABLE_TURTLE_SHELL_EFFECT.get()) {
+                            boolean piercingAttack = false;
+                            if (attackingEntity instanceof AbstractArrow abstractarrow) {
+                                if (abstractarrow.getPierceLevel() > 0) {
+                                    piercingAttack = true;
+                                }
+                            }
+                            if (!damageSource.is(DamageTypeTags.BYPASSES_SHIELD) && !piercingAttack) {
+                                Vec3 damageSourcePosition = damageSource.getSourcePosition();
+                                if (damageSourcePosition != null) {
+                                    Vec3 attackVector = damageSourcePosition.vectorTo(player.position());
+                                    attackVector = new Vec3(attackVector.x, 0.0D, attackVector.z).normalize();
+                                    Vec3 viewVector = player.getViewVector(1.0F);
+                                    viewVector = new Vec3(viewVector.x, 0.0D, viewVector.z).normalize();
+                                    if (attackVector.dot(viewVector) > 0.0D) {
+                                        event.setAmount(event.getAmount() * 0.25F);
+                                    }
+                                }
                             }
                         }
                     }

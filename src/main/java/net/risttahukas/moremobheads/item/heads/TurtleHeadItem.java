@@ -23,7 +23,7 @@ public class TurtleHeadItem extends EffectSkullItem {
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
         if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_TURTLE_HEAD_EFFECTS.get()) {
-            return ImmutableList.of(HeadEffects.AMPHIBIAN);
+            return ImmutableList.of(HeadEffects.AMPHIBIAN, HeadEffects.TURTLE_SHELL);
         }
         return ImmutableList.of();
     }

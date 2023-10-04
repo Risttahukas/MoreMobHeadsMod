@@ -492,6 +492,7 @@
   "head_effects.moremobheads.slow_falling": "Slow Falling",
   "head_effects.moremobheads.thermophobic": "Thermophobic",
   "head_effects.moremobheads.trader": "Trader",
+  "head_effects.moremobheads.turtle_shell": "Turtle Shell",
   "head_effects.moremobheads.undead": "Undead",
 
   "active_head_effects.moremobheads.ender_pearl": "Ender Pearl",
@@ -512,6 +513,7 @@
   "head_effects.moremobheads.slow_falling.desc": "You fall slowly",
   "head_effects.moremobheads.thermophobic.desc": "Hot environments harm you",
   "head_effects.moremobheads.trader.desc": "Trader",
+  "head_effects.moremobheads.turtle_shell.desc": "Attacks from behind deal significantly reduced damage to you",
   "head_effects.moremobheads.undead.desc": "Matters of the living, such as breathing and eating, don't concern you\nYou are not affected by Poison and Regeneration\nYou don't need to eat, but no food can fully satisfy you",
 
   "active_head_effects.moremobheads.ender_pearl.desc": "Throw an Ender Pearl",

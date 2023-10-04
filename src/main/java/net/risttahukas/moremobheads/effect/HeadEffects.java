@@ -21,6 +21,7 @@ public class HeadEffects {
     public static final AbstractPassiveHeadEffect SLOW_FALLING = new SlowFallingHeadEffect();
     public static final AbstractPassiveHeadEffect THERMOPHOBIC = new ThermophobicHeadEffect();
     public static final AbstractPassiveHeadEffect TRADER = new TraderHeadEffect();
+    public static final AbstractPassiveHeadEffect TURTLE_SHELL = new TurtleShellHeadEffect();
     public static final AbstractPassiveHeadEffect UNDEAD = new UndeadHeadEffect();
 
 

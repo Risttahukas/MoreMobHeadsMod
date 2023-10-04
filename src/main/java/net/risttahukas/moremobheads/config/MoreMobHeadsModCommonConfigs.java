@@ -103,6 +103,7 @@ public class MoreMobHeadsModCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_OTHERWORLDLY_SHIELD_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SLOW_FALLING_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_THERMOPHOBIC_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_TURTLE_SHELL_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_UNDEAD_EFFECT;
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ENDER_PEARL_ACTIVE_EFFECT;
@@ -304,6 +305,8 @@ public class MoreMobHeadsModCommonConfigs {
                 .define("Enable Slow Falling effect", true);
         ENABLE_THERMOPHOBIC_EFFECT = BUILDER.comment("Should the Thermophobic effect be used?")
                 .define("Enable Thermophobic effect", true);
+        ENABLE_TURTLE_SHELL_EFFECT = BUILDER.comment("Should the Turtle Shell effect be used?")
+                .define("Enable Turtle Shell effect", true);
         ENABLE_UNDEAD_EFFECT = BUILDER.comment("Should the Undead effect be used?")
                 .define("Enable Undead effect", true);
 
