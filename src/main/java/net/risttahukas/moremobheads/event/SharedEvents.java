@@ -319,7 +319,7 @@ public class SharedEvents {
         }
 
         @SubscribeEvent
-        public static void onLivingDamageEvent(LivingDamageEvent event) {
+        public static void onLivingHurtEvent(LivingHurtEvent event) {
             LivingEntity target = event.getEntity();
             if (target instanceof Player player && !target.level().isClientSide()) {
                 Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
