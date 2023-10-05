@@ -98,10 +98,12 @@ public abstract class EffectSkullItem extends StandingAndWallBlockItem implement
 
     private void evaluateHeadEffects(Player player) {
         for (AbstractPassiveHeadEffect headEffect : getPassiveHeadEffects()) {
-            for (Pair<MobEffect, Integer> pair : headEffect.getPassivePotionEffects()) {
+            for (Pair<MobEffect, Pair<Integer, Integer>> pair : headEffect.getPassivePotionEffects()) {
                 MobEffect mobEffect = pair.getFirst();
-                int amplifier = pair.getSecond();
-                player.addEffect(new MobEffectInstance(mobEffect, 2, amplifier, false, false, false));
+                Pair<Integer, Integer> data = pair.getSecond();
+                int amplifier = data.getFirst();
+                int duration = data.getSecond();
+                player.addEffect(new MobEffectInstance(mobEffect, duration, amplifier, false, false, false));
             }
         }
     }

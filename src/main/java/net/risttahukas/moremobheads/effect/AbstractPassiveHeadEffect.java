@@ -10,7 +10,7 @@ public abstract class AbstractPassiveHeadEffect {
 
     public abstract MutableComponent getDesc();
 
-    public ImmutableList<Pair<MobEffect, Integer>> getPassivePotionEffects() {
+    public ImmutableList<Pair<MobEffect, Pair<Integer, Integer>>> getPassivePotionEffects() {
         return ImmutableList.of();
     }
 }

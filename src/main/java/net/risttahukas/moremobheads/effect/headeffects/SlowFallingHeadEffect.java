@@ -23,9 +23,9 @@ public class SlowFallingHeadEffect extends AbstractPassiveHeadEffect {
     }
 
     @Override
-    public ImmutableList<Pair<MobEffect, Integer>> getPassivePotionEffects() {
+    public ImmutableList<Pair<MobEffect, Pair<Integer, Integer>>> getPassivePotionEffects() {
         if (MoreMobHeadsModCommonConfigs.ENABLE_SLOW_FALLING_EFFECT.get()) {
-            return ImmutableList.of(Pair.of(MobEffects.SLOW_FALLING, 0));
+            return ImmutableList.of(Pair.of(MobEffects.SLOW_FALLING, Pair.of(0, 2)));
         }
         return ImmutableList.of();
     }

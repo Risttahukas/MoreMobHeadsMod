@@ -23,9 +23,10 @@ public class HeavyDutyHeadEffect extends AbstractPassiveHeadEffect {
     }
 
     @Override
-    public ImmutableList<Pair<MobEffect, Integer>> getPassivePotionEffects() {
+    public ImmutableList<Pair<MobEffect, Pair<Integer, Integer>>> getPassivePotionEffects() {
         if (MoreMobHeadsModCommonConfigs.ENABLE_HEAVY_DUTY_EFFECT.get()) {
-            return ImmutableList.of(Pair.of(MobEffects.DAMAGE_RESISTANCE, 1), Pair.of(MobEffects.MOVEMENT_SLOWDOWN, 0));
+            return ImmutableList.of(Pair.of(MobEffects.DAMAGE_RESISTANCE, Pair.of(1, 2)),
+                    Pair.of(MobEffects.MOVEMENT_SLOWDOWN, Pair.of(0, 2)));
         }
         return ImmutableList.of();
     }

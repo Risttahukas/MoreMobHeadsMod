@@ -23,9 +23,9 @@ public class FireproofHeadEffect extends AbstractPassiveHeadEffect {
     }
 
     @Override
-    public ImmutableList<Pair<MobEffect, Integer>> getPassivePotionEffects() {
+    public ImmutableList<Pair<MobEffect, Pair<Integer, Integer>>> getPassivePotionEffects() {
         if (MoreMobHeadsModCommonConfigs.ENABLE_FIREPROOF_EFFECT.get()) {
-            return ImmutableList.of(Pair.of(MobEffects.FIRE_RESISTANCE, 0));
+            return ImmutableList.of(Pair.of(MobEffects.FIRE_RESISTANCE, Pair.of(0, 2)));
         }
         return ImmutableList.of();
     }

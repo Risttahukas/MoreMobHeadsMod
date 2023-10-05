@@ -23,9 +23,9 @@ public class OtherworldlyShieldHeadEffect extends AbstractPassiveHeadEffect {
     }
 
     @Override
-    public ImmutableList<Pair<MobEffect, Integer>> getPassivePotionEffects() {
+    public ImmutableList<Pair<MobEffect, Pair<Integer, Integer>>> getPassivePotionEffects() {
         if (MoreMobHeadsModCommonConfigs.ENABLE_OTHERWORLDLY_SHIELD_EFFECT.get()) {
-            return ImmutableList.of(Pair.of(MobEffects.DAMAGE_RESISTANCE, 2));
+            return ImmutableList.of(Pair.of(MobEffects.DAMAGE_RESISTANCE, Pair.of(2, 2)));
         }
         return ImmutableList.of();
     }
