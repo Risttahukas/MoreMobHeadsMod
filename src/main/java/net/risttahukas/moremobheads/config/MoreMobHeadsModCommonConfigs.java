@@ -95,6 +95,7 @@ public class MoreMobHeadsModCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_CRYOPHOBIC_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_DECAYING_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_DOLPHIN_SPEED_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ECHOLOCATION_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ENDERIC_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_FIREPROOF_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_FREEZE_IMMUNE_EFFECT;
@@ -292,6 +293,8 @@ public class MoreMobHeadsModCommonConfigs {
                 .define("Enable Decaying effect", true);
         ENABLE_DOLPHIN_SPEED_EFFECT = BUILDER.comment("Should the Dolphin Speed effect be used?")
                 .define("Enable Dolphin Speed effect", true);
+        ENABLE_ECHOLOCATION_EFFECT = BUILDER.comment("Should the Echolocation effect be used?")
+                .define("Enable Echolocation effect", true);
         ENABLE_ENDERIC_EFFECT = BUILDER.comment("Should the Enderic effect be used?")
                 .define("Enable Enderic effect", true);
         ENABLE_FIREPROOF_EFFECT = BUILDER.comment("Should the Fireproof effect be used?")

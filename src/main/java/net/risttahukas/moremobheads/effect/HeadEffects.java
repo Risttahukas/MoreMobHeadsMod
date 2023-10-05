@@ -12,6 +12,7 @@ public class HeadEffects {
     public static final AbstractPassiveHeadEffect CRYOPHOBIC = new CryophobicHeadEffect();
     public static final AbstractPassiveHeadEffect DECAYING = new DecayingHeadEffect();
     public static final AbstractPassiveHeadEffect DOLPHIN_SPEED = new DolphinSpeedHeadEffect();
+    public static final AbstractPassiveHeadEffect ECHOLOCATION = new EcholocationHeadEffect();
     public static final AbstractPassiveHeadEffect ENDERIC = new EndericHeadEffect();
     public static final AbstractPassiveHeadEffect FIREPROOF = new FireproofHeadEffect();
     public static final AbstractPassiveHeadEffect FREEZE_IMMUNE = new FreezeImmuneHeadEffect();

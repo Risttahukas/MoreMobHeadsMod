@@ -23,7 +23,7 @@ public class WardenHeadItem extends EffectSkullItem {
     @Override
     public ImmutableList<AbstractPassiveHeadEffect> getPassiveHeadEffects() {
         if (MoreMobHeadsModCommonConfigs.ENABLE_PASSIVE_HEAD_EFFECTS.get() && MoreMobHeadsModCommonConfigs.ENABLE_WARDEN_HEAD_EFFECTS.get()) {
-            return ImmutableList.of(HeadEffects.BLINDNESS);
+            return ImmutableList.of(HeadEffects.BLINDNESS, HeadEffects.ECHOLOCATION);
         }
         return ImmutableList.of();
     }

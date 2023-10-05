@@ -19,6 +19,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.player.Player;
@@ -189,7 +190,17 @@ public class SharedEvents {
                         }
                     }
                     for (AbstractPassiveHeadEffect headEffect : headEffects) {
-                        if (headEffect == HeadEffects.HYDROPHOBIC && MoreMobHeadsModCommonConfigs.ENABLE_HYDROPHOBIC_EFFECT.get()) {
+                        if (headEffect == HeadEffects.ECHOLOCATION && MoreMobHeadsModCommonConfigs.ENABLE_ECHOLOCATION_EFFECT.get()) {
+                            List<LivingEntity> nearbyEntities = player.level().getNearbyEntities(LivingEntity.class,
+                                    TargetingConditions.forCombat().range(25.0D),
+                                    player,
+                                    player.getBoundingBox().inflate(15.0D, 20.0D, 15.0D));
+                            for (LivingEntity livingEntity : nearbyEntities) {
+                                if (player.closerThan(livingEntity, 15.0D, 20.0D)) {
+                                    livingEntity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 2, 0, false, false, false));
+                                }
+                            }
+                        } else if (headEffect == HeadEffects.HYDROPHOBIC && MoreMobHeadsModCommonConfigs.ENABLE_HYDROPHOBIC_EFFECT.get()) {
                             if (player.isInWaterRainOrBubble()) {
                                 player.hurt(player.damageSources().drown(), 1.0F);
                             }
