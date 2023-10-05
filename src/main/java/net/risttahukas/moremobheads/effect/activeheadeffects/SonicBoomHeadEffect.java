@@ -19,6 +19,6 @@ public class SonicBoomHeadEffect extends AbstractActiveHeadEffect {
 
     @Override
     public int getCooldown() {
-        return 20;
+        return 100;
     }
 }
