@@ -101,6 +101,7 @@ public class MoreMobHeadsModCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_HYDROPHILIC_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_HYDROPHOBIC_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_OTHERWORLDLY_SHIELD_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_POTION_MASTER_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SLOW_FALLING_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_THERMOPHOBIC_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_TURTLE_SHELL_EFFECT;
@@ -301,6 +302,8 @@ public class MoreMobHeadsModCommonConfigs {
                 .define("Enable Hydrophobic effect", true);
         ENABLE_OTHERWORLDLY_SHIELD_EFFECT = BUILDER.comment("Should the Otherworldly Shield effect be used?")
                 .define("Enable Otherworldly Shield effect", true);
+        ENABLE_POTION_MASTER_EFFECT = BUILDER.comment("Should the Potion Master effect be used?")
+                .define("Enable Potion Master Shield effect", true);
         ENABLE_SLOW_FALLING_EFFECT = BUILDER.comment("Should the Slow Falling effect be used?")
                 .define("Enable Slow Falling effect", true);
         ENABLE_THERMOPHOBIC_EFFECT = BUILDER.comment("Should the Thermophobic effect be used?")
