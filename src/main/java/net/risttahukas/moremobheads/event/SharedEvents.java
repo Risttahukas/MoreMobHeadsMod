@@ -192,7 +192,7 @@ public class SharedEvents {
                     for (AbstractPassiveHeadEffect headEffect : headEffects) {
                         if (headEffect == HeadEffects.ECHOLOCATION && MoreMobHeadsModCommonConfigs.ENABLE_ECHOLOCATION_EFFECT.get()) {
                             List<LivingEntity> nearbyEntities = player.level().getNearbyEntities(LivingEntity.class,
-                                    TargetingConditions.forCombat().range(25.0D),
+                                    TargetingConditions.forCombat().range(25.0D).ignoreLineOfSight().ignoreInvisibilityTesting(),
                                     player,
                                     player.getBoundingBox().inflate(15.0D, 20.0D, 15.0D));
                             for (LivingEntity livingEntity : nearbyEntities) {

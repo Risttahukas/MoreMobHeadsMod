@@ -501,6 +501,7 @@
 
   "active_head_effects.moremobheads.ender_pearl": "Ender Pearl",
   "active_head_effects.moremobheads.snowball": "Snowball",
+  "active_head_effects.moremobheads.sonic_boom": "Sonic Boom",
   "active_head_effects.moremobheads.spit": "Spit",
 
   "head_effects.moremobheads.amphibian.desc": "You can breathe both underwater and in air",
@@ -526,5 +527,6 @@
 
   "active_head_effects.moremobheads.ender_pearl.desc": "Throw an Ender Pearl",
   "active_head_effects.moremobheads.snowball.desc": "Shoot a Snowball",
+  "active_head_effects.moremobheads.sonic_boom.desc": "Blast your enemies with the cries of tormented souls",
   "active_head_effects.moremobheads.spit.desc": "Spit like a Llama"
 }

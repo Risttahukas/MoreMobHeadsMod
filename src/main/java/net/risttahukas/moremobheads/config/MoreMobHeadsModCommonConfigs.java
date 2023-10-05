@@ -112,6 +112,7 @@ public class MoreMobHeadsModCommonConfigs {
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ENDER_PEARL_ACTIVE_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SNOWBALL_ACTIVE_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SONIC_BOOM_ACTIVE_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SPIT_ACTIVE_EFFECT;
 
     static {
@@ -326,6 +327,8 @@ public class MoreMobHeadsModCommonConfigs {
                 .define("Enable Ender Pearl active effect", true);
         ENABLE_SNOWBALL_ACTIVE_EFFECT = BUILDER.comment("Should the Snowball effect be activated?")
                 .define("Enable Snowball active effect", true);
+        ENABLE_SONIC_BOOM_ACTIVE_EFFECT = BUILDER.comment("Should the Sonic Boom effect be activated?")
+                .define("Enable Sonic Boom active effect", true);
         ENABLE_SPIT_ACTIVE_EFFECT = BUILDER.comment("Should the Spit effect be activated?")
                 .define("Enable Spit active effect", true);
 
