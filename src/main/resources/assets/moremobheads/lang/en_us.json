@@ -479,6 +479,7 @@
   "tooltip.moremobheads.tick.plural": "ticks",
 
   "head_effects.moremobheads.amphibian": "Amphibian",
+  "head_effects.moremobheads.blindness": "Blindness",
   "head_effects.moremobheads.cryophobic": "Cryophobic",
   "head_effects.moremobheads.decaying": "Decaying",
   "head_effects.moremobheads.enderic": "Enderic",
@@ -501,6 +502,7 @@
   "active_head_effects.moremobheads.spit": "Spit",
 
   "head_effects.moremobheads.amphibian.desc": "You can breathe both underwater and in air",
+  "head_effects.moremobheads.blindness.desc": "Your vision is very limited",
   "head_effects.moremobheads.cryophobic.desc": "You take extra damage from freezing and snowballs",
   "head_effects.moremobheads.decaying.desc": "Your body is more susceptible to damage",
   "head_effects.moremobheads.enderic.desc": "You can use ender pearls without taking damage and safely interact with the denizens of The End",

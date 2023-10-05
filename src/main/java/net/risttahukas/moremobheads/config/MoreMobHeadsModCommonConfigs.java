@@ -91,6 +91,7 @@ public class MoreMobHeadsModCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ZOMBIFIED_PIGLIN_HEAD_EFFECTS;
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_AMPHIBIAN_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_BLINDNESS_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_CRYOPHOBIC_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_DECAYING_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ENDERIC_EFFECT;
@@ -282,6 +283,8 @@ public class MoreMobHeadsModCommonConfigs {
 
         ENABLE_AMPHIBIAN_EFFECT = BUILDER.comment("Should the Amphibian effect be used?")
                 .define("Enable Amphibian effect", true);
+        ENABLE_BLINDNESS_EFFECT = BUILDER.comment("Should the Blindness effect be used?")
+                .define("Enable Blindness effect", true);
         ENABLE_CRYOPHOBIC_EFFECT = BUILDER.comment("Should the Cryophobic effect be used?")
                 .define("Enable Cryophobic effect", true);
         ENABLE_DECAYING_EFFECT = BUILDER.comment("Should the Decaying effect be used?")
