@@ -356,6 +356,8 @@ public class SharedEvents {
                             if (damageSource.is(DamageTypeTags.IS_FREEZING)) {
                                 event.setAmount(event.getAmount() * 5);
                             }
+                        } else if (headEffect == HeadEffects.DECAYING && MoreMobHeadsModCommonConfigs.ENABLE_DECAYING_EFFECT.get()) {
+                            event.setAmount(event.getAmount() * 1.2F);
                         } else if (headEffect == HeadEffects.TURTLE_SHELL && MoreMobHeadsModCommonConfigs.ENABLE_TURTLE_SHELL_EFFECT.get()) {
                             boolean piercingAttack = false;
                             if (attackingEntity instanceof AbstractArrow abstractarrow) {
