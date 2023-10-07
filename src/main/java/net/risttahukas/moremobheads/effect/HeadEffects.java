@@ -26,6 +26,7 @@ public class HeadEffects {
     public static final AbstractPassiveHeadEffect UNDEAD = new UndeadHeadEffect();
 
 
+    public static final AbstractActiveHeadEffect EAT_GRASS = new EatGrassHeadEffect();
     public static final AbstractActiveHeadEffect ENDER_PEARL = new EnderPearlHeadEffect();
     public static final AbstractActiveHeadEffect SNOWBALL = new SnowballHeadEffect();
     public static final AbstractActiveHeadEffect SONIC_BOOM = new SonicBoomHeadEffect();

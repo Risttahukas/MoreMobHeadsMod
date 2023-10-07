@@ -1,5 +1,6 @@
 package net.risttahukas.moremobheads.networking.packet;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerLevel;
@@ -13,6 +14,10 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.entity.projectile.ThrownEnderpearl;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.network.NetworkEvent;
 import net.risttahukas.moremobheads.capability.PlayerHeadActiveEffectCooldownProvider;
@@ -57,7 +62,26 @@ public class HeadActiveEffectC2SPacket {
                     player.getCapability(PlayerHeadActiveEffectCooldownProvider.PLAYER_HEAD_ACTIVE_EFFECT_COOLDOWN).ifPresent(cooldown -> {
                         if (cooldown.getCooldown() == 0) {
                             boolean applyCooldown = true;
-                            if (activeHeadEffect == HeadEffects.ENDER_PEARL && MoreMobHeadsModCommonConfigs.ENABLE_ENDER_PEARL_ACTIVE_EFFECT.get()) {
+                            if (activeHeadEffect == HeadEffects.EAT_GRASS && MoreMobHeadsModCommonConfigs.ENABLE_EAT_GRASS_ACTIVE_EFFECT.get()) {
+                                HitResult hitResult = player.pick(player.getBlockReach(), 1.0F, false);
+                                if (hitResult instanceof BlockHitResult blockHitResult) {
+                                    BlockPos blockPos = blockHitResult.getBlockPos();
+                                    BlockState blockState = level.getBlockState(blockPos);
+                                    if (blockState.is(Blocks.GRASS) || blockState.is(Blocks.TALL_GRASS) || blockState.is(Blocks.GRASS_BLOCK)) {
+                                        level.destroyBlock(blockPos, false);
+                                        if (blockState.is(Blocks.GRASS_BLOCK)) {
+                                            level.setBlock(blockPos, Blocks.DIRT.defaultBlockState(), 2);
+                                        }
+                                        if (player.canEat(false)) {
+                                            player.getFoodData().eat(1, 0.1F);
+                                        }
+                                    } else {
+                                        applyCooldown = false;
+                                    }
+                                } else {
+                                    applyCooldown = false;
+                                }
+                            } else if (activeHeadEffect == HeadEffects.ENDER_PEARL && MoreMobHeadsModCommonConfigs.ENABLE_ENDER_PEARL_ACTIVE_EFFECT.get()) {
                                 ThrownEnderpearl thrownEnderpearl = new ThrownEnderpearl(level, player);
                                 thrownEnderpearl.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
                                 level.playSound(null, player.blockPosition(), SoundEvents.ENDER_PEARL_THROW, player.getSoundSource(), 1.0F, 0.4F / (player.getRandom().nextFloat() * 0.4F + 0.8F));
