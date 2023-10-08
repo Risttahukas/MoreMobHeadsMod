@@ -12,7 +12,7 @@ public class ModHeadEffectHelper {
             return ImmutableList.of();
         }
         if (headItem == Items.CREEPER_HEAD && MoreMobHeadsModCommonConfigs.ENABLE_CREEPER_HEAD_EFFECTS.get()) {
-            return ImmutableList.of();
+            return ImmutableList.of(HeadEffects.VOLATILE_GUTS);
         } else if (headItem == Items.DRAGON_HEAD && MoreMobHeadsModCommonConfigs.ENABLE_DRAGON_HEAD_EFFECTS.get()) {
             return ImmutableList.of(HeadEffects.ENDERIC);
         } else if (headItem == Items.PIGLIN_HEAD && MoreMobHeadsModCommonConfigs.ENABLE_PIGLIN_HEAD_EFFECTS.get()) {

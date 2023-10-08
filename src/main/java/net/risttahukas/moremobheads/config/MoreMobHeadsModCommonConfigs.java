@@ -109,6 +109,7 @@ public class MoreMobHeadsModCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_THERMOPHOBIC_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_TURTLE_SHELL_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_UNDEAD_EFFECT;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_VOLATILE_GUTS_EFFECT;
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_EAT_GRASS_ACTIVE_EFFECT;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ENDER_PEARL_ACTIVE_EFFECT;
@@ -323,6 +324,8 @@ public class MoreMobHeadsModCommonConfigs {
                 .define("Enable Turtle Shell effect", true);
         ENABLE_UNDEAD_EFFECT = BUILDER.comment("Should the Undead effect be used?")
                 .define("Enable Undead effect", true);
+        ENABLE_VOLATILE_GUTS_EFFECT = BUILDER.comment("Should the Volatile Guts effect be used?")
+                .define("Enable Volatile Guts effect", true);
 
         ENABLE_EAT_GRASS_ACTIVE_EFFECT = BUILDER.comment("Should the Eat Grass effect be activated?")
                 .define("Enable Eat Grass active effect", true);

@@ -34,6 +34,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
@@ -55,6 +56,7 @@ import net.risttahukas.moremobheads.effect.AbstractActiveHeadEffect;
 import net.risttahukas.moremobheads.effect.AbstractPassiveHeadEffect;
 import net.risttahukas.moremobheads.effect.HeadEffects;
 import net.risttahukas.moremobheads.effect.ModHeadEffectHelper;
+import net.risttahukas.moremobheads.effect.headeffects.VolatileGutsHeadEffect;
 import net.risttahukas.moremobheads.enchantment.ModEnchantmentHelper;
 import net.risttahukas.moremobheads.item.EffectSkullItem;
 import net.risttahukas.moremobheads.item.ModItems;
@@ -120,6 +122,29 @@ public class SharedEvents {
                             if (randomSource.nextFloat() < ModLootHelper.getHeadDropChance(entity, event.getLootingLevel(), ModEnchantmentHelper.getMobBeheading(player))) {
                                 entity.spawnAtLocation(headToDrop);
                             }
+                        }
+                    }
+                }
+            }
+        }
+
+        @SubscribeEvent
+        public static void onLivingDeathEvent(LivingDeathEvent event) {
+            if (event.getEntity() instanceof Player player && !player.level().isClientSide()) {
+                Item headItem = player.getItemBySlot(EquipmentSlot.HEAD).getItem();
+                if (headItem instanceof EffectSkullItem ||
+                        headItem == Items.SKELETON_SKULL || headItem == Items.WITHER_SKELETON_SKULL ||
+                        headItem == Items.ZOMBIE_HEAD || headItem == Items.CREEPER_HEAD ||
+                        headItem == Items.DRAGON_HEAD || headItem == Items.PIGLIN_HEAD) {
+                    ImmutableList<AbstractPassiveHeadEffect> headEffects;
+                    if (headItem instanceof EffectSkullItem effectSkullItem) {
+                        headEffects = effectSkullItem.getPassiveHeadEffects();
+                    } else {
+                        headEffects = ModHeadEffectHelper.getPassiveEffectsFromHead(headItem);
+                    }
+                    for (AbstractPassiveHeadEffect headEffect : headEffects) {
+                        if (headEffect instanceof VolatileGutsHeadEffect volatileGutsHeadEffect && MoreMobHeadsModCommonConfigs.ENABLE_VOLATILE_GUTS_EFFECT.get()) {
+                            player.level().explode(player, player.getX(), player.getY(), player.getZ(), volatileGutsHeadEffect.getExplosionPower(), Level.ExplosionInteraction.NONE);
                         }
                     }
                 }

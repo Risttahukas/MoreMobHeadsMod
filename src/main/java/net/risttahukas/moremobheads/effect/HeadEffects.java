@@ -24,6 +24,8 @@ public class HeadEffects {
     public static final AbstractPassiveHeadEffect TRADER = new TraderHeadEffect();
     public static final AbstractPassiveHeadEffect TURTLE_SHELL = new TurtleShellHeadEffect();
     public static final AbstractPassiveHeadEffect UNDEAD = new UndeadHeadEffect();
+    public static final AbstractPassiveHeadEffect VOLATILE_GUTS = new VolatileGutsHeadEffect(3);
+    public static final AbstractPassiveHeadEffect VOLATILE_GUTS_CHARGED = new VolatileGutsHeadEffect(6);
 
 
     public static final AbstractActiveHeadEffect EAT_GRASS = new EatGrassHeadEffect();
